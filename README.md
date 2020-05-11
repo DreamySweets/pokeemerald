@@ -1,36 +1,26 @@
-# Pokémon Emerald
+# Touhou Puppet Play v2.0
 
-[![Build Status][travis-badge]][travis]
+This is a fork of the Pokémon Emerald Decompilation used as a base to create a modern, workable base for those wanting to create Touhou Puppet Play hacks.
 
-[travis]: https://travis-ci.org/pret/pokeemerald
-[travis-badge]: https://travis-ci.org/pret/pokeemerald.svg?branch=master
+Due to the fragmented nature of the scene due to several unpolished hacks along with a community made obselete by the spiritual successor, Touhou Puppet Dance Performance, much of it goes under the radar or is otherwise known in the west as "kusoge"s despite effort put into the hacks. It is thanks to Derxwna Kapsyla's efforts in Essentials that there is a remote semblance of activity, but this does not solve any problems for the GBA side of things.
 
-This is a decompilation of Pokémon Emerald.
+Due to this fallout and lack of prevailing, scenario-original hacks left behind, this self-declared v2.0 of Touhou Puppet Play will attempt to do the following:
 
-It builds the following ROM:
+* Retain all data in 1.812 as accurately as possible and import said data into the repository
+* Trace any extra modernized sprites by Hemoglobin and others and attempt to expand the dex for new, diverse puppets
+** In the same vein, attempt to locate fan-made sprites for newer games and attempt to create new puppets
+* Recreate new music files to reach a certain margin of polish that most hacks using said music seem to lack
+* Assimilate quality of life changes that are considered beneficial
 
-* [**pokeemerald.gba**](https://datomatic.no-intro.org/index.php?page=show_record&s=23&n=1961) `sha1: f3ae088181bf583e55daf962a92bb46f4f1d07b7`
+This edit, at this point in time, will not
 
-To set up the repository, see [INSTALL.md](INSTALL.md).
-
-
-## See also
-
-Other disassembly and/or decompilation projects:
-* [**Pokémon Red and Blue**](https://github.com/pret/pokered)
-* [**Pokémon Gold and Silver (Space World '97 demo)**](https://github.com/pret/pokegold-spaceworld)
-* [**Pokémon Yellow**](https://github.com/pret/pokeyellow)
-* [**Pokémon Trading Card Game**](https://github.com/pret/poketcg)
-* [**Pokémon Pinball**](https://github.com/pret/pokepinball)
-* [**Pokémon Stadium**](https://github.com/pret/pokestadium)
-* [**Pokémon Gold and Silver**](https://github.com/pret/pokegold)
-* [**Pokémon Crystal**](https://github.com/pret/pokecrystal)
-* [**Pokémon Ruby and Sapphire**](https://github.com/pret/pokeruby)
-* [**Pokémon Pinball: Ruby & Sapphire**](https://github.com/pret/pokepinballrs)
-* [**Pokémon FireRed and LeafGreen**](https://github.com/pret/pokefirered)
-* [**Pokémon Mystery Dungeon: Red Rescue Team**](https://github.com/pret/pmd-red)
-
+* Keep both Pokémon and Puppets as co-existing battlers
+** This may be an additional add-on in the future once all puppets, moves, abilities, and the movesets are in place for those taking inspiration from Faith and Prayer.
+* Do immediate balancing on puppet performances
+** This is something that would be deemed a community effort until further notice
+* Be completed any time soon
+** While all the assets are there, things like sprites will take quite some time to import, along with needing to figure out the structure of the decompilation
 
 ## Contacts
 
-You can find us on [Discord](https://discord.gg/d5dubZ3) and [IRC](https://kiwiirc.com/client/irc.freenode.net/?#pret).
+You can find me on [Discord (Fatih#4806).
