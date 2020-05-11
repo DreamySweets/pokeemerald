@@ -15,7 +15,7 @@ Due to this fallout and lack of prevailing, scenario-original hacks left behind,
 This edit, at this point in time, will not
 
 * Keep both Pokémon and Puppets as co-existing battlers
-  *This may be an additional add-on in the future once all puppets, moves, abilities, and the movesets are in place for those taking inspiration from Faith and Prayer.
+  * This may be an additional add-on in the future once all puppets, moves, abilities, and the movesets are in place for those taking inspiration from Faith and Prayer.
 * Do immediate balancing on puppet performances
   * This is something that would be deemed a community effort until further notice
 * Be completed any time soon
@@ -23,4 +23,4 @@ This edit, at this point in time, will not
 
 ## Contacts
 
-You can find me on [Discord (Fatih#4806).
+You can find me on Discord (Fatih#4806).
