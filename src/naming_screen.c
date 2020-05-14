@@ -2281,9 +2281,9 @@ static const u8* const sNamingScreenKeyboardText[KBPAGE_COUNT][KBROW_COUNT] =
 {
     [KBPAGE_LETTERS_LOWER] = 
     {
-        gText_NamingScreenKeyboard_abcdef,
-        gText_NamingScreenKeyboard_ghijkl,
-        gText_NamingScreenKeyboard_mnopqrs,
+        gText_NamingScreenKeyboard_qwertyuiopàá,
+        gText_NamingScreenKeyboard_asdfghjkl,
+        gText_NamingScreenKeyboard_zxcvbnm,
         gText_NamingScreenKeyboard_tuvwxyz
     },
     [KBPAGE_LETTERS_UPPER] = 
