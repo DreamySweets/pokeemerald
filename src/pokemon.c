@@ -6680,7 +6680,7 @@ sprite->callback = SpriteCallbackDummy;
 //        gTasks[taskId].data[3] = sMonAnimationDelayTable[species - 1];
 //        SummaryScreen_SetUnknownTaskId(taskId);
 //        SetSpriteCB_MonAnimDummy(sprite);
-    }
+//    }
 //    else
 //    {
 //        StartMonSummaryAnimation(sprite, sMonFrontAnimIdsTable[species - 1]);
