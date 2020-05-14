@@ -4644,16 +4644,16 @@ static bool32 sub_802A8E8(void)
         LoadPalette(gDaiyouseiBerryBgPal1, 0, sizeof(gDaiyouseiBerryBgPal1));
         break;
     case 1:
-        reset_temp_tile_data_buffers();
+        ResetTempTileDataBuffers();
         break;
     case 2:
-        decompress_and_copy_tile_data_to_vram(3, gDaiyouseiBerryBgGfx1, 0, 0, 0);
+        DecompressAndCopyTileDataToVram(3, gDaiyouseiBerryBgGfx1, 0, 0, 0);
         break;
     case 3:
-        decompress_and_copy_tile_data_to_vram(1, gDaiyouseiBerryBgGfx2, 0, 0, 0);
+        DecompressAndCopyTileDataToVram(1, gDaiyouseiBerryBgGfx2, 0, 0, 0);
         break;
     case 4:
-        if (free_temp_tile_data_buffers_if_possible() == TRUE)
+        if (FreeTempTileDataBuffersIfPossible() == TRUE)
             return FALSE;
         break;
     case 5:
