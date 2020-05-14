@@ -6618,9 +6618,9 @@ static void Task_PokemonSummaryAnimateAfterDelay(u8 taskId)
 void BattleAnimateFrontSprite(struct Sprite* sprite, u16 species, bool8 noCry, u8 arg3)
 {
 //    if (gHitMarker & HITMARKER_NO_ANIMATIONS && !(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_x2000000)))
-        DoMonFrontSpriteAnimation(sprite, species, noCry, arg3 | 0x80);
+//        DoMonFrontSpriteAnimation(sprite, species, noCry, arg3 | 0x80);
 //    else
-//        DoMonFrontSpriteAnimation(sprite, species, noCry, arg3);
+        DoMonFrontSpriteAnimation(sprite, species, noCry, arg3);
 }
 
 void DoMonFrontSpriteAnimation(struct Sprite* sprite, u16 species, bool8 noCry, u8 arg3)
