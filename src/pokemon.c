@@ -6649,8 +6649,8 @@ void DoMonFrontSpriteAnimation(struct Sprite* sprite, u16 species, bool8 noCry, 
         if (!noCry)
         {
             PlayCry1(species, pan);
-//            if (HasTwoFramesAnimation(species))
-//                StartSpriteAnim(sprite, 1);
+            if (HasTwoFramesAnimation(species))
+                StartSpriteAnim(sprite, 1);
         }
         if (sMonAnimationDelayTable[species - 1] != 0)
         {
@@ -6661,7 +6661,7 @@ void DoMonFrontSpriteAnimation(struct Sprite* sprite, u16 species, bool8 noCry, 
         }
         else
         {
-            LaunchAnimationTaskForFrontSprite(sprite, sMonFrontAnimIdsTable[species - 1]);
+//            LaunchAnimationTaskForFrontSprite(sprite, sMonFrontAnimIdsTable[species - 1]);
         }
         sprite->callback = SpriteCallbackDummy_2;
     }
