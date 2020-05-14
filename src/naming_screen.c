@@ -134,7 +134,7 @@ static const struct WindowTemplate gUnknown_0858BE10[] =
     DUMMY_WIN_TEMPLATE
 };
 
-static const u8 gUnknown_0858BE40[] = __("abcdef .ghijkl ,mnopqrs tuvwxyz ABCDEF .GHIJKL ,MNOPQRS TUVWXYZ 01234   56789   !?♂♀/-  …“”‘'   ");
+static const u8 gUnknown_0858BE40[] = __("qwerty.ghijkl ,mnopqrs tuvwxyz ABCDEF .GHIJKL ,MNOPQRS TUVWXYZ 01234   56789   !?♂♀/-  …“”‘'   ");
 
 static const u8 gUnknown_0858BEA0[] = { 12, 12, 6 };
 static const u8 gUnknown_0858BEA3[] = { 0, 12, 24, 56, 68, 80, 92, 123, 0, 12, 24, 56, 68, 80, 92, 123, 0, 22, 44, 66, 88, 110, 0, 0 };
@@ -2281,9 +2281,9 @@ static const u8* const sNamingScreenKeyboardText[KBPAGE_COUNT][KBROW_COUNT] =
 {
     [KBPAGE_LETTERS_LOWER] = 
     {
-        gText_NamingScreenKeyboard_qwertyuiopàá,
-        gText_NamingScreenKeyboard_asdfghjkl,
-        gText_NamingScreenKeyboard_zxcvbnm,
+        gText_NamingScreenKeyboard_abcdef,
+        gText_NamingScreenKeyboard_ghijkl,
+        gText_NamingScreenKeyboard_mnopqrs,
         gText_NamingScreenKeyboard_tuvwxyz
     },
     [KBPAGE_LETTERS_UPPER] = 
