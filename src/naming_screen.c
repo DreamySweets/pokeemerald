@@ -137,7 +137,7 @@ static const struct WindowTemplate gUnknown_0858BE10[] =
 static const u8 gUnknown_0858BE40[] = __("qwerty.ghijkl ,mnopqrs tuvwxyz ABCDEF .GHIJKL ,MNOPQRS TUVWXYZ 01234   56789   !?♂♀/-  …“”‘'   ");
 
 static const u8 gUnknown_0858BEA0[] = { 12, 12, 6 };
-static const u8 gUnknown_0858BEA3[] = { 0, 6, 20, 32, 41, 80, 92, 123, 0, 12, 24, 56, 68, 80, 92, 123, 0, 22, 44, 66, 88, 110, 0, 0 };
+static const u8 gUnknown_0858BEA3[] = { -3, 9, 20, 32, 41, 80, 92, 123, 0, 12, 24, 56, 68, 80, 92, 123, 0, 22, 44, 66, 88, 110, 0, 0 };
 
 // forward declarations
 static const struct NamingScreenTemplate *const sNamingScreenTemplates[];
