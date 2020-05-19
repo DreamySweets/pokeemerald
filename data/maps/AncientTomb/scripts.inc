@@ -5,10 +5,10 @@ AncientTomb_MapScripts:: @ 8238FB3
 	.byte 0
 
 AncientTomb_OnResume: @ 8238FC3
-	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, AncientTomb_EventScript_TryRemoveRegisteel
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, AncientTomb_EventScript_TryRemoveFuto
 	end
 
-AncientTomb_EventScript_TryRemoveRegisteel:: @ 8238FCD
+AncientTomb_EventScript_TryRemoveFuto:: @ 8238FCD
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_ne Common_EventScript_NopReturn
@@ -17,15 +17,15 @@ AncientTomb_EventScript_TryRemoveRegisteel:: @ 8238FCD
 
 AncientTomb_OnTransition: @ 8238FE1
 	setflag FLAG_LANDMARK_ANCIENT_TOMB
-	call_if_unset FLAG_DEFEATED_REGISTEEL, AncientTomb_EventScript_ShowRegisteel
+	call_if_unset FLAG_DEFEATED_FUTO, AncientTomb_EventScript_ShowFuto
 	end
 
-AncientTomb_EventScript_ShowRegisteel:: @ 8238FEE
-	clearflag FLAG_HIDE_REGISTEEL
+AncientTomb_EventScript_ShowFuto:: @ 8238FEE
+	clearflag FLAG_HIDE_FUTO
 	return
 
 AncientTomb_OnLoad: @ 8238FF2
-	call_if_unset FLAG_SYS_REGISTEEL_PUZZLE_COMPLETED, AncientTomb_EventScript_HideRegiEntrance
+	call_if_unset FLAG_SYS_FUTO_PUZZLE_COMPLETED, AncientTomb_EventScript_HideRegiEntrance
 	end
 
 AncientTomb_EventScript_HideRegiEntrance:: @ 8238FFC
@@ -39,7 +39,7 @@ AncientTomb_EventScript_HideRegiEntrance:: @ 8238FFC
 
 AncientTomb_EventScript_CaveEntranceMiddle:: @ 8239033
 	lockall
-	goto_if_set FLAG_SYS_REGISTEEL_PUZZLE_COMPLETED, AncientTomb_EventScript_BigHoleInWall
+	goto_if_set FLAG_SYS_FUTO_PUZZLE_COMPLETED, AncientTomb_EventScript_BigHoleInWall
 	braillemessage AncientTomb_Braille_ShineInTheMiddle
 	waitbuttonpress
 	closebraillemessage
@@ -59,36 +59,36 @@ AncientTomb_EventScript_CaveEntranceSide:: @ 8239050
 	releaseall
 	end
 
-AncientTomb_EventScript_Registeel:: @ 823905A
+AncientTomb_EventScript_Futo:: @ 823905A
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_REGISTEEL, 2
+	playmoncry SPECIES_FUTO, 2
 	delay 40
 	waitmoncry
-	setwildbattle SPECIES_REGISTEEL, 40, ITEM_NONE
+	setwildbattle SPECIES_FUTO, 40, ITEM_NONE
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special StartRegiBattle
 	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq AncientTomb_EventScript_DefeatedRegisteel
+	goto_if_eq AncientTomb_EventScript_DefeatedFuto
 	compare VAR_RESULT, B_OUTCOME_RAN
-	goto_if_eq AncientTomb_EventScript_RanFromRegisteel
+	goto_if_eq AncientTomb_EventScript_RanFromFuto
 	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
-	goto_if_eq AncientTomb_EventScript_RanFromRegisteel
-	setflag FLAG_DEFEATED_REGISTEEL
+	goto_if_eq AncientTomb_EventScript_RanFromFuto
+	setflag FLAG_DEFEATED_FUTO
 	release
 	end
 
-AncientTomb_EventScript_DefeatedRegisteel:: @ 82390A1
-	setflag FLAG_DEFEATED_REGISTEEL
+AncientTomb_EventScript_DefeatedFuto:: @ 82390A1
+	setflag FLAG_DEFEATED_FUTO
 	goto Common_EventScript_RemoveStaticPokemon
 	end
 
-AncientTomb_EventScript_RanFromRegisteel:: @ 82390AA
-	setvar VAR_0x8004, SPECIES_REGISTEEL
+AncientTomb_EventScript_RanFromFuto:: @ 82390AA
+	setvar VAR_0x8004, SPECIES_FUTO
 	goto Common_EventScript_LegendaryFlewAway
 	end
 

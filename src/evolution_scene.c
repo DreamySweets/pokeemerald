@@ -80,7 +80,7 @@ static const u16 sUnknown_085B5544[] = INCBIN_U16("graphics/evolution_scene/gray
 static const u16 sUnknown_085B56E4[] = INCBIN_U16("graphics/evolution_scene/gray_transition_outro.gbapal");
 static const u16 sUnknown_085B5884[] = INCBIN_U16("graphics/evolution_scene/transition.gbapal");
 
-static const u8 Text_ShedinjaJapaneseName[] = _("ヌケニン");
+static const u8 Text_AShouJapaneseName[] = _("ヌケニン");
 
 static const u8 sUnknown_085B58C9[][4] =
 {
@@ -541,13 +541,13 @@ static void CB2_TradeEvolutionSceneUpdate(void)
     RunTasks();
 }
 
-static void CreateShedinja(u16 preEvoSpecies, struct Pokemon* mon)
+static void CreateAShou(u16 preEvoSpecies, struct Pokemon* mon)
 {
     u32 data = 0;
-    if (gEvolutionTable[preEvoSpecies][0].method == EVO_LEVEL_NINJASK && gPlayerPartyCount < 6)
+    if (gEvolutionTable[preEvoSpecies][0].method == EVO_LEVEL_ASUWAKO && gPlayerPartyCount < 6)
     {
         s32 i;
-        struct Pokemon* shedinja = &gPlayerParty[gPlayerPartyCount];
+        struct Pokemon* ashou = &gPlayerParty[gPlayerPartyCount];
         const struct Evolution *evos;
         const struct Evolution *evos2;
 
@@ -577,10 +577,10 @@ static void CreateShedinja(u16 preEvoSpecies, struct Pokemon* mon)
         GetSetPokedexFlag(SpeciesToNationalPokedexNum(evos[1].targetSpecies), FLAG_SET_SEEN);
         GetSetPokedexFlag(SpeciesToNationalPokedexNum(evos[1].targetSpecies), FLAG_SET_CAUGHT);
 
-        if (GetMonData(shedinja, MON_DATA_SPECIES) == SPECIES_SHEDINJA
-            && GetMonData(shedinja, MON_DATA_LANGUAGE) == LANGUAGE_JAPANESE
-            && GetMonData(mon, MON_DATA_SPECIES) == SPECIES_NINJASK)
-                SetMonData(shedinja, MON_DATA_NICKNAME, Text_ShedinjaJapaneseName);
+        if (GetMonData(ashou, MON_DATA_SPECIES) == SPECIES_ASHOU
+            && GetMonData(ashou, MON_DATA_LANGUAGE) == LANGUAGE_JAPANESE
+            && GetMonData(mon, MON_DATA_SPECIES) == SPECIES_ASUWAKO)
+                SetMonData(ashou, MON_DATA_NICKNAME, Text_AShouJapaneseName);
     }
 }
 
@@ -766,7 +766,7 @@ static void Task_EvolutionScene(u8 taskID)
                 Overworld_PlaySpecialMapMusic();
             }
             if (!gTasks[taskID].tEvoWasStopped)
-                CreateShedinja(gTasks[taskID].tPreEvoSpecies, mon);
+                CreateAShou(gTasks[taskID].tPreEvoSpecies, mon);
 
             DestroyTask(taskID);
             FreeMonSpritesGfx();

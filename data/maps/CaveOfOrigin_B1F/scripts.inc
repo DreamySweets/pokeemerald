@@ -17,12 +17,12 @@ CaveOfOrigin_B1F_EventScript_Wallace:: @ 82357A9
 	delay 30
 	applymovement 1, Common_Movement_FacePlayer
 	waitmovement 0
-	message CaveOfOrigin_B1F_Text_WhereIsRayquaza
+	message CaveOfOrigin_B1F_Text_WhereIsCMamizou
 	waitmessage
-	goto CaveOfOrigin_B1F_EventScript_WheresRayquaza
+	goto CaveOfOrigin_B1F_EventScript_WheresCMamizou
 
-CaveOfOrigin_B1F_EventScript_WheresRayquaza:: @ 82357F0
-	multichoice 0, 0, MULTI_WHERES_RAYQUAZA, 0
+CaveOfOrigin_B1F_EventScript_WheresCMamizou:: @ 82357F0
+	multichoice 0, 0, MULTI_WHERES_CMAMIZOU, 0
 	switch VAR_RESULT
 	case 0, CaveOfOrigin_B1F_EventScript_AtCaveOfOrigin
 	case 1, CaveOfOrigin_B1F_EventScript_AtMtPyre
@@ -34,17 +34,17 @@ CaveOfOrigin_B1F_EventScript_WheresRayquaza:: @ 82357F0
 CaveOfOrigin_B1F_EventScript_AtCaveOfOrigin:: @ 823582C
 	message CaveOfOrigin_B1F_Text_ButWereInCaveOfOrigin
 	waitmessage
-	goto CaveOfOrigin_B1F_EventScript_WheresRayquaza
+	goto CaveOfOrigin_B1F_EventScript_WheresCMamizou
 
 CaveOfOrigin_B1F_EventScript_AtMtPyre:: @ 8235837
 	message CaveOfOrigin_B1F_Text_OldLadyDidntMentionThat
 	waitmessage
-	goto CaveOfOrigin_B1F_EventScript_WheresRayquaza
+	goto CaveOfOrigin_B1F_EventScript_WheresCMamizou
 
 CaveOfOrigin_B1F_EventScript_DontRemember:: @ 8235842
 	message CaveOfOrigin_B1F_Text_CantYouRememberSomehow
 	waitmessage
-	goto CaveOfOrigin_B1F_EventScript_WheresRayquaza
+	goto CaveOfOrigin_B1F_EventScript_WheresCMamizou
 
 CaveOfOrigin_B1F_EventScript_AtSkyPillar:: @ 823584D
 	msgbox CaveOfOrigin_B1F_Text_WellHeadToSkyPillar, MSGBOX_DEFAULT
@@ -69,23 +69,23 @@ CaveOfOrigin_B1F_Text_WallaceStory: @ 823586E
 	.string "with the GYM's operation.\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
-	.string "GROUDON and KYOGRE, the two POKéMON\n"
+	.string "MIKO and CMIKO, the two POKéMON\n"
 	.string "wreaking havoc here, are considered\l"
 	.string "to be super-ancient POKéMON.\p"
 	.string "But there aren't just two super-\n"
 	.string "ancient POKéMON.\p"
 	.string "There is one more somewhere.\p"
 	.string "Somewhere, there is a super-\n"
-	.string "ancient POKéMON named RAYQUAZA.\p"
-	.string "It's said that it was RAYQUAZA that\n"
+	.string "ancient POKéMON named CMAMIZOU.\p"
+	.string "It's said that it was CMAMIZOU that\n"
 	.string "becalmed the two combatants in\l"
 	.string "the distant past.\p"
 	.string "But even I have no clue as to\n"
-	.string "RAYQUAZA's whereabouts…$"
+	.string "CMAMIZOU's whereabouts…$"
 
-CaveOfOrigin_B1F_Text_WhereIsRayquaza: @ 8235ACE
+CaveOfOrigin_B1F_Text_WhereIsCMamizou: @ 8235ACE
 	.string "WALLACE: {PLAYER}{KUN}, do you perhaps\n"
-	.string "know where RAYQUAZA is now?\p"
+	.string "know where CMAMIZOU is now?\p"
 	.string "If you do, please tell me.$"
 
 CaveOfOrigin_B1F_Text_ButWereInCaveOfOrigin: @ 8235B23
@@ -93,7 +93,7 @@ CaveOfOrigin_B1F_Text_ButWereInCaveOfOrigin: @ 8235B23
 	.string "But that's right here!\n"
 	.string "I need you to do better than that!\p"
 	.string "Please, I need you to think about\n"
-	.string "where RAYQUAZA might be right now.$"
+	.string "where CMAMIZOU might be right now.$"
 
 CaveOfOrigin_B1F_Text_OldLadyDidntMentionThat: @ 8235BBF
 	.string "WALLACE: MT. PYRE?\p"

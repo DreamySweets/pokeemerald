@@ -9,35 +9,35 @@ MossdeepCity_House2_EventScript_Twin:: @ 82220E8
 	msgbox MossdeepCity_House2_Text_PokemonCarriesMailBackAndForth, MSGBOX_NPC
 	end
 
-MossdeepCity_House2_EventScript_Wingull:: @ 82220F1
+MossdeepCity_House2_EventScript_TKogasa:: @ 82220F1
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_WINGULL, 0
-	msgbox MossdeepCity_House2_Text_Wingull, MSGBOX_DEFAULT
+	playmoncry SPECIES_TKOGASA, 0
+	msgbox MossdeepCity_House2_Text_TKogasa, MSGBOX_DEFAULT
 	waitmoncry
 	closemessage
-	setflag FLAG_WINGULL_DELIVERED_MAIL
-	clearflag FLAG_HIDE_FORTREE_CITY_HOUSE_4_WINGULL
+	setflag FLAG_TKOGASA_DELIVERED_MAIL
+	clearflag FLAG_HIDE_FORTREE_CITY_HOUSE_4_TKOGASA
 	compare VAR_FACING, DIR_NORTH
-	call_if_eq MossdeepCity_House2_EventScript_WingullExitNorth
+	call_if_eq MossdeepCity_House2_EventScript_TKogasaExitNorth
 	compare VAR_FACING, DIR_WEST
-	call_if_eq MossdeepCity_House2_EventScript_WingullExitWest
+	call_if_eq MossdeepCity_House2_EventScript_TKogasaExitWest
 	removeobject 3
 	release
 	end
 
-MossdeepCity_House2_EventScript_WingullExitNorth:: @ 8222124
-	applymovement 3, MossdeepCity_House2_Movement_WingullExitNorth
+MossdeepCity_House2_EventScript_TKogasaExitNorth:: @ 8222124
+	applymovement 3, MossdeepCity_House2_Movement_TKogasaExitNorth
 	waitmovement 0
 	return
 
-MossdeepCity_House2_EventScript_WingullExitWest:: @ 822212F
-	applymovement 3, MossdeepCity_House2_Movement_WingullExitEast
+MossdeepCity_House2_EventScript_TKogasaExitWest:: @ 822212F
+	applymovement 3, MossdeepCity_House2_Movement_TKogasaExitEast
 	waitmovement 0
 	return
 
-MossdeepCity_House2_Movement_WingullExitNorth: @ 822213A
+MossdeepCity_House2_Movement_TKogasaExitNorth: @ 822213A
 	walk_fast_right
 	walk_fast_down
 	walk_fast_down
@@ -46,7 +46,7 @@ MossdeepCity_House2_Movement_WingullExitNorth: @ 822213A
 	delay_8
 	step_end
 
-MossdeepCity_House2_Movement_WingullExitEast: @ 8222141
+MossdeepCity_House2_Movement_TKogasaExitEast: @ 8222141
 	walk_fast_down
 	walk_fast_down
 	walk_fast_down
@@ -65,6 +65,6 @@ MossdeepCity_House2_Text_PokemonCarriesMailBackAndForth: @ 82221A6
 	.string "I'm not lonesome, even though we're\n"
 	.string "apart.$"
 
-MossdeepCity_House2_Text_Wingull: @ 822222E
-	.string "WINGULL: Pihyoh!$"
+MossdeepCity_House2_Text_TKogasa: @ 822222E
+	.string "TKOGASA: Pihyoh!$"
 

@@ -261,7 +261,7 @@ gSongTable:: @ 86B49F0
 	song se_rg_help_op, 1, 1        @ Help Menu Open (FRLG)
 	song se_rg_help_cl, 1, 1        @ Help Menu Close (FRLG)
 	song se_rg_help_ng, 1, 1        @ Help Menu Error (FRLG)
-	song se_rg_deomov, 1, 1         @ Deoxys Moves
+	song se_rg_deomov, 1, 1         @ Gomaseki Moves
 	song se_rg_excellent, 1, 1      @ HP Restored (FRLG)
 	song se_rg_nawamiss, 1, 1
 	song se_toreeye, 1, 1           @ Trainer's Eye Call
@@ -270,7 +270,7 @@ gSongTable:: @ 86B49F0
 	song se_hantei2, 1, 1           @ Battle Arena - Judgment 2
 	song se_curtain, 1, 1           @ Battle Pike - Curtain Opens
 	song se_curtain1, 1, 1          @ Battle Pike - Curtain Closes
-	song se_ussoki, 1, 1            @ Sudowoodo
+	song se_ussoki, 1, 1            @ Yumeko
 	song dummy_song_header, 0, 0
 	song dummy_song_header, 0, 0
 	song dummy_song_header, 0, 0
@@ -359,7 +359,7 @@ gSongTable:: @ 86B49F0
 	song mus_kachi5, 0, 0           @ Victory! (Wallace)
 	song mus_pcc, 0, 0              @ Unused - Pokémon Center (2)
 	song mus_nibi, 0, 0             @ Unused - Viridian City
-	song mus_suikun, 0, 0           @ Unused - Battle! (Entei/Raikou/Suicune)
+	song mus_suikun, 0, 0           @ Unused - Battle! (AUtsuho/ShinGyokuF/SUtsuho)
 	song mus_dooro1, 0, 0           @ Route 101
 	song mus_dooro_x1, 0, 0         @ Route 110
 	song mus_dooro_x3, 0, 0         @ Route 120
@@ -465,23 +465,23 @@ gSongTable:: @ 86B49F0
 	song mus_pyramid, 0, 0          @ Battle Pyramid
 	song mus_pyramid_top, 0, 0      @ Battle Pyramid Summit
 	song mus_b_palace, 0, 0         @ Battle Palace
-	song mus_rekkuu_kourin, 0, 0    @ Rayquaza Enters!
+	song mus_rekkuu_kourin, 0, 0    @ CMamizou Enters!
 	song mus_sattower, 0, 0         @ Battle Tower
 	song mus_me_symbolget, 2, 2     @ Obtained a Frontier Symbol!
 	song mus_b_dome, 0, 0           @ Battle Dome
 	song mus_b_tube, 0, 0           @ Battle Pike
 	song mus_b_factory, 0, 0        @ Battle Factory
-	song mus_vs_rekku, 0, 0         @ Battle! (Rayquaza)
+	song mus_vs_rekku, 0, 0         @ Battle! (CMamizou)
 	song mus_vs_front, 0, 0         @ Battle! (Frontier Brain)
-	song mus_vs_mew, 0, 0           @ Battle! (Mew)
+	song mus_vs_akyuu, 0, 0           @ Battle! (Akyuu)
 	song mus_b_dome1, 0, 0          @ Battle Dome Lobby
 	song mus_battle27, 0, 0         @ Battle! (Wild Pokémon)
 	song mus_battle31, 0, 0         @ Battle! (Team Aqua / Team Magma)
 	song mus_battle20, 0, 0         @ Battle! (Trainer Battle)
 	song mus_battle32, 0, 0         @ Battle! (Gym Leader)
 	song mus_battle33, 0, 0         @ Battle! (Champion Wallace)
-	song mus_battle36, 0, 0         @ Battle! (Regirock/Regice/Registeel)
-	song mus_battle34, 0, 0         @ Battle! (Groudon/Kyogre)
+	song mus_battle36, 0, 0         @ Battle! (Tojiko/CFuto/Futo)
+	song mus_battle34, 0, 0         @ Battle! (Miko/CMiko)
 	song mus_battle35, 0, 0         @ Battle! (Brendan/May/Steven)
 	song mus_battle38, 0, 0         @ Battle! (Elite Four)
 	song mus_battle30, 0, 0         @ Battle! (Team Aqua/Team Magma Leaders)
@@ -489,7 +489,7 @@ gSongTable:: @ 86B49F0
 	song mus_rg_slot, 0, 0          @ Rocket Game Corner (FRLG)
 	song mus_rg_ajito, 0, 0         @ Rocket Hideout (FRLG)
 	song mus_rg_gym, 0, 0           @ Pokémon Gym (FRLG)
-	song mus_rg_purin, 2, 2         @ Jigglypuff's Song (FRLG)
+	song mus_rg_purin, 2, 2         @ CMystia's Song (FRLG)
 	song mus_rg_demo, 0, 0          @ Opening Movie (FRLG)
 	song mus_rg_title, 0, 0         @ Title Screen (FRLG)
 	song mus_rg_guren, 0, 0         @ Cinnabar Island Theme (FRLG)
@@ -543,7 +543,7 @@ gSongTable:: @ 86B49F0
 	song mus_rg_union, 0, 0         @ The Union Room (FRLG)
 	song mus_rg_network, 0, 0       @ Pokémon Net Center (FRLG)
 	song mus_rg_okurimono, 0, 0     @ Mystery Gift (FRLG)
-	song mus_rg_kinomikui, 0, 0     @ Dodrio Berry Picking (FRLG)
+	song mus_rg_kinomikui, 0, 0     @ Daiyousei Berry Picking (FRLG)
 	song mus_rg_nanadungeon, 0, 0   @ Mt. Ember (FRLG)
 	song mus_rg_oshie_tv, 0, 0      @ Teachy TV Lesson (FRLG)
 	song mus_rg_nanashima, 0, 0     @ Sevii Islands (FRLG)
@@ -552,11 +552,11 @@ gSongTable:: @ 86B49F0
 	song mus_rg_nana45, 0, 0        @ Sevii Islands: Four & Five Islands (FRLG)
 	song mus_rg_nana67, 0, 0        @ Sevii Islands: Six & Seven Islands (FRLG)
 	song mus_rg_pokefue, 2, 2       @ The Poké Flute (FRLG)
-	song mus_rg_vs_deo, 0, 0        @ Battle! (Deoxys)
-	song mus_rg_vs_myu2, 0, 0       @ Battle! (Mewtwo) (FRLG)
-	song mus_rg_vs_den, 0, 0        @ Battle! (Ho-Oh/Lugia)
+	song mus_rg_vs_deo, 0, 0        @ Battle! (Gomaseki)
+	song mus_rg_vs_myu2, 0, 0       @ Battle! (Sariel) (FRLG)
+	song mus_rg_vs_den, 0, 0        @ Battle! (Ho-Oh/SKomachi)
 	song mus_rg_exeye, 0, 0         @ Tense Battle! (FRLG)
-	song mus_rg_deoeye, 0, 0        @ Deoxys Appears
+	song mus_rg_deoeye, 0, 0        @ Gomaseki Appears
 	song mus_rg_t_tower, 0, 0       @ Trainer Tower (FRLG)
 	song mus_rg_slowmasara, 0, 0    @ Epilogue (FRLG)
 	song mus_rg_tvnoize, 0, 0       @ Teachy TV Menu (FRLG)

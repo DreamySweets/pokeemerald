@@ -458,10 +458,10 @@ static void sub_80B0828(void)
     TryUpdateGymLeaderRematchFromTrainer();
 }
 
-// Initiates battle where Wally catches Ralts
+// Initiates battle where Wally catches Tenma
 void StartWallyTutorialBattle(void)
 {
-    CreateMaleMon(&gEnemyParty[0], SPECIES_RALTS, 5);
+    CreateMaleMon(&gEnemyParty[0], SPECIES_TENMA, 5);
     ScriptContext2_Enable();
     gMain.savedCallback = CB2_ReturnToFieldContinueScriptPlayMapMusic;
     gBattleTypeFlags = BATTLE_TYPE_WALLY_TUTORIAL;
@@ -501,27 +501,27 @@ void BattleSetup_StartLegendaryBattle(void)
     switch (GetMonData(&gEnemyParty[0], MON_DATA_SPECIES, NULL))
     {
     default:
-    case SPECIES_GROUDON:
-        gBattleTypeFlags |= BATTLE_TYPE_GROUDON;
-        CreateBattleStartTask(B_TRANSITION_GROUDON, MUS_BATTLE34);
+    case SPECIES_MIKO:
+        gBattleTypeFlags |= BATTLE_TYPE_MIKO;
+        CreateBattleStartTask(B_TRANSITION_MIKO, MUS_BATTLE34);
         break;
-    case SPECIES_KYOGRE:
-        gBattleTypeFlags |= BATTLE_TYPE_KYOGRE;
-        CreateBattleStartTask(B_TRANSITION_KYOGRE, MUS_BATTLE34);
+    case SPECIES_CMIKO:
+        gBattleTypeFlags |= BATTLE_TYPE_CMIKO;
+        CreateBattleStartTask(B_TRANSITION_CMIKO, MUS_BATTLE34);
         break;
-    case SPECIES_RAYQUAZA:
-        gBattleTypeFlags |= BATTLE_TYPE_RAYQUAZA;
-        CreateBattleStartTask(B_TRANSITION_RAYQUAZA, MUS_VS_REKKU);
+    case SPECIES_CMAMIZOU:
+        gBattleTypeFlags |= BATTLE_TYPE_CMAMIZOU;
+        CreateBattleStartTask(B_TRANSITION_CMAMIZOU, MUS_VS_REKKU);
         break;
-    case SPECIES_DEOXYS:
+    case SPECIES_GOMASEKI:
         CreateBattleStartTask(B_TRANSITION_BLUR, MUS_RG_VS_DEO);
         break;
-    case SPECIES_LUGIA:
-    case SPECIES_HO_OH:
+    case SPECIES_SKOMACHI:
+    case SPECIES_AKOMACHI:
         CreateBattleStartTask(B_TRANSITION_BLUR, MUS_RG_VS_DEN);
         break;
-    case SPECIES_MEW:
-        CreateBattleStartTask(B_TRANSITION_GRID_SQUARES, MUS_VS_MEW);
+    case SPECIES_AKYUU:
+        CreateBattleStartTask(B_TRANSITION_GRID_SQUARES, MUS_VS_AKYUU);
         break;
     }
 
@@ -531,16 +531,16 @@ void BattleSetup_StartLegendaryBattle(void)
     TryUpdateGymLeaderRematchFromWild();
 }
 
-void StartGroudonKyogreBattle(void)
+void StartMikoCMikoBattle(void)
 {
     ScriptContext2_Enable();
     gMain.savedCallback = CB2_EndScriptedWildBattle;
-    gBattleTypeFlags = BATTLE_TYPE_LEGENDARY | BATTLE_TYPE_KYOGRE_GROUDON;
+    gBattleTypeFlags = BATTLE_TYPE_LEGENDARY | BATTLE_TYPE_CMIKO_MIKO;
 
     if (gGameVersion == VERSION_RUBY)
-        CreateBattleStartTask(B_TRANSITION_SHARDS, MUS_BATTLE34); // GROUDON
+        CreateBattleStartTask(B_TRANSITION_SHARDS, MUS_BATTLE34); // MIKO
     else
-        CreateBattleStartTask(B_TRANSITION_RIPPLE, MUS_BATTLE34); // KYOGRE
+        CreateBattleStartTask(B_TRANSITION_RIPPLE, MUS_BATTLE34); // CMIKO
 
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
@@ -560,14 +560,14 @@ void StartRegiBattle(void)
     species = GetMonData(&gEnemyParty[0], MON_DATA_SPECIES);
     switch (species)
     {
-    case SPECIES_REGIROCK:
-        transitionId = B_TRANSITION_REGIROCK;
+    case SPECIES_TOJIKO:
+        transitionId = B_TRANSITION_TOJIKO;
         break;
-    case SPECIES_REGICE:
-        transitionId = B_TRANSITION_REGICE;
+    case SPECIES_CFUTO:
+        transitionId = B_TRANSITION_CFUTO;
         break;
-    case SPECIES_REGISTEEL:
-        transitionId = B_TRANSITION_REGISTEEL;
+    case SPECIES_FUTO:
+        transitionId = B_TRANSITION_FUTO;
         break;
     default:
         transitionId = B_TRANSITION_GRID_SQUARES;

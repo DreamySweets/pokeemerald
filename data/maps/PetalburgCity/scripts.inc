@@ -36,7 +36,7 @@ PetalburgCity_OnFrame: @ 81DC31C
 PetalburgCity_EventScript_WallyTutorial:: @ 81DC32E
 	lockall
 	special SavePlayerParty
-	special PutZigzagoonInPlayerParty
+	special PutHLunasaInPlayerParty
 	applymovement 2, PetalburgCity_Movement_WallyTutorialWally
 	applymovement OBJ_EVENT_ID_PLAYER, PetalburgCity_Movement_WallyTutorialPlayer
 	waitmovement 0

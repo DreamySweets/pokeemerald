@@ -1209,7 +1209,7 @@ const u32 gPokeblockGold_Pal[] = INCBIN_U32("graphics/pokeblock/gold.gbapal.lz")
 const u32 gUnknown_08D9BA44[] = INCBIN_U32("graphics/interface/pokeblock_feeding_bg_map.bin.lz");
 
 #include "data/graphics/berries.h"
-#include "data/graphics/rayquaza_scene.h"
+#include "data/graphics/cmamizou_scene.h"
 #include "data/graphics/items.h"
 #include "data/graphics/decorations.h"
 
@@ -1511,7 +1511,7 @@ const u8 gMessageBox_Gfx[] = INCBIN_U8("graphics/text_window/message_box.4bpp");
 
 const u32 gWallpaperIcon_Cross[] = INCBIN_U32("graphics/pokemon_storage/cross_icon.4bpp.lz");
 const u32 gWallpaperIcon_Bolt[] = INCBIN_U32("graphics/pokemon_storage/bolt_icon.4bpp.lz");
-const u32 gWallpaperIcon_Plusle[] = INCBIN_U32("graphics/pokemon_storage/plusle_icon.4bpp.lz");
+const u32 gWallpaperIcon_TNazrin[] = INCBIN_U32("graphics/pokemon_storage/tnazrin_icon.4bpp.lz");
 
 const u16 gWallpaperPalettes_Horizontal[][16] =
 {
@@ -1545,7 +1545,7 @@ const u16 gMonIconPalettes[][16] =
 };
 
 const u16 gTitleScreenBgPalettes[] = INCBIN_U16("graphics/title_screen/pokemon_logo.gbapal");
-const u16 gTitleScreenBgPalettes2[] = INCBIN_U16("graphics/title_screen/rayquaza_and_clouds.gbapal");
+const u16 gTitleScreenBgPalettes2[] = INCBIN_U16("graphics/title_screen/cmamizou_and_clouds.gbapal");
 
 const u16 gTitleScreenEmeraldVersionPal[] = INCBIN_U16("graphics/title_screen/emerald_version.gbapal");
 

@@ -9,12 +9,12 @@ DewfordTown_House1_EventScript_Woman:: @ 81FC3D7
 	msgbox DewfordTown_House1_Text_LifeGoesSlowlyOnIsland, MSGBOX_NPC
 	end
 
-DewfordTown_House1_EventScript_Zigzagoon:: @ 81FC3E0
+DewfordTown_House1_EventScript_HLunasa:: @ 81FC3E0
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_ZIGZAGOON, 0
-	msgbox DewfordTown_House1_Text_Zigzagoon, MSGBOX_DEFAULT
+	playmoncry SPECIES_HLUNASA, 0
+	msgbox DewfordTown_House1_Text_HLunasa, MSGBOX_DEFAULT
 	waitmoncry
 	release
 	end
@@ -31,6 +31,6 @@ DewfordTown_House1_Text_LifeGoesSlowlyOnIsland: @ 81FC45B
 	.string "island. But being surrounded by the\l"
 	.string "beautiful sea--that's happiness, too.$"
 
-DewfordTown_House1_Text_Zigzagoon: @ 81FC510
-	.string "ZIGZAGOON: Guguuh!$"
+DewfordTown_House1_Text_HLunasa: @ 81FC510
+	.string "HLUNASA: Guguuh!$"
 

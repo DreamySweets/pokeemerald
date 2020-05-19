@@ -4,10 +4,10 @@ BattleFrontier_OutsideEast_MapScripts:: @ 8242C04
 	.byte 0
 
 BattleFrontier_OutsideEast_OnResume: @ 8242C0F
-	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, BattleFrontier_OutsideEast_EventScript_TryRemoveSudowoodo
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, BattleFrontier_OutsideEast_EventScript_TryRemoveYumeko
 	end
 
-BattleFrontier_OutsideEast_EventScript_TryRemoveSudowoodo:: @ 8242C19
+BattleFrontier_OutsideEast_EventScript_TryRemoveYumeko:: @ 8242C19
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_ne Common_EventScript_NopReturn
@@ -17,11 +17,11 @@ BattleFrontier_OutsideEast_EventScript_TryRemoveSudowoodo:: @ 8242C19
 BattleFrontier_OutsideEast_OnTransition: @ 8242C2D
 	setvar VAR_BRAVO_TRAINER_BATTLE_TOWER_ON, 0
 	setflag FLAG_HIDE_BATTLE_TOWER_REPORTER
-	call_if_unset FLAG_DEFEATED_SUDOWOODO, BattleFrontier_OutsideEast_EventScript_ShowSudowoodo
+	call_if_unset FLAG_DEFEATED_YUMEKO, BattleFrontier_OutsideEast_EventScript_ShowYumeko
 	end
 
-BattleFrontier_OutsideEast_EventScript_ShowSudowoodo:: @ 8242C3F
-	clearflag FLAG_HIDE_BATTLE_FRONTIER_SUDOWOODO
+BattleFrontier_OutsideEast_EventScript_ShowYumeko:: @ 8242C3F
+	clearflag FLAG_HIDE_BATTLE_FRONTIER_YUMEKO
 	return
 
 BattleFrontier_OutsideEast_EventScript_BattleTowerSign:: @ 8242C43
@@ -66,12 +66,12 @@ BattleFrontier_OutsideEast_EventScript_Cook:: @ 8242C94
 	release
 	end
 
-BattleFrontier_OutsideEast_EventScript_Zigzagoon:: @ 8242C9F
+BattleFrontier_OutsideEast_EventScript_HLunasa:: @ 8242C9F
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_ZIGZAGOON, 0
-	msgbox BattleFrontier_OutsideEast_Text_ZigzagoonLooksVacant, MSGBOX_DEFAULT
+	playmoncry SPECIES_HLUNASA, 0
+	msgbox BattleFrontier_OutsideEast_Text_HLunasaLooksVacant, MSGBOX_DEFAULT
 	waitmoncry
 	release
 	end
@@ -102,53 +102,53 @@ BattleFrontier_OutsideEast_EventScript_TriathleteM:: @ 8242CE1
 	msgbox BattleFrontier_OutsideEast_Text_DidScottBringYouHere, MSGBOX_NPC
 	end
 
-BattleFrontier_OutsideEast_EventScript_Sudowoodo:: @ 8242CEA
+BattleFrontier_OutsideEast_EventScript_Yumeko:: @ 8242CEA
 	lock
 	faceplayer
 	waitse
 	playse 269
-	applymovement 14, BattleFrontier_OutsideEast_Movement_SudowoodoShake
+	applymovement 14, BattleFrontier_OutsideEast_Movement_YumekoShake
 	waitmovement 0
 	release
 	end
 
-BattleFrontier_OutsideEast_EventScript_WaterSudowoodo:: @ 8242CFC
+BattleFrontier_OutsideEast_EventScript_WaterYumeko:: @ 8242CFC
 	lock
 	faceplayer
 	special DoWateringBerryTreeAnim
 	waitstate
 	waitse
 	playse SE_USSOKI
-	applymovement 14, BattleFrontier_OutsideEast_Movement_SudowoodoShake
+	applymovement 14, BattleFrontier_OutsideEast_Movement_YumekoShake
 	waitmovement 0
-	msgbox gText_Sudowoodo_Attacked, MSGBOX_DEFAULT
+	msgbox gText_Yumeko_Attacked, MSGBOX_DEFAULT
 	closemessage
 	waitse
-	playmoncry SPECIES_SUDOWOODO, 2
+	playmoncry SPECIES_YUMEKO, 2
 	delay 40
 	waitmoncry
-	setvar VAR_LAST_TALKED, 14  @ Sudowoodo object event id
-	setwildbattle SPECIES_SUDOWOODO, 40, ITEM_NONE
+	setvar VAR_LAST_TALKED, 14  @ Yumeko object event id
+	setwildbattle SPECIES_YUMEKO, 40, ITEM_NONE
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	dowildbattle
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq BattleFrontier_OutsideEast_EventScript_DefeatedSudowoodo
+	goto_if_eq BattleFrontier_OutsideEast_EventScript_DefeatedYumeko
 	compare VAR_RESULT, B_OUTCOME_RAN
-	goto_if_eq BattleFrontier_OutsideEast_EventScript_DefeatedSudowoodo
+	goto_if_eq BattleFrontier_OutsideEast_EventScript_DefeatedYumeko
 	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
-	goto_if_eq BattleFrontier_OutsideEast_EventScript_DefeatedSudowoodo
-	setflag FLAG_DEFEATED_SUDOWOODO
+	goto_if_eq BattleFrontier_OutsideEast_EventScript_DefeatedYumeko
+	setflag FLAG_DEFEATED_YUMEKO
 	release
 	end
 
-BattleFrontier_OutsideEast_EventScript_DefeatedSudowoodo:: @ 8242D60
-	setflag FLAG_DEFEATED_SUDOWOODO
+BattleFrontier_OutsideEast_EventScript_DefeatedYumeko:: @ 8242D60
+	setflag FLAG_DEFEATED_YUMEKO
 	goto Common_EventScript_RemoveStaticPokemon
 	end
 
-BattleFrontier_OutsideEast_Movement_SudowoodoShake: @ 8242D69
+BattleFrontier_OutsideEast_Movement_YumekoShake: @ 8242D69
 	face_right
 	delay_8
 	face_down
@@ -221,12 +221,12 @@ BattleFrontier_OutsideEast_EventScript_Gentleman:: @ 8242DE0
 BattleFrontier_OutsideEast_EventScript_OldWoman:: @ 8242DE9
 	lock
 	faceplayer
-	goto_if_set FLAG_DEFEATED_SUDOWOODO, BattleFrontier_OutsideEast_EventScript_OldWomanSudowoodoGone
+	goto_if_set FLAG_DEFEATED_YUMEKO, BattleFrontier_OutsideEast_EventScript_OldWomanYumekoGone
 	msgbox BattleFrontier_OutsideEast_Text_OddTreeHereSeemsToWiggle, MSGBOX_DEFAULT
 	release
 	end
 
-BattleFrontier_OutsideEast_EventScript_OldWomanSudowoodoGone:: @ 8242DFE
+BattleFrontier_OutsideEast_EventScript_OldWomanYumekoGone:: @ 8242DFE
 	msgbox BattleFrontier_OutsideEast_Text_OnceAnOddTreePastHere, MSGBOX_DEFAULT
 	release
 	end
@@ -307,8 +307,8 @@ BattleFrontier_OutsideEast_Text_BelieveInYouBuddy: @ 82432DD
 	.string "I'll make my little ZIGG any favorite\n"
 	.string "tasty treats you like if you win!$"
 
-BattleFrontier_OutsideEast_Text_ZigzagoonLooksVacant: @ 824334B
-	.string "ZIGZAGOON looks vacant…$"
+BattleFrontier_OutsideEast_Text_HLunasaLooksVacant: @ 824334B
+	.string "HLUNASA looks vacant…$"
 
 BattleFrontier_OutsideEast_Text_PeopleCallMeBusybody: @ 8243363
 	.string "People call me a busybody,\n"

@@ -4,10 +4,10 @@ AquaHideout_B1F_MapScripts:: @ 82339A7
 	.byte 0
 
 AquaHideout_B1F_OnResume: @ 82339B2
-	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, AquaHideout_B1F_EventScript_TryRemoveElectrode
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, AquaHideout_B1F_EventScript_TryRemoveMerlin
 	end
 
-AquaHideout_B1F_EventScript_TryRemoveElectrode:: @ 82339BC
+AquaHideout_B1F_EventScript_TryRemoveMerlin:: @ 82339BC
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_ne Common_EventScript_NopReturn
@@ -15,24 +15,24 @@ AquaHideout_B1F_EventScript_TryRemoveElectrode:: @ 82339BC
 	return
 
 AquaHideout_B1F_OnTransition: @ 82339D0
-	call_if_unset FLAG_DEFEATED_ELECTRODE_1_AQUA_HIDEOUT, AquaHideout_B1F_EventScript_ShowElectrode1
-	call_if_unset FLAG_DEFEATED_ELECTRODE_2_AQUA_HIDEOUT, AquaHideout_B1F_EventScript_ShowElectrode2
+	call_if_unset FLAG_DEFEATED_MERLIN_1_AQUA_HIDEOUT, AquaHideout_B1F_EventScript_ShowMerlin1
+	call_if_unset FLAG_DEFEATED_MERLIN_2_AQUA_HIDEOUT, AquaHideout_B1F_EventScript_ShowMerlin2
 	end
 
-AquaHideout_B1F_EventScript_ShowElectrode1:: @ 82339E3
-	clearflag FLAG_HIDE_AQUA_HIDEOUT_B1F_ELECTRODE_1
+AquaHideout_B1F_EventScript_ShowMerlin1:: @ 82339E3
+	clearflag FLAG_HIDE_AQUA_HIDEOUT_B1F_MERLIN_1
 	return
 
-AquaHideout_B1F_EventScript_ShowElectrode2:: @ 82339E7
-	clearflag FLAG_HIDE_AQUA_HIDEOUT_B1F_ELECTRODE_2
+AquaHideout_B1F_EventScript_ShowMerlin2:: @ 82339E7
+	clearflag FLAG_HIDE_AQUA_HIDEOUT_B1F_MERLIN_2
 	return
 
-AquaHideout_B1F_EventScript_Electrode1:: @ 82339EB
+AquaHideout_B1F_EventScript_Merlin1:: @ 82339EB
 	lock
 	faceplayer
-	setwildbattle SPECIES_ELECTRODE, 30, ITEM_NONE
+	setwildbattle SPECIES_MERLIN, 30, ITEM_NONE
 	waitse
-	playmoncry SPECIES_ELECTRODE, 2
+	playmoncry SPECIES_MERLIN, 2
 	delay 40
 	waitmoncry
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
@@ -40,26 +40,26 @@ AquaHideout_B1F_EventScript_Electrode1:: @ 82339EB
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq AquaHideout_B1F_EventScript_DefeatedElectrode1
+	goto_if_eq AquaHideout_B1F_EventScript_DefeatedMerlin1
 	compare VAR_RESULT, B_OUTCOME_RAN
-	goto_if_eq AquaHideout_B1F_EventScript_DefeatedElectrode1
+	goto_if_eq AquaHideout_B1F_EventScript_DefeatedMerlin1
 	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
-	goto_if_eq AquaHideout_B1F_EventScript_DefeatedElectrode1
-	setflag FLAG_DEFEATED_ELECTRODE_1_AQUA_HIDEOUT
+	goto_if_eq AquaHideout_B1F_EventScript_DefeatedMerlin1
+	setflag FLAG_DEFEATED_MERLIN_1_AQUA_HIDEOUT
 	release
 	end
 
-AquaHideout_B1F_EventScript_DefeatedElectrode1:: @ 8233A2F
-	setflag FLAG_DEFEATED_ELECTRODE_1_AQUA_HIDEOUT
+AquaHideout_B1F_EventScript_DefeatedMerlin1:: @ 8233A2F
+	setflag FLAG_DEFEATED_MERLIN_1_AQUA_HIDEOUT
 	goto Common_EventScript_RemoveStaticPokemon
 	end
 
-AquaHideout_B1F_EventScript_Electrode2:: @ 8233A38
+AquaHideout_B1F_EventScript_Merlin2:: @ 8233A38
 	lock
 	faceplayer
-	setwildbattle SPECIES_ELECTRODE, 30, ITEM_NONE
+	setwildbattle SPECIES_MERLIN, 30, ITEM_NONE
 	waitse
-	playmoncry SPECIES_ELECTRODE, 2
+	playmoncry SPECIES_MERLIN, 2
 	delay 40
 	waitmoncry
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
@@ -67,17 +67,17 @@ AquaHideout_B1F_EventScript_Electrode2:: @ 8233A38
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq AquaHideout_B1F_EventScript_DefeatedElectrode2
+	goto_if_eq AquaHideout_B1F_EventScript_DefeatedMerlin2
 	compare VAR_RESULT, B_OUTCOME_RAN
-	goto_if_eq AquaHideout_B1F_EventScript_DefeatedElectrode2
+	goto_if_eq AquaHideout_B1F_EventScript_DefeatedMerlin2
 	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
-	goto_if_eq AquaHideout_B1F_EventScript_DefeatedElectrode2
-	setflag FLAG_DEFEATED_ELECTRODE_2_AQUA_HIDEOUT
+	goto_if_eq AquaHideout_B1F_EventScript_DefeatedMerlin2
+	setflag FLAG_DEFEATED_MERLIN_2_AQUA_HIDEOUT
 	release
 	end
 
-AquaHideout_B1F_EventScript_DefeatedElectrode2:: @ 8233A7C
-	setflag FLAG_DEFEATED_ELECTRODE_2_AQUA_HIDEOUT
+AquaHideout_B1F_EventScript_DefeatedMerlin2:: @ 8233A7C
+	setflag FLAG_DEFEATED_MERLIN_2_AQUA_HIDEOUT
 	goto Common_EventScript_RemoveStaticPokemon
 	end
 

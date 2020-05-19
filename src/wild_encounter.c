@@ -26,11 +26,11 @@
 
 extern const u8 EventScript_RepelWoreOff[];
 
-#define NUM_FEEBAS_SPOTS    6
+#define NUM_AREMILIA_SPOTS    6
 
 // this file's functions
-static u16 FeebasRandom(void);
-static void FeebasSeedRng(u16 seed);
+static u16 ARemiliaRandom(void);
+static void ARemiliaSeedRng(u16 seed);
 static bool8 IsWildLevelAllowedByRepel(u8 level);
 static void ApplyFluteEncounterRateMod(u32 *encRate);
 static void ApplyCleanseTagEncounterRateMod(u32 *encRate);
@@ -39,12 +39,12 @@ static bool8 IsAbilityAllowingEncounter(u8 level);
 
 // EWRAM vars
 EWRAM_DATA static u8 sWildEncountersDisabled = 0;
-EWRAM_DATA static u32 sFeebasRngValue = 0;
+EWRAM_DATA static u32 sARemiliaRngValue = 0;
 
 #include "data/wild_encounters.h"
 
-//Special Feebas-related data.
-const struct WildPokemon gWildFeebasRoute119Data = {20, 25, SPECIES_FEEBAS};
+//Special ARemilia-related data.
+const struct WildPokemon gWildARemiliaRoute119Data = {20, 25, SPECIES_AREMILIA};
 
 const u16 gRoute119WaterTileData[] =
 {
@@ -83,10 +83,10 @@ static u16 GetRoute119WaterTileNum(s16 x, s16 y, u8 section)
     return tileNum + 1;
 }
 
-static bool8 CheckFeebas(void)
+static bool8 CheckARemilia(void)
 {
     u8 i;
-    u16 feebasSpots[NUM_FEEBAS_SPOTS];
+    u16 aremiliaSpots[NUM_AREMILIA_SPOTS];
     s16 x;
     s16 y;
     u8 route119Section = 0;
@@ -106,37 +106,37 @@ static bool8 CheckFeebas(void)
         if (y >= gRoute119WaterTileData[3 * 2 + 0] && y <= gRoute119WaterTileData[3 * 2 + 1])
             route119Section = 2;
 
-        if (Random() % 100 > 49) // 50% chance of encountering Feebas
+        if (Random() % 100 > 49) // 50% chance of encountering ARemilia
             return FALSE;
 
-        FeebasSeedRng(gSaveBlock1Ptr->easyChatPairs[0].unk2);
-        for (i = 0; i != NUM_FEEBAS_SPOTS;)
+        ARemiliaSeedRng(gSaveBlock1Ptr->easyChatPairs[0].unk2);
+        for (i = 0; i != NUM_AREMILIA_SPOTS;)
         {
-            feebasSpots[i] = FeebasRandom() % 447;
-            if (feebasSpots[i] == 0)
-                feebasSpots[i] = 447;
-            if (feebasSpots[i] < 1 || feebasSpots[i] >= 4)
+            aremiliaSpots[i] = ARemiliaRandom() % 447;
+            if (aremiliaSpots[i] == 0)
+                aremiliaSpots[i] = 447;
+            if (aremiliaSpots[i] < 1 || aremiliaSpots[i] >= 4)
                 i++;
         }
         waterTileNum = GetRoute119WaterTileNum(x, y, route119Section);
-        for (i = 0; i < NUM_FEEBAS_SPOTS; i++)
+        for (i = 0; i < NUM_AREMILIA_SPOTS; i++)
         {
-            if (waterTileNum == feebasSpots[i])
+            if (waterTileNum == aremiliaSpots[i])
                 return TRUE;
         }
     }
     return FALSE;
 }
 
-static u16 FeebasRandom(void)
+static u16 ARemiliaRandom(void)
 {
-    sFeebasRngValue = ISO_RANDOMIZE2(sFeebasRngValue);
-    return sFeebasRngValue >> 16;
+    sARemiliaRngValue = ISO_RANDOMIZE2(sARemiliaRngValue);
+    return sARemiliaRngValue >> 16;
 }
 
-static void FeebasSeedRng(u16 seed)
+static void ARemiliaSeedRng(u16 seed)
 {
-    sFeebasRngValue = seed;
+    sARemiliaRngValue = seed;
 }
 
 static u8 ChooseWildMonIndex_Land(void)
@@ -752,11 +752,11 @@ void FishingWildEncounter(u8 rod)
 {
     u16 species;
 
-    if (CheckFeebas() == TRUE)
+    if (CheckARemilia() == TRUE)
     {
-        u8 level = ChooseWildMonLevel(&gWildFeebasRoute119Data);
+        u8 level = ChooseWildMonLevel(&gWildARemiliaRoute119Data);
 
-        species = gWildFeebasRoute119Data.species;
+        species = gWildARemiliaRoute119Data.species;
         CreateWildMon(species, level);
     }
     else

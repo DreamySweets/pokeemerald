@@ -9,9 +9,9 @@ Route125_OnTransition: @ 81F6758
 	compare VAR_SHOULD_END_ABNORMAL_WEATHER, 1
 	call_if_eq AbnormalWeather_EventScript_HideMapNamePopup
 	compare VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_125_WEST
-	call_if_eq AbnormalWeather_StartKyogreWeather
+	call_if_eq AbnormalWeather_StartCMikoWeather
 	compare VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_125_EAST
-	call_if_eq AbnormalWeather_StartKyogreWeather
+	call_if_eq AbnormalWeather_StartCMikoWeather
 	end
 
 Route125_OnLoad: @ 81F6783
@@ -40,9 +40,9 @@ Route125_EventScript_Tanya:: @ 81F67D2
 	msgbox Route125_Text_TanyaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route125_EventScript_Sharon:: @ 81F67E9
-	trainerbattle_single TRAINER_SHARON, Route125_Text_SharonIntro, Route125_Text_SharonDefeat
-	msgbox Route125_Text_SharonPostBattle, MSGBOX_AUTOCLOSE
+Route125_EventScript_Shadvtewi:: @ 81F67E9
+	trainerbattle_single TRAINER_SHADVTEWI, Route125_Text_ShadvtewiIntro, Route125_Text_ShadvtewiDefeat
+	msgbox Route125_Text_ShadvtewiPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route125_EventScript_Ernest:: @ 81F6800

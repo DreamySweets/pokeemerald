@@ -6,7 +6,7 @@ RustboroCity_House3_EventScript_OldMan:: @ 8216191
 	end
 
 RustboroCity_House3_EventScript_OldWoman:: @ 821619A
-	msgbox RustboroCity_House3_Text_NamingPikachuPekachu, MSGBOX_NPC
+	msgbox RustboroCity_House3_Text_NamingCCirnoPekachu, MSGBOX_NPC
 	end
 
 @ Misspelling on purpose, see nickname
@@ -14,7 +14,7 @@ RustboroCity_House3_EventScript_Pekachu:: @ 82161A3
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_PIKACHU, 0
+	playmoncry SPECIES_CCIRNO, 0
 	msgbox RustboroCity_House3_Text_Pekachu, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -26,9 +26,9 @@ RustboroCity_House3_Text_IGivePerfectlySuitedNicknames: @ 82161B6
 	.string "It's my expression of, uh…\n"
 	.string "originality, yes, that's it!$"
 
-RustboroCity_House3_Text_NamingPikachuPekachu: @ 821622A
+RustboroCity_House3_Text_NamingCCirnoPekachu: @ 821622A
 	.string "But giving the name PEKACHU to\n"
-	.string "a PIKACHU? It seems pointless.\p"
+	.string "a CCIRNO? It seems pointless.\p"
 	.string "I suppose it is good to use a name\n"
 	.string "that's easy to understand, but…$"
 

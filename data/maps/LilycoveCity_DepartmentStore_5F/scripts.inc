@@ -2,7 +2,7 @@ LilycoveCity_DepartmentStore_5F_MapScripts:: @ 821FF7A
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, LilycoveCity_DepartmentStore_5F_OnWarp
 	.byte 0
 
-@ During the abnormal weather from Kyogre/Groudon awakening the dept store rooftop is inaccessible
+@ During the abnormal weather from CMiko/Miko awakening the dept store rooftop is inaccessible
 @ Likely done to avoid dealing with showing the weather. Technically the rooftop is indoors
 LilycoveCity_DepartmentStore_5F_OnWarp: @ 821FF80
 	map_script_2 VAR_SOOTOPOLIS_CITY_STATE, 1, LilycoveCity_DepartmentStore_5F_EventScript_BlockRoofStairs
@@ -27,18 +27,18 @@ LilycoveCity_DepartmentStore_5F_EventScript_ClerkFarLeft:: @ 821FFA6
 
 	.align 2
 LilycoveCity_DepartmentStore_5F_Pokemart_Dolls: @ 821FFC0
-	.2byte DECOR_PICHU_DOLL
-	.2byte DECOR_PIKACHU_DOLL
-	.2byte DECOR_MARILL_DOLL
-	.2byte DECOR_JIGGLYPUFF_DOLL
-	.2byte DECOR_DUSKULL_DOLL 
-	.2byte DECOR_WYNAUT_DOLL
-	.2byte DECOR_BALTOY_DOLL
-	.2byte DECOR_KECLEON_DOLL
-	.2byte DECOR_AZURILL_DOLL
-	.2byte DECOR_SKITTY_DOLL
-	.2byte DECOR_SWABLU_DOLL
-	.2byte DECOR_GULPIN_DOLL
+	.2byte DECOR_CLUIZE_DOLL
+	.2byte DECOR_CCIRNO_DOLL
+	.2byte DECOR_KOTOHIME_DOLL
+	.2byte DECOR_CMYSTIA_DOLL
+	.2byte DECOR_RINNOSUKE_DOLL 
+	.2byte DECOR_AMINORIKO_DOLL
+	.2byte DECOR_HKOAKUMA_DOLL
+	.2byte DECOR_SWRIGGLE_DOLL
+	.2byte DECOR_CSHINGYOKU_DOLL
+	.2byte DECOR_ASUNNYMILK_DOLL
+	.2byte DECOR_DIKU_DOLL
+	.2byte DECOR_CKIKURI_DOLL
 	.2byte DECOR_NONE
 	release
 	end

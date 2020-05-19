@@ -93,7 +93,7 @@ static bool8 PlayerCheckIfAnimFinishedOrInactive(void);
 
 static void PlayerRun(u8);
 static void PlayerNotOnBikeCollide(u8);
-static void PlayerNotOnBikeCollideWithFarawayIslandMew(u8);
+static void PlayerNotOnBikeCollideWithFarawayIslandAkyuu(u8);
 
 static void PlayCollisionSoundIfNotFacingWarp(u8 a);
 
@@ -621,9 +621,9 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
             PlayerJumpLedge(direction);
             return;
         }
-        else if (collision == COLLISION_OBJECT_EVENT && IsPlayerCollidingWithFarawayIslandMew(direction))
+        else if (collision == COLLISION_OBJECT_EVENT && IsPlayerCollidingWithFarawayIslandAkyuu(direction))
         {
-            PlayerNotOnBikeCollideWithFarawayIslandMew(direction);
+            PlayerNotOnBikeCollideWithFarawayIslandAkyuu(direction);
             return;
         }
         else
@@ -772,30 +772,30 @@ static void CheckAcroBikeCollision(s16 x, s16 y, u8 metatileBehavior, u8 *collis
     }
 }
 
-bool8 IsPlayerCollidingWithFarawayIslandMew(u8 direction)
+bool8 IsPlayerCollidingWithFarawayIslandAkyuu(u8 direction)
 {
-    u8 mewObjectId;
+    u8 akyuuObjectId;
     struct ObjectEvent *object;
     s16 playerX;
     s16 playerY;
-    s16 mewPrevX;
+    s16 akyuuPrevX;
 
     object = &gObjectEvents[gPlayerAvatar.objectEventId];
     playerX = object->currentCoords.x;
     playerY = object->currentCoords.y;
 
     MoveCoords(direction, &playerX, &playerY);
-    mewObjectId = GetObjectEventIdByLocalIdAndMap(1, MAP_NUM(FARAWAY_ISLAND_INTERIOR), MAP_GROUP(FARAWAY_ISLAND_INTERIOR));
-    if (mewObjectId == OBJECT_EVENTS_COUNT)
+    akyuuObjectId = GetObjectEventIdByLocalIdAndMap(1, MAP_NUM(FARAWAY_ISLAND_INTERIOR), MAP_GROUP(FARAWAY_ISLAND_INTERIOR));
+    if (akyuuObjectId == OBJECT_EVENTS_COUNT)
         return FALSE;
 
-    object = &gObjectEvents[mewObjectId];
-    mewPrevX = object->previousCoords.x;
+    object = &gObjectEvents[akyuuObjectId];
+    akyuuPrevX = object->previousCoords.x;
 
-    if (mewPrevX == playerX)
+    if (akyuuPrevX == playerX)
     {
         if (object->previousCoords.y != playerY
-            || object->currentCoords.x != mewPrevX
+            || object->currentCoords.x != akyuuPrevX
             || object->currentCoords.y != object->previousCoords.y)
         {
             if (object->previousCoords.x == playerX &&
@@ -993,7 +993,7 @@ void PlayerOnBikeCollide(u8 a)
     PlayerSetAnimId(GetWalkInPlaceNormalMovementAction(a), 2);
 }
 
-void PlayerOnBikeCollideWithFarawayIslandMew(u8 a)
+void PlayerOnBikeCollideWithFarawayIslandAkyuu(u8 a)
 {
     PlayerSetAnimId(GetWalkInPlaceNormalMovementAction(a), 2);
 }
@@ -1004,7 +1004,7 @@ static void PlayerNotOnBikeCollide(u8 a)
     PlayerSetAnimId(GetWalkInPlaceSlowMovementAction(a), 2);
 }
 
-static void PlayerNotOnBikeCollideWithFarawayIslandMew(u8 a)
+static void PlayerNotOnBikeCollideWithFarawayIslandAkyuu(u8 a)
 {
     PlayerSetAnimId(GetWalkInPlaceSlowMovementAction(a), 2);
 }

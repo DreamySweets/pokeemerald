@@ -154,7 +154,7 @@ BerryTree_EventScript_ItemUsePlantBerry:: @ 8274482
 	end
 
 BerryTree_EventScript_WantToWater:: @ 827448D
-	checkitem ITEM_WAILMER_PAIL, 1
+	checkitem ITEM_DMEILING_PAIL, 1
 	compare VAR_RESULT, 0
 	goto_if_eq BerryTree_EventScript_DontWater
 	special ObjectEventInteractionGetBerryName
@@ -168,7 +168,7 @@ BerryTree_EventScript_DontWater:: @ 82744BE
 	releaseall
 	end
 
-BerryTree_EventScript_ItemUseWailmerPail:: @ 82744C0
+BerryTree_EventScript_ItemUseDMeilingPail:: @ 82744C0
 	special ObjectEventInteractionGetBerryTreeData
 	lockall
 BerryTree_EventScript_WaterBerry:: @ 82744C4
@@ -251,7 +251,7 @@ BerryTree_Text_BerryLeftUnpicked: @ 82746CB
 
 BerryTree_Text_WantToWater: @ 82746E4
 	.string "Want to water the {STR_VAR_1} with the\n"
-	.string "WAILMER PAIL?$"
+	.string "DMEILING PAIL?$"
 
 BerryTree_Text_WateredTheBerry: @ 8274710
 	.string "{PLAYER} watered the {STR_VAR_1}.$"

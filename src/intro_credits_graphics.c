@@ -47,10 +47,10 @@ static const u16 gIntro2MayPalette[] = INCBIN_U16("graphics/intro/intro2_may.gba
 static const u16 gUnknown_085F3490[0xF0] = {0};
 static const u32 gIntro2MayTiles[] = INCBIN_U32("graphics/intro/intro2_may.4bpp.lz");
 static const u32 gIntro2BicycleTiles[] = INCBIN_U32("graphics/intro/intro2_bicycle.4bpp.lz");
-static const u16 gIntro2LatiosPalette[] = INCBIN_U16("graphics/intro/intro2_latios.gbapal");
-static const u32 gIntro2LatiosTiles[] = INCBIN_U32("graphics/intro/intro2_latios.4bpp.lz");
-static const u16 gIntro2LatiasPalette[] = INCBIN_U16("graphics/intro/intro2_latias.gbapal");
-static const u32 gIntro2LatiasTiles[] = INCBIN_U32("graphics/intro/intro2_latias.4bpp.lz");
+static const u16 gIntro2CKasenPalette[] = INCBIN_U16("graphics/intro/intro2_ckasen.gbapal");
+static const u32 gIntro2CKasenTiles[] = INCBIN_U32("graphics/intro/intro2_ckasen.4bpp.lz");
+static const u16 gIntro2MamizouPalette[] = INCBIN_U16("graphics/intro/intro2_mamizou.gbapal");
+static const u32 gIntro2MamizouTiles[] = INCBIN_U32("graphics/intro/intro2_mamizou.4bpp.lz");
 
 static void sub_817B62C(struct Sprite *sprite);
 static void nullsub_65(struct Sprite *sprite);
@@ -590,29 +590,29 @@ const struct CompressedSpriteSheet gIntro2BicycleSpriteSheet[] =
 static const struct CompressedSpriteSheet gUnknown_085F52EC[] =
 {
     {
-        .data = gIntro2FlygonGfx,
+        .data = gIntro2ASanaeGfx,
         .size = 0x1000,
         .tag = 1004
     },
     {}
 };
 
-const struct CompressedSpriteSheet gIntro2FlygonSpriteSheet[] =
+const struct CompressedSpriteSheet gIntro2ASanaeSpriteSheet[] =
 {
     {
-        .data = gIntro2FlygonGfx,
+        .data = gIntro2ASanaeGfx,
         .size = 0x1000,
         .tag = 1005
     },
     {}
 };
 
-const struct SpritePalette gIntroBikeAndFlygonPalette[] =
+const struct SpritePalette gIntroBikeAndASanaePalette[] =
 {
     { .data = gIntro2BrendanNoTurnPal, .tag = 1002 },
     { .data = gIntro2BrendanNoTurnPal, .tag = 1003 },
-    { .data = gIntro2FlygonPal,        .tag = 1004 },
-    { .data = gIntro2FlygonPal,        .tag = 1005 },
+    { .data = gIntro2ASanaePal,        .tag = 1004 },
+    { .data = gIntro2ASanaePal,        .tag = 1005 },
     {}
 };
 
@@ -649,7 +649,7 @@ const struct CompressedSpriteSheet gUnknown_085F5354[] =
 static const struct CompressedSpriteSheet gUnknown_085F5364[] =
 {
     {
-        .data = gIntro2LatiosTiles,
+        .data = gIntro2CKasenTiles,
         .size = 0x1000,
         .tag = 1004
     },
@@ -659,7 +659,7 @@ static const struct CompressedSpriteSheet gUnknown_085F5364[] =
 static const struct CompressedSpriteSheet gUnknown_085F5374[] =
 {
     {
-        .data = gIntro2LatiasTiles,
+        .data = gIntro2MamizouTiles,
         .size = 0x1000,
         .tag = 1005
     },
@@ -670,8 +670,8 @@ const struct SpritePalette gUnknown_085F5384[] =
 {
     { .data = gIntro2BrendanPalette, .tag = 1002 },
     { .data = gIntro2MayPalette,     .tag = 1003 },
-    { .data = gIntro2LatiosPalette,  .tag = 1004 },
-    { .data = gIntro2LatiasPalette,  .tag = 1005 },
+    { .data = gIntro2CKasenPalette,  .tag = 1004 },
+    { .data = gIntro2MamizouPalette,  .tag = 1005 },
     {}
 };
 
@@ -1098,19 +1098,19 @@ static void sub_817B8E8(struct Sprite* sprite)
 static u8 sub_817B948(s16 a, s16 b)
 {
     u8 sprite = CreateSprite(&gUnknown_085F528C, a - 32, b, 5);
-    u8 latios = CreateSprite(&gUnknown_085F528C, a + 32, b, 6);
-    gSprites[latios].data[0] = sprite;
-    StartSpriteAnim(&gSprites[latios], 1);
-    gSprites[latios].callback = &sub_817B8E8;
+    u8 ckasen = CreateSprite(&gUnknown_085F528C, a + 32, b, 6);
+    gSprites[ckasen].data[0] = sprite;
+    StartSpriteAnim(&gSprites[ckasen], 1);
+    gSprites[ckasen].callback = &sub_817B8E8;
     return sprite;
 }
 
-u8 intro_create_flygon_sprite(s16 a, s16 b)
+u8 intro_create_asanae_sprite(s16 a, s16 b)
 {
     u8 sprite = CreateSprite(&gUnknown_085F52A4, a - 32, b, 5);
-    u8 flygon = CreateSprite(&gUnknown_085F52A4, a + 32, b, 6);
-    gSprites[flygon].data[0] = sprite;
-    StartSpriteAnim(&gSprites[flygon], 1);
-    gSprites[flygon].callback = &sub_817B8E8;
+    u8 asanae = CreateSprite(&gUnknown_085F52A4, a + 32, b, 6);
+    gSprites[asanae].data[0] = sprite;
+    StartSpriteAnim(&gSprites[asanae], 1);
+    gSprites[asanae].callback = &sub_817B8E8;
     return sprite;
 }

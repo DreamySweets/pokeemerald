@@ -25,15 +25,15 @@ Route101_EventScript_StartBirchRescue:: @ 81EBCDE
 	setobjectxy 4, 0, 16
 	applymovement OBJ_EVENT_ID_PLAYER, Route101_Movement_EnterScene
 	applymovement 2, Route101_Movement_BirchRunAway1
-	applymovement 4, Route101_Movement_PoochyenaChase1
+	applymovement 4, Route101_Movement_DYuyukoChase1
 	waitmovement 0
-	applymovement 4, Route101_Movement_PoochyenaChaseInCircles
+	applymovement 4, Route101_Movement_DYuyukoChaseInCircles
 	applymovement 2, Route101_Movement_BirchRunInCircles
 	waitmovement 0
 	applymovement 2, Common_Movement_WalkInPlaceFastestRight
 	waitmovement 0
-	applymovement 4, Route101_Movement_PoochyenaFaceBirch
-	applymovement 2, Route101_Movement_BirchFacePoochyena
+	applymovement 4, Route101_Movement_DYuyukoFaceBirch
+	applymovement 2, Route101_Movement_BirchFaceDYuyuko
 	waitmovement 0
 	msgbox Route101_Text_PleaseHelp, MSGBOX_DEFAULT
 	closemessage
@@ -80,7 +80,7 @@ Route101_Movement_PreventExitNorth: @ 81EBD94
 	walk_down
 	step_end
 
-Route101_Movement_PoochyenaChaseInCircles: @ 81EBD96
+Route101_Movement_DYuyukoChaseInCircles: @ 81EBD96
 	walk_fast_up
 	walk_fast_up
 	walk_fast_up
@@ -113,7 +113,7 @@ Route101_Movement_PoochyenaChaseInCircles: @ 81EBD96
 	walk_fast_left
 	step_end
 
-Route101_Movement_PoochyenaChase1: @ 81EBDB5
+Route101_Movement_DYuyukoChase1: @ 81EBDB5
 	walk_fast_up
 	walk_fast_right
 	walk_fast_right
@@ -125,7 +125,7 @@ Route101_Movement_PoochyenaChase1: @ 81EBDB5
 @ Leftover data? This command is unused.
 	step_end
 
-Route101_Movement_PoochyenaFaceBirch: @ 81EBDBD
+Route101_Movement_DYuyukoFaceBirch: @ 81EBDBD
 	walk_in_place_fast_left
 	walk_in_place_fast_left
 	walk_in_place_fast_left
@@ -185,7 +185,7 @@ Route101_Movement_BirchRunAway1: @ 81EBDE7
 @ Leftover data? This command is unused.
 	step_end
 
-Route101_Movement_BirchFacePoochyena: @ 81EBDEF
+Route101_Movement_BirchFaceDYuyuko: @ 81EBDEF
 	walk_in_place_fast_right
 	walk_in_place_fast_right
 	walk_in_place_fast_right
@@ -231,7 +231,7 @@ Route101_EventScript_BirchsBag:: @ 81EBE16
 	waitmovement 0
 	msgbox Route101_Text_YouSavedMe, MSGBOX_DEFAULT
 	special HealPlayerParty
-	setflag FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE
+	setflag FLAG_HIDE_ROUTE_101_BIRCH_HLUNASA_BATTLE
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH
 	setflag FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG
 	setvar VAR_BIRCH_LAB_STATE, 2

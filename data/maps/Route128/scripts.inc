@@ -8,10 +8,10 @@ Route128_OnTransition: @ 81F6B43
 	end
 
 Route128_OnFrame: @ 81F6B4D
-	map_script_2 VAR_ROUTE128_STATE, 1, Route128_EventScript_KyogreAwakenedScene
+	map_script_2 VAR_ROUTE128_STATE, 1, Route128_EventScript_CMikoAwakenedScene
 	.2byte 0
 
-Route128_EventScript_KyogreAwakenedScene:: @ 81F6B57
+Route128_EventScript_CMikoAwakenedScene:: @ 81F6B57
 	lockall
 	delay 20
 	applymovement 4, Route128_Movement_ArchieLookAround

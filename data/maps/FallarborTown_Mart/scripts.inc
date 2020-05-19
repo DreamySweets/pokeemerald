@@ -30,34 +30,34 @@ FallarborTown_Mart_Pokemart: @ 81FFCD8
 	end
 
 FallarborTown_Mart_EventScript_Woman:: @ 81FFCF4
-	msgbox FallarborTown_Mart_Text_DecidingSkittyEvolve, MSGBOX_NPC
+	msgbox FallarborTown_Mart_Text_DecidingASunnyMilkEvolve, MSGBOX_NPC
 	end
 
 FallarborTown_Mart_EventScript_PokefanM:: @ 81FFCFD
 	msgbox FallarborTown_Mart_Text_SellNuggetIFound, MSGBOX_NPC
 	end
 
-FallarborTown_Mart_EventScript_Skitty:: @ 81FFD06
+FallarborTown_Mart_EventScript_ASunnyMilk:: @ 81FFD06
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_SKITTY, 0
-	msgbox FallarborTown_Mart_Text_Skitty, MSGBOX_DEFAULT
+	playmoncry SPECIES_ASUNNYMILK, 0
+	msgbox FallarborTown_Mart_Text_ASunnyMilk, MSGBOX_DEFAULT
 	waitmoncry
 	release
 	end
 
-FallarborTown_Mart_Text_DecidingSkittyEvolve: @ 81FFD19
+FallarborTown_Mart_Text_DecidingASunnyMilkEvolve: @ 81FFD19
 	.string "I'm having a hard time deciding if I\n"
-	.string "should make my SKITTY evolve or not.\p"
+	.string "should make my ASUNNYMILK evolve or not.\p"
 	.string "I only have to use this MOON STONE,\n"
 	.string "but it's so hard to decide…\p"
 	.string "If I make it evolve, it will become\n"
 	.string "much stronger.\p"
 	.string "But it will look so different, too.$"
 
-FallarborTown_Mart_Text_Skitty: @ 81FFDFA
-	.string "SKITTY: Miyao?$"
+FallarborTown_Mart_Text_ASunnyMilk: @ 81FFDFA
+	.string "ASUNNYMILK: Miyao?$"
 
 FallarborTown_Mart_Text_SellNuggetIFound: @ 81FFE09
 	.string "This NUGGET I found here…\n"

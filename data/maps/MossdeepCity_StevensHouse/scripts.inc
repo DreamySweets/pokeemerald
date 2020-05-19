@@ -70,66 +70,66 @@ MossdeepCity_StevensHouse_Movement_StevenReturn: @ 822283B
 	walk_in_place_fastest_up
 	step_end
 
-MossdeepCity_StevensHouse_EventScript_BeldumPokeball:: @ 8222841
+MossdeepCity_StevensHouse_EventScript_CSeigaPokeball:: @ 8222841
 	lockall
-	msgbox MossdeepCity_StevensHouse_Text_TakeBallContainingBeldum, MSGBOX_YESNO
+	msgbox MossdeepCity_StevensHouse_Text_TakeBallContainingCSeiga, MSGBOX_YESNO
 	compare VAR_RESULT, NO
-	goto_if_eq MossdeepCity_StevensHouse_EventScript_LeaveBeldum
-	goto MossdeepCity_StevensHouse_EventScript_GiveBeldum
+	goto_if_eq MossdeepCity_StevensHouse_EventScript_LeaveCSeiga
+	goto MossdeepCity_StevensHouse_EventScript_GiveCSeiga
 	end
 
-MossdeepCity_StevensHouse_EventScript_LeaveBeldum:: @ 822285B
+MossdeepCity_StevensHouse_EventScript_LeaveCSeiga:: @ 822285B
 	msgbox MossdeepCity_StevensHouse_Text_LeftPokeBallWhereItWas, MSGBOX_DEFAULT
 	releaseall
 	end
 
-MossdeepCity_StevensHouse_EventScript_GiveBeldum:: @ 8222865
-	setvar VAR_TEMP_1, SPECIES_BELDUM
-	givemon SPECIES_BELDUM, 5, ITEM_NONE
+MossdeepCity_StevensHouse_EventScript_GiveCSeiga:: @ 8222865
+	setvar VAR_TEMP_1, SPECIES_CSEIGA
+	givemon SPECIES_CSEIGA, 5, ITEM_NONE
 	compare VAR_RESULT, 0
-	goto_if_eq MossdeepCity_StevensHouse_EventScript_SendBeldumParty
+	goto_if_eq MossdeepCity_StevensHouse_EventScript_SendCSeigaParty
 	compare VAR_RESULT, 1
-	goto_if_eq MossdeepCity_StevensHouse_EventScript_SendBeldumPC
+	goto_if_eq MossdeepCity_StevensHouse_EventScript_SendCSeigaPC
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
-MossdeepCity_StevensHouse_EventScript_SendBeldumParty:: @ 8222895
-	call MossdeepCity_StevensHouse_EventScript_ReceivedBeldumFanfare
+MossdeepCity_StevensHouse_EventScript_SendCSeigaParty:: @ 8222895
+	call MossdeepCity_StevensHouse_EventScript_ReceivedCSeigaFanfare
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
 	compare VAR_RESULT, NO
-	goto_if_eq MossdeepCity_StevensHouse_EventScript_ReceivedBeldum
+	goto_if_eq MossdeepCity_StevensHouse_EventScript_ReceivedCSeiga
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
-	goto MossdeepCity_StevensHouse_EventScript_ReceivedBeldum
+	goto MossdeepCity_StevensHouse_EventScript_ReceivedCSeiga
 	end
 
-MossdeepCity_StevensHouse_EventScript_SendBeldumPC:: @ 82228BD
-	call MossdeepCity_StevensHouse_EventScript_ReceivedBeldumFanfare
+MossdeepCity_StevensHouse_EventScript_SendCSeigaPC:: @ 82228BD
+	call MossdeepCity_StevensHouse_EventScript_ReceivedCSeigaFanfare
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
 	compare VAR_RESULT, NO
-	goto_if_eq MossdeepCity_StevensHouse_EventScript_BeldumTransferredToPC
+	goto_if_eq MossdeepCity_StevensHouse_EventScript_CSeigaTransferredToPC
 	call Common_EventScript_NameReceivedBoxMon
-	goto MossdeepCity_StevensHouse_EventScript_BeldumTransferredToPC
+	goto MossdeepCity_StevensHouse_EventScript_CSeigaTransferredToPC
 	end
 
-MossdeepCity_StevensHouse_EventScript_BeldumTransferredToPC:: @ 82228E0
+MossdeepCity_StevensHouse_EventScript_CSeigaTransferredToPC:: @ 82228E0
 	call Common_EventScript_TransferredToPC
-	goto MossdeepCity_StevensHouse_EventScript_ReceivedBeldum
+	goto MossdeepCity_StevensHouse_EventScript_ReceivedCSeiga
 	end
 
-MossdeepCity_StevensHouse_EventScript_ReceivedBeldumFanfare:: @ 82228EB
-	bufferspeciesname 1, SPECIES_BELDUM
+MossdeepCity_StevensHouse_EventScript_ReceivedCSeigaFanfare:: @ 82228EB
+	bufferspeciesname 1, SPECIES_CSEIGA
 	removeobject 2
 	playfanfare MUS_FANFA4
-	message MossdeepCity_StevensHouse_Text_ObtainedBeldum
+	message MossdeepCity_StevensHouse_Text_ObtainedCSeiga
 	waitmessage
 	waitfanfare
-	bufferspeciesname 0, SPECIES_BELDUM
+	bufferspeciesname 0, SPECIES_CSEIGA
 	return
 
-MossdeepCity_StevensHouse_EventScript_ReceivedBeldum:: @ 8222901
-	setflag FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_BELDUM_POKEBALL
-	setflag FLAG_RECEIVED_BELDUM
+MossdeepCity_StevensHouse_EventScript_ReceivedCSeiga:: @ 8222901
+	setflag FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_CSEIGA_POKEBALL
+	setflag FLAG_RECEIVED_CSEIGA
 	releaseall
 	end
 
@@ -180,14 +180,14 @@ MossdeepCity_StevensHouse_Text_UnderwateCavernBetweenMossdeepSootopolis: @ 8222B
 	.string "You know, the one that CAPT. STERN\n"
 	.string "found in his submarine.$"
 
-MossdeepCity_StevensHouse_Text_TakeBallContainingBeldum: @ 8222B9E
+MossdeepCity_StevensHouse_Text_TakeBallContainingCSeiga: @ 8222B9E
 	.string "{PLAYER} checked the POKé BALL.\p"
 	.string "It contained the POKéMON\n"
-	.string "BELDUM.\p"
+	.string "CSEIGA.\p"
 	.string "Take the POKé BALL?$"
 
-MossdeepCity_StevensHouse_Text_ObtainedBeldum: @ 8222BED
-	.string "{PLAYER} obtained a BELDUM.$"
+MossdeepCity_StevensHouse_Text_ObtainedCSeiga: @ 8222BED
+	.string "{PLAYER} obtained a CSEIGA.$"
 
 @ Unused
 MossdeepCity_StevensHouse_Text_NoSpaceForAnotherMon: @ 8222C03
@@ -208,7 +208,7 @@ MossdeepCity_StevensHouse_Text_LetterFromSteven: @ 8222C4E
 	.string "I have a favor to ask of you.\p"
 	.string "I want you to take the POKé BALL on\n"
 	.string "the desk.\p"
-	.string "Inside it is a BELDUM, my favorite\n"
+	.string "Inside it is a CSEIGA, my favorite\n"
 	.string "POKéMON.\p"
 	.string "I'm counting on you.\p"
 	.string "May our paths cross someday.\p"

@@ -9,12 +9,12 @@ SootopolisCity_House4_EventScript_Woman:: @ 8226D1F
 	msgbox SootopolisCity_House4_Text_StrollUnderwaterWithPokemon, MSGBOX_NPC
 	end
 
-SootopolisCity_House4_EventScript_Azumarill:: @ 8226D28
+SootopolisCity_House4_EventScript_CYumeko:: @ 8226D28
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_AZUMARILL, 0
-	msgbox SootopolisCity_House4_Text_Azumarill, MSGBOX_DEFAULT
+	playmoncry SPECIES_CYUMEKO, 0
+	msgbox SootopolisCity_House4_Text_CYumeko, MSGBOX_DEFAULT
 	waitmoncry
 	release
 	end
@@ -34,6 +34,6 @@ SootopolisCity_House4_Text_StrollUnderwaterWithPokemon: @ 8226DEA
 	.string "beautiful to take an underwater\l"
 	.string "stroll with my POKéMON.$"
 
-SootopolisCity_House4_Text_Azumarill: @ 8226E7F
-	.string "AZUMARILL: Marurii.$"
+SootopolisCity_House4_Text_CYumeko: @ 8226E7F
+	.string "CYUMEKO: Marurii.$"
 

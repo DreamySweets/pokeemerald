@@ -23,7 +23,7 @@ MtPyre_1F_EventScript_PokefanF:: @ 8230F78
 	end
 
 MtPyre_1F_EventScript_Man:: @ 8230F81
-	msgbox MtPyre_1F_Text_RestingPlaceOfZigzagoon, MSGBOX_NPC
+	msgbox MtPyre_1F_Text_RestingPlaceOfHLunasa, MSGBOX_NPC
 	end
 
 MtPyre_1F_Text_TakeThisForYourOwnGood: @ 8230F8A
@@ -42,7 +42,7 @@ MtPyre_1F_Text_ComeToPayRespects: @ 823104F
 	.string "to the spirits of departed POKéMON?\p"
 	.string "You must care for your POKéMON a lot.$"
 
-MtPyre_1F_Text_RestingPlaceOfZigzagoon: @ 82310BA
+MtPyre_1F_Text_RestingPlaceOfHLunasa: @ 82310BA
 	.string "This is the final resting place of my\n"
-	.string "ZIGZAGOON. I cherished it…$"
+	.string "HLUNASA. I cherished it…$"
 

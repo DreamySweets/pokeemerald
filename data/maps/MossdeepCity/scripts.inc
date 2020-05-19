@@ -37,7 +37,7 @@ MossdeepCity_EventScript_SailorMagmaGone:: @ 81E4AE6
 	end
 
 MossdeepCity_EventScript_NinjaBoy:: @ 81E4AF0
-	msgbox MossdeepCity_Text_WailmerWatching, MSGBOX_NPC
+	msgbox MossdeepCity_Text_DMeilingWatching, MSGBOX_NPC
 	end
 
 MossdeepCity_EventScript_ExpertM:: @ 81E4AF9
@@ -326,13 +326,13 @@ MossdeepCity_Text_WhatToDoWithWeirdRock: @ 81E4DD7
 	.string "Yeah, you think so, too! What are you\n"
 	.string "supposed to do with some weird rock?$"
 
-MossdeepCity_Text_WailmerWatching: @ 81E4E22
+MossdeepCity_Text_DMeilingWatching: @ 81E4E22
 	.string "Around MOSSDEEP, you can see wild\n"
-	.string "WAILMER.\p"
+	.string "DMEILING.\p"
 	.string "It's called, uh…\n"
 	.string "What was it now…\p"
 	.string "WAI, WAI, WAI…\p"
-	.string "WAILMER watching!$"
+	.string "DMEILING watching!$"
 
 MossdeepCity_Text_SpaceCenterReceivedLetter: @ 81E4E90
 	.string "The island's SPACE CENTER has been\n"

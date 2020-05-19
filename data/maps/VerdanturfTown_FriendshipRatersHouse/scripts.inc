@@ -52,12 +52,12 @@ VerdanturfTown_FriendshipRatersHouse_EventScript_AdoresYou:: @ 82030D0
 	release
 	end
 
-VerdanturfTown_FriendshipRatersHouse_EventScript_Pikachu:: @ 82030DA
+VerdanturfTown_FriendshipRatersHouse_EventScript_CCirno:: @ 82030DA
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_PIKACHU, 0
-	msgbox VerdanturfTown_FriendshipRatersHouse_Text_Pikachu, MSGBOX_DEFAULT
+	playmoncry SPECIES_CCIRNO, 0
+	msgbox VerdanturfTown_FriendshipRatersHouse_Text_CCirno, MSGBOX_DEFAULT
 	waitmoncry
 	release
 	end
@@ -99,6 +99,6 @@ VerdanturfTown_FriendshipRatersHouse_Text_DetestsYou: @ 82032DF
 	.string "Your POKéMON simply detests you.\n"
 	.string "Doesn't that make you uncomfortable?$"
 
-VerdanturfTown_FriendshipRatersHouse_Text_Pikachu: @ 820334A
-	.string "PIKACHU: Pika pika!$"
+VerdanturfTown_FriendshipRatersHouse_Text_CCirno: @ 820334A
+	.string "CCIRNO: Pika pika!$"
 

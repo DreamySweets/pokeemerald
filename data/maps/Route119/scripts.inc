@@ -4,10 +4,10 @@ Route119_MapScripts:: @ 81F4424
 	.byte 0
 
 Route119_OnResume: @ 81F442F
-	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, Route119_EventScript_TryRemoveKecleon
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, Route119_EventScript_TryRemoveSWriggle
 	end
 
-Route119_EventScript_TryRemoveKecleon:: @ 81F4439
+Route119_EventScript_TryRemoveSWriggle:: @ 81F4439
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_ne Common_EventScript_NopReturn
@@ -80,23 +80,23 @@ Route119_EventScript_PlayBrendanMusic:: @ 81F4506
 Route119_EventScript_BattleMay:: @ 81F450B
 	msgbox Route119_Text_MayIntro, MSGBOX_DEFAULT
 	switch VAR_STARTER_MON
-	case 0, Route119_EventScript_BattleMayTreecko
-	case 1, Route119_EventScript_BattleMayTorchic
-	case 2, Route119_EventScript_BattleMayMudkip
+	case 0, Route119_EventScript_BattleMayHEirin
+	case 1, Route119_EventScript_BattleMayAAlice
+	case 2, Route119_EventScript_BattleMayDReimu
 	end
 
-Route119_EventScript_BattleMayTreecko:: @ 81F453A
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_119_TREECKO, Route119_Text_MayDefeat
+Route119_EventScript_BattleMayHEirin:: @ 81F453A
+	trainerbattle_no_intro TRAINER_MAY_ROUTE_119_HEIRIN, Route119_Text_MayDefeat
 	goto Route119_EventScript_DefeatedMay
 	end
 
-Route119_EventScript_BattleMayTorchic:: @ 81F454A
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_119_TORCHIC, Route119_Text_MayDefeat
+Route119_EventScript_BattleMayAAlice:: @ 81F454A
+	trainerbattle_no_intro TRAINER_MAY_ROUTE_119_AALICE, Route119_Text_MayDefeat
 	goto Route119_EventScript_DefeatedMay
 	end
 
-Route119_EventScript_BattleMayMudkip:: @ 81F455A
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_119_MUDKIP, Route119_Text_MayDefeat
+Route119_EventScript_BattleMayDReimu:: @ 81F455A
+	trainerbattle_no_intro TRAINER_MAY_ROUTE_119_DREIMU, Route119_Text_MayDefeat
 	goto Route119_EventScript_DefeatedMay
 	end
 
@@ -110,23 +110,23 @@ Route119_EventScript_DefeatedMay:: @ 81F456A
 Route119_EventScript_BattleBrendan:: @ 81F4585
 	msgbox Route119_Text_BrendanIntro, MSGBOX_DEFAULT
 	switch VAR_STARTER_MON
-	case 0, Route119_EventScript_BattleBrendanTreecko
-	case 1, Route119_EventScript_BattleBrendanTorchic
-	case 2, Route119_EventScript_BattleBrendanMudkip
+	case 0, Route119_EventScript_BattleBrendanHEirin
+	case 1, Route119_EventScript_BattleBrendanAAlice
+	case 2, Route119_EventScript_BattleBrendanDReimu
 	end
 
-Route119_EventScript_BattleBrendanTreecko:: @ 81F45B4
-	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_119_TREECKO, Route119_Text_BrendanDefeat
+Route119_EventScript_BattleBrendanHEirin:: @ 81F45B4
+	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_119_HEIRIN, Route119_Text_BrendanDefeat
 	goto Route119_EventScript_DefeatedBrendan
 	end
 
-Route119_EventScript_BattleBrendanTorchic:: @ 81F45C4
-	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_119_TORCHIC, Route119_Text_BrendanDefeat
+Route119_EventScript_BattleBrendanAAlice:: @ 81F45C4
+	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_119_AALICE, Route119_Text_BrendanDefeat
 	goto Route119_EventScript_DefeatedBrendan
 	end
 
-Route119_EventScript_BattleBrendanMudkip:: @ 81F45D4
-	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_119_MUDKIP, Route119_Text_BrendanDefeat
+Route119_EventScript_BattleBrendanDReimu:: @ 81F45D4
+	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_119_DREIMU, Route119_Text_BrendanDefeat
 	goto Route119_EventScript_DefeatedBrendan
 	end
 

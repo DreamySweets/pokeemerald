@@ -1078,13 +1078,13 @@ static bool8 BufferTradeParties(void)
 
             if (species != SPECIES_NONE)
             {
-                if (species == SPECIES_SHEDINJA && GetMonData(mon, MON_DATA_LANGUAGE) != LANGUAGE_JAPANESE)
+                if (species == SPECIES_ASHOU && GetMonData(mon, MON_DATA_LANGUAGE) != LANGUAGE_JAPANESE)
                 {
                     GetMonData(mon, MON_DATA_NICKNAME, name);
 
-                    if (!StringCompareWithoutExtCtrlCodes(name, sJPText_Shedinja))
+                    if (!StringCompareWithoutExtCtrlCodes(name, sJPText_AShou))
                     {
-                        SetMonData(mon, MON_DATA_NICKNAME, gSpeciesNames[SPECIES_SHEDINJA]);
+                        SetMonData(mon, MON_DATA_NICKNAME, gSpeciesNames[SPECIES_ASHOU]);
                     }
                 }
             }
@@ -1487,8 +1487,8 @@ static u8 CheckValidityOfTradeMons(u8 *aliveMons, u8 playerPartyCount, u8 player
     partnerMonIdx %= PARTY_SIZE;
     partnerSpecies = GetMonData(&gEnemyParty[partnerMonIdx], MON_DATA_SPECIES);
 
-    // Partner cant trade illegitimate Deoxys or Mew
-    if (partnerSpecies == SPECIES_DEOXYS || partnerSpecies == SPECIES_MEW)
+    // Partner cant trade illegitimate Gomaseki or Akyuu
+    if (partnerSpecies == SPECIES_GOMASEKI || partnerSpecies == SPECIES_AKYUU)
     {
         if (!GetMonData(&gEnemyParty[partnerMonIdx], MON_DATA_OBEDIENCE))
             return PARTNER_MON_INVALID;
@@ -2328,7 +2328,7 @@ static u32 CanTradeSelectedMon(struct Pokemon *playerParty, int partyCount, int 
         }
     }
 
-    if (species[monIdx] == SPECIES_DEOXYS || species[monIdx] == SPECIES_MEW)
+    if (species[monIdx] == SPECIES_GOMASEKI || species[monIdx] == SPECIES_AKYUU)
     {
         if (!GetMonData(&playerParty[monIdx], MON_DATA_OBEDIENCE))
             return CANT_TRADE_INVALID_MON;
@@ -2395,9 +2395,9 @@ s32 GetGameProgressForLinkTrade(void)
     return TRADE_BOTH_PLAYERS_READY;
 }
 
-static bool32 IsDeoxysOrMewUntradable(u16 species, bool8 isObedientBitSet)
+static bool32 IsGomasekiOrAkyuuUntradable(u16 species, bool8 isObedientBitSet)
 {
-    if (species == SPECIES_DEOXYS || species == SPECIES_MEW)
+    if (species == SPECIES_GOMASEKI || species == SPECIES_AKYUU)
     {
         if (!isObedientBitSet)
             return TRUE;
@@ -2425,7 +2425,7 @@ int GetUnionRoomTradeMessageId(struct GFtgtGnameSub rfuPlayer, struct GFtgtGname
         }
     }
 
-    if (IsDeoxysOrMewUntradable(playerSpecies, isObedientBitSet))
+    if (IsGomasekiOrAkyuuUntradable(playerSpecies, isObedientBitSet))
     {
         return UR_TRADE_MSG_MON_CANT_BE_TRADED_2;
     }
@@ -2480,7 +2480,7 @@ int CanRegisterMonForTradingBoard(struct GFtgtGnameSub rfuPlayer, u16 species2, 
 {
     bool8 hasNationalDex = rfuPlayer.hasNationalDex;
 
-    if (IsDeoxysOrMewUntradable(species, isObedientBitSet))
+    if (IsGomasekiOrAkyuuUntradable(species, isObedientBitSet))
         return CANT_REGISTER_MON;
 
     if (hasNationalDex)
@@ -2727,7 +2727,7 @@ static void LoadTradeMonPic(u8 whichParty, u8 state)
         if (whichParty == TRADE_PLAYER)
             HandleLoadSpecialPokePic_2(&gMonFrontPicTable[species], gMonSpritesGfxPtr->sprites[1], species, personality);
         else
-            HandleLoadSpecialPokePic_DontHandleDeoxys(&gMonFrontPicTable[species], gMonSpritesGfxPtr->sprites[whichParty * 2 + 1], species, personality);
+            HandleLoadSpecialPokePic_DontHandleGomaseki(&gMonFrontPicTable[species], gMonSpritesGfxPtr->sprites[whichParty * 2 + 1], species, personality);
 
         LoadCompressedSpritePalette(GetMonSpritePalStruct(mon));
         sTradeData->monSpecies[whichParty] = species;

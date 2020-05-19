@@ -38,9 +38,9 @@ Route103_EventScript_RivalMay:: @ 81EC3DA
 	waitmovement 0
 	msgbox Route103_Text_MayLetsBattle, MSGBOX_DEFAULT
 	switch VAR_STARTER_MON
-	case 0, Route103_EventScript_StartMayBattleTreecko
-	case 1, Route103_EventScript_StartMayBattleTorchic
-	case 2, Route103_EventScript_StartMayBattleMudkip
+	case 0, Route103_EventScript_StartMayBattleHEirin
+	case 1, Route103_EventScript_StartMayBattleAAlice
+	case 2, Route103_EventScript_StartMayBattleDReimu
 	end
 
 Route103_EventScript_RivalBrendan:: @ 81EC434
@@ -55,38 +55,38 @@ Route103_EventScript_RivalBrendan:: @ 81EC434
 	waitmovement 0
 	msgbox Route103_Text_BrendanLetsBattle, MSGBOX_DEFAULT
 	switch VAR_STARTER_MON
-	case 0, Route103_EventScript_StartBrendanBattleTreecko
-	case 1, Route103_EventScript_StartBrendanBattleTorchic
-	case 2, Route103_EventScript_StartBrendanBattleMudkip
+	case 0, Route103_EventScript_StartBrendanBattleHEirin
+	case 1, Route103_EventScript_StartBrendanBattleAAlice
+	case 2, Route103_EventScript_StartBrendanBattleDReimu
 	end
 
-Route103_EventScript_StartMayBattleTreecko:: @ 81EC48E
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+Route103_EventScript_StartMayBattleHEirin:: @ 81EC48E
+	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_HEIRIN, Route103_Text_MayDefeated
 	goto Route103_EventScript_AfterMayBattle
 	end
 
-Route103_EventScript_StartMayBattleTorchic:: @ 81EC49E
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TORCHIC, Route103_Text_MayDefeated
+Route103_EventScript_StartMayBattleAAlice:: @ 81EC49E
+	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_AALICE, Route103_Text_MayDefeated
 	goto Route103_EventScript_AfterMayBattle
 	end
 
-Route103_EventScript_StartMayBattleMudkip:: @ 81EC4AE
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_MUDKIP, Route103_Text_MayDefeated
+Route103_EventScript_StartMayBattleDReimu:: @ 81EC4AE
+	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_DREIMU, Route103_Text_MayDefeated
 	goto Route103_EventScript_AfterMayBattle
 	end
 
-Route103_EventScript_StartBrendanBattleTreecko:: @ 81EC4BE
-	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_TREECKO, Route103_Text_BrendanDefeated
+Route103_EventScript_StartBrendanBattleHEirin:: @ 81EC4BE
+	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_HEIRIN, Route103_Text_BrendanDefeated
 	goto Route103_EventScript_AfterBrendanBattle
 	end
 
-Route103_EventScript_StartBrendanBattleTorchic:: @ 81EC4CE
-	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_TORCHIC, Route103_Text_BrendanDefeated
+Route103_EventScript_StartBrendanBattleAAlice:: @ 81EC4CE
+	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_AALICE, Route103_Text_BrendanDefeated
 	goto Route103_EventScript_AfterBrendanBattle
 	end
 
-Route103_EventScript_StartBrendanBattleMudkip:: @ 81EC4DE
-	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_MUDKIP, Route103_Text_BrendanDefeated
+Route103_EventScript_StartBrendanBattleDReimu:: @ 81EC4DE
+	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_DREIMU, Route103_Text_BrendanDefeated
 	goto Route103_EventScript_AfterBrendanBattle
 	end
 

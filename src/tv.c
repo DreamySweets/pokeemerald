@@ -193,31 +193,31 @@ static const struct {
     u8 location;
 } sPokeOutbreakSpeciesList[] = {
     {
-        .species = SPECIES_SEEDOT,
+        .species = SPECIES_SRIN,
         .moves = {MOVE_BIDE, MOVE_HARDEN, MOVE_LEECH_SEED},
         .level = 3, 
         .location = MAP_NUM(ROUTE102)
     },
     {
-        .species = SPECIES_NUZLEAF,
+        .species = SPECIES_ARIN,
         .moves = {MOVE_HARDEN, MOVE_GROWTH, MOVE_NATURE_POWER, MOVE_LEECH_SEED},
         .level = 15, 
         .location = MAP_NUM(ROUTE114),
     },
     {
-        .species = SPECIES_SEEDOT,
+        .species = SPECIES_SRIN,
         .moves = {MOVE_HARDEN, MOVE_GROWTH, MOVE_NATURE_POWER, MOVE_LEECH_SEED},
         .level = 13, 
         .location = MAP_NUM(ROUTE117),
     },
     {
-        .species = SPECIES_SEEDOT,
+        .species = SPECIES_SRIN,
         .moves = {MOVE_GIGA_DRAIN, MOVE_FRUSTRATION, MOVE_SOLAR_BEAM, MOVE_LEECH_SEED},
         .level = 25, 
         .location = MAP_NUM(ROUTE120),
     },
     {
-        .species = SPECIES_SKITTY,
+        .species = SPECIES_ASUNNYMILK,
         .moves = {MOVE_GROWL, MOVE_TACKLE, MOVE_TAIL_WHIP, MOVE_ATTRACT},
         .level = 8, 
         .location = MAP_NUM(ROUTE116),
@@ -3533,7 +3533,7 @@ u8 CheckForBigMovieOrEmergencyNewsOnTV(void)
             return 0;
         }
     }
-    if (FlagGet(FLAG_SYS_TV_LATIAS_LATIOS) == TRUE)
+    if (FlagGet(FLAG_SYS_TV_MAMIZOU_CKASEN) == TRUE)
     {
         return 1;
     }

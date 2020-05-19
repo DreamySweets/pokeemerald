@@ -386,7 +386,7 @@ gBattleAnims_StatusConditions::
 
 	.align 2
 gBattleAnims_General::
-	.4byte General_CastformChange
+	.4byte General_TSanaeChange
 	.4byte General_StatsChange
 	.4byte General_SubstituteFade
 	.4byte General_SubstituteAppear
@@ -10294,11 +10294,11 @@ Status_Nightmare:
 	clearmonbg ANIM_DEF_PARTNER
 	end
 
-General_CastformChange:
+General_TSanaeChange:
 	createvisualtask AnimTask_IsMonInvisible, 2
-	jumpreteq 1, CastformChangeSkipAnim
-	goto CastformChangeContinue
-CastformChangeContinue:
+	jumpreteq 1, TSanaeChangeSkipAnim
+	goto TSanaeChangeContinue
+TSanaeChangeContinue:
 	monbg ANIM_ATTACKER
 	playsewithpan SE_W100, SOUND_PAN_ATTACKER
 	waitplaysewithpan SE_W107, SOUND_PAN_ATTACKER, 48
@@ -10306,8 +10306,8 @@ CastformChangeContinue:
 	waitforvisualfinish
 	clearmonbg ANIM_ATTACKER
 	end
-CastformChangeSkipAnim:
-	createvisualtask AnimTask_CastformGfxDataChange, 2, 1
+TSanaeChangeSkipAnim:
+	createvisualtask AnimTask_TSanaeGfxDataChange, 2, 1
 	end
 
 General_StatsChange:

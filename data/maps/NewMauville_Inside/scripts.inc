@@ -9,10 +9,10 @@ NewMauville_Inside_OnResume: @ 82373E7
 	call_if_eq NewMauville_Inside_EventScript_SetBarrierStateBlueButton
 	compare VAR_TEMP_2, 1
 	call_if_eq NewMauville_Inside_EventScript_SetBarrierStateGreenButton
-	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, NewMauville_Inside_EventScript_TryRemoveVoltorb
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, NewMauville_Inside_EventScript_TryRemoveCMerlin
 	end
 
-NewMauville_Inside_EventScript_TryRemoveVoltorb:: @ 8237407
+NewMauville_Inside_EventScript_TryRemoveCMerlin:: @ 8237407
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_ne Common_EventScript_NopReturn
@@ -22,21 +22,21 @@ NewMauville_Inside_EventScript_TryRemoveVoltorb:: @ 8237407
 NewMauville_Inside_OnTransition: @ 823741B
 	setvar VAR_TEMP_1, 0
 	setvar VAR_TEMP_2, 0
-	call_if_unset FLAG_DEFEATED_VOLTORB_1_NEW_MAUVILLE, NewMauville_Inside_EventScript_ShowVoltorb1
-	call_if_unset FLAG_DEFEATED_VOLTORB_2_NEW_MAUVILLE, NewMauville_Inside_EventScript_ShowVoltorb2
-	call_if_unset FLAG_DEFEATED_VOLTORB_3_NEW_MAUVILLE, NewMauville_Inside_EventScript_ShowVoltorb3
+	call_if_unset FLAG_DEFEATED_CMERLIN_1_NEW_MAUVILLE, NewMauville_Inside_EventScript_ShowCMerlin1
+	call_if_unset FLAG_DEFEATED_CMERLIN_2_NEW_MAUVILLE, NewMauville_Inside_EventScript_ShowCMerlin2
+	call_if_unset FLAG_DEFEATED_CMERLIN_3_NEW_MAUVILLE, NewMauville_Inside_EventScript_ShowCMerlin3
 	end
 
-NewMauville_Inside_EventScript_ShowVoltorb1:: @ 8237441
-	clearflag FLAG_HIDE_NEW_MAUVILLE_VOLTORB_1
+NewMauville_Inside_EventScript_ShowCMerlin1:: @ 8237441
+	clearflag FLAG_HIDE_NEW_MAUVILLE_CMERLIN_1
 	return
 
-NewMauville_Inside_EventScript_ShowVoltorb2:: @ 8237445
-	clearflag FLAG_HIDE_NEW_MAUVILLE_VOLTORB_2
+NewMauville_Inside_EventScript_ShowCMerlin2:: @ 8237445
+	clearflag FLAG_HIDE_NEW_MAUVILLE_CMERLIN_2
 	return
 
-NewMauville_Inside_EventScript_ShowVoltorb3:: @ 8237449
-	clearflag FLAG_HIDE_NEW_MAUVILLE_VOLTORB_3
+NewMauville_Inside_EventScript_ShowCMerlin3:: @ 8237449
+	clearflag FLAG_HIDE_NEW_MAUVILLE_CMERLIN_3
 	return
 
 NewMauville_Inside_OnLoad: @ 823744D
@@ -178,12 +178,12 @@ NewMauville_Inside_EventScript_GeneratorOff:: @ 82377A5
 	releaseall
 	end
 
-NewMauville_Inside_EventScript_Voltorb1:: @ 82377AF
+NewMauville_Inside_EventScript_CMerlin1:: @ 82377AF
 	lock
 	faceplayer
-	setwildbattle SPECIES_VOLTORB, 25, ITEM_NONE
+	setwildbattle SPECIES_CMERLIN, 25, ITEM_NONE
 	waitse
-	playmoncry SPECIES_VOLTORB, 2
+	playmoncry SPECIES_CMERLIN, 2
 	delay 40
 	waitmoncry
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
@@ -191,26 +191,26 @@ NewMauville_Inside_EventScript_Voltorb1:: @ 82377AF
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq NewMauville_Inside_EventScript_DefeatedVoltorb1
+	goto_if_eq NewMauville_Inside_EventScript_DefeatedCMerlin1
 	compare VAR_RESULT, B_OUTCOME_RAN
-	goto_if_eq NewMauville_Inside_EventScript_DefeatedVoltorb1
+	goto_if_eq NewMauville_Inside_EventScript_DefeatedCMerlin1
 	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
-	goto_if_eq NewMauville_Inside_EventScript_DefeatedVoltorb1
-	setflag FLAG_DEFEATED_VOLTORB_1_NEW_MAUVILLE
+	goto_if_eq NewMauville_Inside_EventScript_DefeatedCMerlin1
+	setflag FLAG_DEFEATED_CMERLIN_1_NEW_MAUVILLE
 	release
 	end
 
-NewMauville_Inside_EventScript_DefeatedVoltorb1:: @ 82377F3
-	setflag FLAG_DEFEATED_VOLTORB_1_NEW_MAUVILLE
+NewMauville_Inside_EventScript_DefeatedCMerlin1:: @ 82377F3
+	setflag FLAG_DEFEATED_CMERLIN_1_NEW_MAUVILLE
 	goto Common_EventScript_RemoveStaticPokemon
 	end
 
-NewMauville_Inside_EventScript_Voltorb2:: @ 82377FC
+NewMauville_Inside_EventScript_CMerlin2:: @ 82377FC
 	lock
 	faceplayer
-	setwildbattle SPECIES_VOLTORB, 25, ITEM_NONE
+	setwildbattle SPECIES_CMERLIN, 25, ITEM_NONE
 	waitse
-	playmoncry SPECIES_VOLTORB, 2
+	playmoncry SPECIES_CMERLIN, 2
 	delay 40
 	waitmoncry
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
@@ -218,26 +218,26 @@ NewMauville_Inside_EventScript_Voltorb2:: @ 82377FC
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq NewMauville_Inside_EventScript_DefeatedVoltorb2
+	goto_if_eq NewMauville_Inside_EventScript_DefeatedCMerlin2
 	compare VAR_RESULT, B_OUTCOME_RAN
-	goto_if_eq NewMauville_Inside_EventScript_DefeatedVoltorb2
+	goto_if_eq NewMauville_Inside_EventScript_DefeatedCMerlin2
 	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
-	goto_if_eq NewMauville_Inside_EventScript_DefeatedVoltorb2
-	setflag FLAG_DEFEATED_VOLTORB_2_NEW_MAUVILLE
+	goto_if_eq NewMauville_Inside_EventScript_DefeatedCMerlin2
+	setflag FLAG_DEFEATED_CMERLIN_2_NEW_MAUVILLE
 	release
 	end
 
-NewMauville_Inside_EventScript_DefeatedVoltorb2:: @ 8237840
-	setflag FLAG_DEFEATED_VOLTORB_2_NEW_MAUVILLE
+NewMauville_Inside_EventScript_DefeatedCMerlin2:: @ 8237840
+	setflag FLAG_DEFEATED_CMERLIN_2_NEW_MAUVILLE
 	goto Common_EventScript_RemoveStaticPokemon
 	end
 
-NewMauville_Inside_EventScript_Voltorb3:: @ 8237849
+NewMauville_Inside_EventScript_CMerlin3:: @ 8237849
 	lock
 	faceplayer
-	setwildbattle SPECIES_VOLTORB, 25, ITEM_NONE
+	setwildbattle SPECIES_CMERLIN, 25, ITEM_NONE
 	waitse
-	playmoncry SPECIES_VOLTORB, 2
+	playmoncry SPECIES_CMERLIN, 2
 	delay 40
 	waitmoncry
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
@@ -245,17 +245,17 @@ NewMauville_Inside_EventScript_Voltorb3:: @ 8237849
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq NewMauville_Inside_EventScript_DefeatedVoltorb3
+	goto_if_eq NewMauville_Inside_EventScript_DefeatedCMerlin3
 	compare VAR_RESULT, B_OUTCOME_RAN
-	goto_if_eq NewMauville_Inside_EventScript_DefeatedVoltorb3
+	goto_if_eq NewMauville_Inside_EventScript_DefeatedCMerlin3
 	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
-	goto_if_eq NewMauville_Inside_EventScript_DefeatedVoltorb3
-	setflag FLAG_DEFEATED_VOLTORB_3_NEW_MAUVILLE
+	goto_if_eq NewMauville_Inside_EventScript_DefeatedCMerlin3
+	setflag FLAG_DEFEATED_CMERLIN_3_NEW_MAUVILLE
 	release
 	end
 
-NewMauville_Inside_EventScript_DefeatedVoltorb3:: @ 823788D
-	setflag FLAG_DEFEATED_VOLTORB_3_NEW_MAUVILLE
+NewMauville_Inside_EventScript_DefeatedCMerlin3:: @ 823788D
+	setflag FLAG_DEFEATED_CMERLIN_3_NEW_MAUVILLE
 	goto Common_EventScript_RemoveStaticPokemon
 	end
 

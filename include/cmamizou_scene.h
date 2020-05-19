@@ -1,7 +1,7 @@
-#ifndef GUARD_RAYQUAZA_SCENE_H
-#define GUARD_RAYQUAZA_SCENE_H
+#ifndef GUARD_CMAMIZOU_SCENE_H
+#define GUARD_CMAMIZOU_SCENE_H
 
-void DoRayquazaScene(u8 animId, bool8 onlyOneAnim, void (*callback)(void));
+void DoCMamizouScene(u8 animId, bool8 onlyOneAnim, void (*callback)(void));
 
 enum
 {
@@ -14,4 +14,4 @@ enum
     RAY_ANIM_END
 };
 
-#endif // GUARD_RAYQUAZA_SCENE_H
+#endif // GUARD_CMAMIZOU_SCENE_H

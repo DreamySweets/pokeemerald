@@ -236,32 +236,32 @@ SlateportCity_PokemonFanClub_EventScript_Twin:: @ 820A1F1
 	msgbox SlateportCity_PokemonFanClub_Text_MonEnjoyedProtein, MSGBOX_NPC
 	end
 
-SlateportCity_PokemonFanClub_EventScript_Skitty:: @ 820A1FA
+SlateportCity_PokemonFanClub_EventScript_ASunnyMilk:: @ 820A1FA
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_SKITTY, 0
-	msgbox SlateportCity_PokemonFanClub_Text_Skitty, MSGBOX_DEFAULT
+	playmoncry SPECIES_ASUNNYMILK, 0
+	msgbox SlateportCity_PokemonFanClub_Text_ASunnyMilk, MSGBOX_DEFAULT
 	waitmoncry
 	release
 	end
 
-SlateportCity_PokemonFanClub_EventScript_Zigzagoon:: @ 820A20D
+SlateportCity_PokemonFanClub_EventScript_HLunasa:: @ 820A20D
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_ZIGZAGOON, 0
-	msgbox SlateportCity_PokemonFanClub_Text_Zigzagoon, MSGBOX_DEFAULT
+	playmoncry SPECIES_HLUNASA, 0
+	msgbox SlateportCity_PokemonFanClub_Text_HLunasa, MSGBOX_DEFAULT
 	waitmoncry
 	release
 	end
 
-SlateportCity_PokemonFanClub_EventScript_Azumarill:: @ 820A220
+SlateportCity_PokemonFanClub_EventScript_CYumeko:: @ 820A220
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_AZUMARILL, 0
-	msgbox SlateportCity_PokemonFanClub_Text_Azumarill, MSGBOX_DEFAULT
+	playmoncry SPECIES_CYUMEKO, 0
+	msgbox SlateportCity_PokemonFanClub_Text_CYumeko, MSGBOX_DEFAULT
 	waitmoncry
 	release
 	end
@@ -403,12 +403,12 @@ SlateportCity_PokemonFanClub_Text_MonEnjoyedProtein: @ 820ACF9
 	.string "Mine acted really happy when I gave\n"
 	.string "it some PROTEIN.$"
 
-SlateportCity_PokemonFanClub_Text_Skitty: @ 820AD5A
-	.string "SKITTY: Fffnyaaaah…$"
+SlateportCity_PokemonFanClub_Text_ASunnyMilk: @ 820AD5A
+	.string "ASUNNYMILK: Fffnyaaaah…$"
 
-SlateportCity_PokemonFanClub_Text_Zigzagoon: @ 820AD6E
-	.string "ZIGZAGOON: Kyuuu…$"
+SlateportCity_PokemonFanClub_Text_HLunasa: @ 820AD6E
+	.string "HLUNASA: Kyuuu…$"
 
-SlateportCity_PokemonFanClub_Text_Azumarill: @ 820AD80
-	.string "AZUMARILL: Marimari?$"
+SlateportCity_PokemonFanClub_Text_CYumeko: @ 820AD80
+	.string "CYUMEKO: Marimari?$"
 

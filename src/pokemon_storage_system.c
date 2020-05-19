@@ -395,7 +395,7 @@ enum
 
 enum
 {
-    FRIENDS_ZIGZAGOON,
+    FRIENDS_HLUNASA,
     FRIENDS_SCREEN,
     FRIENDS_HORIZONTAL,
     FRIENDS_DIAGONAL,
@@ -405,12 +405,12 @@ enum
     FRIENDS_FRAME,
     FRIENDS_BLANK,
     FRIENDS_CIRCLES,
-    FRIENDS_AZUMARILL,
-    FRIENDS_PIKACHU,
+    FRIENDS_CYUMEKO,
+    FRIENDS_CCIRNO,
     FRIENDS_LEGENDARY,
-    FRIENDS_DUSCLOPS,
-    FRIENDS_LUDICOLO,
-    FRIENDS_WHISCASH,
+    FRIENDS_ADVCIRNO,
+    FRIENDS_SSHIZUHA,
+    FRIENDS_DHATATE,
     FRIENDS_WALLPAPERS_COUNT
 };
 
@@ -1265,13 +1265,13 @@ static const struct WallpaperTable gWallpaperTable[] =
 
 static const u8 gPCGfx_Arrow[] = INCBIN_U8("graphics/pokemon_storage/arrow.4bpp");
 
-static const u16 gWallpaperPalettes_Zigzagoon[][16] =
+static const u16 gWallpaperPalettes_HLunasa[][16] =
 {
     INCBIN_U16("graphics/pokemon_storage/friends_frame1.gbapal"),
-    INCBIN_U16("graphics/pokemon_storage/zigzagoon_bg.gbapal"),
+    INCBIN_U16("graphics/pokemon_storage/hlunasa_bg.gbapal"),
 };
-static const u32 gWallpaperTiles_Zigzagoon[] = INCBIN_U32("graphics/pokemon_storage/zigzagoon.4bpp.lz");
-static const u32 gWallpaperTilemap_Zigzagoon[] = INCBIN_U32("graphics/pokemon_storage/zigzagoon.bin.lz");
+static const u32 gWallpaperTiles_HLunasa[] = INCBIN_U32("graphics/pokemon_storage/hlunasa.4bpp.lz");
+static const u32 gWallpaperTilemap_HLunasa[] = INCBIN_U32("graphics/pokemon_storage/hlunasa.bin.lz");
 
 static const u16 gWallpaperPalettes_Screen[][16] =
 {
@@ -1316,7 +1316,7 @@ static const u32 gWallpaperTilemap_Frame[] = INCBIN_U32("graphics/pokemon_storag
 static const u16 gWallpaperPalettes_Blank[][16] =
 {
     INCBIN_U16("graphics/pokemon_storage/friends_frame1.gbapal"),
-    INCBIN_U16("graphics/pokemon_storage/zigzagoon_bg.gbapal"),
+    INCBIN_U16("graphics/pokemon_storage/hlunasa_bg.gbapal"),
 };
 static const u32 gWallpaperTiles_Blank[] = INCBIN_U32("graphics/pokemon_storage/blank.4bpp.lz");
 static const u32 gWallpaperTilemap_Blank[] = INCBIN_U32("graphics/pokemon_storage/blank.bin.lz");
@@ -1329,21 +1329,21 @@ static const u16 gWallpaperPalettes_Circles[][16] =
 static const u32 gWallpaperTiles_Circles[] = INCBIN_U32("graphics/pokemon_storage/circles.4bpp.lz");
 static const u32 gWallpaperTilemap_Circles[] = INCBIN_U32("graphics/pokemon_storage/circles.bin.lz");
 
-static const u16 gWallpaperPalettes_Azumarill[][16] =
+static const u16 gWallpaperPalettes_CYumeko[][16] =
 {
     INCBIN_U16("graphics/pokemon_storage/friends_frame2.gbapal"),
-    INCBIN_U16("graphics/pokemon_storage/azumarill_bg.gbapal"),
+    INCBIN_U16("graphics/pokemon_storage/cyumeko_bg.gbapal"),
 };
-static const u32 gWallpaperTiles_Azumarill[] = INCBIN_U32("graphics/pokemon_storage/azumarill.4bpp.lz");
-static const u32 gWallpaperTilemap_Azumarill[] = INCBIN_U32("graphics/pokemon_storage/azumarill.bin.lz");
+static const u32 gWallpaperTiles_CYumeko[] = INCBIN_U32("graphics/pokemon_storage/cyumeko.4bpp.lz");
+static const u32 gWallpaperTilemap_CYumeko[] = INCBIN_U32("graphics/pokemon_storage/cyumeko.bin.lz");
 
-static const u16 gWallpaperPalettes_Pikachu[][16] =
+static const u16 gWallpaperPalettes_CCirno[][16] =
 {
     INCBIN_U16("graphics/pokemon_storage/friends_frame2.gbapal"),
-    INCBIN_U16("graphics/pokemon_storage/pikachu_bg.gbapal"),
+    INCBIN_U16("graphics/pokemon_storage/ccirno_bg.gbapal"),
 };
-static const u32 gWallpaperTiles_Pikachu[] = INCBIN_U32("graphics/pokemon_storage/pikachu.4bpp.lz");
-static const u32 gWallpaperTilemap_Pikachu[] = INCBIN_U32("graphics/pokemon_storage/pikachu.bin.lz");
+static const u32 gWallpaperTiles_CCirno[] = INCBIN_U32("graphics/pokemon_storage/ccirno.4bpp.lz");
+static const u32 gWallpaperTilemap_CCirno[] = INCBIN_U32("graphics/pokemon_storage/ccirno.bin.lz");
 
 static const u16 gWallpaperPalettes_Legendary[][16] =
 {
@@ -1353,29 +1353,29 @@ static const u16 gWallpaperPalettes_Legendary[][16] =
 static const u32 gWallpaperTiles_Legendary[] = INCBIN_U32("graphics/pokemon_storage/legendary.4bpp.lz");
 static const u32 gWallpaperTilemap_Legendary[] = INCBIN_U32("graphics/pokemon_storage/legendary.bin.lz");
 
-static const u16 gWallpaperPalettes_Dusclops[][16] =
+static const u16 gWallpaperPalettes_AdvCirno[][16] =
 {
     INCBIN_U16("graphics/pokemon_storage/friends_frame2.gbapal"),
-    INCBIN_U16("graphics/pokemon_storage/dusclops_bg.gbapal"),
+    INCBIN_U16("graphics/pokemon_storage/advcirno_bg.gbapal"),
 };
-static const u32 gWallpaperTiles_Dusclops[] = INCBIN_U32("graphics/pokemon_storage/dusclops.4bpp.lz");
-static const u32 gWallpaperTilemap_Dusclops[] = INCBIN_U32("graphics/pokemon_storage/dusclops.bin.lz");
+static const u32 gWallpaperTiles_AdvCirno[] = INCBIN_U32("graphics/pokemon_storage/advcirno.4bpp.lz");
+static const u32 gWallpaperTilemap_AdvCirno[] = INCBIN_U32("graphics/pokemon_storage/advcirno.bin.lz");
 
-static const u16 gWallpaperPalettes_Ludicolo[][16] =
+static const u16 gWallpaperPalettes_SShizuha[][16] =
 {
     INCBIN_U16("graphics/pokemon_storage/friends_frame2.gbapal"),
-    INCBIN_U16("graphics/pokemon_storage/ludicolo_bg.gbapal"),
+    INCBIN_U16("graphics/pokemon_storage/sshizuha_bg.gbapal"),
 };
-static const u32 gWallpaperTiles_Ludicolo[] = INCBIN_U32("graphics/pokemon_storage/ludicolo.4bpp.lz");
-static const u32 gWallpaperTilemap_Ludicolo[] = INCBIN_U32("graphics/pokemon_storage/ludicolo.bin.lz");
+static const u32 gWallpaperTiles_SShizuha[] = INCBIN_U32("graphics/pokemon_storage/sshizuha.4bpp.lz");
+static const u32 gWallpaperTilemap_SShizuha[] = INCBIN_U32("graphics/pokemon_storage/sshizuha.bin.lz");
 
-static const u16 gWallpaperPalettes_Whiscash[][16] =
+static const u16 gWallpaperPalettes_DHatate[][16] =
 {
     INCBIN_U16("graphics/pokemon_storage/friends_frame2.gbapal"),
-    INCBIN_U16("graphics/pokemon_storage/whiscash_bg.gbapal"),
+    INCBIN_U16("graphics/pokemon_storage/dhatate_bg.gbapal"),
 };
-static const u32 gWallpaperTiles_Whiscash[] = INCBIN_U32("graphics/pokemon_storage/whiscash.4bpp.lz");
-static const u32 gWallpaperTilemap_Whiscash[] = INCBIN_U32("graphics/pokemon_storage/whiscash.bin.lz");
+static const u32 gWallpaperTiles_DHatate[] = INCBIN_U32("graphics/pokemon_storage/dhatate.4bpp.lz");
+static const u32 gWallpaperTilemap_DHatate[] = INCBIN_U32("graphics/pokemon_storage/dhatate.bin.lz");
 
 static const u32 gWallpaperIcon_Aqua[] = INCBIN_U32("graphics/pokemon_storage/aqua_icon.4bpp.lz");
 static const u32 gWallpaperIcon_Heart[] = INCBIN_U32("graphics/pokemon_storage/heart_icon.4bpp.lz");
@@ -1390,24 +1390,24 @@ static const u32 gWallpaperIcon_Maze[] = INCBIN_U32("graphics/pokemon_storage/ma
 static const u32 gWallpaperIcon_Footprint[] = INCBIN_U32("graphics/pokemon_storage/footprint_icon.4bpp.lz");
 static const u32 gWallpaperIcon_BigAsterisk[] = INCBIN_U32("graphics/pokemon_storage/big_asterisk_icon.4bpp.lz");
 static const u32 gWallpaperIcon_Circle[] = INCBIN_U32("graphics/pokemon_storage/circle_icon.4bpp.lz");
-static const u32 gWallpaperIcon_Koffing[] = INCBIN_U32("graphics/pokemon_storage/koffing_icon.4bpp.lz");
+static const u32 gWallpaperIcon_Rin[] = INCBIN_U32("graphics/pokemon_storage/rin_icon.4bpp.lz");
 static const u32 gWallpaperIcon_Ribbon[] = INCBIN_U32("graphics/pokemon_storage/ribbon_icon.4bpp.lz");
 static const u32 gWallpaperIcon_FourCircles[] = INCBIN_U32("graphics/pokemon_storage/four_circles_icon.4bpp.lz");
-static const u32 gWallpaperIcon_Lotad[] = INCBIN_U32("graphics/pokemon_storage/lotad_icon.4bpp.lz");
+static const u32 gWallpaperIcon_AHina[] = INCBIN_U32("graphics/pokemon_storage/ahina_icon.4bpp.lz");
 static const u32 gWallpaperIcon_Crystal[] = INCBIN_U32("graphics/pokemon_storage/crystal_icon.4bpp.lz");
-static const u32 gWallpaperIcon_Pichu[] = INCBIN_U32("graphics/pokemon_storage/pichu_icon.4bpp.lz");
-static const u32 gWallpaperIcon_Diglett[] = INCBIN_U32("graphics/pokemon_storage/diglett_icon.4bpp.lz");
-static const u32 gWallpaperIcon_Luvdisc[] = INCBIN_U32("graphics/pokemon_storage/luvdisc_icon.4bpp.lz");
+static const u32 gWallpaperIcon_CLuize[] = INCBIN_U32("graphics/pokemon_storage/cluize_icon.4bpp.lz");
+static const u32 gWallpaperIcon_CYamame[] = INCBIN_U32("graphics/pokemon_storage/cyamame_icon.4bpp.lz");
+static const u32 gWallpaperIcon_AkiSisters[] = INCBIN_U32("graphics/pokemon_storage/akisisters_icon.4bpp.lz");
 static const u32 gWallpaperIcon_StarInCircle[] = INCBIN_U32("graphics/pokemon_storage/star_in_circle_icon.4bpp.lz");
-static const u32 gWallpaperIcon_Spinda[] = INCBIN_U32("graphics/pokemon_storage/spinda_icon.4bpp.lz");
+static const u32 gWallpaperIcon_SKogasa[] = INCBIN_U32("graphics/pokemon_storage/skogasa_icon.4bpp.lz");
 static const u32 gWallpaperIcon_Latis[] = INCBIN_U32("graphics/pokemon_storage/latis_icon.4bpp.lz");
-static const u32 gWallpaperIcon_Minun[] = INCBIN_U32("graphics/pokemon_storage/minun_icon.4bpp.lz");
-static const u32 gWallpaperIcon_Togepi[] = INCBIN_U32("graphics/pokemon_storage/togepi_icon.4bpp.lz");
+static const u32 gWallpaperIcon_HNazrin[] = INCBIN_U32("graphics/pokemon_storage/hnazrin_icon.4bpp.lz");
+static const u32 gWallpaperIcon_Margatroid[] = INCBIN_U32("graphics/pokemon_storage/margatroid_icon.4bpp.lz");
 static const u32 gWallpaperIcon_Magma[] = INCBIN_U32("graphics/pokemon_storage/magma_icon.4bpp.lz");
 
 static const struct WallpaperTable gFriendsWallpaperTable[] =
 {
-    WALLPAPER_ENTRY(Zigzagoon),
+    WALLPAPER_ENTRY(HLunasa),
     WALLPAPER_ENTRY(Screen),
     WALLPAPER_ENTRY(Horizontal),
     WALLPAPER_ENTRY(Diagonal),
@@ -1417,12 +1417,12 @@ static const struct WallpaperTable gFriendsWallpaperTable[] =
     WALLPAPER_ENTRY(Frame),
     WALLPAPER_ENTRY(Blank),
     WALLPAPER_ENTRY(Circles),
-    WALLPAPER_ENTRY(Azumarill),
-    WALLPAPER_ENTRY(Pikachu),
+    WALLPAPER_ENTRY(CYumeko),
+    WALLPAPER_ENTRY(CCirno),
     WALLPAPER_ENTRY(Legendary),
-    WALLPAPER_ENTRY(Dusclops),
-    WALLPAPER_ENTRY(Ludicolo),
-    WALLPAPER_ENTRY(Whiscash),
+    WALLPAPER_ENTRY(AdvCirno),
+    WALLPAPER_ENTRY(SShizuha),
+    WALLPAPER_ENTRY(DHatate),
 };
 
 static const u32 *const gFriendsIcons[] =
@@ -1441,21 +1441,21 @@ static const u32 *const gFriendsIcons[] =
     gWallpaperIcon_Footprint,
     gWallpaperIcon_BigAsterisk,
     gWallpaperIcon_Circle,
-    gWallpaperIcon_Koffing,
+    gWallpaperIcon_Rin,
     gWallpaperIcon_Ribbon,
     gWallpaperIcon_Bolt,
     gWallpaperIcon_FourCircles,
-    gWallpaperIcon_Lotad,
+    gWallpaperIcon_AHina,
     gWallpaperIcon_Crystal,
-    gWallpaperIcon_Pichu,
-    gWallpaperIcon_Diglett,
-    gWallpaperIcon_Luvdisc,
+    gWallpaperIcon_CLuize,
+    gWallpaperIcon_CYamame,
+    gWallpaperIcon_AkiSisters,
     gWallpaperIcon_StarInCircle,
-    gWallpaperIcon_Spinda,
+    gWallpaperIcon_SKogasa,
     gWallpaperIcon_Latis,
-    gWallpaperIcon_Plusle,
-    gWallpaperIcon_Minun,
-    gWallpaperIcon_Togepi,
+    gWallpaperIcon_TNazrin,
+    gWallpaperIcon_HNazrin,
+    gWallpaperIcon_Margatroid,
     gWallpaperIcon_Magma,
 };
 
@@ -6858,7 +6858,7 @@ static void SetCursorMonData(void *pokemon, u8 mode)
     }
     else
     {
-        if (sPSSData->cursorMonSpecies == SPECIES_NIDORAN_F || sPSSData->cursorMonSpecies == SPECIES_NIDORAN_M)
+        if (sPSSData->cursorMonSpecies == SPECIES_SHANGHAI || sPSSData->cursorMonSpecies == SPECIES_HOURAI)
             gender = MON_GENDERLESS;
 
         StringCopyPadded(sPSSData->cursorMonNickText, sPSSData->cursorMonNick, CHAR_SPACE, 5);

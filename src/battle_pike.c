@@ -95,17 +95,17 @@ static bool8 StatusInflictionFadeIn(struct Task *task);
 static const struct PikeWildMon sLvl50_Mons1[] =
 {
     {
-        .species = SPECIES_SEVIPER,
+        .species = SPECIES_TSATORI,
         .levelDelta = 4,
         .moves = {MOVE_TOXIC, MOVE_GLARE, MOVE_BODY_SLAM, MOVE_SLUDGE_BOMB}
     },
     {
-        .species = SPECIES_MILOTIC,
+        .species = SPECIES_DTEWI,
         .levelDelta = 4,
         .moves = {MOVE_TOXIC, MOVE_HYPNOSIS, MOVE_BODY_SLAM, MOVE_SURF}
     },
     {
-        .species = SPECIES_DUSCLOPS,
+        .species = SPECIES_ADVCIRNO,
         .levelDelta = 5,
         .moves = {MOVE_WILL_O_WISP, MOVE_MEAN_LOOK, MOVE_TOXIC, MOVE_SHADOW_PUNCH}
     }
@@ -114,17 +114,17 @@ static const struct PikeWildMon sLvl50_Mons1[] =
 static const struct PikeWildMon sLvl50_Mons2[] =
 {
     {
-        .species = SPECIES_SEVIPER,
+        .species = SPECIES_TSATORI,
         .levelDelta = 4,
         .moves = {MOVE_TOXIC, MOVE_GLARE, MOVE_BODY_SLAM, MOVE_SLUDGE_BOMB}
     },
     {
-        .species = SPECIES_MILOTIC,
+        .species = SPECIES_DTEWI,
         .levelDelta = 4,
         .moves = {MOVE_TOXIC, MOVE_HYPNOSIS, MOVE_BODY_SLAM, MOVE_SURF}
     },
     {
-        .species = SPECIES_ELECTRODE,
+        .species = SPECIES_MERLIN,
         .levelDelta = 5,
         .moves = {MOVE_EXPLOSION, MOVE_SELF_DESTRUCT, MOVE_THUNDER, MOVE_TOXIC}
     }
@@ -133,17 +133,17 @@ static const struct PikeWildMon sLvl50_Mons2[] =
 static const struct PikeWildMon sLvl50_Mons3[] =
 {
     {
-        .species = SPECIES_SEVIPER,
+        .species = SPECIES_TSATORI,
         .levelDelta = 4,
         .moves = {MOVE_TOXIC, MOVE_GLARE, MOVE_BODY_SLAM, MOVE_SLUDGE_BOMB}
     },
     {
-        .species = SPECIES_MILOTIC,
+        .species = SPECIES_DTEWI,
         .levelDelta = 4,
         .moves = {MOVE_TOXIC, MOVE_HYPNOSIS, MOVE_BODY_SLAM, MOVE_SURF}
     },
     {
-        .species = SPECIES_BRELOOM,
+        .species = SPECIES_SYAMAME,
         .levelDelta = 5,
         .moves = {MOVE_SPORE, MOVE_STUN_SPORE, MOVE_POISON_POWDER, MOVE_HIDDEN_POWER}
     }
@@ -152,17 +152,17 @@ static const struct PikeWildMon sLvl50_Mons3[] =
 static const struct PikeWildMon sLvl50_Mons4[] =
 {
     {
-        .species = SPECIES_SEVIPER,
+        .species = SPECIES_TSATORI,
         .levelDelta = 4,
         .moves = {MOVE_TOXIC, MOVE_GLARE, MOVE_BODY_SLAM, MOVE_SLUDGE_BOMB}
     },
     {
-        .species = SPECIES_MILOTIC,
+        .species = SPECIES_DTEWI,
         .levelDelta = 4,
         .moves = {MOVE_TOXIC, MOVE_HYPNOSIS, MOVE_BODY_SLAM, MOVE_SURF}
     },
     {
-        .species = SPECIES_WOBBUFFET,
+        .species = SPECIES_CMAI,
         .levelDelta = 5,
         .moves = {MOVE_COUNTER, MOVE_MIRROR_COAT, MOVE_SAFEGUARD, MOVE_DESTINY_BOND}
     }
@@ -179,17 +179,17 @@ static const struct PikeWildMon *const sLvl50Mons[] =
 static const struct PikeWildMon sLvlOpen_Mons1[] =
 {
     {
-        .species = SPECIES_SEVIPER,
+        .species = SPECIES_TSATORI,
         .levelDelta = 4,
         .moves = {MOVE_TOXIC, MOVE_GLARE, MOVE_POISON_FANG, MOVE_SLUDGE_BOMB}
     },
     {
-        .species = SPECIES_MILOTIC,
+        .species = SPECIES_DTEWI,
         .levelDelta = 4,
         .moves = {MOVE_TOXIC, MOVE_HYPNOSIS, MOVE_BODY_SLAM, MOVE_ICE_BEAM}
     },
     {
-        .species = SPECIES_DUSCLOPS,
+        .species = SPECIES_ADVCIRNO,
         .levelDelta = 5,
         .moves = {MOVE_WILL_O_WISP, MOVE_MEAN_LOOK, MOVE_TOXIC, MOVE_ICE_BEAM}
     }
@@ -198,17 +198,17 @@ static const struct PikeWildMon sLvlOpen_Mons1[] =
 static const struct PikeWildMon sLvlOpen_Mons2[] =
 {
     {
-        .species = SPECIES_SEVIPER,
+        .species = SPECIES_TSATORI,
         .levelDelta = 4,
         .moves = {MOVE_TOXIC, MOVE_GLARE, MOVE_POISON_FANG, MOVE_SLUDGE_BOMB}
     },
     {
-        .species = SPECIES_MILOTIC,
+        .species = SPECIES_DTEWI,
         .levelDelta = 4,
         .moves = {MOVE_TOXIC, MOVE_HYPNOSIS, MOVE_BODY_SLAM, MOVE_ICE_BEAM}
     },
     {
-        .species = SPECIES_ELECTRODE,
+        .species = SPECIES_MERLIN,
         .levelDelta = 5,
         .moves = {MOVE_EXPLOSION, MOVE_SELF_DESTRUCT, MOVE_THUNDER, MOVE_TOXIC}
     }
@@ -217,17 +217,17 @@ static const struct PikeWildMon sLvlOpen_Mons2[] =
 static const struct PikeWildMon sLvlOpen_Mons3[] =
 {
     {
-        .species = SPECIES_SEVIPER,
+        .species = SPECIES_TSATORI,
         .levelDelta = 4,
         .moves = {MOVE_TOXIC, MOVE_GLARE, MOVE_POISON_FANG, MOVE_SLUDGE_BOMB}
     },
     {
-        .species = SPECIES_MILOTIC,
+        .species = SPECIES_DTEWI,
         .levelDelta = 4,
         .moves = {MOVE_TOXIC, MOVE_HYPNOSIS, MOVE_BODY_SLAM, MOVE_ICE_BEAM}
     },
     {
-        .species = SPECIES_BRELOOM,
+        .species = SPECIES_SYAMAME,
         .levelDelta = 5,
         .moves = {MOVE_SPORE, MOVE_STUN_SPORE, MOVE_POISON_POWDER, MOVE_HIDDEN_POWER}
     }
@@ -236,17 +236,17 @@ static const struct PikeWildMon sLvlOpen_Mons3[] =
 static const struct PikeWildMon sLvlOpen_Mons4[] =
 {
     {
-        .species = SPECIES_SEVIPER,
+        .species = SPECIES_TSATORI,
         .levelDelta = 4,
         .moves = {MOVE_TOXIC, MOVE_GLARE, MOVE_POISON_FANG, MOVE_SLUDGE_BOMB}
     },
     {
-        .species = SPECIES_MILOTIC,
+        .species = SPECIES_DTEWI,
         .levelDelta = 4,
         .moves = {MOVE_TOXIC, MOVE_HYPNOSIS, MOVE_BODY_SLAM, MOVE_ICE_BEAM}
     },
     {
-        .species = SPECIES_WOBBUFFET,
+        .species = SPECIES_CMAI,
         .levelDelta = 5,
         .moves = {MOVE_COUNTER, MOVE_MIRROR_COAT, MOVE_SAFEGUARD, MOVE_ENCORE}
     }
@@ -559,7 +559,7 @@ static void SetupRoomObjectEvents(void)
     u16 objGfx2;
 
     VarSet(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_LINK_RECEPTIONIST);
-    VarSet(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_DUSCLOPS);
+    VarSet(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ADVCIRNO);
     setObjGfx1 = TRUE;
     setObjGfx2 = FALSE;
     objGfx1 = 0;
@@ -579,10 +579,10 @@ static void SetupRoomObjectEvents(void)
         break;
     case PIKE_ROOM_STATUS:
         objGfx1 = OBJ_EVENT_GFX_GENTLEMAN;
-        if (sStatusMon == PIKE_STATUSMON_DUSCLOPS)
-            objGfx2 = OBJ_EVENT_GFX_DUSCLOPS;
+        if (sStatusMon == PIKE_STATUSMON_ADVCIRNO)
+            objGfx2 = OBJ_EVENT_GFX_ADVCIRNO;
         else
-            objGfx2 = OBJ_EVENT_GFX_KIRLIA;
+            objGfx2 = OBJ_EVENT_GFX_SENDAI;
         setObjGfx2 = TRUE;
         break;
     case PIKE_ROOM_HEAL_PART:
@@ -946,19 +946,19 @@ static bool8 TryInflictRandomStatus(void)
     switch (sStatusFlags)
     {
     case STATUS1_FREEZE:
-        sStatusMon = PIKE_STATUSMON_DUSCLOPS;
+        sStatusMon = PIKE_STATUSMON_ADVCIRNO;
         break;
     case STATUS1_BURN:
         if (Random() % 2 != 0)
-            sStatusMon = PIKE_STATUSMON_DUSCLOPS;
+            sStatusMon = PIKE_STATUSMON_ADVCIRNO;
         else
-            sStatusMon = PIKE_STATUSMON_KIRLIA;
+            sStatusMon = PIKE_STATUSMON_SENDAI;
         break;
     case STATUS1_PARALYSIS:
     case STATUS1_SLEEP:
     case STATUS1_TOXIC_POISON:
     default:
-        sStatusMon = PIKE_STATUSMON_KIRLIA;
+        sStatusMon = PIKE_STATUSMON_SENDAI;
         break;
     }
 
@@ -1642,9 +1642,9 @@ static u8 SpeciesToPikeMonId(u16 species)
 {
     u8 ret;
 
-    if (species == SPECIES_SEVIPER)
+    if (species == SPECIES_TSATORI)
         ret = 0;
-    else if (species == SPECIES_MILOTIC)
+    else if (species == SPECIES_DTEWI)
         ret = 1;
     else
         ret = 2;

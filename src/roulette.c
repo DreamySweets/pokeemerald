@@ -907,10 +907,10 @@ static void sub_8140470(void)
     {
         switch (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES2))
         {
-        case SPECIES_SHROOMISH:
+        case SPECIES_DSUWAKO:
             gUnknown_0203AB88->var02 |= 0x1;
             break;
-        case SPECIES_TAILLOW:
+        case SPECIES_TSHOU:
             gUnknown_0203AB88->var02 |= 0x2;
             break;
         }
@@ -1290,8 +1290,8 @@ static u8 sub_814118C(u16 r0, u16 r1)
 {
     switch (gUnknown_0203AB88->var02)
     {
-    case 1: // SHROOMISH
-    case 2: // TAILLOW
+    case 1: // DSUWAKO
+    case 2: // TSHOU
         // one of the two is in party
         if (gLocalTime.hours > 3 && gLocalTime.hours < 10)
         {
@@ -2033,13 +2033,13 @@ static const u16 RouletteSpritePalette_02[] = INCBIN_U16("graphics/roulette/ball
 static const u16 RouletteSpritePalette_03[] = INCBIN_U16("graphics/roulette/ball_counter.gbapal");
 static const u16 RouletteSpritePalette_04[] = INCBIN_U16("graphics/roulette/cursor.gbapal");
 static const u16 RouletteSpritePalette_05[] = INCBIN_U16("graphics/roulette/credit.gbapal");
-static const u16 RouletteSpritePalette_06[] = INCBIN_U16("graphics/roulette/shroomish.gbapal");
+static const u16 RouletteSpritePalette_06[] = INCBIN_U16("graphics/roulette/dsuwako.gbapal");
 static const u16 RouletteSpritePalette_07[] = INCBIN_U16("graphics/roulette/tailow.gbapal");
 static const u16 RouletteSpritePalette_08[] = INCBIN_U16("graphics/roulette/poke_icons.gbapal");
-static const u16 RouletteSpritePalette_09[] = INCBIN_U16("graphics/roulette/wynaut.gbapal");
-static const u16 RouletteSpritePalette_10[] = INCBIN_U16("graphics/roulette/azurill.gbapal");
-static const u16 RouletteSpritePalette_11[] = INCBIN_U16("graphics/roulette/skitty.gbapal");
-static const u16 RouletteSpritePalette_12[] = INCBIN_U16("graphics/roulette/makuhita.gbapal");
+static const u16 RouletteSpritePalette_09[] = INCBIN_U16("graphics/roulette/aminoriko.gbapal");
+static const u16 RouletteSpritePalette_10[] = INCBIN_U16("graphics/roulette/cshingyoku.gbapal");
+static const u16 RouletteSpritePalette_11[] = INCBIN_U16("graphics/roulette/asunnymilk.gbapal");
+static const u16 RouletteSpritePalette_12[] = INCBIN_U16("graphics/roulette/aflandre.gbapal");
 static const u16 RouletteSpritePalette_13[] = INCBIN_U16("graphics/roulette/85B65D0.gbapal");
 static const u16 RouletteSpritePalette_14[] = INCBIN_U16("graphics/roulette/85B65F0.gbapal");
 static const u16 RouletteSpritePalette_15[] = INCBIN_U16("graphics/roulette/85B6610.gbapal");
@@ -4129,13 +4129,13 @@ static void sub_8144A24(struct Sprite *sprite)
     if (gUnknown_0203AB88->var03_0)
     {
         if (sprite->data[0])
-            PlayCry1(SPECIES_TAILLOW, -63);
+            PlayCry1(SPECIES_TSHOU, -63);
         else
-            PlayCry1(SPECIES_TAILLOW, 63);
+            PlayCry1(SPECIES_TSHOU, 63);
     }
     else
     {
-        PlayCry1(SPECIES_SHROOMISH, -63);
+        PlayCry1(SPECIES_DSUWAKO, -63);
     }
 
     val = 2;
@@ -4384,9 +4384,9 @@ static void sub_81450D8(struct Sprite *sprite)
         {
             m4aSongNumStartOrChange(SE_BASABASA);
             if (gUnknown_0203AB88->var38->data[0] == 0)
-                PlayCry1(SPECIES_TAILLOW, 63);
+                PlayCry1(SPECIES_TSHOU, 63);
             else
-                PlayCry1(SPECIES_TAILLOW, -63);
+                PlayCry1(SPECIES_TSHOU, -63);
             StartSpriteAnim(sprite, gUnknown_0203AB88->var38->data[0] + 2);
             sprite->data[1] = 45;
             sprite->callback = sub_8145030;

@@ -424,7 +424,7 @@ Route104_Text_DarianDefeat: @ 8295CC9
 	.string "What the…$"
 
 Route104_Text_DarianPostBattle: @ 8295CD3
-	.string "Hey, MAGIKARP, you sure don't live up\n"
+	.string "Hey, WRIGGLE, you sure don't live up\n"
 	.string "to your name, do you?$"
 
 Route105_Text_FosterIntro: @ 8295D0F
@@ -1458,7 +1458,7 @@ Route111_Text_BrandenDefeat: @ 82994C5
 	.string "enough of a bribe…$"
 
 Route111_Text_BrandenPostBattle: @ 82994FB
-	.string "My SANDSHREW loves eating\n"
+	.string "My CRUMIA loves eating\n"
 	.string "my sandwiches.$"
 
 Route111_Text_TyronIntro: @ 8299524
@@ -1639,7 +1639,7 @@ Route113_Text_DillonPostBattle: @ 8299E38
 Route113_Text_MadelineIntro: @ 8299EA6
 	.string "I use this parasol to ward off this\n"
 	.string "filthy, yucky volcanic ash from\l"
-	.string "my dear NUMEL.$"
+	.string "my dear CKONNGARA.$"
 
 Route113_Text_MadelineDefeat: @ 8299EF9
 	.string "Huff, huff…\n"
@@ -2030,14 +2030,14 @@ Route115_Text_TimothyPostRematch: @ 829B385
 
 Route115_Text_KoichiIntro: @ 829B3CC
 	.string "You!\p"
-	.string "My MACHOP!\p"
+	.string "My CYUUGI!\p"
 	.string "Demand a battle!$"
 
 Route115_Text_KoichiDefeat: @ 829B3ED
 	.string "Ouch, ouch, ouch!$"
 
 Route115_Text_KoichiPostBattle: @ 829B3FF
-	.string "My MACHOP crew!\p"
+	.string "My CYUUGI crew!\p"
 	.string "So long as they seek power, I will\n"
 	.string "grow strong with them!$"
 
@@ -3800,7 +3800,7 @@ Route125_Text_StanDefeat: @ 82A15C7
 	.string "I floundered…$"
 
 Route125_Text_StanPostBattle: @ 82A15D5
-	.string "I was blown away by HORSEA's charm,\n"
+	.string "I was blown away by CLUNACHILD's charm,\n"
 	.string "so I started swimming, too.$"
 
 Route125_Text_TanyaIntro: @ 82A1615
@@ -3814,14 +3814,14 @@ Route125_Text_TanyaPostBattle: @ 82A165E
 	.string "Whew…\n"
 	.string "Which way is it to MOSSDEEP CITY?$"
 
-Route125_Text_SharonIntro: @ 82A1686
+Route125_Text_ShadvtewiIntro: @ 82A1686
 	.string "How would you like to take on the\n"
 	.string "WATER-type POKéMON I raised?$"
 
-Route125_Text_SharonDefeat: @ 82A16C5
+Route125_Text_ShadvtewiDefeat: @ 82A16C5
 	.string "Lost it…$"
 
-Route125_Text_SharonPostBattle: @ 82A16CE
+Route125_Text_ShadvtewiPostBattle: @ 82A16CE
 	.string "Your power… You're the real deal.\n"
 	.string "I'm amazed!$"
 
@@ -4682,7 +4682,7 @@ Route134_Text_JackPostBattle: @ 82A45C5
 	.string "currents around these parts.$"
 
 Route134_Text_LaurelIntro: @ 82A4609
-	.string "My LUVDISC are looking for a fun\n"
+	.string "My AKISISTERS are looking for a fun\n"
 	.string "match. Will you join us?$"
 
 Route134_Text_LaurelDefeat: @ 82A4643
@@ -4690,7 +4690,7 @@ Route134_Text_LaurelDefeat: @ 82A4643
 
 Route134_Text_LaurelPostBattle: @ 82A464B
 	.string "There's a collector who's after\n"
-	.string "the SCALES of LUVDISC.$"
+	.string "the SCALES of AKISISTERS.$"
 
 Route134_Text_AlexIntro: @ 82A4682
 	.string "Okeydokey! That's enough rest, gang!\n"
@@ -4715,14 +4715,14 @@ Route134_Text_HitoshiPostBattle: @ 82A475D
 	.string "It was I who challenged you, and yet\n"
 	.string "I lost. I am deeply shamed…$"
 
-Route134_Text_AaronIntro: @ 82A479E
+Route134_Text_AadvtewiIntro: @ 82A479E
 	.string "The savage tide in this area serves to\n"
 	.string "make us stronger than ever.$"
 
-Route134_Text_AaronDefeat: @ 82A47E1
+Route134_Text_AadvtewiDefeat: @ 82A47E1
 	.string "I willingly concede defeat.$"
 
-Route134_Text_AaronPostBattle: @ 82A47FD
+Route134_Text_AadvtewiPostBattle: @ 82A47FD
 	.string "We will return for more training at\n"
 	.string "METEOR FALLS.\p"
 	.string "If you'd like, you should go, too.\n"

@@ -16,7 +16,7 @@
 
 	.align 2
 	.include "data/scripts/mevent_stamp_card.inc"
-	.include "data/scripts/mevent_pichu.inc"
+	.include "data/scripts/mevent_cluize.inc"
 	.include "data/scripts/mevent_trainer.inc"
 	.include "data/scripts/mevent_battle_card.inc"
 	.include "data/scripts/mevent_aurora_ticket.inc"

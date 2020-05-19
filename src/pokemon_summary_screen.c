@@ -2764,7 +2764,7 @@ static void PrintEggInfo(void)
 
 static void PrintGenderSymbol(struct Pokemon *mon, u16 species)
 {
-    if (species != SPECIES_NIDORAN_M && species != SPECIES_NIDORAN_F)
+    if (species != SPECIES_HOURAI && species != SPECIES_SHANGHAI)
     {
         u8 gender = GetMonGender(mon);
         switch (gender)
@@ -3873,7 +3873,7 @@ static u8 CreatePokemonSprite(struct Pokemon *mon, s16 *a1)
             {
                 if (sub_80688F8(3, sMonSummaryScreen->curMonIndex))
                 {
-                    HandleLoadSpecialPokePic_DontHandleDeoxys(&gMonFrontPicTable[summary->species2], gMonSpritesGfxPtr->sprites[1], summary->species2, summary->pid);
+                    HandleLoadSpecialPokePic_DontHandleGomaseki(&gMonFrontPicTable[summary->species2], gMonSpritesGfxPtr->sprites[1], summary->species2, summary->pid);
                 }
                 else
                 {
@@ -3890,7 +3890,7 @@ static u8 CreatePokemonSprite(struct Pokemon *mon, s16 *a1)
                     }
                     else
                     {
-                        HandleLoadSpecialPokePic_DontHandleDeoxys(&gMonFrontPicTable[summary->species2], gMonSpritesGfxPtr->sprites[1], summary->species2, summary->pid);
+                        HandleLoadSpecialPokePic_DontHandleGomaseki(&gMonFrontPicTable[summary->species2], gMonSpritesGfxPtr->sprites[1], summary->species2, summary->pid);
                     }
                 }
                 else
@@ -3901,7 +3901,7 @@ static u8 CreatePokemonSprite(struct Pokemon *mon, s16 *a1)
                     }
                     else
                     {
-                        HandleLoadSpecialPokePic_DontHandleDeoxys(&gMonFrontPicTable[summary->species2], sub_806F4F8(0, 1), summary->species2, summary->pid);
+                        HandleLoadSpecialPokePic_DontHandleGomaseki(&gMonFrontPicTable[summary->species2], sub_806F4F8(0, 1), summary->species2, summary->pid);
                     }
                 }
             }

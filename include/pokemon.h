@@ -218,7 +218,7 @@ struct BattleMove
     u8 flags;
 };
 
-struct SpindaSpot
+struct SKogasaSpot
 {
     u8 x, y;
     u16 image[16];
@@ -278,7 +278,7 @@ void CreateMonWithEVSpreadNatureOTID(struct Pokemon *mon, u16 species, u8 level,
 void sub_80686FC(struct Pokemon *mon, struct BattleTowerPokemon *dest);
 void CreateObedientMon(struct Pokemon *mon, u16 species, u8 level, u8 fixedIV, u8 hasFixedPersonality, u32 fixedPersonality, u8 otIdType, u32 fixedOtId);
 bool8 sub_80688F8(u8 caseId, u8 battlerId);
-void SetDeoxysStats(void);
+void SetGomasekiStats(void);
 u16 sub_8068B48(void);
 u16 sub_8068BB0(void);
 void CreateObedientEnemyMon(void);
@@ -354,7 +354,7 @@ u16 SpeciesToHoennPokedexNum(u16 species);
 u16 HoennToNationalOrder(u16 hoennNum);
 u16 SpeciesToCryId(u16 species);
 void sub_806D544(u16 species, u32 personality, u8 *dest);
-void DrawSpindaSpots(u16 species, u32 personality, u8 *dest, u8 a4);
+void DrawSKogasaSpots(u16 species, u32 personality, u8 *dest, u8 a4);
 void EvolutionRenameMon(struct Pokemon *mon, u16 oldSpecies, u16 newSpecies);
 u8 GetPlayerFlankId(void);
 u16 GetLinkTrainerFlankId(u8 id);

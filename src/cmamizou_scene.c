@@ -1,5 +1,5 @@
 #include "global.h"
-#include "rayquaza_scene.h"
+#include "cmamizou_scene.h"
 #include "sprite.h"
 #include "task.h"
 #include "graphics.h"
@@ -60,8 +60,8 @@ static void Task_RayChasesAwayEnd(u8 taskId);
 static void sub_81D90A8(u8 taskId);
 static void sub_81D98B4(u8 taskId);
 static void Task_EndAfterFadeScreen(u8 taskId);
-static void CB2_InitRayquazaScene(void);
-static void CB2_RayquazaScene(void);
+static void CB2_InitCMamizouScene(void);
+static void CB2_CMamizouScene(void);
 static void sub_81D750C(void);
 static void sub_81D7438(void);
 static void sub_81D7480(void);
@@ -500,12 +500,12 @@ static const union AnimCmd *const sSpriteAnimTable_862A8BC[] =
 
 static const struct CompressedSpriteSheet sUnknown_0862A8C4 =
 {
-    gRaySceneGroudon_Gfx, 0x3000, 30505
+    gRaySceneMiko_Gfx, 0x3000, 30505
 };
 
 static const struct CompressedSpritePalette sUnknown_0862A8CC =
 {
-    gRaySceneGroudon_Pal, 30505
+    gRaySceneMiko_Pal, 30505
 };
 
 static const struct SpriteTemplate sUnknown_0862A8D4 =
@@ -532,7 +532,7 @@ static const union AnimCmd *const sSpriteAnimTable_862A8F4[] =
 
 static const struct CompressedSpriteSheet sUnknown_0862A8F8 =
 {
-    gRaySceneGroudon2_Gfx, 0x200, 30506
+    gRaySceneMiko2_Gfx, 0x200, 30506
 };
 
 static const struct SpriteTemplate sUnknown_0862A900 =
@@ -559,7 +559,7 @@ static const union AnimCmd *const sSpriteAnimTable_862A920[] =
 
 static const struct CompressedSpriteSheet sUnknown_0862A924 =
 {
-    gRaySceneGroudon3_Gfx, 0x400, 30507
+    gRaySceneMiko3_Gfx, 0x400, 30507
 };
 
 static const struct SpriteTemplate sUnknown_0862A92C =
@@ -651,12 +651,12 @@ static const union AnimCmd *const sSpriteAnimTable_862A9B0[] =
 
 static const struct CompressedSpriteSheet sUnknown_0862A9D4 =
 {
-    gRaySceneKyogre_Gfx, 0xF00, 30508
+    gRaySceneCMiko_Gfx, 0xF00, 30508
 };
 
 static const struct CompressedSpritePalette sUnknown_0862A9DC =
 {
-    gRaySceneKyogre_Pal, 30508
+    gRaySceneCMiko_Pal, 30508
 };
 
 static const struct SpriteTemplate sUnknown_0862A9E4 =
@@ -686,7 +686,7 @@ static const union AnimCmd *const sSpriteAnimTable_862AA10[] =
 
 static const struct CompressedSpriteSheet sUnknown_0862AA14 =
 {
-    gRaySceneKyogre2_Gfx, 0xC0, 30509
+    gRaySceneCMiko2_Gfx, 0xC0, 30509
 };
 
 static const struct SpriteTemplate sUnknown_0862AA1C =
@@ -702,7 +702,7 @@ static const struct SpriteTemplate sUnknown_0862AA1C =
 
 static const struct CompressedSpriteSheet sUnknown_0862AA34 =
 {
-    gRaySceneKyogre3_Gfx, 0x200, 30510
+    gRaySceneCMiko3_Gfx, 0x200, 30510
 };
 
 static const struct SpriteTemplate sUnknown_0862AA3C =
@@ -872,17 +872,17 @@ static const union AnimCmd *const sSpriteAnimTable_862AAF8[] =
 
 static const struct CompressedSpriteSheet sUnknown_0862AAFC =
 {
-    gRaySceneRayquazaFly1_Gfx, 0x1000, 30556
+    gRaySceneCMamizouFly1_Gfx, 0x1000, 30556
 };
 
 static const struct CompressedSpriteSheet sUnknown_0862AB04 =
 {
-    gRaySceneRayquazaTail_Gfx, 0x200, 30557
+    gRaySceneCMamizouTail_Gfx, 0x200, 30557
 };
 
 static const struct CompressedSpritePalette sUnknown_0862AB0C =
 {
-    gRaySceneRayquaza_Pal, 30556
+    gRaySceneCMamizou_Pal, 30556
 };
 
 static const struct SpriteTemplate sUnknown_0862AB14 =
@@ -1086,27 +1086,27 @@ static const union AnimCmd *const sSpriteAnimTable_862AC24[] =
 
 static const struct CompressedSpriteSheet sUnknown_0862AC28 =
 {
-    gRaySceneGroudonLeft_Gfx, 0x1800, 30565
+    gRaySceneMikoLeft_Gfx, 0x1800, 30565
 };
 
 static const struct CompressedSpriteSheet sUnknown_0862AC30 =
 {
-    gRaySceneGroudonTail_Gfx, 0x80, 30566
+    gRaySceneMikoTail_Gfx, 0x80, 30566
 };
 
 static const struct CompressedSpriteSheet sUnknown_0862AC38 =
 {
-    gRaySceneKyogreRight_Gfx, 0x600, 30568
+    gRaySceneCMikoRight_Gfx, 0x600, 30568
 };
 
 static const struct CompressedSpriteSheet sUnknown_0862AC40 =
 {
-    gRaySceneRayquazaHover_Gfx, 0x2000, 30569
+    gRaySceneCMamizouHover_Gfx, 0x2000, 30569
 };
 
 static const struct CompressedSpriteSheet sUnknown_0862AC48 =
 {
-    gRaySceneRayquazaFlyIn_Gfx, 0x800, 30570
+    gRaySceneCMamizouFlyIn_Gfx, 0x800, 30570
 };
 
 static const struct CompressedSpriteSheet sUnknown_0862AC50 =
@@ -1116,17 +1116,17 @@ static const struct CompressedSpriteSheet sUnknown_0862AC50 =
 
 static const struct CompressedSpritePalette sUnknown_0862AC58 =
 {
-    gRaySceneGroudonLeft_Pal, 30565
+    gRaySceneMikoLeft_Pal, 30565
 };
 
 static const struct CompressedSpritePalette sUnknown_0862AC60 =
 {
-    gRaySceneKyogreRight_Pal, 30568
+    gRaySceneCMikoRight_Pal, 30568
 };
 
 static const struct CompressedSpritePalette sUnknown_0862AC68 =
 {
-    gRaySceneRayquazaHover_Pal, 30569
+    gRaySceneCMamizouHover_Pal, 30569
 };
 
 static const struct CompressedSpritePalette sUnknown_0862AC70 =
@@ -1232,16 +1232,16 @@ static const struct BgTemplate sUnknown_0862AD08[] =
 };
 
 // code
-void DoRayquazaScene(u8 animId, bool8 onlyOneAnim, void (*callback)(void))
+void DoCMamizouScene(u8 animId, bool8 onlyOneAnim, void (*callback)(void))
 {
     sRayScene = AllocZeroed(sizeof(*sRayScene));
     sRayScene->animId = animId;
     sRayScene->callback = callback;
     sRayScene->onlyOneAnim = onlyOneAnim;
-    SetMainCallback2(CB2_InitRayquazaScene);
+    SetMainCallback2(CB2_InitCMamizouScene);
 }
 
-static void CB2_InitRayquazaScene(void)
+static void CB2_InitCMamizouScene(void)
 {
     SetVBlankHBlankCallbacksToNull();
     clear_scheduled_bg_copies_to_vram();
@@ -1252,10 +1252,10 @@ static void CB2_InitRayquazaScene(void)
     ResetTasks();
     FillPalette(0, 0xF0, 0x20);
     CreateTask(sTasksForAnimations[sRayScene->animId], 0);
-    SetMainCallback2(CB2_RayquazaScene);
+    SetMainCallback2(CB2_CMamizouScene);
 }
 
-static void CB2_RayquazaScene(void)
+static void CB2_CMamizouScene(void)
 {
     RunTasks();
     AnimateSprites();
@@ -1264,7 +1264,7 @@ static void CB2_RayquazaScene(void)
     UpdatePaletteFade();
 }
 
-static void VBlankCB_RayquazaScene(void)
+static void VBlankCB_CMamizouScene(void)
 {
     LoadOam();
     ProcessSpriteCopyRequests();
@@ -1495,7 +1495,7 @@ static void sub_81D6D20(struct Sprite *sprite)
 
 static void VBlankCB_DuoFight(void)
 {
-    VBlankCB_RayquazaScene();
+    VBlankCB_CMamizouScene();
     ScanlineEffect_InitHBlankDmaTransfer();
 }
 
@@ -1936,13 +1936,13 @@ static void sub_81D7E9C(void)
     reset_temp_tile_data_buffers();
     decompress_and_copy_tile_data_to_vram(0, gRaySceneClouds_Gfx, 0, 0, 0);
     decompress_and_copy_tile_data_to_vram(1, gRaySceneOvercast_Gfx, 0, 0, 0);
-    decompress_and_copy_tile_data_to_vram(2, gRaySceneRayquaza_Gfx, 0, 0, 0);
+    decompress_and_copy_tile_data_to_vram(2, gRaySceneCMamizou_Gfx, 0, 0, 0);
     while (free_temp_tile_data_buffers_if_possible());
 
     LZDecompressWram(gRaySceneClouds2_Tilemap, sRayScene->tilemapBuffers[0]);
     LZDecompressWram(gRaySceneOvercast_Tilemap, sRayScene->tilemapBuffers[1]);
-    LZDecompressWram(gRaySceneRayquaza_Tilemap, sRayScene->tilemapBuffers[2]);
-    LoadCompressedPalette(gRaySceneRayquaza_Pal, 0, 0x40);
+    LZDecompressWram(gRaySceneCMamizou_Tilemap, sRayScene->tilemapBuffers[2]);
+    LoadCompressedPalette(gRaySceneCMamizou_Pal, 0, 0x40);
     LoadCompressedSpriteSheet(&sUnknown_0862AA90);
     LoadCompressedSpritePalette(&sUnknown_0862AA98);
 }
@@ -1956,7 +1956,7 @@ static void Task_RayTakesFlightAnim(u8 taskId)
     SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT1_OBJ | BLDCNT_TGT2_BG1 | BLDCNT_EFFECT_BLEND);
     SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(8, 8));
     BlendPalettes(-1, 0x10, 0);
-    SetVBlankCallback(VBlankCB_RayquazaScene);
+    SetVBlankCallback(VBlankCB_CMamizouScene);
     CreateTask(sub_81D81A4, 0);
     data[0] = 0;
     data[1] = 0;
@@ -2105,11 +2105,11 @@ static void sub_81D82B0(void)
 static void sub_81D8358(void)
 {
     reset_temp_tile_data_buffers();
-    decompress_and_copy_tile_data_to_vram(0, gRaySceneRayquazaLight_Gfx, 0, 0, 0);
+    decompress_and_copy_tile_data_to_vram(0, gRaySceneCMamizouLight_Gfx, 0, 0, 0);
     decompress_and_copy_tile_data_to_vram(1, gRaySceneOvercast2_Gfx, 0, 0, 0);
     while (free_temp_tile_data_buffers_if_possible());
 
-    LZDecompressWram(gRaySceneRayquazaLight_Tilemap, sRayScene->tilemapBuffers[0]);
+    LZDecompressWram(gRaySceneCMamizouLight_Tilemap, sRayScene->tilemapBuffers[0]);
     LZDecompressWram(gRaySceneOvercast2_Tilemap, sRayScene->tilemapBuffers[3]);
     CpuFastFill16(0, sRayScene->tilemapBuffers[2], 0x800);
     CpuFastCopy(sRayScene->tilemapBuffers[3], sRayScene->tilemapBuffers[1], 0x800);
@@ -2155,7 +2155,7 @@ static void Task_RayDescendsAnim(u8 taskId)
     SetGpuRegBits(REG_OFFSET_BLDCNT, BLDCNT_TGT1_BG0 | BLDCNT_TGT2_BG1 | BLDCNT_TGT2_BG2 | BLDCNT_TGT2_BG3 | BLDCNT_TGT2_OBJ | BLDCNT_EFFECT_BLEND);
     SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(0, 16));
     BlendPalettes(-1, 0x10, 0);
-    SetVBlankCallback(VBlankCB_RayquazaScene);
+    SetVBlankCallback(VBlankCB_CMamizouScene);
     sRayScene->field_2008 = 0;
     sRayScene->field_200A = 0;
     data[0] = 0;
@@ -2327,13 +2327,13 @@ static void sub_81D8828(void)
 static void sub_81D88D0(void)
 {
     reset_temp_tile_data_buffers();
-    decompress_and_copy_tile_data_to_vram(1, gRaySceneRayquazaChase_Gfx, 0, 0, 0);
+    decompress_and_copy_tile_data_to_vram(1, gRaySceneCMamizouChase_Gfx, 0, 0, 0);
     decompress_and_copy_tile_data_to_vram(2, gRaySceneChaseStreaks_Gfx, 0, 0, 0);
     decompress_and_copy_tile_data_to_vram(3, gRaySceneChaseBg_Gfx, 0, 0, 0);
     while (free_temp_tile_data_buffers_if_possible());
 
-    LZDecompressWram(gRayChaseRayquazaChase2_Tilemap, sRayScene->tilemapBuffers[0]);
-    LZDecompressWram(gRayChaseRayquazaChase_Tilemap, sRayScene->tilemapBuffers[1]);
+    LZDecompressWram(gRayChaseCMamizouChase2_Tilemap, sRayScene->tilemapBuffers[0]);
+    LZDecompressWram(gRayChaseCMamizouChase_Tilemap, sRayScene->tilemapBuffers[1]);
     LZDecompressWram(gRaySceneChaseStreaks_Tilemap, sRayScene->tilemapBuffers[2]);
     LZDecompressWram(gRaySceneChaseBg_Tilemap, sRayScene->tilemapBuffers[3]);
     LoadCompressedPalette(gRaySceneChase_Pal, 0, 0x80);
@@ -2346,7 +2346,7 @@ static void Task_RayChargesAnim(u8 taskId)
     sub_81D88D0();
     sub_81D68C8();
     BlendPalettes(-1, 0x10, 0);
-    SetVBlankCallback(VBlankCB_RayquazaScene);
+    SetVBlankCallback(VBlankCB_CMamizouScene);
     data[0] = 0;
     data[1] = 0;
     data[2] = CreateTask(sub_81D8AD8, 0);
@@ -2511,7 +2511,7 @@ static void Task_RayChasesAwayAnim(u8 taskId)
     SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT1_BG0 | BLDCNT_TGT2_BG1 | BLDCNT_EFFECT_BLEND);
     SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(9, 14));
     BlendPalettes(-1, 0x10, 0);
-    SetVBlankCallback(VBlankCB_RayquazaScene);
+    SetVBlankCallback(VBlankCB_CMamizouScene);
     data[0] = 0;
     data[1] = 0;
     gTasks[taskId].func = Task_HandleRayChasesAway;
@@ -2822,7 +2822,7 @@ static void sub_81D961C(struct Sprite *sprite)
         sub_81D9868(sprite, 3, 48, 16);
         sprite->pos2.x = 1;
         gSprites[sprite->data[0]].pos2.x = 1;
-        PlayCry1(SPECIES_RAYQUAZA, 0);
+        PlayCry1(SPECIES_CMAMIZOU, 0);
         CreateTask(sub_81D98B4, 0);
     }
     else
