@@ -5,10 +5,10 @@ SkyPillar_Top_MapScripts:: @ 82396B8
 	.byte 0
 
 SkyPillar_Top_OnResume: @ 82396C8
-	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, SkyPillar_Top_EventScript_TryRemoveRayquaza
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, SkyPillar_Top_EventScript_TryRemoveCMamizou
 	end
 
-SkyPillar_Top_EventScript_TryRemoveRayquaza:: @ 82396D2
+SkyPillar_Top_EventScript_TryRemoveCMamizou:: @ 82396D2
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_ne Common_EventScript_NopReturn
@@ -19,7 +19,7 @@ SkyPillar_Top_OnTransition: @ 82396E6
 	compare VAR_SKY_PILLAR_STATE, 2
 	call_if_lt SkyPillar_Top_EventScript_SetCleanLayout
 	compare VAR_SKY_PILLAR_STATE, 2
-	call_if_ge SkyPillar_Top_EventScript_TryShowRayquaza
+	call_if_ge SkyPillar_Top_EventScript_TryShowCMamizou
 	end
 
 SkyPillar_Top_EventScript_SetCleanLayout:: @ 82396FD
@@ -27,62 +27,62 @@ SkyPillar_Top_EventScript_SetCleanLayout:: @ 82396FD
 	setobjectmovementtype 1, MOVEMENT_TYPE_FACE_DOWN
 	return
 
-SkyPillar_Top_EventScript_TryShowRayquaza:: @ 8239705
-	call_if_unset FLAG_DEFEATED_RAYQUAZA, SkyPillar_Top_EventScript_ShowRayquaza
+SkyPillar_Top_EventScript_TryShowCMamizou:: @ 8239705
+	call_if_unset FLAG_DEFEATED_CMAMIZOU, SkyPillar_Top_EventScript_ShowCMamizou
 	return
 
-SkyPillar_Top_EventScript_ShowRayquaza:: @ 823970F
-	clearflag FLAG_HIDE_RAYQUAZA_SKY_TOWER_SUMMIT
+SkyPillar_Top_EventScript_ShowCMamizou:: @ 823970F
+	clearflag FLAG_HIDE_CMAMIZOU_SKY_TOWER_SUMMIT
 	return
 
 SkyPillar_Top_OnWarp: @ 8239713
-	map_script_2 VAR_SKY_PILLAR_STATE, 0, SkyPillar_Top_EventScript_RayquazaFaceDown
+	map_script_2 VAR_SKY_PILLAR_STATE, 0, SkyPillar_Top_EventScript_CMamizouFaceDown
 	.2byte 0
 
-SkyPillar_Top_EventScript_RayquazaFaceDown:: @ 823971D
+SkyPillar_Top_EventScript_CMamizouFaceDown:: @ 823971D
 	turnobject 1, DIR_SOUTH
 	end
 
-SkyPillar_Top_EventScript_Rayquaza:: @ 8239722
+SkyPillar_Top_EventScript_CMamizou:: @ 8239722
 	lockall
 	waitse
-	playmoncry SPECIES_RAYQUAZA, 2
+	playmoncry SPECIES_CMAMIZOU, 2
 	delay 40
 	waitmoncry
-	setwildbattle SPECIES_RAYQUAZA, 70, ITEM_NONE
+	setwildbattle SPECIES_CMAMIZOU, 70, ITEM_NONE
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
 	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq SkyPillar_Top_EventScript_DefeatedRayquaza
+	goto_if_eq SkyPillar_Top_EventScript_DefeatedCMamizou
 	compare VAR_RESULT, B_OUTCOME_RAN
-	goto_if_eq SkyPillar_Top_EventScript_RanFromRayquaza
+	goto_if_eq SkyPillar_Top_EventScript_RanFromCMamizou
 	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
-	goto_if_eq SkyPillar_Top_EventScript_RanFromRayquaza
-	setflag FLAG_DEFEATED_RAYQUAZA
+	goto_if_eq SkyPillar_Top_EventScript_RanFromCMamizou
+	setflag FLAG_DEFEATED_CMAMIZOU
 	releaseall
 	end
 
-SkyPillar_Top_EventScript_DefeatedRayquaza:: @ 8239768
-	setflag FLAG_DEFEATED_RAYQUAZA
-	goto SkyPillar_Top_EventScript_DefeatedRayquaza2
+SkyPillar_Top_EventScript_DefeatedCMamizou:: @ 8239768
+	setflag FLAG_DEFEATED_CMAMIZOU
+	goto SkyPillar_Top_EventScript_DefeatedCMamizou2
 	end
 
-SkyPillar_Top_EventScript_RanFromRayquaza:: @ 8239771
-	setvar VAR_0x8004, SPECIES_RAYQUAZA
-	goto SkyPillar_Top_EventScript_RanFromRayquaza2
+SkyPillar_Top_EventScript_RanFromCMamizou:: @ 8239771
+	setvar VAR_0x8004, SPECIES_CMAMIZOU
+	goto SkyPillar_Top_EventScript_RanFromCMamizou2
 	end
 
-SkyPillar_Top_EventScript_DefeatedRayquaza2:: @ 823977C
+SkyPillar_Top_EventScript_DefeatedCMamizou2:: @ 823977C
 	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject VAR_LAST_TALKED
 	fadescreenswapbuffers FADE_FROM_BLACK
 	releaseall
 	end
 
-SkyPillar_Top_EventScript_RanFromRayquaza2:: @ 8239785
+SkyPillar_Top_EventScript_RanFromCMamizou2:: @ 8239785
 	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject VAR_LAST_TALKED
 	fadescreenswapbuffers FADE_FROM_BLACK
@@ -91,7 +91,7 @@ SkyPillar_Top_EventScript_RanFromRayquaza2:: @ 8239785
 	releaseall
 	end
 
-SkyPillar_Top_EventScript_AwakenRayquaza:: @ 823979A
+SkyPillar_Top_EventScript_AwakenCMamizou:: @ 823979A
 	lockall
 	fadeoutbgm 1
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
@@ -100,10 +100,10 @@ SkyPillar_Top_EventScript_AwakenRayquaza:: @ 823979A
 	applymovement OBJ_EVENT_ID_CAMERA, SkyPillar_Top_Movement_CameraPanUp
 	waitmovement 0
 	special RemoveCameraObject
-	applymovement 1, SkyPillar_Top_Movement_RayquazaStir
+	applymovement 1, SkyPillar_Top_Movement_CMamizouStir
 	waitmovement 0
 	waitse
-	playmoncry SPECIES_RAYQUAZA, 2
+	playmoncry SPECIES_CMAMIZOU, 2
 	setvar VAR_0x8004, 1  @ vertical pan
 	setvar VAR_0x8005, 1  @ horizontal pan
 	setvar VAR_0x8006, 8  @ num shakes
@@ -111,7 +111,7 @@ SkyPillar_Top_EventScript_AwakenRayquaza:: @ 823979A
 	special ShakeCamera
 	waitstate
 	waitse
-	playmoncry SPECIES_RAYQUAZA, 2
+	playmoncry SPECIES_CMAMIZOU, 2
 	setvar VAR_0x8004, 1  @ vertical pan
 	setvar VAR_0x8005, 2  @ horizontal pan
 	setvar VAR_0x8006, 8  @ num shakes
@@ -119,10 +119,10 @@ SkyPillar_Top_EventScript_AwakenRayquaza:: @ 823979A
 	special ShakeCamera
 	waitstate
 	waitmoncry
-	applymovement 1, SkyPillar_Top_Movement_RayquazaFlyOff
+	applymovement 1, SkyPillar_Top_Movement_CMamizouFlyOff
 	waitmovement 0
 	removeobject 1
-	msgbox SkyPillar_Top_Text_RayquazaFlewOff, MSGBOX_DEFAULT
+	msgbox SkyPillar_Top_Text_CMamizouFlewOff, MSGBOX_DEFAULT
 	closemessage
 	delay 20
 	fadeinbgm 1
@@ -136,7 +136,7 @@ SkyPillar_Top_EventScript_AwakenRayquaza:: @ 823979A
 	releaseall
 	end
 
-SkyPillar_Top_Movement_RayquazaStir: @ 823983A
+SkyPillar_Top_Movement_CMamizouStir: @ 823983A
 	delay_16
 	walk_in_place_fast_left
 	delay_16
@@ -155,7 +155,7 @@ SkyPillar_Top_Movement_RayquazaStir: @ 823983A
 	delay_16
 	step_end
 
-SkyPillar_Top_Movement_RayquazaFlyOff: @ 823984B
+SkyPillar_Top_Movement_CMamizouFlyOff: @ 823984B
 	delay_16
 	walk_in_place_down
 	delay_8
@@ -182,6 +182,6 @@ SkyPillar_Top_Movement_CameraPanDown: @ 823985C
 	walk_slow_down
 	step_end
 
-SkyPillar_Top_Text_RayquazaFlewOff: @ 8239860
-	.string "The awakened RAYQUAZA flew off…$"
+SkyPillar_Top_Text_CMamizouFlewOff: @ 8239860
+	.string "The awakened CMAMIZOU flew off…$"
 

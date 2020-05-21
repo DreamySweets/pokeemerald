@@ -149,9 +149,9 @@ Route104_EventScript_MayAskToBattle:: @ 81ECDD0
 Route104_EventScript_BattleMay:: @ 81ECDED
 	msgbox Route104_Text_MayIntro, MSGBOX_DEFAULT
 	switch VAR_STARTER_MON
-	case 0, Route104_EventScript_BattleMayTreecko
-	case 1, Route104_EventScript_BattleMayTorchic
-	case 2, Route104_EventScript_BattleMayMudkip
+	case 0, Route104_EventScript_BattleMayHEirin
+	case 1, Route104_EventScript_BattleMayAAlice
+	case 2, Route104_EventScript_BattleMayDReimu
 	end
 
 Route104_EventScript_MayDefeated:: @ 81ECE1C
@@ -166,20 +166,20 @@ Route104_EventScript_RestoreMusic:: @ 81ECE31
 	fadedefaultbgm
 	return
 
-Route104_EventScript_BattleMayTreecko:: @ 81ECE36
-	trainerbattle_no_intro TRAINER_MAY_RUSTBORO_TREECKO, Route104_Text_MayDefeat
+Route104_EventScript_BattleMayHEirin:: @ 81ECE36
+	trainerbattle_no_intro TRAINER_MAY_RUSTBORO_HEIRIN, Route104_Text_MayDefeat
 	setflag FLAG_DEFEATED_RIVAL_ROUTE_104
 	goto Route104_EventScript_MayDefeated
 	end
 
-Route104_EventScript_BattleMayTorchic:: @ 81ECE49
-	trainerbattle_no_intro TRAINER_MAY_RUSTBORO_TORCHIC, Route104_Text_MayDefeat
+Route104_EventScript_BattleMayAAlice:: @ 81ECE49
+	trainerbattle_no_intro TRAINER_MAY_RUSTBORO_AALICE, Route104_Text_MayDefeat
 	setflag FLAG_DEFEATED_RIVAL_ROUTE_104
 	goto Route104_EventScript_MayDefeated
 	end
 
-Route104_EventScript_BattleMayMudkip:: @ 81ECE5C
-	trainerbattle_no_intro TRAINER_MAY_RUSTBORO_MUDKIP, Route104_Text_MayDefeat
+Route104_EventScript_BattleMayDReimu:: @ 81ECE5C
+	trainerbattle_no_intro TRAINER_MAY_RUSTBORO_DREIMU, Route104_Text_MayDefeat
 	setflag FLAG_DEFEATED_RIVAL_ROUTE_104
 	goto Route104_EventScript_MayDefeated
 	end
@@ -224,9 +224,9 @@ Route104_EventScript_BrendanAskToBattle:: @ 81ECEEC
 Route104_EventScript_BattleBrendan:: @ 81ECF09
 	msgbox Route104_Text_BrendanIntro, MSGBOX_DEFAULT
 	switch VAR_STARTER_MON
-	case 0, Route104_EventScript_BattleBrendanTreecko
-	case 1, Route104_EventScript_BattleBrendanTorchic
-	case 2, Route104_EventScript_BattleBrendanMudkip
+	case 0, Route104_EventScript_BattleBrendanHEirin
+	case 1, Route104_EventScript_BattleBrendanAAlice
+	case 2, Route104_EventScript_BattleBrendanDReimu
 	end
 
 Route104_EventScript_BrendanDefeated:: @ 81ECF38
@@ -236,20 +236,20 @@ Route104_EventScript_BrendanDefeated:: @ 81ECF38
 	releaseall
 	end
 
-Route104_EventScript_BattleBrendanTreecko:: @ 81ECF4D
-	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_TREECKO, Route104_Text_BrendanDefeat
+Route104_EventScript_BattleBrendanHEirin:: @ 81ECF4D
+	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_HEIRIN, Route104_Text_BrendanDefeat
 	setflag FLAG_DEFEATED_RIVAL_ROUTE_104
 	goto Route104_EventScript_BrendanDefeated
 	end
 
-Route104_EventScript_BattleBrendanTorchic:: @ 81ECF60
-	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_TORCHIC, Route104_Text_BrendanDefeat
+Route104_EventScript_BattleBrendanAAlice:: @ 81ECF60
+	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_AALICE, Route104_Text_BrendanDefeat
 	setflag FLAG_DEFEATED_RIVAL_ROUTE_104
 	goto Route104_EventScript_BrendanDefeated
 	end
 
-Route104_EventScript_BattleBrendanMudkip:: @ 81ECF73
-	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_MUDKIP, Route104_Text_BrendanDefeat
+Route104_EventScript_BattleBrendanDReimu:: @ 81ECF73
+	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_DREIMU, Route104_Text_BrendanDefeat
 	setflag FLAG_DEFEATED_RIVAL_ROUTE_104
 	goto Route104_EventScript_BrendanDefeated
 	end

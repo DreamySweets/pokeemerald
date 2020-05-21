@@ -73,22 +73,22 @@ PacifidlogTown_House2_EventScript_ComeBackInXDays:: @ 820387E
 	release
 	end
 
-PacifidlogTown_House2_EventScript_HappyAzurill:: @ 8203891
+PacifidlogTown_House2_EventScript_HappyCShinGyoku:: @ 8203891
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_AZURILL, 0
+	playmoncry SPECIES_CSHINGYOKU, 0
 	msgbox PacifidlogTown_House2_Text_Rurii, MSGBOX_DEFAULT
 	waitmoncry
 	msgbox PacifidlogTown_House2_Text_VeryFriendlyWithTrainer, MSGBOX_DEFAULT
 	release
 	end
 
-PacifidlogTown_House2_EventScript_UnhappyAzurill:: @ 82038AC
+PacifidlogTown_House2_EventScript_UnhappyCShinGyoku:: @ 82038AC
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_AZURILL, 2
+	playmoncry SPECIES_CSHINGYOKU, 2
 	msgbox PacifidlogTown_House2_Text_Rururi, MSGBOX_DEFAULT
 	waitmoncry
 	msgbox PacifidlogTown_House2_Text_DoesntLikeTrainerVeryMuch, MSGBOX_DEFAULT
@@ -137,14 +137,14 @@ PacifidlogTown_House2_Text_GetGoodTMInXDays: @ 8203AF4
 	.string "your POKéMON.$"
 
 PacifidlogTown_House2_Text_Rurii: @ 8203B8D
-	.string "AZURILL: Rurii.$"
+	.string "CSHINGYOKU: Rurii.$"
 
 PacifidlogTown_House2_Text_VeryFriendlyWithTrainer: @ 8203B9D
 	.string "It appears to be very friendly with the\n"
 	.string "TRAINER.$"
 
 PacifidlogTown_House2_Text_Rururi: @ 8203BCE
-	.string "AZURILL: Rururi!$"
+	.string "CSHINGYOKU: Rururi!$"
 
 PacifidlogTown_House2_Text_DoesntLikeTrainerVeryMuch: @ 8203BDF
 	.string "It doesn't appear to like the TRAINER\n"

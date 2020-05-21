@@ -83,12 +83,12 @@ static void Phase2Task_Drake(u8 taskId);
 static void Phase2Task_Champion(u8 taskId);
 static void Phase2Task_Aqua(u8 taskId);
 static void Phase2Task_Magma(u8 taskId);
-static void Phase2Task_Regice(u8 taskId);
-static void Phase2Task_Registeel(u8 taskId);
-static void Phase2Task_Regirock(u8 taskId);
-static void Phase2Task_Kyogre(u8 taskId);
-static void Phase2Task_Groudon(u8 taskId);
-static void Phase2Task_Rayquaza(u8 taskId);
+static void Phase2Task_CFuto(u8 taskId);
+static void Phase2Task_Futo(u8 taskId);
+static void Phase2Task_Tojiko(u8 taskId);
+static void Phase2Task_CMiko(u8 taskId);
+static void Phase2Task_Miko(u8 taskId);
+static void Phase2Task_CMamizou(u8 taskId);
 static void Phase2Task_ShredSplit(u8 taskId);
 static void Phase2Task_Blackhole1(u8 taskId);
 static void Phase2Task_Blackhole2(u8 taskId);
@@ -117,7 +117,7 @@ static void VBlankCB0_Phase2_WhiteFade(void);
 static void VBlankCB1_Phase2_WhiteFade(void);
 static void HBlankCB_Phase2_WhiteFade(void);
 static void VBlankCB_Phase2_Shards(void);
-static void VBlankCB_Phase2_Rayquaza(void);
+static void VBlankCB_Phase2_CMamizou(void);
 static bool8 Phase2_Blur_Func1(struct Task *task);
 static bool8 Phase2_Blur_Func2(struct Task *task);
 static bool8 Phase2_Blur_Func3(struct Task *task);
@@ -131,17 +131,17 @@ static bool8 Phase2_Magma_Func1(struct Task *task);
 static bool8 Phase2_Magma_Func2(struct Task *task);
 static bool8 Phase2_FramesCountdown(struct Task *task);
 static bool8 Phase2_Regi_Func1(struct Task *task);
-static bool8 Phase2_Regice_Func2(struct Task *task);
-static bool8 Phase2_Registeel_Func2(struct Task *task);
-static bool8 Phase2_Regirock_Func2(struct Task *task);
+static bool8 Phase2_CFuto_Func2(struct Task *task);
+static bool8 Phase2_Futo_Func2(struct Task *task);
+static bool8 Phase2_Tojiko_Func2(struct Task *task);
 static bool8 Phase2_WeatherTrio_Func1(struct Task *task);
 static bool8 Phase2_WaitPaletteFade(struct Task *task);
-static bool8 Phase2_Kyogre_Func3(struct Task *task);
-static bool8 Phase2_Kyogre_Func4(struct Task *task);
-static bool8 Phase2_Kyogre_Func5(struct Task *task);
-static bool8 Phase2_Groudon_Func3(struct Task *task);
-static bool8 Phase2_Groudon_Func4(struct Task *task);
-static bool8 Phase2_Groudon_Func5(struct Task *task);
+static bool8 Phase2_CMiko_Func3(struct Task *task);
+static bool8 Phase2_CMiko_Func4(struct Task *task);
+static bool8 Phase2_CMiko_Func5(struct Task *task);
+static bool8 Phase2_Miko_Func3(struct Task *task);
+static bool8 Phase2_Miko_Func4(struct Task *task);
+static bool8 Phase2_Miko_Func5(struct Task *task);
 static bool8 Phase2_WeatherDuo_Func6(struct Task *task);
 static bool8 Phase2_WeatherDuo_Func7(struct Task *task);
 static bool8 Phase2_BigPokeball_Func1(struct Task *task);
@@ -198,13 +198,13 @@ static bool8 Phase2_30_Func1(struct Task *task);
 static bool8 Phase2_30_Func2(struct Task *task);
 static bool8 Phase2_30_Func3(struct Task *task);
 static bool8 Phase2_30_Func4(struct Task *task);
-static bool8 Phase2_Rayquaza_Func3(struct Task *task);
-static bool8 Phase2_Rayquaza_Func4(struct Task *task);
-static bool8 Phase2_Rayquaza_Func5(struct Task *task);
-static bool8 Phase2_Rayquaza_Func6(struct Task *task);
-static bool8 Phase2_Rayquaza_Func7(struct Task *task);
-static bool8 Phase2_Rayquaza_Func8(struct Task *task);
-static bool8 Phase2_Rayquaza_Func9(struct Task *task);
+static bool8 Phase2_CMamizou_Func3(struct Task *task);
+static bool8 Phase2_CMamizou_Func4(struct Task *task);
+static bool8 Phase2_CMamizou_Func5(struct Task *task);
+static bool8 Phase2_CMamizou_Func6(struct Task *task);
+static bool8 Phase2_CMamizou_Func7(struct Task *task);
+static bool8 Phase2_CMamizou_Func8(struct Task *task);
+static bool8 Phase2_CMamizou_Func9(struct Task *task);
 static bool8 Phase2_31_Func1(struct Task *task);
 static bool8 Phase2_31_Func2(struct Task *task);
 static bool8 Phase2_31_Func3(struct Task *task);
@@ -291,17 +291,17 @@ static const u32 gUnknown_085BC314[] = INCBIN_U32("graphics/battle_transitions/8
 static const u32 gUnknown_085BCB14[] = INCBIN_U32("graphics/battle_transitions/85BCB14.bin");
 static const u32 gUnknown_085BD314[] = INCBIN_U32("graphics/battle_transitions/85BD314.bin");
 static const u16 gUnknown_085BDB14[] = INCBIN_U16("graphics/battle_transitions/85BDB14.gbapal");
-static const u32 gUnknown_085BDB34[] = INCBIN_U32("graphics/battle_transitions/kyogre.4bpp.lz");
-static const u32 gUnknown_085BE1E8[] = INCBIN_U32("graphics/battle_transitions/kyogre.bin.lz");
-static const u32 gUnknown_085BE51C[] = INCBIN_U32("graphics/battle_transitions/groudon.4bpp.lz");
-static const u32 gUnknown_085BEA88[] = INCBIN_U32("graphics/battle_transitions/groudon.bin.lz");
-static const u16 gUnknown_085BEDA0[] = INCBIN_U16("graphics/battle_transitions/kyogre_pt1.gbapal");
-static const u16 gUnknown_085BEEE0[] = INCBIN_U16("graphics/battle_transitions/kyogre_pt2.gbapal");
-static const u16 gUnknown_085BF0A0[] = INCBIN_U16("graphics/battle_transitions/groudon_pt1.gbapal");
-static const u16 gUnknown_085BF2A0[] = INCBIN_U16("graphics/battle_transitions/groudon_pt2.gbapal");
-static const u16 gUnknown_085BF4A0[] = INCBIN_U16("graphics/battle_transitions/rayquaza.gbapal");
-static const u32 gUnknown_085BF6A0[] = INCBIN_U32("graphics/battle_transitions/rayquaza.4bpp");
-static const u32 gUnknown_085C6BE0[] = INCBIN_U32("graphics/battle_transitions/rayquaza.bin");
+static const u32 gUnknown_085BDB34[] = INCBIN_U32("graphics/battle_transitions/cmiko.4bpp.lz");
+static const u32 gUnknown_085BE1E8[] = INCBIN_U32("graphics/battle_transitions/cmiko.bin.lz");
+static const u32 gUnknown_085BE51C[] = INCBIN_U32("graphics/battle_transitions/miko.4bpp.lz");
+static const u32 gUnknown_085BEA88[] = INCBIN_U32("graphics/battle_transitions/miko.bin.lz");
+static const u16 gUnknown_085BEDA0[] = INCBIN_U16("graphics/battle_transitions/cmiko_pt1.gbapal");
+static const u16 gUnknown_085BEEE0[] = INCBIN_U16("graphics/battle_transitions/cmiko_pt2.gbapal");
+static const u16 gUnknown_085BF0A0[] = INCBIN_U16("graphics/battle_transitions/miko_pt1.gbapal");
+static const u16 gUnknown_085BF2A0[] = INCBIN_U16("graphics/battle_transitions/miko_pt2.gbapal");
+static const u16 gUnknown_085BF4A0[] = INCBIN_U16("graphics/battle_transitions/cmamizou.gbapal");
+static const u32 gUnknown_085BF6A0[] = INCBIN_U32("graphics/battle_transitions/cmamizou.4bpp");
+static const u32 gUnknown_085C6BE0[] = INCBIN_U32("graphics/battle_transitions/cmamizou.bin");
 static const u32 gUnknown_085C7BE0[] = INCBIN_U32("graphics/battle_transitions/frontier_brain.gbapal");
 static const u32 gUnknown_085C7C00[] = INCBIN_U32("graphics/battle_transitions/frontier_brain.4bpp.lz");
 static const u32 gUnknown_085C828C[] = INCBIN_U32("graphics/battle_transitions/frontier_brain.bin.lz");
@@ -338,12 +338,12 @@ static const TaskFunc sPhase2_Tasks[B_TRANSITION_COUNT] =
     Phase2Task_Champion,                    // 16
     Phase2Task_Aqua,                        // 17
     Phase2Task_Magma,                       // 18
-    Phase2Task_Regice,                      // 19
-    Phase2Task_Registeel,                   // 20
-    Phase2Task_Regirock,                    // 21
-    Phase2Task_Kyogre,                      // 22
-    Phase2Task_Groudon,                     // 23
-    Phase2Task_Rayquaza,                    // 24
+    Phase2Task_CFuto,                      // 19
+    Phase2Task_Futo,                   // 20
+    Phase2Task_Tojiko,                    // 21
+    Phase2Task_CMiko,                      // 22
+    Phase2Task_Miko,                     // 23
+    Phase2Task_CMamizou,                    // 24
     Phase2Task_ShredSplit,                  // 25
     Phase2Task_Blackhole1,                  // 26
     Phase2Task_Blackhole2,                  // 27
@@ -422,43 +422,43 @@ static const TransitionStateFunc sPhase2_BigPokeball_Funcs[] =
     Phase2_BigPokeball_Func6
 };
 
-static const TransitionStateFunc sPhase2_Regice_Funcs[] =
+static const TransitionStateFunc sPhase2_CFuto_Funcs[] =
 {
     Phase2_Regi_Func1,
-    Phase2_Regice_Func2,
+    Phase2_CFuto_Func2,
     Phase2_BigPokeball_Func3,
     Phase2_BigPokeball_Func4,
     Phase2_BigPokeball_Func5,
     Phase2_BigPokeball_Func6
 };
 
-static const TransitionStateFunc sPhase2_Registeel_Funcs[] =
+static const TransitionStateFunc sPhase2_Futo_Funcs[] =
 {
     Phase2_Regi_Func1,
-    Phase2_Registeel_Func2,
+    Phase2_Futo_Func2,
     Phase2_BigPokeball_Func3,
     Phase2_BigPokeball_Func4,
     Phase2_BigPokeball_Func5,
     Phase2_BigPokeball_Func6
 };
 
-static const TransitionStateFunc sPhase2_Regirock_Funcs[] =
+static const TransitionStateFunc sPhase2_Tojiko_Funcs[] =
 {
     Phase2_Regi_Func1,
-    Phase2_Regirock_Func2,
+    Phase2_Tojiko_Func2,
     Phase2_BigPokeball_Func3,
     Phase2_BigPokeball_Func4,
     Phase2_BigPokeball_Func5,
     Phase2_BigPokeball_Func6
 };
 
-static const TransitionStateFunc sPhase2_Kyogre_Funcs[] =
+static const TransitionStateFunc sPhase2_CMiko_Funcs[] =
 {
     Phase2_WeatherTrio_Func1,
     Phase2_WaitPaletteFade,
-    Phase2_Kyogre_Func3,
-    Phase2_Kyogre_Func4,
-    Phase2_Kyogre_Func5,
+    Phase2_CMiko_Func3,
+    Phase2_CMiko_Func4,
+    Phase2_CMiko_Func5,
     Phase2_FramesCountdown,
     Phase2_WeatherDuo_Func6,
     Phase2_WeatherDuo_Func7
@@ -639,29 +639,29 @@ static const s16 *const *const gUnknown_085C8D38[] =
     gUnknown_085C8D18
 };
 
-static const TransitionStateFunc sPhase2_Groudon_Funcs[] =
+static const TransitionStateFunc sPhase2_Miko_Funcs[] =
 {
     Phase2_WeatherTrio_Func1,
     Phase2_WaitPaletteFade,
-    Phase2_Groudon_Func3,
-    Phase2_Groudon_Func4,
-    Phase2_Groudon_Func5,
+    Phase2_Miko_Func3,
+    Phase2_Miko_Func4,
+    Phase2_Miko_Func5,
     Phase2_FramesCountdown,
     Phase2_WeatherDuo_Func6,
     Phase2_WeatherDuo_Func7
 };
 
-static const TransitionStateFunc sPhase2_Rayquaza_Funcs[] =
+static const TransitionStateFunc sPhase2_CMamizou_Funcs[] =
 {
     Phase2_WeatherTrio_Func1,
     Phase2_WaitPaletteFade,
-    Phase2_Rayquaza_Func3,
-    Phase2_Rayquaza_Func4,
-    Phase2_Rayquaza_Func5,
-    Phase2_Rayquaza_Func6,
-    Phase2_Rayquaza_Func7,
-    Phase2_Rayquaza_Func8,
-    Phase2_Rayquaza_Func9,
+    Phase2_CMamizou_Func3,
+    Phase2_CMamizou_Func4,
+    Phase2_CMamizou_Func5,
+    Phase2_CMamizou_Func6,
+    Phase2_CMamizou_Func7,
+    Phase2_CMamizou_Func8,
+    Phase2_CMamizou_Func9,
     Phase2_Blackhole1_Func2,
     Phase2_Blackhole1_Func3
 };
@@ -1225,24 +1225,24 @@ static void Phase2Task_Magma(u8 taskId)
     while (sPhase2_Magma_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
 }
 
-static void Phase2Task_Regice(u8 taskId)
+static void Phase2Task_CFuto(u8 taskId)
 {
-    while (sPhase2_Regice_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
+    while (sPhase2_CFuto_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
 }
 
-static void Phase2Task_Registeel(u8 taskId)
+static void Phase2Task_Futo(u8 taskId)
 {
-    while (sPhase2_Registeel_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
+    while (sPhase2_Futo_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
 }
 
-static void Phase2Task_Regirock(u8 taskId)
+static void Phase2Task_Tojiko(u8 taskId)
 {
-    while (sPhase2_Regirock_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
+    while (sPhase2_Tojiko_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
 }
 
-static void Phase2Task_Kyogre(u8 taskId)
+static void Phase2Task_CMiko(u8 taskId)
 {
-    while (sPhase2_Kyogre_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
+    while (sPhase2_CMiko_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
 }
 
 static void sub_814669C(struct Task *task)
@@ -1374,7 +1374,7 @@ static bool8 Phase2_Magma_Func2(struct Task *task)
     return FALSE;
 }
 
-static bool8 Phase2_Regice_Func2(struct Task *task)
+static bool8 Phase2_CFuto_Func2(struct Task *task)
 {
     u16 *dst1, *dst2;
 
@@ -1387,7 +1387,7 @@ static bool8 Phase2_Regice_Func2(struct Task *task)
     return FALSE;
 }
 
-static bool8 Phase2_Registeel_Func2(struct Task *task)
+static bool8 Phase2_Futo_Func2(struct Task *task)
 {
     u16 *dst1, *dst2;
 
@@ -1400,7 +1400,7 @@ static bool8 Phase2_Registeel_Func2(struct Task *task)
     return FALSE;
 }
 
-static bool8 Phase2_Regirock_Func2(struct Task *task)
+static bool8 Phase2_Tojiko_Func2(struct Task *task)
 {
     u16 *dst1, *dst2;
 
@@ -1413,7 +1413,7 @@ static bool8 Phase2_Regirock_Func2(struct Task *task)
     return FALSE;
 }
 
-static bool8 Phase2_Kyogre_Func3(struct Task *task)
+static bool8 Phase2_CMiko_Func3(struct Task *task)
 {
     u16 *dst1, *dst2;
 
@@ -1426,7 +1426,7 @@ static bool8 Phase2_Kyogre_Func3(struct Task *task)
     return FALSE;
 }
 
-static bool8 Phase2_Kyogre_Func4(struct Task *task)
+static bool8 Phase2_CMiko_Func4(struct Task *task)
 {
     if (task->tData1 % 3 == 0)
     {
@@ -1443,7 +1443,7 @@ static bool8 Phase2_Kyogre_Func4(struct Task *task)
     return FALSE;
 }
 
-static bool8 Phase2_Kyogre_Func5(struct Task *task)
+static bool8 Phase2_CMiko_Func5(struct Task *task)
 {
     if (task->tData1 % 5 == 0)
     {
@@ -3044,12 +3044,12 @@ static bool16 sub_8149048(const s16 * const *arg0, struct StructRectangularSpira
     return TRUE;
 }
 
-static void Phase2Task_Groudon(u8 taskId)
+static void Phase2Task_Miko(u8 taskId)
 {
-    while (sPhase2_Groudon_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
+    while (sPhase2_Miko_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
 }
 
-static bool8 Phase2_Groudon_Func3(struct Task *task)
+static bool8 Phase2_Miko_Func3(struct Task *task)
 {
     u16 *dst1, *dst2;
 
@@ -3063,7 +3063,7 @@ static bool8 Phase2_Groudon_Func3(struct Task *task)
     return FALSE;
 }
 
-static bool8 Phase2_Groudon_Func4(struct Task *task)
+static bool8 Phase2_Miko_Func4(struct Task *task)
 {
     if (task->tData1 % 3 == 0)
     {
@@ -3079,7 +3079,7 @@ static bool8 Phase2_Groudon_Func4(struct Task *task)
     return FALSE;
 }
 
-static bool8 Phase2_Groudon_Func5(struct Task *task)
+static bool8 Phase2_Miko_Func5(struct Task *task)
 {
     if (task->tData1 % 5 == 0)
     {
@@ -3096,12 +3096,12 @@ static bool8 Phase2_Groudon_Func5(struct Task *task)
     return FALSE;
 }
 
-static void Phase2Task_Rayquaza(u8 taskId)
+static void Phase2Task_CMamizou(u8 taskId)
 {
-    while (sPhase2_Rayquaza_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
+    while (sPhase2_CMamizou_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
 }
 
-static bool8 Phase2_Rayquaza_Func3(struct Task *task)
+static bool8 Phase2_CMamizou_Func3(struct Task *task)
 {
     u16 *dst1, *dst2;
     u16 i;
@@ -3124,11 +3124,11 @@ static bool8 Phase2_Rayquaza_Func3(struct Task *task)
         gScanlineEffectRegBuffers[1][i] = 0x100;
     }
 
-    SetVBlankCallback(VBlankCB_Phase2_Rayquaza);
+    SetVBlankCallback(VBlankCB_Phase2_CMamizou);
     return FALSE;
 }
 
-static bool8 Phase2_Rayquaza_Func4(struct Task *task)
+static bool8 Phase2_CMamizou_Func4(struct Task *task)
 {
     u16 *dst1, *dst2;
 
@@ -3138,7 +3138,7 @@ static bool8 Phase2_Rayquaza_Func4(struct Task *task)
     return FALSE;
 }
 
-static bool8 Phase2_Rayquaza_Func5(struct Task *task)
+static bool8 Phase2_CMamizou_Func5(struct Task *task)
 {
     if ((task->tData1 % 4) == 0)
     {
@@ -3155,7 +3155,7 @@ static bool8 Phase2_Rayquaza_Func5(struct Task *task)
     return FALSE;
 }
 
-static bool8 Phase2_Rayquaza_Func6(struct Task *task)
+static bool8 Phase2_CMamizou_Func6(struct Task *task)
 {
     if (++task->tData1 > 20)
     {
@@ -3167,7 +3167,7 @@ static bool8 Phase2_Rayquaza_Func6(struct Task *task)
     return FALSE;
 }
 
-static bool8 Phase2_Rayquaza_Func7(struct Task *task)
+static bool8 Phase2_CMamizou_Func7(struct Task *task)
 {
     if (!gPaletteFade.active)
     {
@@ -3178,7 +3178,7 @@ static bool8 Phase2_Rayquaza_Func7(struct Task *task)
     return FALSE;
 }
 
-static bool8 Phase2_Rayquaza_Func8(struct Task *task)
+static bool8 Phase2_CMamizou_Func8(struct Task *task)
 {
     BlendPalettes(0x00007FFF, 8, 0);
     BlendPalettes(0xFFFF8000, 0, 0);
@@ -3187,7 +3187,7 @@ static bool8 Phase2_Rayquaza_Func8(struct Task *task)
     return FALSE;
 }
 
-static bool8 Phase2_Rayquaza_Func9(struct Task *task)
+static bool8 Phase2_CMamizou_Func9(struct Task *task)
 {
     if ((task->tData1 % 3) == 0)
     {
@@ -3219,7 +3219,7 @@ static bool8 Phase2_Rayquaza_Func9(struct Task *task)
     return FALSE;
 }
 
-static void VBlankCB_Phase2_Rayquaza(void)
+static void VBlankCB_Phase2_CMamizou(void)
 {
     void *dmaSrc;
 

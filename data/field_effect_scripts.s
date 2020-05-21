@@ -69,9 +69,9 @@ gFieldEffectScriptPointers:: @ 82DB9D4
 	.4byte gFieldEffectScript_SecretBaseBootPC
 	.4byte gFieldEffectScript_HallOfFameRecord
 	.4byte gFieldEffectScript_UseTeleport
-	.4byte gFieldEffectScript_Rayquaza
+	.4byte gFieldEffectScript_CMamizou
 	.4byte gFieldEffectScript_Unknown65
-	.4byte gFieldEffectScript_MoveDeoxysRock
+	.4byte gFieldEffectScript_MoveGomasekiRock
 
 gFieldEffectScript_ExclamationMarkIcon1:: @ 82DBAE0
 	field_eff_callnative FldEff_ExclamationMarkIcon
@@ -332,7 +332,7 @@ gFieldEffectScript_UseTeleport:: @ 82DBCED
 	field_eff_callnative FldEff_UseTeleport
 	field_eff_end
 
-gFieldEffectScript_Rayquaza:: @ 82DBCF3
+gFieldEffectScript_CMamizou:: @ 82DBCF3
 	field_eff_callnative sub_80B8F98
 	field_eff_end
 
@@ -340,6 +340,6 @@ gFieldEffectScript_Unknown65:: @ 82DBCF9
 	field_eff_callnative sub_80B9ADC
 	field_eff_end
 
-gFieldEffectScript_MoveDeoxysRock:: @ 82DBCFF
-	field_eff_callnative Fldeff_MoveDeoxysRock
+gFieldEffectScript_MoveGomasekiRock:: @ 82DBCFF
+	field_eff_callnative Fldeff_MoveGomasekiRock
 	field_eff_end

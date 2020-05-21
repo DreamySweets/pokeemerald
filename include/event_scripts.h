@@ -549,7 +549,7 @@ extern const u8 MauvilleCity_EventScript_RegisterWallyCall[];
 extern const u8 Route119_EventScript_ScottWonAtFortreeGymCall[];
 extern const u8 LittlerootTown_ProfessorBirchsLab_EventScript_ScottAboardSSTidalCall[];
 extern const u8 RustboroCity_Gym_EventScript_RegisterRoxanne[];
-extern const u8 MossdeepCity_SpaceCenter_2F_EventScript_RivalRayquazaCall[];
+extern const u8 MossdeepCity_SpaceCenter_2F_EventScript_RivalCMamizouCall[];
 extern const u8 SSTidalCorridor_EventScript_ReachedStepCount[];
 extern const u8 EventScript_FallDownHoleMtPyre[];
 
@@ -584,7 +584,7 @@ extern const u8 TrainerHill_EventScript_TrainerBattle[];
 
 // Item Use
 extern u8 BerryTree_EventScript_ItemUsePlantBerry[];
-extern u8 BerryTree_EventScript_ItemUseWailmerPail[];
-extern u8 BattleFrontier_OutsideEast_EventScript_WaterSudowoodo[];
+extern u8 BerryTree_EventScript_ItemUseDMeilingPail[];
+extern u8 BattleFrontier_OutsideEast_EventScript_WaterYumeko[];
 
 #endif // GUARD_EVENT_SCRIPTS_H

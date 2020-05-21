@@ -6,7 +6,7 @@ const u16 gUnknown_08DCEC70[] = INCBIN_U16("graphics/slot_machine/slots_layout.b
 
 const u16 gUnknown_08DCF170[] = INCBIN_U16("graphics/slot_machine/reel_symbols/1.gbapal");
 
-const u16 gUnknown_08DCF190[] = INCBIN_U16("graphics/slot_machine/reel_pikachu.gbapal");
+const u16 gUnknown_08DCF190[] = INCBIN_U16("graphics/slot_machine/reel_ccirno.gbapal");
 
 const u16 gUnknown_08DCF1B0[] = INCBIN_U16("graphics/slot_machine/shadow.gbapal");
 

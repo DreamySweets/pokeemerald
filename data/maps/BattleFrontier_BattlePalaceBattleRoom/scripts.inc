@@ -210,8 +210,8 @@ BattleFrontier_BattlePalaceBattleRoom_EventScript_BattleSpenser:: @ 824FC06
 	hideobjectat 2, MAP_BATTLE_FRONTIER_BATTLE_PALACE_BATTLE_ROOM
 	setobjectxy 2, 13, 1
 	setobjectxyperm 2, 13, 1
-	applymovement 4, BattleFrontier_BattlePalaceBattleRoom_Movement_DusclopsEnter
-	applymovement 5, BattleFrontier_BattlePalaceBattleRoom_Movement_AzurillEnter
+	applymovement 4, BattleFrontier_BattlePalaceBattleRoom_Movement_AdvCirnoEnter
+	applymovement 5, BattleFrontier_BattlePalaceBattleRoom_Movement_CShinGyokuEnter
 	applymovement 2, BattleFrontier_BattlePalaceBattleRoom_Movement_SpenserEnter
 	waitmovement 0
 	switch VAR_TEMP_F
@@ -422,7 +422,7 @@ BattleFrontier_BattlePalaceBattleRoom_EventScript_WarpToLobbyDoubles:: @ 824FED5
 	waitstate
 	end
 
-BattleFrontier_BattlePalaceBattleRoom_Movement_DusclopsEnter: @ 824FEDF
+BattleFrontier_BattlePalaceBattleRoom_Movement_AdvCirnoEnter: @ 824FEDF
 	delay_16
 	delay_16
 	set_visible
@@ -432,7 +432,7 @@ BattleFrontier_BattlePalaceBattleRoom_Movement_DusclopsEnter: @ 824FEDF
 	walk_in_place_fastest_left
 	step_end
 
-BattleFrontier_BattlePalaceBattleRoom_Movement_AzurillEnter: @ 824FEE7
+BattleFrontier_BattlePalaceBattleRoom_Movement_CShinGyokuEnter: @ 824FEE7
 	set_visible
 	walk_fast_down
 	walk_fast_right

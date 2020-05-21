@@ -4,48 +4,48 @@ NavelRock_Top_MapScripts:: @ 8269113
 	.byte 0
 
 NavelRock_Top_OnTransition: @ 826911E
-	call_if_set FLAG_CAUGHT_HO_OH, NavelRock_Top_EventScript_HideHoOh
-	call_if_unset FLAG_CAUGHT_HO_OH, NavelRock_Top_EventScript_TryShowHoOh
+	call_if_set FLAG_CAUGHT_AKOMACHI, NavelRock_Top_EventScript_HideAKomachi
+	call_if_unset FLAG_CAUGHT_AKOMACHI, NavelRock_Top_EventScript_TryShowAKomachi
 	end
 
-NavelRock_Top_EventScript_HideHoOh:: @ 8269131
+NavelRock_Top_EventScript_HideAKomachi:: @ 8269131
 	setvar VAR_TEMP_1, 1
-	setflag FLAG_HIDE_HO_OH
+	setflag FLAG_HIDE_AKOMACHI
 	return
 
-NavelRock_Top_EventScript_TryShowHoOh:: @ 826913A
+NavelRock_Top_EventScript_TryShowAKomachi:: @ 826913A
 	setvar VAR_TEMP_1, 1
-	goto_if_set FLAG_DEFEATED_HO_OH, Common_EventScript_NopReturn
+	goto_if_set FLAG_DEFEATED_AKOMACHI, Common_EventScript_NopReturn
 	setvar VAR_TEMP_1, 0
-	clearflag FLAG_HIDE_HO_OH
+	clearflag FLAG_HIDE_AKOMACHI
 	return
 
 NavelRock_Top_OnResume: @ 8269151
-	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, NavelRock_Top_EventScript_TryRemoveHoOh
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, NavelRock_Top_EventScript_TryRemoveAKomachi
 	end
 
-NavelRock_Top_EventScript_TryRemoveHoOh:: @ 826915B
+NavelRock_Top_EventScript_TryRemoveAKomachi:: @ 826915B
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_ne Common_EventScript_NopReturn
 	removeobject 1
 	return
 
-NavelRock_Top_EventScript_HoOh:: @ 826916F
+NavelRock_Top_EventScript_AKomachi:: @ 826916F
 	lockall
 	setvar VAR_TEMP_1, 1
 	special SpawnCameraObject
 	setvar VAR_0x8004, 3  @ num loops
 	setvar VAR_0x8005, 35 @ delay
 	special LoopWingFlapSE
-	applymovement 1, NavelRock_Top_Movement_HoOhAppear
+	applymovement 1, NavelRock_Top_Movement_AKomachiAppear
 	applymovement OBJ_EVENT_ID_CAMERA, NavelRock_Top_Movement_CameraPanUp
 	waitmovement 0
 	delay 50
 	setweather WEATHER_NONE
 	doweather
 	waitse
-	playmoncry SPECIES_HO_OH, 2
+	playmoncry SPECIES_AKOMACHI, 2
 	delay 30
 	waitmoncry
 	delay 60
@@ -53,10 +53,10 @@ NavelRock_Top_EventScript_HoOh:: @ 826916F
 	setvar VAR_0x8005, 35 @ delay
 	special LoopWingFlapSE
 	applymovement OBJ_EVENT_ID_CAMERA, NavelRock_Top_Movement_CameraPanDown
-	applymovement 1, NavelRock_Top_Movement_HoOhApproach
+	applymovement 1, NavelRock_Top_Movement_AKomachiApproach
 	waitmovement 0
 	special RemoveCameraObject
-	setvar VAR_0x8004, SPECIES_HO_OH
+	setvar VAR_0x8004, SPECIES_AKOMACHI
 	setvar VAR_0x8005, 70 @ level
 	setvar VAR_0x8006, ITEM_NONE
 	special CreateObedientEnemyMon
@@ -67,23 +67,23 @@ NavelRock_Top_EventScript_HoOh:: @ 826916F
 	setvar VAR_LAST_TALKED, 1
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq NavelRock_Top_EventScript_DefeatedHoOh
+	goto_if_eq NavelRock_Top_EventScript_DefeatedAKomachi
 	compare VAR_RESULT, B_OUTCOME_RAN
-	goto_if_eq NavelRock_Top_EventScript_RanFromHoOh
+	goto_if_eq NavelRock_Top_EventScript_RanFromAKomachi
 	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
-	goto_if_eq NavelRock_Top_EventScript_RanFromHoOh
-	setflag FLAG_CAUGHT_HO_OH
+	goto_if_eq NavelRock_Top_EventScript_RanFromAKomachi
+	setflag FLAG_CAUGHT_AKOMACHI
 	releaseall
 	end
 
-NavelRock_Top_EventScript_DefeatedHoOh:: @ 8269217
-	setflag FLAG_DEFEATED_HO_OH
-	setvar VAR_0x8004, SPECIES_HO_OH
+NavelRock_Top_EventScript_DefeatedAKomachi:: @ 8269217
+	setflag FLAG_DEFEATED_AKOMACHI
+	setvar VAR_0x8004, SPECIES_AKOMACHI
 	goto Common_EventScript_LegendaryFlewAway
 	end
 
-NavelRock_Top_EventScript_RanFromHoOh:: @ 8269225
-	setvar VAR_0x8004, SPECIES_HO_OH
+NavelRock_Top_EventScript_RanFromAKomachi:: @ 8269225
+	setvar VAR_0x8004, SPECIES_AKOMACHI
 	goto Common_EventScript_LegendaryFlewAway
 	end
 
@@ -101,7 +101,7 @@ NavelRock_Top_Movement_CameraPanDown: @ 8269234
 	walk_down
 	step_end
 
-NavelRock_Top_Movement_HoOhApproach: @ 826923A
+NavelRock_Top_Movement_AKomachiApproach: @ 826923A
 	walk_down
 	walk_down
 	walk_down
@@ -112,7 +112,7 @@ NavelRock_Top_Movement_HoOhApproach: @ 826923A
 	delay_16
 	step_end
 
-NavelRock_Top_Movement_HoOhAppear: @ 8269243
+NavelRock_Top_Movement_AKomachiAppear: @ 8269243
 	delay_16
 	delay_16
 	walk_in_place_down

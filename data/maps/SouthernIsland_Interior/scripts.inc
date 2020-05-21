@@ -16,20 +16,20 @@ SouthernIsland_Interior_EventScript_TryRemoveLati:: @ 8242A5A
 
 SouthernIsland_Interior_OnTransition: @ 8242A6E
 	compare VAR_ROAMER_POKEMON, 0
-	call_if_eq SouthernIsland_Interior_EventScript_SetUpLatios
+	call_if_eq SouthernIsland_Interior_EventScript_SetUpCKasen
 	compare VAR_ROAMER_POKEMON, 0
-	call_if_ne SouthernIsland_Interior_EventScript_SetUpLatias
+	call_if_ne SouthernIsland_Interior_EventScript_SetUpMamizou
 	call SouthernIsland_Interior_EventScript_SetUpPlayerGfx
 	end
 
-SouthernIsland_Interior_EventScript_SetUpLatios:: @ 8242A8A
-	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_LATIOS
-	setvar VAR_TEMP_4, SPECIES_LATIOS
+SouthernIsland_Interior_EventScript_SetUpCKasen:: @ 8242A8A
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_CKASEN
+	setvar VAR_TEMP_4, SPECIES_CKASEN
 	return
 
-SouthernIsland_Interior_EventScript_SetUpLatias:: @ 8242A95
-	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_LATIAS
-	setvar VAR_TEMP_4, SPECIES_LATIAS
+SouthernIsland_Interior_EventScript_SetUpMamizou:: @ 8242A95
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_MAMIZOU
+	setvar VAR_TEMP_4, SPECIES_MAMIZOU
 	return
 
 SouthernIsland_Interior_EventScript_SetUpPlayerGfx:: @ 8242AA0
@@ -56,10 +56,10 @@ SouthernIsland_Interior_EventScript_TryLatiEncounter:: @ 8242AC4
 
 SouthernIsland_Interior_EventScript_Lati:: @ 8242AD0
 	goto_if_set FLAG_TEMP_2, SouthernIsland_Interior_EventScript_Sign
-	goto_if_set FLAG_DEFEATED_LATIAS_OR_LATIOS, SouthernIsland_Interior_EventScript_Sign
-	goto_if_set FLAG_CAUGHT_LATIAS_OR_LATIOS, SouthernIsland_Interior_EventScript_Sign
+	goto_if_set FLAG_DEFEATED_MAMIZOU_OR_CKASEN, SouthernIsland_Interior_EventScript_Sign
+	goto_if_set FLAG_CAUGHT_MAMIZOU_OR_CKASEN, SouthernIsland_Interior_EventScript_Sign
 	goto_if_unset FLAG_ENABLE_SHIP_SOUTHERN_ISLAND, SouthernIsland_Interior_EventScript_Sign
-	setflag FLAG_ENCOUNTERED_LATIAS_OR_LATIOS
+	setflag FLAG_ENCOUNTERED_MAMIZOU_OR_CKASEN
 	setflag FLAG_TEMP_2
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, SouthernIsland_Interior_Movement_CameraPanUp
@@ -78,9 +78,9 @@ SouthernIsland_Interior_EventScript_Lati:: @ 8242AD0
 	special RemoveCameraObject
 	setvar VAR_LAST_TALKED, 2
 	compare VAR_ROAMER_POKEMON, 0
-	call_if_eq SouthernIsland_Interior_EventScript_SetLatiosBattleVars
+	call_if_eq SouthernIsland_Interior_EventScript_SetCKasenBattleVars
 	compare VAR_ROAMER_POKEMON, 0
-	call_if_ne SouthernIsland_Interior_EventScript_SetLatiasBattleVars
+	call_if_ne SouthernIsland_Interior_EventScript_SetMamizouBattleVars
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLatiBattle
 	waitstate
@@ -92,12 +92,12 @@ SouthernIsland_Interior_EventScript_Lati:: @ 8242AD0
 	goto_if_eq SouthernIsland_Interior_EventScript_RanFromLati
 	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
 	goto_if_eq SouthernIsland_Interior_EventScript_RanFromLati
-	setflag FLAG_CAUGHT_LATIAS_OR_LATIOS
+	setflag FLAG_CAUGHT_MAMIZOU_OR_CKASEN
 	releaseall
 	end
 
 SouthernIsland_Interior_EventScript_LatiDefeated:: @ 8242B81
-	setflag FLAG_DEFEATED_LATIAS_OR_LATIOS
+	setflag FLAG_DEFEATED_MAMIZOU_OR_CKASEN
 	copyvar VAR_0x8004, VAR_TEMP_4
 	goto Common_EventScript_LegendaryFlewAway
 	end
@@ -112,15 +112,15 @@ SouthernIsland_Interior_EventScript_Sign:: @ 8242B9A
 	releaseall
 	end
 
-SouthernIsland_Interior_EventScript_SetLatiosBattleVars:: @ 8242BA4
-	setvar VAR_0x8004, SPECIES_LATIOS
+SouthernIsland_Interior_EventScript_SetCKasenBattleVars:: @ 8242BA4
+	setvar VAR_0x8004, SPECIES_CKASEN
 	setvar VAR_0x8005, 50 @ level
 	setvar VAR_0x8006, ITEM_SOUL_DEW
 	special CreateObedientEnemyMon
 	return
 
-SouthernIsland_Interior_EventScript_SetLatiasBattleVars:: @ 8242BB7
-	setvar VAR_0x8004, SPECIES_LATIAS
+SouthernIsland_Interior_EventScript_SetMamizouBattleVars:: @ 8242BB7
+	setvar VAR_0x8004, SPECIES_MAMIZOU
 	setvar VAR_0x8005, 50 @ level
 	setvar VAR_0x8006, ITEM_SOUL_DEW
 	special CreateObedientEnemyMon

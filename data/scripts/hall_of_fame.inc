@@ -19,7 +19,7 @@ EverGrandeCity_HallOfFame_EventScript_SetGameClearFlags:: @ 82717C1
 	setflag FLAG_HIDE_LILYCOVE_CITY_RIVAL
 	special UpdateTrainerFanClubGameClear
 	call_if_unset FLAG_RECEIVED_SS_TICKET, EverGrandeCity_HallOfFame_EventScript_ReadyReceiveSSTicketEvent
-	call_if_unset FLAG_RECEIVED_BELDUM, EverGrandeCity_HallOfFame_EventScript_ShowStevensHouseBeldum
+	call_if_unset FLAG_RECEIVED_CSEIGA, EverGrandeCity_HallOfFame_EventScript_ShowStevensHouseCSeiga
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_BEDROOM
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_BEDROOM
 	compare VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 0
@@ -27,19 +27,19 @@ EverGrandeCity_HallOfFame_EventScript_SetGameClearFlags:: @ 82717C1
 	return
 
 EverGrandeCity_HallOfFame_EventScript_ResetDefeatedEventLegendaries:: @ 8271829
-	clearflag FLAG_DEFEATED_MEW
-	clearflag FLAG_DEFEATED_LATIAS_OR_LATIOS
-	clearflag FLAG_DEFEATED_DEOXYS
-	clearflag FLAG_DEFEATED_LUGIA
-	clearflag FLAG_DEFEATED_HO_OH
+	clearflag FLAG_DEFEATED_AKYUU
+	clearflag FLAG_DEFEATED_MAMIZOU_OR_CKASEN
+	clearflag FLAG_DEFEATED_GOMASEKI
+	clearflag FLAG_DEFEATED_SKOMACHI
+	clearflag FLAG_DEFEATED_AKOMACHI
 	return
 
 EverGrandeCity_HallOfFame_EventScript_SetDesertUnderpassCommentReady:: @ 8271839
 	setvar VAR_FOSSIL_MANIAC_STATE, 1
 	return
 
-EverGrandeCity_HallOfFame_EventScript_ShowStevensHouseBeldum:: @ 827183F
-	clearflag FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_BELDUM_POKEBALL
+EverGrandeCity_HallOfFame_EventScript_ShowStevensHouseCSeiga:: @ 827183F
+	clearflag FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_CSEIGA_POKEBALL
 	return
 
 EverGrandeCity_HallOfFame_EventScript_ReadyReceiveSSTicketEvent:: @ 8271843

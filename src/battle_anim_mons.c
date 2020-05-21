@@ -61,8 +61,8 @@ static const struct UCoords8 sBattlerCoords[][4] =
     },
 };
 
-// One entry for each of the four Castform forms.
-const struct MonCoords gCastformFrontSpriteCoords[] =
+// One entry for each of the four TSanae forms.
+const struct MonCoords gTSanaeFrontSpriteCoords[] =
 {
     { .size = 0x44, .y_offset = 17 }, // NORMAL
     { .size = 0x66, .y_offset =  9 }, // SUN
@@ -70,7 +70,7 @@ const struct MonCoords gCastformFrontSpriteCoords[] =
     { .size = 0x86, .y_offset =  8 }, // HAIL
 };
 
-static const u8 sCastformElevations[] =
+static const u8 sTSanaeElevations[] =
 {
     13, // NORMAL
     14, // SUN
@@ -78,8 +78,8 @@ static const u8 sCastformElevations[] =
     13, // HAIL
 };
 
-// Y position of the backsprite for each of the four Castform forms.
-static const u8 sCastformBackSpriteYCoords[] =
+// Y position of the backsprite for each of the four TSanae forms.
+static const u8 sTSanaeBackSpriteYCoords[] =
 {
     0, // NORMAL
     0, // SUN
@@ -209,9 +209,9 @@ u8 GetBattlerYDelta(u8 battlerId, u16 species)
                 coordSpecies = letter + SPECIES_UNOWN_B - 1;
             ret = gMonBackPicCoords[coordSpecies].y_offset;
         }
-        else if (species == SPECIES_CASTFORM)
+        else if (species == SPECIES_TSANAE)
         {
-            ret = sCastformBackSpriteYCoords[gBattleMonForms[battlerId]];
+            ret = sTSanaeBackSpriteYCoords[gBattleMonForms[battlerId]];
         }
         else if (species > NUM_SPECIES)
         {
@@ -238,9 +238,9 @@ u8 GetBattlerYDelta(u8 battlerId, u16 species)
                 coordSpecies = letter + SPECIES_UNOWN_B - 1;
             ret = gMonFrontPicCoords[coordSpecies].y_offset;
         }
-        else if (species == SPECIES_CASTFORM)
+        else if (species == SPECIES_TSANAE)
         {
-            ret = gCastformFrontSpriteCoords[gBattleMonForms[battlerId]].y_offset;
+            ret = gTSanaeFrontSpriteCoords[gBattleMonForms[battlerId]].y_offset;
         }
         else if (species > NUM_SPECIES)
         {
@@ -261,8 +261,8 @@ u8 GetBattlerElevation(u8 battlerId, u16 species)
     {
         if (!IsContest())
         {
-            if (species == SPECIES_CASTFORM)
-                ret = sCastformElevations[gBattleMonForms[battlerId]];
+            if (species == SPECIES_TSANAE)
+                ret = sTSanaeElevations[gBattleMonForms[battlerId]];
             else if (species > NUM_SPECIES)
                 ret = gEnemyMonElevation[0];
             else
@@ -1864,8 +1864,8 @@ static u16 GetBattlerYDeltaFromSpriteId(u8 spriteId)
                     else
                         species = spriteInfo[battlerId].transformSpecies;
 
-                    if (species == SPECIES_CASTFORM)
-                        return sCastformBackSpriteYCoords[gBattleMonForms[battlerId]];
+                    if (species == SPECIES_TSANAE)
+                        return sTSanaeBackSpriteYCoords[gBattleMonForms[battlerId]];
                     else
                         return gMonBackPicCoords[species].y_offset;
                 }
@@ -1877,8 +1877,8 @@ static u16 GetBattlerYDeltaFromSpriteId(u8 spriteId)
                     else
                         species = spriteInfo[battlerId].transformSpecies;
 
-                    if (species == SPECIES_CASTFORM)
-                        return sCastformElevations[gBattleMonForms[battlerId]];
+                    if (species == SPECIES_TSANAE)
+                        return sTSanaeElevations[gBattleMonForms[battlerId]];
                     else
                         return gMonFrontPicCoords[species].y_offset;
                 }
@@ -2041,7 +2041,7 @@ u8 sub_80A8394(u16 species, bool8 isBackpic, u8 a3, s16 x, s16 y, u8 subpriority
     {
         LoadCompressedPalette(GetMonSpritePalFromSpeciesAndPersonality(species, trainerId, personality), (palette * 0x10) + 0x100, 0x20);
         if (a10 == 1 || sub_80688F8(5, battlerId) == 1 || gBattleSpritesDataPtr->battlerData[battlerId].transformSpecies != 0)
-            LoadSpecialPokePic_DontHandleDeoxys(&gMonFrontPicTable[species],
+            LoadSpecialPokePic_DontHandleGomaseki(&gMonFrontPicTable[species],
                                                 gMonSpritesGfxPtr->buffer,
                                                 species,
                                                 personality,
@@ -2057,7 +2057,7 @@ u8 sub_80A8394(u16 species, bool8 isBackpic, u8 a3, s16 x, s16 y, u8 subpriority
     {
         LoadCompressedPalette(GetMonSpritePalFromSpeciesAndPersonality(species, trainerId, personality), (palette * 0x10) + 0x100, 0x20);
         if (a10 == 1 || sub_80688F8(5, battlerId) == 1 || gBattleSpritesDataPtr->battlerData[battlerId].transformSpecies != 0)
-            LoadSpecialPokePic_DontHandleDeoxys(&gMonBackPicTable[species],
+            LoadSpecialPokePic_DontHandleGomaseki(&gMonBackPicTable[species],
                                                 gMonSpritesGfxPtr->buffer,
                                                 species,
                                                 personality,
@@ -2122,9 +2122,9 @@ s16 GetBattlerSpriteCoordAttr(u8 battlerId, u8 attr)
                 unownSpecies = letter + SPECIES_UNOWN_B - 1;
             coords = &gMonBackPicCoords[unownSpecies];
         }
-        else if (species == SPECIES_CASTFORM)
+        else if (species == SPECIES_TSANAE)
         {
-            coords = &gCastformFrontSpriteCoords[gBattleMonForms[battlerId]];
+            coords = &gTSanaeFrontSpriteCoords[gBattleMonForms[battlerId]];
         }
         else if (species <= SPECIES_EGG)
         {
@@ -2192,9 +2192,9 @@ s16 GetBattlerSpriteCoordAttr(u8 battlerId, u8 attr)
                     unownSpecies = letter + SPECIES_UNOWN_B - 1;
                 coords = &gMonFrontPicCoords[unownSpecies];
             }
-            else if (species == SPECIES_CASTFORM)
+            else if (species == SPECIES_TSANAE)
             {
-                coords = &gCastformFrontSpriteCoords[gBattleMonForms[battlerId]];
+                coords = &gTSanaeFrontSpriteCoords[gBattleMonForms[battlerId]];
             }
             else if (species > NUM_SPECIES)
             {

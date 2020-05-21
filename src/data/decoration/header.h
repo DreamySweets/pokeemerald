@@ -684,230 +684,230 @@ const struct Decoration gDecorations[] = {
         DecorDesc_KISS_POSTER,
         DecorGfx_KISS_POSTER
     }, {
-        DECOR_PICHU_DOLL,
-        _("PICHU DOLL"),
+        DECOR_CLUIZE_DOLL,
+        _("CLUIZE DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
         3000,
-        DecorDesc_PICHU_DOLL,
-        DecorGfx_PICHU_DOLL
+        DecorDesc_CLUIZE_DOLL,
+        DecorGfx_CLUIZE_DOLL
     }, {
-        DECOR_PIKACHU_DOLL,
-        _("PIKACHU DOLL"),
+        DECOR_CCIRNO_DOLL,
+        _("CCIRNO DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
         3000,
-        DecorDesc_PIKACHU_DOLL,
-        DecorGfx_PIKACHU_DOLL
+        DecorDesc_CCIRNO_DOLL,
+        DecorGfx_CCIRNO_DOLL
     }, {
-        DECOR_MARILL_DOLL,
-        _("MARILL DOLL"),
+        DECOR_KOTOHIME_DOLL,
+        _("KOTOHIME DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
         3000,
-        DecorDesc_MARILL_DOLL,
-        DecorGfx_MARILL_DOLL
+        DecorDesc_KOTOHIME_DOLL,
+        DecorGfx_KOTOHIME_DOLL
     }, {
-        DECOR_TOGEPI_DOLL,
-        _("TOGEPI DOLL"),
+        DECOR_MARGATROID_DOLL,
+        _("MARGATROID DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
         3000,
-        DecorDesc_TOGEPI_DOLL,
-        DecorGfx_TOGEPI_DOLL
+        DecorDesc_MARGATROID_DOLL,
+        DecorGfx_MARGATROID_DOLL
     }, {
-        DECOR_CYNDAQUIL_DOLL,
-        _("CYNDAQUIL DOLL"),
+        DECOR_CELLY_DOLL,
+        _("CELLY DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
         3000,
-        DecorDesc_CYNDAQUIL_DOLL,
-        DecorGfx_CYNDAQUIL_DOLL
+        DecorDesc_CELLY_DOLL,
+        DecorGfx_CELLY_DOLL
     }, {
-        DECOR_CHIKORITA_DOLL,
-        _("CHIKORITA DOLL"),
+        DECOR_GENJI_DOLL,
+        _("GENJI DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
         3000,
-        DecorDesc_CHIKORITA_DOLL,
-        DecorGfx_CHIKORITA_DOLL
+        DecorDesc_GENJI_DOLL,
+        DecorGfx_GENJI_DOLL
     }, {
-        DECOR_TOTODILE_DOLL,
-        _("TOTODILE DOLL"),
+        DECOR_ORANGE_DOLL,
+        _("ORANGE DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
         3000,
-        DecorDesc_TOTODILE_DOLL,
-        DecorGfx_TOTODILE_DOLL
+        DecorDesc_ORANGE_DOLL,
+        DecorGfx_ORANGE_DOLL
     }, {
-        DECOR_JIGGLYPUFF_DOLL,
-        _("JIGGLYPUFF DOLL"),
+        DECOR_CMYSTIA_DOLL,
+        _("CMYSTIA DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
         3000,
-        DecorDesc_JIGGLYPUFF_DOLL,
-        DecorGfx_JIGGLYPUFF_DOLL
+        DecorDesc_CMYSTIA_DOLL,
+        DecorGfx_CMYSTIA_DOLL
     }, {
-        DECOR_MEOWTH_DOLL,
-        _("MEOWTH DOLL"),
+        DECOR_CCHEN_DOLL,
+        _("CCHEN DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
         3000,
-        DecorDesc_MEOWTH_DOLL,
-        DecorGfx_MEOWTH_DOLL
+        DecorDesc_CCHEN_DOLL,
+        DecorGfx_CCHEN_DOLL
     }, {
-        DECOR_CLEFAIRY_DOLL,
-        _("CLEFAIRY DOLL"),
+        DECOR_CYUKARI_DOLL,
+        _("CYUKARI DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
         3000,
-        DecorDesc_CLEFAIRY_DOLL,
-        DecorGfx_CLEFAIRY_DOLL
+        DecorDesc_CYUKARI_DOLL,
+        DecorGfx_CYUKARI_DOLL
     }, {
-        DECOR_DITTO_DOLL,
-        _("DITTO DOLL"),
+        DECOR_KEDAMA_DOLL,
+        _("KEDAMA DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
         3000,
-        DecorDesc_DITTO_DOLL,
-        DecorGfx_DITTO_DOLL
+        DecorDesc_KEDAMA_DOLL,
+        DecorGfx_KEDAMA_DOLL
     }, {
-        DECOR_SMOOCHUM_DOLL,
-        _("SMOOCHUM DOLL"),
+        DECOR_DKANAKO_DOLL,
+        _("DKANAKO DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
         3000,
-        DecorDesc_SMOOCHUM_DOLL,
-        DecorGfx_SMOOCHUM_DOLL
+        DecorDesc_DKANAKO_DOLL,
+        DecorGfx_DKANAKO_DOLL
     }, {
-        DECOR_TREECKO_DOLL,
-        _("TREECKO DOLL"),
+        DECOR_HEIRIN_DOLL,
+        _("HEIRIN DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
         3000,
-        DecorDesc_TREECKO_DOLL,
-        DecorGfx_TREECKO_DOLL
+        DecorDesc_HEIRIN_DOLL,
+        DecorGfx_HEIRIN_DOLL
     }, {
-        DECOR_TORCHIC_DOLL,
-        _("TORCHIC DOLL"),
+        DECOR_AALICE_DOLL,
+        _("AALICE DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
         3000,
-        DecorDesc_TORCHIC_DOLL,
-        DecorGfx_TORCHIC_DOLL
+        DecorDesc_AALICE_DOLL,
+        DecorGfx_AALICE_DOLL
     }, {
-        DECOR_MUDKIP_DOLL,
-        _("MUDKIP DOLL"),
+        DECOR_DREIMU_DOLL,
+        _("DREIMU DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
         3000,
-        DecorDesc_MUDKIP_DOLL,
-        DecorGfx_MUDKIP_DOLL
+        DecorDesc_DREIMU_DOLL,
+        DecorGfx_DREIMU_DOLL
     }, {
-        DECOR_DUSKULL_DOLL,
-        _("DUSKULL DOLL"),
+        DECOR_RINNOSUKE_DOLL,
+        _("RINNOSUKE DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
         3000,
-        DecorDesc_DUSKULL_DOLL,
-        DecorGfx_DUSKULL_DOLL
+        DecorDesc_RINNOSUKE_DOLL,
+        DecorGfx_RINNOSUKE_DOLL
     }, {
-        DECOR_WYNAUT_DOLL,
-        _("WYNAUT DOLL"),
+        DECOR_AMINORIKO_DOLL,
+        _("AMINORIKO DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
         3000,
-        DecorDesc_WYNAUT_DOLL,
-        DecorGfx_WYNAUT_DOLL
+        DecorDesc_AMINORIKO_DOLL,
+        DecorGfx_AMINORIKO_DOLL
     }, {
-        DECOR_BALTOY_DOLL,
-        _("BALTOY DOLL"),
+        DECOR_HKOAKUMA_DOLL,
+        _("HKOAKUMA DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
         3000,
-        DecorDesc_BALTOY_DOLL,
-        DecorGfx_BALTOY_DOLL
+        DecorDesc_HKOAKUMA_DOLL,
+        DecorGfx_HKOAKUMA_DOLL
     }, {
-        DECOR_KECLEON_DOLL,
-        _("KECLEON DOLL"),
+        DECOR_SWRIGGLE_DOLL,
+        _("SWRIGGLE DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
         3000,
-        DecorDesc_KECLEON_DOLL,
-        DecorGfx_KECLEON_DOLL
+        DecorDesc_SWRIGGLE_DOLL,
+        DecorGfx_SWRIGGLE_DOLL
     }, {
-        DECOR_AZURILL_DOLL,
-        _("AZURILL DOLL"),
+        DECOR_CSHINGYOKU_DOLL,
+        _("CSHINGYOKU DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
         3000,
-        DecorDesc_AZURILL_DOLL,
-        DecorGfx_AZURILL_DOLL
+        DecorDesc_CSHINGYOKU_DOLL,
+        DecorGfx_CSHINGYOKU_DOLL
     }, {
-        DECOR_SKITTY_DOLL,
-        _("SKITTY DOLL"),
+        DECOR_ASUNNYMILK_DOLL,
+        _("ASUNNYMILK DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
         3000,
-        DecorDesc_SKITTY_DOLL,
-        DecorGfx_SKITTY_DOLL
+        DecorDesc_ASUNNYMILK_DOLL,
+        DecorGfx_ASUNNYMILK_DOLL
     }, {
-        DECOR_SWABLU_DOLL,
-        _("SWABLU DOLL"),
+        DECOR_DIKU_DOLL,
+        _("DIKU DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
         3000,
-        DecorDesc_SWABLU_DOLL,
-        DecorGfx_SWABLU_DOLL
+        DecorDesc_DIKU_DOLL,
+        DecorGfx_DIKU_DOLL
     }, {
-        DECOR_GULPIN_DOLL,
-        _("GULPIN DOLL"),
+        DECOR_CKIKURI_DOLL,
+        _("CKIKURI DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
         3000,
-        DecorDesc_GULPIN_DOLL,
-        DecorGfx_GULPIN_DOLL
+        DecorDesc_CKIKURI_DOLL,
+        DecorGfx_CKIKURI_DOLL
     }, {
-        DECOR_LOTAD_DOLL,
-        _("LOTAD DOLL"),
+        DECOR_AHINA_DOLL,
+        _("AHINA DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
         3000,
-        DecorDesc_LOTAD_DOLL,
-        DecorGfx_LOTAD_DOLL
+        DecorDesc_AHINA_DOLL,
+        DecorGfx_AHINA_DOLL
     }, {
-        DECOR_SEEDOT_DOLL,
-        _("SEEDOT DOLL"),
+        DECOR_SRIN_DOLL,
+        _("SRIN DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
         3000,
-        DecorDesc_SEEDOT_DOLL,
-        DecorGfx_SEEDOT_DOLL
+        DecorDesc_SRIN_DOLL,
+        DecorGfx_SRIN_DOLL
     }, {
         DECOR_PIKA_CUSHION,
         _("PIKA CUSHION"),
@@ -999,93 +999,93 @@ const struct Decoration gDecorations[] = {
         DecorDesc_WATER_CUSHION,
         DecorGfx_WATER_CUSHION
     }, {
-        DECOR_SNORLAX_DOLL,
-        _("SNORLAX DOLL"),
+        DECOR_BYAKUREN_DOLL,
+        _("BYAKUREN DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x2,
         DECORCAT_DOLL,
         10000,
-        DecorDesc_SNORLAX_DOLL,
-        DecorGfx_SNORLAX_DOLL
+        DecorDesc_BYAKUREN_DOLL,
+        DecorGfx_BYAKUREN_DOLL
     }, {
-        DECOR_RHYDON_DOLL,
-        _("RHYDON DOLL"),
+        DECOR_CICHIRIN_DOLL,
+        _("CICHIRIN DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x2,
         DECORCAT_DOLL,
         10000,
-        DecorDesc_RHYDON_DOLL,
-        DecorGfx_RHYDON_DOLL
+        DecorDesc_CICHIRIN_DOLL,
+        DecorGfx_CICHIRIN_DOLL
     }, {
-        DECOR_LAPRAS_DOLL,
-        _("LAPRAS DOLL"),
+        DECOR_TEWI_DOLL,
+        _("TEWI DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x2,
         DECORCAT_DOLL,
         10000,
-        DecorDesc_LAPRAS_DOLL,
-        DecorGfx_LAPRAS_DOLL
+        DecorDesc_TEWI_DOLL,
+        DecorGfx_TEWI_DOLL
     }, {
-        DECOR_VENUSAUR_DOLL,
-        _("VENUSAUR DOLL"),
+        DECOR_CALICE_DOLL,
+        _("CALICE DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x2,
         DECORCAT_DOLL,
         10000,
-        DecorDesc_VENUSAUR_DOLL,
-        DecorGfx_VENUSAUR_DOLL
+        DecorDesc_CALICE_DOLL,
+        DecorGfx_CALICE_DOLL
     }, {
-        DECOR_CHARIZARD_DOLL,
-        _("CHARIZARD DOLL"),
+        DECOR_REISEN_DOLL,
+        _("REISEN DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x2,
         DECORCAT_DOLL,
         10000,
-        DecorDesc_CHARIZARD_DOLL,
-        DecorGfx_CHARIZARD_DOLL
+        DecorDesc_REISEN_DOLL,
+        DecorGfx_REISEN_DOLL
     }, {
-        DECOR_BLASTOISE_DOLL,
-        _("BLASTOISE DOLL"),
+        DECOR_CLILYBLACK_DOLL,
+        _("CLILYBLACK DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x2,
         DECORCAT_DOLL,
         10000,
-        DecorDesc_BLASTOISE_DOLL,
-        DecorGfx_BLASTOISE_DOLL
+        DecorDesc_CLILYBLACK_DOLL,
+        DecorGfx_CLILYBLACK_DOLL
     }, {
-        DECOR_WAILMER_DOLL,
-        _("WAILMER DOLL"),
+        DECOR_DMEILING_DOLL,
+        _("DMEILING DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x2,
         DECORCAT_DOLL,
         10000,
-        DecorDesc_WAILMER_DOLL,
-        DecorGfx_WAILMER_DOLL
+        DecorDesc_DMEILING_DOLL,
+        DecorGfx_DMEILING_DOLL
     }, {
-        DECOR_REGIROCK_DOLL,
-        _("REGIROCK DOLL"),
+        DECOR_TOJIKO_DOLL,
+        _("TOJIKO DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x2,
         DECORCAT_DOLL,
         10000,
-        DecorDesc_REGIROCK_DOLL,
-        DecorGfx_REGIROCK_DOLL
+        DecorDesc_TOJIKO_DOLL,
+        DecorGfx_TOJIKO_DOLL
     }, {
-        DECOR_REGICE_DOLL,
-        _("REGICE DOLL"),
+        DECOR_CFUTO_DOLL,
+        _("CFUTO DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x2,
         DECORCAT_DOLL,
         10000,
-        DecorDesc_REGICE_DOLL,
-        DecorGfx_REGICE_DOLL
+        DecorDesc_CFUTO_DOLL,
+        DecorGfx_CFUTO_DOLL
     }, {
-        DECOR_REGISTEEL_DOLL,
-        _("REGISTEEL DOLL"),
+        DECOR_FUTO_DOLL,
+        _("FUTO DOLL"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x2,
         DECORCAT_DOLL,
         10000,
-        DecorDesc_REGISTEEL_DOLL,
-        DecorGfx_REGISTEEL_DOLL}
+        DecorDesc_FUTO_DOLL,
+        DecorGfx_FUTO_DOLL}
 };

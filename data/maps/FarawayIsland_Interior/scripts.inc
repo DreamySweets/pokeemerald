@@ -27,10 +27,10 @@ FarawayIsland_Interior_EventScript_267D4B:: @ 8267D4B
 	return
 
 FarawayIsland_Interior_OnResume: @ 8267D54
-	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, FarawayIsland_Interior_EventScript_TryRemoveMew
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, FarawayIsland_Interior_EventScript_TryRemoveAkyuu
 	end
 
-FarawayIsland_Interior_EventScript_TryRemoveMew:: @ 8267D5E
+FarawayIsland_Interior_EventScript_TryRemoveAkyuu:: @ 8267D5E
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_ne Common_EventScript_NopReturn
@@ -40,34 +40,34 @@ FarawayIsland_Interior_EventScript_TryRemoveMew:: @ 8267D5E
 FarawayIsland_Interior_OnTransition: @ 8267D72
 	setvar VAR_FARAWAY_ISLAND_STEP_COUNTER, 0
 	setvar VAR_TEMP_1, 1
-	call_if_unset FLAG_CAUGHT_MEW, FarawayIsland_Interior_EventScript_TryShowMew
+	call_if_unset FLAG_CAUGHT_AKYUU, FarawayIsland_Interior_EventScript_TryShowAkyuu
 	end
 
-FarawayIsland_Interior_EventScript_TryShowMew:: @ 8267D86
-	goto_if_set FLAG_DEFEATED_MEW, Common_EventScript_NopReturn
-	clearflag FLAG_HIDE_MEW
+FarawayIsland_Interior_EventScript_TryShowAkyuu:: @ 8267D86
+	goto_if_set FLAG_DEFEATED_AKYUU, Common_EventScript_NopReturn
+	clearflag FLAG_HIDE_AKYUU
 	setvar VAR_TEMP_1, 0
 	return
 
 FarawayIsland_Interior_OnFrame: @ 8267D98
-	map_script_2 VAR_TEMP_1, 0, FarawayIsland_Interior_EventScript_FindMew
+	map_script_2 VAR_TEMP_1, 0, FarawayIsland_Interior_EventScript_FindAkyuu
 	.2byte 0
 
-FarawayIsland_Interior_EventScript_FindMew:: @ 8267DA2
+FarawayIsland_Interior_EventScript_FindAkyuu:: @ 8267DA2
 	lockall
 	playse SE_PIN
 	applymovement 1, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement 1, Common_Movement_Delay48
 	waitmovement 0
-	applymovement 1, FarawayIsland_Interior_Movement_MewMoveAndHide
+	applymovement 1, FarawayIsland_Interior_Movement_AkyuuMoveAndHide
 	waitmovement 0
 	copyobjectxytoperm 1
 	setvar VAR_TEMP_1, 1
 	releaseall
 	end
 
-FarawayIsland_Interior_Movement_MewMoveAndHide: @ 8267DCE
+FarawayIsland_Interior_Movement_AkyuuMoveAndHide: @ 8267DCE
 	walk_up
 	walk_up
 	walk_up
@@ -75,11 +75,11 @@ FarawayIsland_Interior_Movement_MewMoveAndHide: @ 8267DCE
 	set_invisible
 	step_end
 
-FarawayIsland_Interior_Movement_MewAppear: @ 8267DD4
+FarawayIsland_Interior_Movement_AkyuuAppear: @ 8267DD4
 	set_visible
 	step_end
 
-FarawayIsland_Interior_Movement_MewHideDown: @ 8267DD6
+FarawayIsland_Interior_Movement_AkyuuHideDown: @ 8267DD6
 	lock_facing_direction
 	walk_fast_up
 	walk_fast_up
@@ -88,7 +88,7 @@ FarawayIsland_Interior_Movement_MewHideDown: @ 8267DD6
 	walk_in_place_down
 	step_end
 
-FarawayIsland_Interior_Movement_MewHideUp: @ 8267DDD
+FarawayIsland_Interior_Movement_AkyuuHideUp: @ 8267DDD
 	lock_facing_direction
 	walk_fast_up
 	walk_fast_up
@@ -97,7 +97,7 @@ FarawayIsland_Interior_Movement_MewHideUp: @ 8267DDD
 	walk_in_place_up
 	step_end
 
-FarawayIsland_Interior_Movement_MewHideRight: @ 8267DE4
+FarawayIsland_Interior_Movement_AkyuuHideRight: @ 8267DE4
 	lock_facing_direction
 	walk_fast_up
 	walk_fast_up
@@ -106,7 +106,7 @@ FarawayIsland_Interior_Movement_MewHideRight: @ 8267DE4
 	walk_in_place_right
 	step_end
 
-FarawayIsland_Interior_Movement_MewHideLeft: @ 8267DEB
+FarawayIsland_Interior_Movement_AkyuuHideLeft: @ 8267DEB
 	lock_facing_direction
 	walk_fast_up
 	walk_fast_up
@@ -115,28 +115,28 @@ FarawayIsland_Interior_Movement_MewHideLeft: @ 8267DEB
 	walk_in_place_left
 	step_end
 
-FarawayIsland_Interior_EventScript_Mew:: @ 8267DF2
+FarawayIsland_Interior_EventScript_Akyuu:: @ 8267DF2
 	lock
 	faceplayer
-	applymovement 1, FarawayIsland_Interior_Movement_MewAppear
+	applymovement 1, FarawayIsland_Interior_Movement_AkyuuAppear
 	waitmovement 0
 	setvar VAR_0x8004, 0
 	special sub_81D4A90
-	message FarawayIsland_Interior_Text_Mew
+	message FarawayIsland_Interior_Text_Akyuu
 	waitse
-	playmoncry SPECIES_MEW, 2
+	playmoncry SPECIES_AKYUU, 2
 	compare VAR_FACING, DIR_NORTH
-	call_if_eq FarawayIsland_Interior_EventScript_MewHideDown
+	call_if_eq FarawayIsland_Interior_EventScript_AkyuuHideDown
 	compare VAR_FACING, DIR_SOUTH
-	call_if_eq FarawayIsland_Interior_EventScript_MewHideUp
+	call_if_eq FarawayIsland_Interior_EventScript_AkyuuHideUp
 	compare VAR_FACING, DIR_WEST
-	call_if_eq FarawayIsland_Interior_EventScript_MewHideRight
+	call_if_eq FarawayIsland_Interior_EventScript_AkyuuHideRight
 	compare VAR_FACING, DIR_EAST
-	call_if_eq FarawayIsland_Interior_EventScript_MewHideLeft
+	call_if_eq FarawayIsland_Interior_EventScript_AkyuuHideLeft
 	special sub_81D4BEC
 	delay 40
 	waitmoncry
-	setvar VAR_0x8004, SPECIES_MEW
+	setvar VAR_0x8004, SPECIES_AKYUU
 	setvar VAR_0x8005, 30 @ level
 	setvar VAR_0x8006, ITEM_NONE
 	special CreateObedientEnemyMon
@@ -146,52 +146,52 @@ FarawayIsland_Interior_EventScript_Mew:: @ 8267DF2
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq FarawayIsland_Interior_EventScript_MewDefeated
+	goto_if_eq FarawayIsland_Interior_EventScript_AkyuuDefeated
 	compare VAR_RESULT, B_OUTCOME_RAN
-	goto_if_eq FarawayIsland_Interior_EventScript_PlayerOrMewRan
+	goto_if_eq FarawayIsland_Interior_EventScript_PlayerOrAkyuuRan
 	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
-	goto_if_eq FarawayIsland_Interior_EventScript_PlayerOrMewRan
+	goto_if_eq FarawayIsland_Interior_EventScript_PlayerOrAkyuuRan
 	compare VAR_RESULT, B_OUTCOME_MON_TELEPORTED
-	goto_if_eq FarawayIsland_Interior_EventScript_PlayerOrMewRan
-	setflag FLAG_CAUGHT_MEW
+	goto_if_eq FarawayIsland_Interior_EventScript_PlayerOrAkyuuRan
+	setflag FLAG_CAUGHT_AKYUU
 	release
 	end
 
-FarawayIsland_Interior_EventScript_MewDefeated:: @ 8267E96
-	setflag FLAG_DEFEATED_MEW
-	setvar VAR_0x8004, SPECIES_MEW
+FarawayIsland_Interior_EventScript_AkyuuDefeated:: @ 8267E96
+	setflag FLAG_DEFEATED_AKYUU
+	setvar VAR_0x8004, SPECIES_AKYUU
 	goto Common_EventScript_LegendaryFlewAway
 	end
 
-FarawayIsland_Interior_EventScript_PlayerOrMewRan:: @ 8267EA4
-	setvar VAR_0x8004, SPECIES_MEW
+FarawayIsland_Interior_EventScript_PlayerOrAkyuuRan:: @ 8267EA4
+	setvar VAR_0x8004, SPECIES_AKYUU
 	goto Common_EventScript_LegendaryFlewAway
 	end
 
-FarawayIsland_Interior_EventScript_MewHideDown:: @ 8267EAF
-	applymovement 1, FarawayIsland_Interior_Movement_MewHideDown
+FarawayIsland_Interior_EventScript_AkyuuHideDown:: @ 8267EAF
+	applymovement 1, FarawayIsland_Interior_Movement_AkyuuHideDown
 	waitmovement 0
 	return
 
-FarawayIsland_Interior_EventScript_MewHideUp:: @ 8267EBA
-	applymovement 1, FarawayIsland_Interior_Movement_MewHideUp
+FarawayIsland_Interior_EventScript_AkyuuHideUp:: @ 8267EBA
+	applymovement 1, FarawayIsland_Interior_Movement_AkyuuHideUp
 	waitmovement 0
 	return
 
-FarawayIsland_Interior_EventScript_MewHideRight:: @ 8267EC5
-	applymovement 1, FarawayIsland_Interior_Movement_MewHideRight
+FarawayIsland_Interior_EventScript_AkyuuHideRight:: @ 8267EC5
+	applymovement 1, FarawayIsland_Interior_Movement_AkyuuHideRight
 	waitmovement 0
 	return
 
-FarawayIsland_Interior_EventScript_MewHideLeft:: @ 8267ED0
-	applymovement 1, FarawayIsland_Interior_Movement_MewHideLeft
+FarawayIsland_Interior_EventScript_AkyuuHideLeft:: @ 8267ED0
+	applymovement 1, FarawayIsland_Interior_Movement_AkyuuHideLeft
 	waitmovement 0
 	return
 
-FarawayIsland_Interior_EventScript_HideMewWhenGrassCut:: @ 8267EDB
+FarawayIsland_Interior_EventScript_HideAkyuuWhenGrassCut:: @ 8267EDB
 	lockall
 	fadescreenswapbuffers FADE_TO_BLACK
-	setflag FLAG_HIDE_MEW
+	setflag FLAG_HIDE_AKYUU
 	removeobject 1
 	fadescreenswapbuffers FADE_FROM_BLACK
 	msgbox FarawayIsland_Interior_Text_TheFeelingOfBeingWatchedFaded, MSGBOX_DEFAULT

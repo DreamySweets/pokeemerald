@@ -534,8 +534,8 @@ static const u16 sMysteryGiftPhrase[] = {
 static const u16 sBerryMasterWifePhrases[][2] = {
     [PHRASE_GREAT_BATTLE - 1]        = {EC_WORD_GREAT, EC_WORD_BATTLE},
     [PHRASE_CHALLENGE_CONTEST - 1]   = {EC_WORD_CHALLENGE, EC_WORD_CONTEST},
-    [PHRASE_OVERWHELMING_LATIAS - 1] = {EC_WORD_OVERWHELMING, EC_POKEMON(LATIAS)},
-    [PHRASE_COOL_LATIOS - 1]         = {EC_WORD_COOL, EC_POKEMON(LATIOS)},
+    [PHRASE_OVERWHELMING_MAMIZOU - 1] = {EC_WORD_OVERWHELMING, EC_POKEMON(MAMIZOU)},
+    [PHRASE_COOL_CKASEN - 1]         = {EC_WORD_COOL, EC_POKEMON(CKASEN)},
     [PHRASE_SUPER_HUSTLE - 1]        = {EC_WORD_SUPER, EC_WORD_HUSTLE},
 };
 
@@ -1080,7 +1080,7 @@ static const u16 sUnknown_0859E64C[] = {
 };
 
 static const u16 sUnknown_0859E658[] = {
-    SPECIES_DEOXYS,
+    SPECIES_GOMASEKI,
 };
 
 void DoEasyChatScreen(u8 type, u16 *words, MainCallback callback, u8 displayedPersonType)

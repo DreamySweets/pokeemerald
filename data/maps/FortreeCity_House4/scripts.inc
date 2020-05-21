@@ -8,29 +8,29 @@ FortreeCity_House4_EventScript_Woman:: @ 8217C81
 FortreeCity_House4_EventScript_Boy:: @ 8217C8A
 	lockall
 	goto_if_set FLAG_RECEIVED_MENTAL_HERB, FortreeCity_House4_EventScript_ReceivedMentalHerb
-	goto_if_set FLAG_WINGULL_DELIVERED_MAIL, FortreeCity_House4_EventScript_WingullReturned
-	goto_if_set FLAG_WINGULL_SENT_ON_ERRAND, FortreeCity_House4_EventScript_WingullOnErrand
+	goto_if_set FLAG_TKOGASA_DELIVERED_MAIL, FortreeCity_House4_EventScript_TKogasaReturned
+	goto_if_set FLAG_TKOGASA_SENT_ON_ERRAND, FortreeCity_House4_EventScript_TKogasaOnErrand
 	msgbox FortreeCity_House4_Text_GoBirdPokemon, MSGBOX_DEFAULT
 	closemessage
-	setflag FLAG_WINGULL_SENT_ON_ERRAND
-	clearflag FLAG_HIDE_MOSSDEEP_CITY_HOUSE_2_WINGULL
-	applymovement 3, FortreeCity_House4_Movement_WingullExit
+	setflag FLAG_TKOGASA_SENT_ON_ERRAND
+	clearflag FLAG_HIDE_MOSSDEEP_CITY_HOUSE_2_TKOGASA
+	applymovement 3, FortreeCity_House4_Movement_TKogasaExit
 	waitmovement 0
 	removeobject 3
 	releaseall
 	end
 
-FortreeCity_House4_EventScript_WingullOnErrand:: @ 8217CC4
+FortreeCity_House4_EventScript_TKogasaOnErrand:: @ 8217CC4
 	applymovement VAR_LAST_TALKED, Common_Movement_FacePlayer
 	waitmovement 0
-	msgbox FortreeCity_House4_Text_AskedWingullToRunErrand, MSGBOX_DEFAULT
+	msgbox FortreeCity_House4_Text_AskedTKogasaToRunErrand, MSGBOX_DEFAULT
 	releaseall
 	end
 
-FortreeCity_House4_EventScript_WingullReturned:: @ 8217CD8
+FortreeCity_House4_EventScript_TKogasaReturned:: @ 8217CD8
 	applymovement VAR_LAST_TALKED, Common_Movement_FacePlayer
 	waitmovement 0
-	msgbox FortreeCity_House4_Text_WelcomeWingullTakeMentalHerb, MSGBOX_DEFAULT
+	msgbox FortreeCity_House4_Text_WelcomeTKogasaTakeMentalHerb, MSGBOX_DEFAULT
 	giveitem ITEM_MENTAL_HERB
 	compare VAR_RESULT, FALSE
 	goto_if_eq Common_EventScript_ShowBagIsFull
@@ -41,11 +41,11 @@ FortreeCity_House4_EventScript_WingullReturned:: @ 8217CD8
 FortreeCity_House4_EventScript_ReceivedMentalHerb:: @ 8217D06
 	applymovement VAR_LAST_TALKED, Common_Movement_FacePlayer
 	waitmovement 0
-	msgbox FortreeCity_House4_Text_FriendsFarAwayThanksToWingull, MSGBOX_DEFAULT
+	msgbox FortreeCity_House4_Text_FriendsFarAwayThanksToTKogasa, MSGBOX_DEFAULT
 	releaseall
 	end
 
-FortreeCity_House4_Movement_WingullExit: @ 8217D1A
+FortreeCity_House4_Movement_TKogasaExit: @ 8217D1A
 	walk_fast_down
 	walk_fast_down
 	walk_fast_right
@@ -53,12 +53,12 @@ FortreeCity_House4_Movement_WingullExit: @ 8217D1A
 	delay_8
 	step_end
 
-FortreeCity_House4_EventScript_Wingull:: @ 8217D20
+FortreeCity_House4_EventScript_TKogasa:: @ 8217D20
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_WINGULL, 0
-	msgbox FortreeCity_House4_Text_Wingull, MSGBOX_DEFAULT
+	playmoncry SPECIES_TKOGASA, 0
+	msgbox FortreeCity_House4_Text_TKogasa, MSGBOX_DEFAULT
 	waitmoncry
 	release
 	end
@@ -73,13 +73,13 @@ FortreeCity_House4_Text_GoBirdPokemon: @ 8217DB9
 	.string "There!\n"
 	.string "Go, BIRD POKéMON!$"
 
-FortreeCity_House4_Text_AskedWingullToRunErrand: @ 8217DD2
-	.string "Heheh, I asked my WINGULL to run\n"
+FortreeCity_House4_Text_AskedTKogasaToRunErrand: @ 8217DD2
+	.string "Heheh, I asked my TKOGASA to run\n"
 	.string "an errand for me.$"
 
-FortreeCity_House4_Text_WelcomeWingullTakeMentalHerb: @ 8217E05
+FortreeCity_House4_Text_WelcomeTKogasaTakeMentalHerb: @ 8217E05
 	.string "Good!\n"
-	.string "Welcome back, WINGULL!\p"
+	.string "Welcome back, TKOGASA!\p"
 	.string "Huh? What is this?\n"
 	.string "What is it holding?\p"
 	.string "A MENTAL HERB?\n"
@@ -87,10 +87,10 @@ FortreeCity_House4_Text_WelcomeWingullTakeMentalHerb: @ 8217E05
 	.string "But I'm not a TRAINER, so you can\n"
 	.string "have it.$"
 
-FortreeCity_House4_Text_FriendsFarAwayThanksToWingull: @ 8217EA8
-	.string "Thanks to my WINGULL, I have friends\n"
+FortreeCity_House4_Text_FriendsFarAwayThanksToTKogasa: @ 8217EA8
+	.string "Thanks to my TKOGASA, I have friends\n"
 	.string "who live far away.$"
 
-FortreeCity_House4_Text_Wingull: @ 8217EE0
-	.string "WINGULL: Pihyoh!$"
+FortreeCity_House4_Text_TKogasa: @ 8217EE0
+	.string "TKOGASA: Pihyoh!$"
 

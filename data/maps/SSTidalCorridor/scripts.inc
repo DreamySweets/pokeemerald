@@ -89,7 +89,7 @@ SSTidalCorridor_EventScript_Peeko:: @ 823C0E2
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_WINGULL, 0
+	playmoncry SPECIES_TKOGASA, 0
 	msgbox SSTidalCorridor_Text_Peeko, MSGBOX_DEFAULT
 	waitmoncry
 	release

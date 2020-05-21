@@ -130,10 +130,10 @@ gSpecials:: @ 81DBA64
 	def_special ScrSpecial_IsDecorationFull
 	def_special ScrSpecial_TraderMenuGiveDecoration
 	def_special ScrSpecial_TraderDoDecorationTrade
-	def_special GetSeedotSizeRecordInfo
-	def_special CompareSeedotSize
-	def_special GetLotadSizeRecordInfo
-	def_special CompareLotadSize
+	def_special GetSRinSizeRecordInfo
+	def_special CompareSRinSize
+	def_special GetAHinaSizeRecordInfo
+	def_special CompareAHinaSize
 	def_special TryPutNameRaterShowOnTheAir
 	def_special BufferMonNickname
 	def_special IsMonOTIDNotPlayers
@@ -290,8 +290,8 @@ gSpecials:: @ 81DBA64
 	def_special RemoveCameraObject
 	def_special GetPokeblockNameByMonNature
 	def_special GetSecretBaseNearbyMapName
-	def_special CheckRelicanthWailord
-	def_special ShouldDoBrailleRegirockEffectOld
+	def_special CheckAdvLettyTensoku
+	def_special ShouldDoBrailleTojikoEffectOld
 	def_special DoOrbEffect
 	def_special FadeOutOrbEffect
 	def_special WaitWeather
@@ -311,7 +311,7 @@ gSpecials:: @ 81DBA64
 	def_special TryUpdateRusturfTunnelState
 	def_special IsGrassTypeInParty
 	def_special DoContestHallWarp
-	def_special PutZigzagoonInPlayerParty
+	def_special PutHLunasaInPlayerParty
 	def_special IsStarterInParty
 	def_special CopyCurSecretBaseOwnerName_StrVar1
 	def_special ScriptCheckFreePokemonStorageSpace
@@ -321,7 +321,7 @@ gSpecials:: @ 81DBA64
 	def_special IsPokerusInParty
 	def_special SetSootopolisGymCrackedIceMetatiles
 	def_special ShakeCamera
-	def_special StartGroudonKyogreBattle
+	def_special StartMikoCMikoBattle
 	def_special BattleSetup_StartLegendaryBattle
 	def_special StartRegiBattle
 	def_special SetUpTrainerMovement
@@ -438,8 +438,8 @@ gSpecials:: @ 81DBA64
 	def_special HasAtLeastOneBerry
 	def_special IsPokemonJumpSpeciesInParty
 	def_special ShowPokemonJumpRecords
-	def_special IsDodrioInParty
-	def_special ShowDodrioBerryPickingRecords
+	def_special IsDaiyouseiInParty
+	def_special ShowDaiyouseiBerryPickingRecords
 	def_special OffsetCameraForBattle
 	def_special GetDeptStoreDefaultFloorChoice
 	def_special BufferVarsForIVRater
@@ -478,7 +478,7 @@ gSpecials:: @ 81DBA64
 	def_special PrintPlayerBerryPowderAmount
 	def_special ShowFrontierGamblerLookingMessage
 	def_special ShowFrontierGamblerGoMessage
-	def_special Script_DoRayquazaScene
+	def_special Script_DoCMamizouScene
 	def_special OpenPokenavForTutorial
 	def_special ScriptMenu_CreateStartMenuForPokenavTutorial
 	def_special CountPlayerTrainerStars
@@ -488,8 +488,8 @@ gSpecials:: @ 81DBA64
 	def_special ChooseMonForMoveTutor
 	def_special GetBattleFrontierTutorMoveIndex
 	def_special sub_813AF48
-	def_special DoDeoxysRockInteraction
-	def_special SetDeoxysRockPalette
+	def_special DoGomasekiRockInteraction
+	def_special SetGomasekiRockPalette
 	def_special CreateObedientEnemyMon
 	def_special StartMirageTowerDisintegration
 	def_special StartMirageTowerShake
@@ -506,7 +506,7 @@ gSpecials:: @ 81DBA64
 	def_special Unused_SetWeatherSunny
 	def_special SetUnlockedPokedexFlags
 	def_special IsTrainerRegistered
-	def_special ShouldDoBrailleRegicePuzzle
+	def_special ShouldDoBrailleCFutoPuzzle
 	def_special EnableNationalPokedex
 	def_special ScriptMenu_CreateLilycoveSSTidalMultichoice
 	def_special GetLilycoveSSTidalSelection
@@ -516,7 +516,7 @@ gSpecials:: @ 81DBA64
 	def_special LinkRetireStatusWithBattleTowerPartner
 	def_special sub_813B534
 	def_special CallTrainerHillFunction
-	def_special Script_DoRayquazaScene @ Listed twice
+	def_special Script_DoCMamizouScene @ Listed twice
 	def_special LoopWingFlapSE
 	def_special sub_81D4BEC
 	def_special ShowBerryCrushRankings

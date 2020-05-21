@@ -997,14 +997,14 @@ const union AnimCmd gFieldEffectObjectImageAnim_850D6A8[] = {
     ANIMCMD_END,
 };
 
-const union AnimCmd *const gFieldEffectObjectImageAnimTable_Rayquaza[] = {
+const union AnimCmd *const gFieldEffectObjectImageAnimTable_CMamizou[] = {
     gFieldEffectObjectImageAnim_850D6A8,
 };
 
-const struct SpriteFrameImage  gFieldEffectObjectPicTable_Rayquaza[] = {
-    overworld_frame(gObjectEventPic_Rayquaza, 4, 4, 0),
+const struct SpriteFrameImage  gFieldEffectObjectPicTable_CMamizou[] = {
+    overworld_frame(gObjectEventPic_CMamizou, 4, 4, 0),
 };
 
-const struct SpriteTemplate gFieldEffectObjectTemplate_Rayquaza = {0xFFFF, 0xFFFF, &gObjectEventBaseOam_32x32, gFieldEffectObjectImageAnimTable_Rayquaza, gFieldEffectObjectPicTable_Rayquaza, gDummySpriteAffineAnimTable, sub_8155F80};
+const struct SpriteTemplate gFieldEffectObjectTemplate_CMamizou = {0xFFFF, 0xFFFF, &gObjectEventBaseOam_32x32, gFieldEffectObjectImageAnimTable_CMamizou, gFieldEffectObjectPicTable_CMamizou, gDummySpriteAffineAnimTable, sub_8155F80};
 
 const struct SpritePalette gFieldEffectObjectPaletteInfoUnused = {gObjectEventPalette2, 0x1011};

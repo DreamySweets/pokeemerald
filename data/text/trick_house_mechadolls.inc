@@ -1,56 +1,56 @@
-gTrickHouse_Mechadoll_Oddish:: @ 27ECBC
-	.string "ODDISH$"
+gTrickHouse_Mechadoll_CKeine:: @ 27ECBC
+	.string "CKEINE$"
 
-gTrickHouse_Mechadoll_Poochyena:: @ 27ECC3
-	.string "POOCHYENA$"
+gTrickHouse_Mechadoll_DYuyuko:: @ 27ECC3
+	.string "DYUYUKO$"
 
-gTrickHouse_Mechadoll_Taillow:: @ 27ECCD
-	.string "TAILLOW$"
+gTrickHouse_Mechadoll_TShou:: @ 27ECCD
+	.string "TSHOU$"
 
-gTrickHouse_Mechadoll_Azurill:: @ 27ECD5
-	.string "AZURILL$"
+gTrickHouse_Mechadoll_CShinGyoku:: @ 27ECD5
+	.string "CSHINGYOKU$"
 
-gTrickHouse_Mechadoll_Lotad:: @ 27ECDD
-	.string "LOTAD$"
+gTrickHouse_Mechadoll_AHina:: @ 27ECDD
+	.string "AHINA$"
 
-gTrickHouse_Mechadoll_Wingull:: @ 27ECE3
-	.string "WINGULL$"
+gTrickHouse_Mechadoll_TKogasa:: @ 27ECE3
+	.string "TKOGASA$"
 
-gTrickHouse_Mechadoll_Dustox:: @ 27ECEB
-	.string "DUSTOX$"
+gTrickHouse_Mechadoll_TMedicine:: @ 27ECEB
+	.string "TMEDICINE$"
 
-gTrickHouse_Mechadoll_Zubat:: @ 27ECF2
-	.string "ZUBAT$"
+gTrickHouse_Mechadoll_CMinoriko:: @ 27ECF2
+	.string "CMINORIKO$"
 
-gTrickHouse_Mechadoll_Nincada:: @ 27ECF8
-	.string "NINCADA$"
+gTrickHouse_Mechadoll_HShizuha:: @ 27ECF8
+	.string "HSHIZUHA$"
 
-gTrickHouse_Mechadoll_Ralts:: @ 27ED00
-	.string "RALTS$"
+gTrickHouse_Mechadoll_Tenma:: @ 27ED00
+	.string "TENMA$"
 
-gTrickHouse_Mechadoll_Zigzagoon:: @ 27ED06
-	.string "ZIGZAGOON$"
+gTrickHouse_Mechadoll_HLunasa:: @ 27ED06
+	.string "HLUNASA$"
 
-gTrickHouse_Mechadoll_Slakoth:: @ 27ED10
-	.string "SLAKOTH$"
+gTrickHouse_Mechadoll_SSariel:: @ 27ED10
+	.string "SSARIEL$"
 
-gTrickHouse_Mechadoll_Poochyena2:: @ 27ED18
-	.string "POOCHYENA$"
+gTrickHouse_Mechadoll_DYuyuko2:: @ 27ED18
+	.string "DYUYUKO$"
 
-gTrickHouse_Mechadoll_Shroomish:: @ 27ED22
-	.string "SHROOMISH$"
+gTrickHouse_Mechadoll_DSuwako:: @ 27ED22
+	.string "DSUWAKO$"
 
-gTrickHouse_Mechadoll_Zigzagoon2:: @ 27ED2C
-	.string "ZIGZAGOON$"
+gTrickHouse_Mechadoll_HLunasa2:: @ 27ED2C
+	.string "HLUNASA$"
 
-gTrickHouse_Mechadoll_Poochyena3:: @ 27ED36
-	.string "POOCHYENA$"
+gTrickHouse_Mechadoll_DYuyuko3:: @ 27ED36
+	.string "DYUYUKO$"
 
-gTrickHouse_Mechadoll_Zubat2:: @ 27ED40
-	.string "ZUBAT$"
+gTrickHouse_Mechadoll_CMinoriko2:: @ 27ED40
+	.string "CMINORIKO$"
 
-gTrickHouse_Mechadoll_Carvanha:: @ 27ED46
-	.string "CARVANHA$"
+gTrickHouse_Mechadoll_ATewi:: @ 27ED46
+	.string "ATEWI$"
 
 gTrickHouse_Mechadoll_BurnHeal:: @ 27ED4F
 	.string "BURN HEAL$"

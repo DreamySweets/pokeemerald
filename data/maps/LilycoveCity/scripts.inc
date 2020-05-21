@@ -12,22 +12,22 @@ LilycoveCity_OnTransition: @ 81E2B47
 	end
 
 LilycoveCity_OnLoad: @ 81E2B61
-	call_if_unset FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE, LilycoveCity_EventScript_SetWailmerMetatiles
+	call_if_unset FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE, LilycoveCity_EventScript_SetDMeilingMetatiles
 	end
 
-LilycoveCity_EventScript_SetWailmerMetatiles:: @ 81E2B6B
-	setmetatile 76, 12, METATILE_Lilycove_Wailmer0, 1
-	setmetatile 77, 12, METATILE_Lilycove_Wailmer1, 1
-	setmetatile 76, 13, METATILE_Lilycove_Wailmer2, 1
-	setmetatile 77, 13, METATILE_Lilycove_Wailmer3, 1
-	setmetatile 76, 14, METATILE_Lilycove_Wailmer0_Alt, 1
-	setmetatile 77, 14, METATILE_Lilycove_Wailmer1_Alt, 1
-	setmetatile 76, 15, METATILE_Lilycove_Wailmer2, 1
-	setmetatile 77, 15, METATILE_Lilycove_Wailmer3, 1
-	setmetatile 77, 16, METATILE_Lilycove_Wailmer0_Alt, 1
-	setmetatile 78, 16, METATILE_Lilycove_Wailmer1_Alt, 1
-	setmetatile 77, 17, METATILE_Lilycove_Wailmer2, 1
-	setmetatile 78, 17, METATILE_Lilycove_Wailmer3, 1
+LilycoveCity_EventScript_SetDMeilingMetatiles:: @ 81E2B6B
+	setmetatile 76, 12, METATILE_Lilycove_DMeiling0, 1
+	setmetatile 77, 12, METATILE_Lilycove_DMeiling1, 1
+	setmetatile 76, 13, METATILE_Lilycove_DMeiling2, 1
+	setmetatile 77, 13, METATILE_Lilycove_DMeiling3, 1
+	setmetatile 76, 14, METATILE_Lilycove_DMeiling0_Alt, 1
+	setmetatile 77, 14, METATILE_Lilycove_DMeiling1_Alt, 1
+	setmetatile 76, 15, METATILE_Lilycove_DMeiling2, 1
+	setmetatile 77, 15, METATILE_Lilycove_DMeiling3, 1
+	setmetatile 77, 16, METATILE_Lilycove_DMeiling0_Alt, 1
+	setmetatile 78, 16, METATILE_Lilycove_DMeiling1_Alt, 1
+	setmetatile 77, 17, METATILE_Lilycove_DMeiling2, 1
+	setmetatile 78, 17, METATILE_Lilycove_DMeiling3, 1
 	return
 
 LilycoveCity_EventScript_BerryGentleman:: @ 81E2BD8
@@ -76,7 +76,7 @@ LilycoveCity_EventScript_Sailor2:: @ 81E2C53
 	lock
 	faceplayer
 	goto_if_set FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE, LilycoveCity_EventScript_Sailor2AquaGone
-	msgbox LilycoveCity_Text_TeamAquaBeenTrainingWailmer, MSGBOX_DEFAULT
+	msgbox LilycoveCity_Text_TeamAquaBeenTrainingDMeiling, MSGBOX_DEFAULT
 	release
 	end
 
@@ -193,21 +193,21 @@ LilycoveCity_EventScript_MoveDeletersHouseSign:: @ 81E2D74
 	msgbox LilycoveCity_Text_MoveDeletersHouseSign, MSGBOX_SIGN
 	end
 
-LilycoveCity_EventScript_WailmerTrainerGrunt:: @ 81E2D7D
+LilycoveCity_EventScript_DMeilingTrainerGrunt:: @ 81E2D7D
 	lockall
-	goto_if_set FLAG_MET_WAILMER_TRAINER, LilycoveCity_EventScript_MetWailmerTrainer
-	msgbox LilycoveCity_Text_WailmerLeapOutOfWater, MSGBOX_DEFAULT
+	goto_if_set FLAG_MET_DMEILING_TRAINER, LilycoveCity_EventScript_MetDMeilingTrainer
+	msgbox LilycoveCity_Text_DMeilingLeapOutOfWater, MSGBOX_DEFAULT
 	applymovement VAR_LAST_TALKED, Common_Movement_FacePlayer
 	waitmovement 0
 	msgbox LilycoveCity_Text_GetLostMessingUpTraining, MSGBOX_DEFAULT
 	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 	waitmovement 0
-	setflag FLAG_MET_WAILMER_TRAINER
+	setflag FLAG_MET_DMEILING_TRAINER
 	releaseall
 	end
 
-LilycoveCity_EventScript_MetWailmerTrainer:: @ 81E2DB0
-	msgbox LilycoveCity_Text_WailmerLeapOutOfWater, MSGBOX_DEFAULT
+LilycoveCity_EventScript_MetDMeilingTrainer:: @ 81E2DB0
+	msgbox LilycoveCity_Text_DMeilingLeapOutOfWater, MSGBOX_DEFAULT
 	releaseall
 	end
 
@@ -245,9 +245,9 @@ LilycoveCity_EventScript_May:: @ 81E2DF8
 	goto_if_eq LilycoveCity_EventScript_DeclineMayBattle
 	msgbox LilycoveCity_Text_MayWontBeBeaten, MSGBOX_DEFAULT
 	switch VAR_STARTER_MON
-	case 0, LilycoveCity_EventScript_BattleMayTreecko
-	case 1, LilycoveCity_EventScript_BattleMayTorchic
-	case 2, LilycoveCity_EventScript_BattleMayMudkip
+	case 0, LilycoveCity_EventScript_BattleMayHEirin
+	case 1, LilycoveCity_EventScript_BattleMayAAlice
+	case 2, LilycoveCity_EventScript_BattleMayDReimu
 	end
 
 LilycoveCity_EventScript_MayAskToBattleAgain:: @ 81E2E48
@@ -274,9 +274,9 @@ LilycoveCity_EventScript_Brendan:: @ 81E2E6B
 	goto_if_eq LilycoveCity_EventScript_DeclineBrendanBattle
 	msgbox LilycoveCity_Text_BrendanWontBeBeaten, MSGBOX_DEFAULT
 	switch VAR_STARTER_MON
-	case 0, LilycoveCity_EventScript_BattleBrendanTreecko
-	case 1, LilycoveCity_EventScript_BattleBrendanTorchic
-	case 2, LilycoveCity_EventScript_BattleBrendanMudkip
+	case 0, LilycoveCity_EventScript_BattleBrendanHEirin
+	case 1, LilycoveCity_EventScript_BattleBrendanAAlice
+	case 2, LilycoveCity_EventScript_BattleBrendanDReimu
 	end
 
 LilycoveCity_EventScript_BrendanAskToBattleAgain:: @ 81E2EBB
@@ -295,33 +295,33 @@ LilycoveCity_EventScript_DeclineBrendanBattle:: @ 81E2ECD
 	release
 	end
 
-LilycoveCity_EventScript_BattleMayTreecko:: @ 81E2EDE
-	trainerbattle_no_intro TRAINER_MAY_LILYCOVE_TREECKO, LilycoveCity_Text_MayDefeat
+LilycoveCity_EventScript_BattleMayHEirin:: @ 81E2EDE
+	trainerbattle_no_intro TRAINER_MAY_LILYCOVE_HEIRIN, LilycoveCity_Text_MayDefeat
 	goto LilycoveCity_EventScript_DefeatedMay
 	end
 
-LilycoveCity_EventScript_BattleMayTorchic:: @ 81E2EEE
-	trainerbattle_no_intro TRAINER_MAY_LILYCOVE_TORCHIC, LilycoveCity_Text_MayDefeat
+LilycoveCity_EventScript_BattleMayAAlice:: @ 81E2EEE
+	trainerbattle_no_intro TRAINER_MAY_LILYCOVE_AALICE, LilycoveCity_Text_MayDefeat
 	goto LilycoveCity_EventScript_DefeatedMay
 	end
 
-LilycoveCity_EventScript_BattleMayMudkip:: @ 81E2EFE
-	trainerbattle_no_intro TRAINER_MAY_LILYCOVE_MUDKIP, LilycoveCity_Text_MayDefeat
+LilycoveCity_EventScript_BattleMayDReimu:: @ 81E2EFE
+	trainerbattle_no_intro TRAINER_MAY_LILYCOVE_DREIMU, LilycoveCity_Text_MayDefeat
 	goto LilycoveCity_EventScript_DefeatedMay
 	end
 
-LilycoveCity_EventScript_BattleBrendanTreecko:: @ 81E2F0E
-	trainerbattle_no_intro TRAINER_BRENDAN_LILYCOVE_TREECKO, LilycoveCity_Text_BrendanDefeat
+LilycoveCity_EventScript_BattleBrendanHEirin:: @ 81E2F0E
+	trainerbattle_no_intro TRAINER_BRENDAN_LILYCOVE_HEIRIN, LilycoveCity_Text_BrendanDefeat
 	goto LilycoveCity_EventScript_DefeatedBrendan
 	end
 
-LilycoveCity_EventScript_BattleBrendanTorchic:: @ 81E2F1E
-	trainerbattle_no_intro TRAINER_BRENDAN_LILYCOVE_TORCHIC, LilycoveCity_Text_BrendanDefeat
+LilycoveCity_EventScript_BattleBrendanAAlice:: @ 81E2F1E
+	trainerbattle_no_intro TRAINER_BRENDAN_LILYCOVE_AALICE, LilycoveCity_Text_BrendanDefeat
 	goto LilycoveCity_EventScript_DefeatedBrendan
 	end
 
-LilycoveCity_EventScript_BattleBrendanMudkip:: @ 81E2F2E
-	trainerbattle_no_intro TRAINER_BRENDAN_LILYCOVE_MUDKIP, LilycoveCity_Text_BrendanDefeat
+LilycoveCity_EventScript_BattleBrendanDReimu:: @ 81E2F2E
+	trainerbattle_no_intro TRAINER_BRENDAN_LILYCOVE_DREIMU, LilycoveCity_Text_BrendanDefeat
 	goto LilycoveCity_EventScript_DefeatedBrendan
 	end
 
@@ -334,7 +334,7 @@ LilycoveCity_EventScript_DefeatedMay:: @ 81E2F3E
 	compare VAR_RESULT, TRUE
 	call_if_eq LilycoveCity_EventScript_MayPokemonLeague
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_BEDROOM
-	clearflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_2F_PICHU_DOLL
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_2F_CLUIZE_DOLL
 	goto LilycoveCity_EventScript_RivalFlyAway
 	end
 
@@ -368,7 +368,7 @@ LilycoveCity_EventScript_DefeatedBrendan:: @ 81E2FAA
 	compare VAR_RESULT, TRUE
 	call_if_eq LilycoveCity_EventScript_BrendanPokemonLeague
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_BEDROOM
-	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F_SWABLU_DOLL
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F_DIKU_DOLL
 	goto LilycoveCity_EventScript_RivalFlyAway
 	end
 
@@ -579,8 +579,8 @@ LilycoveCity_Text_IfWorldBecomesOurs: @ 81E3CBE
 	.string "TEAM AQUA's, it will be a happier\l"
 	.string "place for POKéMON, too.$"
 
-LilycoveCity_Text_WailmerLeapOutOfWater: @ 81E3D1F
-	.string "There! WAILMER!\n"
+LilycoveCity_Text_DMeilingLeapOutOfWater: @ 81E3D1F
+	.string "There! DMEILING!\n"
 	.string "Leap out of the water now!$"
 
 LilycoveCity_Text_GetLostMessingUpTraining: @ 81E3D4A
@@ -613,9 +613,9 @@ LilycoveCity_Text_ImFromKanto: @ 81E3F05
 	.string "Could there be rare POKéMON that live\n"
 	.string "only in this area?$"
 
-LilycoveCity_Text_TeamAquaBeenTrainingWailmer: @ 81E3FAB
+LilycoveCity_Text_TeamAquaBeenTrainingDMeiling: @ 81E3FAB
 	.string "TEAM AQUA's been training their\n"
-	.string "WAILMER in the cove.\p"
+	.string "DMEILING in the cove.\p"
 	.string "We SAILORS can't get our boats out\n"
 	.string "to sea with them in the way!$"
 
@@ -623,7 +623,7 @@ LilycoveCity_Text_SomeonePuntedTeamAquaOut: @ 81E4020
 	.string "Ahoy, did you know?\p"
 	.string "Someone punted TEAM AQUA out of\n"
 	.string "the way for us!\p"
-	.string "That got the WAILMER out of the cove,\n"
+	.string "That got the DMEILING out of the cove,\n"
 	.string "so we can get our boats out again.$"
 
 LilycoveCity_Text_SomeoneStoleMyPokemon: @ 81E40AD

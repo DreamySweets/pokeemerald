@@ -132,15 +132,15 @@ LilycoveCity_DepartmentStore_1F_EventScript_LittleGirl:: @ 821F838
 	end
 
 LilycoveCity_DepartmentStore_1F_EventScript_PokefanM:: @ 821F841
-	msgbox LilycoveCity_DepartmentStore_1F_Text_BuyingSomethingForAzumarill, MSGBOX_NPC
+	msgbox LilycoveCity_DepartmentStore_1F_Text_BuyingSomethingForCYumeko, MSGBOX_NPC
 	end
 
-LilycoveCity_DepartmentStore_1F_EventScript_Azumarill:: @ 821F84A
+LilycoveCity_DepartmentStore_1F_EventScript_CYumeko:: @ 821F84A
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_AZUMARILL, 0
-	msgbox LilycoveCity_DepartmentStore_1F_Text_Azumarill, MSGBOX_DEFAULT
+	playmoncry SPECIES_CYUMEKO, 0
+	msgbox LilycoveCity_DepartmentStore_1F_Text_CYumeko, MSGBOX_DEFAULT
 	waitmoncry
 	release
 	end
@@ -161,12 +161,12 @@ LilycoveCity_DepartmentStore_1F_Text_MomBuyingMeFurniture: @ 821F8F5
 	.string "Today, my mom is going to buy me some\n"
 	.string "nice furniture.$"
 
-LilycoveCity_DepartmentStore_1F_Text_BuyingSomethingForAzumarill: @ 821F92B
-	.string "I'm buying something for my AZUMARILL\n"
+LilycoveCity_DepartmentStore_1F_Text_BuyingSomethingForCYumeko: @ 821F92B
+	.string "I'm buying something for my CYUMEKO\n"
 	.string "as a reward for winning a CONTEST.$"
 
-LilycoveCity_DepartmentStore_1F_Text_Azumarill: @ 821F974
-	.string "AZUMARILL: Maririroo!$"
+LilycoveCity_DepartmentStore_1F_Text_CYumeko: @ 821F974
+	.string "CYUMEKO: Maririroo!$"
 
 LilycoveCity_DepartmentStore_1F_Text_FloorNamesSign: @ 821F98A
 	.string "1F: SERVICE COUNTER\n"

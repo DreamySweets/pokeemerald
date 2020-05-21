@@ -352,15 +352,15 @@ Route109_EventScript_Woman:: @ 81EEA06
 	end
 
 Route109_EventScript_OldMan:: @ 81EEA0F
-	msgbox Route109_Text_ZigzagoonPicksUpLitter, MSGBOX_NPC
+	msgbox Route109_Text_HLunasaPicksUpLitter, MSGBOX_NPC
 	end
 
-Route109_EventScript_Zigzagoon:: @ 81EEA18
+Route109_EventScript_HLunasa:: @ 81EEA18
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_ZIGZAGOON, 0
-	msgbox Route109_Text_ZigzagoonCry, MSGBOX_DEFAULT
+	playmoncry SPECIES_HLUNASA, 0
+	msgbox Route109_Text_HLunasaCry, MSGBOX_DEFAULT
 	waitmoncry
 	release
 	end
@@ -540,17 +540,17 @@ Route109_Text_WereGoingToMakeBigCastle: @ 81EEFF1
 	.string "queen.\p"
 	.string "We'll let you be a servant.$"
 
-Route109_Text_ZigzagoonPicksUpLitter: @ 81EF080
+Route109_Text_HLunasaPicksUpLitter: @ 81EF080
 	.string "The water around these parts is clean.\p"
-	.string "But, I get my ZIGZAGOON to pick up\n"
+	.string "But, I get my HLUNASA to pick up\n"
 	.string "litter from the shoreline at times.\p"
 	.string "Dirty water becomes rain and joins our\n"
 	.string "rivers, which we drink from…\p"
 	.string "If we pollute the sea, it all comes\n"
 	.string "back to haunt us eventually.$"
 
-Route109_Text_ZigzagoonCry: @ 81EF173
-	.string "ZIGZAGOON: Guguu?$"
+Route109_Text_HLunasaCry: @ 81EF173
+	.string "HLUNASA: Guguu?$"
 
 Route109_Text_SeashoreHouseSign: @ 81EF185
 	.string "SEASHORE HOUSE\p"

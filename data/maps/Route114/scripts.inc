@@ -8,9 +8,9 @@ Route114_OnTransition: @ 81F253F
 	compare VAR_SHOULD_END_ABNORMAL_WEATHER, 1
 	call_if_eq AbnormalWeather_EventScript_HideMapNamePopup
 	compare VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_114_NORTH
-	call_if_eq AbnormalWeather_StartGroudonWeather
+	call_if_eq AbnormalWeather_StartMikoWeather
 	compare VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_114_SOUTH
-	call_if_eq AbnormalWeather_StartGroudonWeather
+	call_if_eq AbnormalWeather_StartMikoWeather
 	end
 
 Route114_OnLoad: @ 81F2561
@@ -64,12 +64,12 @@ Route114_EventScript_ReceivedRoar:: @ 81F2608
 	release
 	end
 
-Route114_EventScript_Poochyena:: @ 81F2612
+Route114_EventScript_DYuyuko:: @ 81F2612
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_POOCHYENA, 2
-	msgbox Route114_Text_Poochyena, MSGBOX_DEFAULT
+	playmoncry SPECIES_DYUYUKO, 2
+	msgbox Route114_Text_DYuyuko, MSGBOX_DEFAULT
 	waitmoncry
 	release
 	end
@@ -195,7 +195,7 @@ Route114_Text_ExplainRoar: @ 81F2872
 	.string "TM05 contains ROAR.\n"
 	.string "A ROAR sends POKéMON scurrying.$"
 
-Route114_Text_Poochyena: @ 81F28A6
+Route114_Text_DYuyuko: @ 81F28A6
 	.string "Bow! Bowwow!$"
 
 Route114_Text_MeteorFallsSign: @ 81F28B3

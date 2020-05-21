@@ -9,12 +9,12 @@ FortreeCity_House5_EventScript_Man:: @ 8217EFB
 	msgbox FortreeCity_House5_Text_AdaptedToNature, MSGBOX_NPC
 	end
 
-FortreeCity_House5_EventScript_Zigzagoon:: @ 8217F04
+FortreeCity_House5_EventScript_HLunasa:: @ 8217F04
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_ZIGZAGOON, 0
-	msgbox FortreeCity_House5_Text_Zigzagoon, MSGBOX_DEFAULT
+	playmoncry SPECIES_HLUNASA, 0
+	msgbox FortreeCity_House5_Text_HLunasa, MSGBOX_DEFAULT
 	waitmoncry
 	release
 	end
@@ -30,6 +30,6 @@ FortreeCity_House5_Text_AdaptedToNature: @ 8217F80
 	.string "There's no need to make nature\n"
 	.string "conform to the way we want to live.$"
 
-FortreeCity_House5_Text_Zigzagoon: @ 8217FFB
-	.string "ZIGZAGOON: Bufuu!$"
+FortreeCity_House5_Text_HLunasa: @ 8217FFB
+	.string "HLUNASA: Bufuu!$"
 

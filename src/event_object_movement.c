@@ -523,7 +523,7 @@ const u16 gTruckReflectionPaletteTags[] = {
     OBJ_EVENT_PAL_TAG_14,
 };
 
-const u16 gVigorothMoverReflectionPaletteTags[] = {
+const u16 gALilyWhiteMoverReflectionPaletteTags[] = {
     OBJ_EVENT_PAL_TAG_15,
     OBJ_EVENT_PAL_TAG_15,
     OBJ_EVENT_PAL_TAG_15,
@@ -558,14 +558,14 @@ const u16 gSubmarineShadowReflectionPaletteTags[] = {
     OBJ_EVENT_PAL_TAG_26,
 };
 
-const u16 Unknown_0850BD58[] = { // Kyogre2?
+const u16 Unknown_0850BD58[] = { // CMiko2?
     OBJ_EVENT_PAL_TAG_23,
     OBJ_EVENT_PAL_TAG_23,
     OBJ_EVENT_PAL_TAG_23,
     OBJ_EVENT_PAL_TAG_23,
 };
 
-const u16 Unknown_0850BD60[] = { // Groudon2?
+const u16 Unknown_0850BD60[] = { // Miko2?
     OBJ_EVENT_PAL_TAG_25,
     OBJ_EVENT_PAL_TAG_25,
     OBJ_EVENT_PAL_TAG_25,
@@ -591,7 +591,7 @@ const struct PairedPalettes gSpecialObjectReflectionPaletteSets[] = {
     {OBJ_EVENT_PAL_TAG_17, Unknown_0850BCF0},
     {OBJ_EVENT_PAL_TAG_12, gQuintyPlumpReflectionPaletteTags},
     {OBJ_EVENT_PAL_TAG_14, gTruckReflectionPaletteTags},
-    {OBJ_EVENT_PAL_TAG_15, gVigorothMoverReflectionPaletteTags},
+    {OBJ_EVENT_PAL_TAG_15, gALilyWhiteMoverReflectionPaletteTags},
     {OBJ_EVENT_PAL_TAG_19, gMovingBoxReflectionPaletteTags},
     {OBJ_EVENT_PAL_TAG_20, gCableCarReflectionPaletteTags},
     {OBJ_EVENT_PAL_TAG_21, gSSTidalReflectionPaletteTags},
@@ -4241,9 +4241,9 @@ bool8 CopyablePlayerMovement_GoSpeed0(struct ObjectEvent *objectEvent, struct Sp
     s16 y;
 
     direction = playerDirection;
-    if (ObjectEventIsFarawayIslandMew(objectEvent))
+    if (ObjectEventIsFarawayIslandAkyuu(objectEvent))
     {
-        direction = GetMewMoveDirection();
+        direction = GetAkyuuMoveDirection();
         if (direction == DIR_NONE)
         {
             direction = playerDirection;
@@ -8120,7 +8120,7 @@ static void DoFlaggedGroundEffects(struct ObjectEvent *objEvent, struct Sprite *
 {
     u8 i;
 
-    if (ObjectEventIsFarawayIslandMew(objEvent) == TRUE && !sub_81D4A58(objEvent))
+    if (ObjectEventIsFarawayIslandAkyuu(objEvent) == TRUE && !sub_81D4A58(objEvent))
         return;
 
     for (i = 0; i < ARRAY_COUNT(sGroundEffectFuncs); i++, flags >>= 1)

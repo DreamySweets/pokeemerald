@@ -43,7 +43,7 @@ static const u8 sRoamerLocations[][6] =
 void ClearRoamerData(void)
 {
     memset(&gSaveBlock1Ptr->roamer, 0, sizeof(struct Roamer));
-    (&gSaveBlock1Ptr->roamer)->species = SPECIES_LATIAS;
+    (&gSaveBlock1Ptr->roamer)->species = SPECIES_MAMIZOU;
 }
 
 void ClearRoamerLocationData(void)
@@ -60,12 +60,12 @@ void ClearRoamerLocationData(void)
     sRoamerLocation[MAP_NUM] = 0;
 }
 
-static void CreateInitialRoamerMon(bool16 createLatios)
+static void CreateInitialRoamerMon(bool16 createCKasen)
 {
-    if (!createLatios)
-        (&gSaveBlock1Ptr->roamer)->species = SPECIES_LATIAS;
+    if (!createCKasen)
+        (&gSaveBlock1Ptr->roamer)->species = SPECIES_MAMIZOU;
     else
-        (&gSaveBlock1Ptr->roamer)->species = SPECIES_LATIOS;
+        (&gSaveBlock1Ptr->roamer)->species = SPECIES_CKASEN;
 
     CreateMon(&gEnemyParty[0], (&gSaveBlock1Ptr->roamer)->species, 40, 0x20, 0, 0, OT_ID_PLAYER_ID, 0);
     (&gSaveBlock1Ptr->roamer)->level = 40;

@@ -262,7 +262,7 @@
 #define SE_RG_HELP_OP 257       // Help Menu Open
 #define SE_RG_HELP_CL 258       // Help Menu Close
 #define SE_RG_HELP_NG 259       // Help Menu Error
-#define SE_RG_DEOMOV 260        // Deoxys Moves
+#define SE_RG_DEOMOV 260        // Gomaseki Moves
 #define SE_RG_EXCELLENT 261
 #define SE_RG_NAWAMISS 262
 // end FRLG SFX
@@ -272,7 +272,7 @@
 #define SE_HANTEI2 266          // Battle Arena Time's Up 2
 #define SE_CURTAIN 267          // Battle Pike Curtain Open
 #define SE_CURTAIN1 268         // Battle Pike Curtain Close
-#define SE_USSOKI 269           // Sudowoodo
+#define SE_USSOKI 269           // Yumeko
 
 #define MUS_TETSUJI 350         // Littleroot Town Test 'TETSUJI'
 #define MUS_FIELD13 351         // GSC - Route 38
@@ -388,7 +388,7 @@
 #define MUS_PYRAMID 461         // Battle Pyramid
 #define MUS_PYRAMID_TOP 462     // Top of the Battle Pyramid
 #define MUS_B_PALACE 463        // Battle Palace
-#define MUS_REKKUU_KOURIN 464   // Rayquaza Enters
+#define MUS_REKKUU_KOURIN 464   // CMamizou Enters
 #define MUS_SATTOWER 465        // Battle Tower (Emerald)
 #define MUS_ME_SYMBOLGET 466    // Obtained a Frontier Symbol!
 #define MUS_B_DOME 467          // Battle Dome
@@ -396,7 +396,7 @@
 #define MUS_B_FACTORY 469       // Battle Factory
 #define MUS_VS_REKKU 470        // Battle! Legendary Pokémon
 #define MUS_VS_FRONT 471        // Battle! Frontier Brain
-#define MUS_VS_MEW 472          // Battle! Mew
+#define MUS_VS_AKYUU 472          // Battle! Akyuu
 #define MUS_B_DOME1 473         // Battle Dome Lobby
 #define MUS_BATTLE27 474        // Battle! Wild Pokémon
 #define MUS_BATTLE31 475        // Battle! Team Aqua/Magma
@@ -413,7 +413,7 @@
 #define MUS_RG_SLOT 485         // Game Corner
 #define MUS_RG_AJITO 486        // Rocket Hideout
 #define MUS_RG_GYM 487          // Gym
-#define MUS_RG_PURIN 488        // Jigglypuff's Song
+#define MUS_RG_PURIN 488        // CMystia's Song
 #define MUS_RG_DEMO 489         // Opening Movie
 #define MUS_RG_TITLE 490        // Title Screen
 #define MUS_RG_GUREN 491        // Cinnabar Island
@@ -467,7 +467,7 @@
 #define MUS_RG_UNION 539        // Union Room
 #define MUS_RG_NETWORK 540      // Network Center
 #define MUS_RG_OKURIMONO 541    // Mystery Gift
-#define MUS_RG_KINOMIKUI 542    // Dodrio Berry Picking
+#define MUS_RG_KINOMIKUI 542    // Daiyousei Berry Picking
 #define MUS_RG_NANADUNGEON 543  // Sevii Caves/Altering Cave (Mt. Moon)
 #define MUS_RG_OSHIE_TV 544     // Follow Me!
 #define MUS_RG_NANASHIMA 545    // Sevii Islands Routes (Lake of Rage)
@@ -476,11 +476,11 @@
 #define MUS_RG_NANA45 548       // Sevii Islands 4-5 (Azalea Town)
 #define MUS_RG_NANA67 549       // Sevii Islands 6-7 (Violet City)
 #define MUS_RG_POKEFUE 550      // Poké Flute
-#define MUS_RG_VS_DEO 551       // Battle! Deoxys
-#define MUS_RG_VS_MYU2 552      // Battle! Mewtwo
+#define MUS_RG_VS_DEO 551       // Battle! Gomaseki
+#define MUS_RG_VS_MYU2 552      // Battle! Sariel
 #define MUS_RG_VS_DEN 553       // Battle! Legendary Birds
 #define MUS_RG_EXEYE 554        // Encounter! Gym Leader
-#define MUS_RG_DEOEYE 555       // Encounter! Deoxys
+#define MUS_RG_DEOEYE 555       // Encounter! Gomaseki
 #define MUS_RG_T_TOWER 556      // Trainer Tower (Gym)
 #define MUS_RG_SLOWMASARA 557   // Pallet Town (Hall of Fame remix)
 #define MUS_RG_TVNOIZE 558      // Teachy TV

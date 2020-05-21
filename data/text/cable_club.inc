@@ -264,14 +264,14 @@ MossdeepCity_GameCorner_1F_Text_PokemonJumpInfo: @ 8278ACB
 	.string "Good things happen if everyone\n"
 	.string "jumps in time.$"
 
-MossdeepCity_GameCorner_1F_Text_DodrioBerryPickingInfo: @ 8278BF1
-	.string "“DODRIO BERRY-PICKING”\p"
-	.string "Command DODRIO's three heads to\n"
+MossdeepCity_GameCorner_1F_Text_DaiyouseiBerryPickingInfo: @ 8278BF1
+	.string "“DAIYOUSEI BERRY-PICKING”\p"
+	.string "Command DAIYOUSEI's three heads to\n"
 	.string "catch falling BERRIES.\p"
 	.string "Press right, up, or left on the\n"
 	.string "{PLUS} Control Pad to move the heads.\p"
 	.string "To play this game, you must have\n"
-	.string "a DODRIO.$"
+	.string "a DAIYOUSEI.$"
 
 MossdeepCity_GameCorner_1F_Text_TalkToOldManToPlay: @ 8278CAC
 	.string "If you want to play a game,\n"
@@ -322,9 +322,9 @@ MossdeepCity_GameCorner_1F_Text_ShortJumpingPokemonAllowed: @ 8278EDC
 	.string "swim, burrow, or fly.\p"
 	.string "That's all you need to know.$"
 
-MossdeepCity_GameCorner_1F_Text_OnlyDodrioAllowed: @ 8278FA4
-	.string "DODRIO BERRY-PICKING is a game that \n"
-	.string "only DODRIO may enter.$"
+MossdeepCity_GameCorner_1F_Text_OnlyDaiyouseiAllowed: @ 8278FA4
+	.string "DAIYOUSEI BERRY-PICKING is a game that \n"
+	.string "only DAIYOUSEI may enter.$"
 
 @ Unused
 MossdeepCity_GameCorner_1F_Text_RetryPlease: @ 8278FE0

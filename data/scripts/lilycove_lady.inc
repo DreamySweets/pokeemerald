@@ -534,63 +534,63 @@ LilycoveCity_PokemonCenter_1F_EventScript_ContestLadyMon:: @ 82A89C7
     special Script_BufferContestLadyCategoryAndMonName
     special GetContestLadyMonSpecies
     compare VAR_RESULT, CONTEST_CATEGORY_COOL
-    goto_if_eq LilycoveCity_PokemonCenter_1F_EventScript_Zigzagoon
+    goto_if_eq LilycoveCity_PokemonCenter_1F_EventScript_HLunasa
     compare VAR_RESULT, CONTEST_CATEGORY_BEAUTY
-    goto_if_eq LilycoveCity_PokemonCenter_1F_EventScript_Skitty
+    goto_if_eq LilycoveCity_PokemonCenter_1F_EventScript_ASunnyMilk
     compare VAR_RESULT, CONTEST_CATEGORY_CUTE
-    goto_if_eq LilycoveCity_PokemonCenter_1F_EventScript_Poochyena
+    goto_if_eq LilycoveCity_PokemonCenter_1F_EventScript_DYuyuko
     compare VAR_RESULT, CONTEST_CATEGORY_SMART
-    goto_if_eq LilycoveCity_PokemonCenter_1F_EventScript_Kecleon
+    goto_if_eq LilycoveCity_PokemonCenter_1F_EventScript_SWriggle
     compare VAR_RESULT, CONTEST_CATEGORY_TOUGH
-    goto_if_eq LilycoveCity_PokemonCenter_1F_EventScript_Pikachu
+    goto_if_eq LilycoveCity_PokemonCenter_1F_EventScript_CCirno
     end
 
-LilycoveCity_PokemonCenter_1F_EventScript_Zigzagoon:: @ 82A8A0A
+LilycoveCity_PokemonCenter_1F_EventScript_HLunasa:: @ 82A8A0A
     lock
     faceplayer
     waitse
     playmoncry VAR_0x8005, 0
-    msgbox LilycoveCity_PokemonCenter_1F_Text_Zigzagoon, MSGBOX_DEFAULT
+    msgbox LilycoveCity_PokemonCenter_1F_Text_HLunasa, MSGBOX_DEFAULT
     waitmoncry
     release
     end
 
-LilycoveCity_PokemonCenter_1F_EventScript_Skitty:: @ 82A8A1D
+LilycoveCity_PokemonCenter_1F_EventScript_ASunnyMilk:: @ 82A8A1D
     lock
     faceplayer
     waitse
     playmoncry VAR_0x8005, 0
-    msgbox LilycoveCity_PokemonCenter_1F_Text_Skitty, MSGBOX_DEFAULT
+    msgbox LilycoveCity_PokemonCenter_1F_Text_ASunnyMilk, MSGBOX_DEFAULT
     waitmoncry
     release
     end
 
-LilycoveCity_PokemonCenter_1F_EventScript_Poochyena:: @ 82A8A30
+LilycoveCity_PokemonCenter_1F_EventScript_DYuyuko:: @ 82A8A30
     lock
     faceplayer
     waitse
     playmoncry VAR_0x8005, 0
-    msgbox LilycoveCity_PokemonCenter_1F_Text_Poochyena, MSGBOX_DEFAULT
+    msgbox LilycoveCity_PokemonCenter_1F_Text_DYuyuko, MSGBOX_DEFAULT
     waitmoncry
     release
     end
 
-LilycoveCity_PokemonCenter_1F_EventScript_Kecleon:: @ 82A8A43
+LilycoveCity_PokemonCenter_1F_EventScript_SWriggle:: @ 82A8A43
     lock
     faceplayer
     waitse
     playmoncry VAR_0x8005, 0
-    msgbox LilycoveCity_PokemonCenter_1F_Text_Kecleon, MSGBOX_DEFAULT
+    msgbox LilycoveCity_PokemonCenter_1F_Text_SWriggle, MSGBOX_DEFAULT
     waitmoncry
     release
     end
 
-LilycoveCity_PokemonCenter_1F_EventScript_Pikachu:: @ 82A8A56
+LilycoveCity_PokemonCenter_1F_EventScript_CCirno:: @ 82A8A56
     lock
     faceplayer
     waitse
     playmoncry VAR_0x8005, 0
-    msgbox LilycoveCity_PokemonCenter_1F_Text_Pikachu, MSGBOX_DEFAULT
+    msgbox LilycoveCity_PokemonCenter_1F_Text_CCirno, MSGBOX_DEFAULT
     waitmoncry
     release
     end
@@ -840,17 +840,17 @@ LilycoveCity_PokemonCenter_1F_Text_ReadyToEnterContests: @ 82A9669
     .string "If you see us in one somewhere,\n"
     .string "I hope you'll cheer for us.$"
 
-LilycoveCity_PokemonCenter_1F_Text_Zigzagoon: @ 82A96DA
+LilycoveCity_PokemonCenter_1F_Text_HLunasa: @ 82A96DA
     .string "{STR_VAR_1}: Guguuh!$"
 
-LilycoveCity_PokemonCenter_1F_Text_Kecleon: @ 82A96E6
+LilycoveCity_PokemonCenter_1F_Text_SWriggle: @ 82A96E6
     .string "{STR_VAR_1}: Igigigiiih!$"
 
-LilycoveCity_PokemonCenter_1F_Text_Poochyena: @ 82A96F6
+LilycoveCity_PokemonCenter_1F_Text_DYuyuko: @ 82A96F6
     .string "{STR_VAR_1}: Baaarun…$"
 
-LilycoveCity_PokemonCenter_1F_Text_Pikachu: @ 82A9703
+LilycoveCity_PokemonCenter_1F_Text_CCirno: @ 82A9703
     .string "{STR_VAR_1}: Pikka!$"
 
-LilycoveCity_PokemonCenter_1F_Text_Skitty: @ 82A970E
+LilycoveCity_PokemonCenter_1F_Text_ASunnyMilk: @ 82A970E
     .string "{STR_VAR_1}: Umyaaaan!$"

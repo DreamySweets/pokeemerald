@@ -3495,16 +3495,16 @@ const struct Item gItems[] =
         .secondaryId = 0,
     },
 
-    [ITEM_WAILMER_PAIL] =
+    [ITEM_DMEILING_PAIL] =
     {
-        .name = _("WAILMER PAIL"),
-        .itemId = ITEM_WAILMER_PAIL,
+        .name = _("DMEILING PAIL"),
+        .itemId = ITEM_DMEILING_PAIL,
         .price = 0,
-        .description = sWailmerPailDesc,
+        .description = sDMeilingPailDesc,
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = 2,
-        .fieldUseFunc = ItemUseOutOfBattle_WailmerPail,
+        .fieldUseFunc = ItemUseOutOfBattle_DMeilingPail,
         .secondaryId = 0,
     },
 

@@ -28,12 +28,12 @@ BattleFrontier_PokemonCenter_1F_EventScript_Picnicker:: @ 8267928
 	msgbox BattleFrontier_PokemonCenter_1F_Text_GoingThroughEveryChallenge, MSGBOX_NPC
 	end
 
-BattleFrontier_PokemonCenter_1F_EventScript_Skitty:: @ 8267931
+BattleFrontier_PokemonCenter_1F_EventScript_ASunnyMilk:: @ 8267931
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_SKITTY, 0
-	msgbox BattleFrontier_PokemonCenter_1F_Text_Skitty, MSGBOX_DEFAULT
+	playmoncry SPECIES_ASUNNYMILK, 0
+	msgbox BattleFrontier_PokemonCenter_1F_Text_ASunnyMilk, MSGBOX_DEFAULT
 	waitmoncry
 	release
 	end
@@ -55,6 +55,6 @@ BattleFrontier_PokemonCenter_1F_Text_GoingThroughEveryChallenge: @ 8267A4B
 	.string "Giggle… I'm going to go through every\n"
 	.string "challenge with just this baby!$"
 
-BattleFrontier_PokemonCenter_1F_Text_Skitty: @ 8267A90
-	.string "SKITTY: Mya myaaah!$"
+BattleFrontier_PokemonCenter_1F_Text_ASunnyMilk: @ 8267A90
+	.string "ASUNNYMILK: Mya myaaah!$"
 

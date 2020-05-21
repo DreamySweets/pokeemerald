@@ -4,30 +4,30 @@ SootopolisCity_House6_MapScripts:: @ 8226F5B
 SootopolisCity_House6_EventScript_Woman:: @ 8226F5C
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_WAILMER_DOLL, SootopolisCity_House6_EventScript_ReceivedWailmerDoll
+	goto_if_set FLAG_RECEIVED_DMEILING_DOLL, SootopolisCity_House6_EventScript_ReceivedDMeilingDoll
 	msgbox SootopolisCity_House6_Text_FirstGuestInWhileTakeDoll, MSGBOX_YESNO
 	compare VAR_RESULT, NO
-	call_if_eq SootopolisCity_House6_EventScript_DeclineWailmerDoll
+	call_if_eq SootopolisCity_House6_EventScript_DeclineDMeilingDoll
 	msgbox SootopolisCity_House6_Text_TakeGoodCareOfIt, MSGBOX_DEFAULT
-	givedecoration DECOR_WAILMER_DOLL
+	givedecoration DECOR_DMEILING_DOLL
 	compare VAR_RESULT, FALSE
-	goto_if_eq SootopolisCity_House6_EventScript_NoRoomForWailmerDoll
-	setflag FLAG_RECEIVED_WAILMER_DOLL
+	goto_if_eq SootopolisCity_House6_EventScript_NoRoomForDMeilingDoll
+	setflag FLAG_RECEIVED_DMEILING_DOLL
 	release
 	end
 
-SootopolisCity_House6_EventScript_DeclineWailmerDoll:: @ 8226F99
+SootopolisCity_House6_EventScript_DeclineDMeilingDoll:: @ 8226F99
 	msgbox SootopolisCity_House6_Text_DontWantThisDoll, MSGBOX_DEFAULT
 	release
 	end
 
-SootopolisCity_House6_EventScript_ReceivedWailmerDoll:: @ 8226FA3
+SootopolisCity_House6_EventScript_ReceivedDMeilingDoll:: @ 8226FA3
 	msgbox SootopolisCity_House6_Text_LovePlushDolls, MSGBOX_DEFAULT
 	release
 	end
 
-SootopolisCity_House6_EventScript_NoRoomForWailmerDoll:: @ 8226FAD
-	bufferdecorationname 1, DECOR_WAILMER_DOLL
+SootopolisCity_House6_EventScript_NoRoomForDMeilingDoll:: @ 8226FAD
+	bufferdecorationname 1, DECOR_DMEILING_DOLL
 	msgbox gText_NoRoomLeftForAnother, MSGBOX_DEFAULT
 	msgbox SootopolisCity_House6_Text_IllHoldItForYou, MSGBOX_DEFAULT
 	release
@@ -37,7 +37,7 @@ SootopolisCity_House6_Text_FirstGuestInWhileTakeDoll: @ 8226FC3
 	.string "Hello! You're our first guest in\n"
 	.string "a good while.\p"
 	.string "You've brightened up my day, so I'll\n"
-	.string "give you a big WAILMER DOLL.$"
+	.string "give you a big DMEILING DOLL.$"
 
 SootopolisCity_House6_Text_TakeGoodCareOfIt: @ 8227034
 	.string "Take good care of it!$"

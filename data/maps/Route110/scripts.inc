@@ -415,23 +415,23 @@ Route110_EventScript_PlayBrendanMusic:: @ 81EF7E6
 Route110_EventScript_MayBattle:: @ 81EF7EB
 	msgbox Route110_Text_MayLetsBattle, MSGBOX_DEFAULT
 	switch VAR_STARTER_MON
-	case 0, Route110_EventScript_MayBattleTreecko
-	case 1, Route110_EventScript_MayBattleTorchic
-	case 2, Route110_EventScript_MayBattleMudkip
+	case 0, Route110_EventScript_MayBattleHEirin
+	case 1, Route110_EventScript_MayBattleAAlice
+	case 2, Route110_EventScript_MayBattleDReimu
 	end
 
-Route110_EventScript_MayBattleTreecko:: @ 81EF81A
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_110_TREECKO, Route110_Text_MayDefeated
+Route110_EventScript_MayBattleHEirin:: @ 81EF81A
+	trainerbattle_no_intro TRAINER_MAY_ROUTE_110_HEIRIN, Route110_Text_MayDefeated
 	goto Route110_EventScript_MayDefeated
 	end
 
-Route110_EventScript_MayBattleTorchic:: @ 81EF82A
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_110_TORCHIC, Route110_Text_MayDefeated
+Route110_EventScript_MayBattleAAlice:: @ 81EF82A
+	trainerbattle_no_intro TRAINER_MAY_ROUTE_110_AALICE, Route110_Text_MayDefeated
 	goto Route110_EventScript_MayDefeated
 	end
 
-Route110_EventScript_MayBattleMudkip:: @ 81EF83A
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_110_MUDKIP, Route110_Text_MayDefeated
+Route110_EventScript_MayBattleDReimu:: @ 81EF83A
+	trainerbattle_no_intro TRAINER_MAY_ROUTE_110_DREIMU, Route110_Text_MayDefeated
 	goto Route110_EventScript_MayDefeated
 	end
 
@@ -445,23 +445,23 @@ Route110_EventScript_MayDefeated:: @ 81EF84A
 Route110_EventScript_BrendanBattle:: @ 81EF865
 	msgbox Route110_Text_BrendayLetsBattle, MSGBOX_DEFAULT
 	switch VAR_STARTER_MON
-	case 0, Route110_EventScript_BrendanBattleTreecko
-	case 1, Route110_EventScript_BrendanBattleTorchic
-	case 2, Route110_EventScript_BrendanBattleMudkip
+	case 0, Route110_EventScript_BrendanBattleHEirin
+	case 1, Route110_EventScript_BrendanBattleAAlice
+	case 2, Route110_EventScript_BrendanBattleDReimu
 	end
 
-Route110_EventScript_BrendanBattleTreecko:: @ 81EF894
-	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_110_TREECKO, Route110_Text_BrendanDefeated
+Route110_EventScript_BrendanBattleHEirin:: @ 81EF894
+	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_110_HEIRIN, Route110_Text_BrendanDefeated
 	goto Route110_EventScript_BrendanDefeated
 	end
 
-Route110_EventScript_BrendanBattleTorchic:: @ 81EF8A4
-	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_110_TORCHIC, Route110_Text_BrendanDefeated
+Route110_EventScript_BrendanBattleAAlice:: @ 81EF8A4
+	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_110_AALICE, Route110_Text_BrendanDefeated
 	goto Route110_EventScript_BrendanDefeated
 	end
 
-Route110_EventScript_BrendanBattleMudkip:: @ 81EF8B4
-	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_110_MUDKIP, Route110_Text_BrendanDefeated
+Route110_EventScript_BrendanBattleDReimu:: @ 81EF8B4
+	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_110_DREIMU, Route110_Text_BrendanDefeated
 	goto Route110_EventScript_BrendanDefeated
 	end
 

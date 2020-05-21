@@ -22,19 +22,19 @@ FallarborTown_EventScript_ExpertMNormal:: @ 81EB221
 	end
 
 FallarborTown_EventScript_Girl:: @ 81EB22B
-	msgbox FallarborTown_Text_MyPreciousAzurill, MSGBOX_NPC
+	msgbox FallarborTown_Text_MyPreciousCShinGyoku, MSGBOX_NPC
 	end
 
 FallarborTown_EventScript_Gentleman:: @ 81EB234
 	msgbox FallarborTown_Text_HaveYouChallengedFlannery, MSGBOX_NPC
 	end
 
-FallarborTown_EventScript_Azurill:: @ 81EB23D
+FallarborTown_EventScript_CShinGyoku:: @ 81EB23D
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_AZURILL, 0
-	msgbox FallarborTown_Text_Azurill, MSGBOX_DEFAULT
+	playmoncry SPECIES_CSHINGYOKU, 0
+	msgbox FallarborTown_Text_CShinGyoku, MSGBOX_DEFAULT
 	waitmoncry
 	release
 	end
@@ -63,13 +63,13 @@ FallarborTown_Text_RegionKnownForMeteors: @ 81EB2DE
 	.string "They say METEOR FALLS was gouged out\n"
 	.string "by a falling meteorite long ago.$"
 
-FallarborTown_Text_MyPreciousAzurill: @ 81EB35F
+FallarborTown_Text_MyPreciousCShinGyoku: @ 81EB35F
 	.string "See! Take a look!\n"
-	.string "This is my precious AZURILL!\p"
+	.string "This is my precious CSHINGYOKU!\p"
 	.string "It's slick and smooth and plushy, too!$"
 
-FallarborTown_Text_Azurill: @ 81EB3B5
-	.string "AZURILL: Rooreelooo.$"
+FallarborTown_Text_CShinGyoku: @ 81EB3B5
+	.string "CSHINGYOKU: Rooreelooo.$"
 
 FallarborTown_Text_HaveYouChallengedFlannery: @ 81EB3CA
 	.string "Have you already challenged FLANNERY,\n"

@@ -780,7 +780,7 @@ const union AffineAnimCmd gObjectEventRotScalAnim_8509078[] =
     AFFINEANIMCMD_END,
 };
 
-const union AnimCmd gObjectEventImageAnim_HoOhFlapWings[] =
+const union AnimCmd gObjectEventImageAnim_AKomachiFlapWings[] =
 {
     ANIMCMD_FRAME(3, 8),
     ANIMCMD_FRAME(4, 8),
@@ -789,7 +789,7 @@ const union AnimCmd gObjectEventImageAnim_HoOhFlapWings[] =
     ANIMCMD_JUMP(0),
 };
 
-const union AnimCmd gObjectEventImageAnim_HoOhStayStill[] =
+const union AnimCmd gObjectEventImageAnim_AKomachiStayStill[] =
 {
     ANIMCMD_FRAME(3, 16),
     ANIMCMD_JUMP(0),
@@ -845,13 +845,13 @@ const union AnimCmd *const gObjectEventImageAnimTable_Standard[] = {
     gObjectEventImageAnim_GoFastestEast,
 };
 
-const union AnimCmd *const gObjectEventImageAnimTable_HoOh[] = {
+const union AnimCmd *const gObjectEventImageAnimTable_AKomachi[] = {
     gObjectEventImageAnim_FaceSouth,
     gObjectEventImageAnim_FaceNorth,
     gObjectEventImageAnim_FaceWest,
     gObjectEventImageAnim_FaceEast,
-    gObjectEventImageAnim_HoOhFlapWings,
-    gObjectEventImageAnim_HoOhStayStill,
+    gObjectEventImageAnim_AKomachiFlapWings,
+    gObjectEventImageAnim_AKomachiStayStill,
     gObjectEventImageAnim_GoWest,
     gObjectEventImageAnim_GoEast,
     gObjectEventImageAnim_GoFastSouth,
@@ -868,7 +868,7 @@ const union AnimCmd *const gObjectEventImageAnimTable_HoOh[] = {
     gObjectEventImageAnim_GoFastestEast,
 };
 
-const union AnimCmd *const gObjectEventImageAnimTable_Groudon3[] = {
+const union AnimCmd *const gObjectEventImageAnimTable_Miko3[] = {
     gObjectEventImageAnim_FaceSouth,
     gObjectEventImageAnim_FaceNorth,
     gObjectEventImageAnim_FaceWest,
@@ -945,7 +945,7 @@ const union AnimCmd gObjectEventImageAnim_8509230[] =
     ANIMCMD_JUMP(0),
 };
 
-const union AnimCmd *const gObjectEventImageAnimTable_Rayquaza2[] = {
+const union AnimCmd *const gObjectEventImageAnimTable_CMamizou2[] = {
     gObjectEventImageAnim_8509218,
     gObjectEventImageAnim_8509220,
     gObjectEventImageAnim_8509228,
@@ -1126,7 +1126,7 @@ const union AnimCmd *const gObjectEventImageAnimTable_Fishing[] = {
     gObjectEventImageAnim_HookedPokemonEast,
 };
 
-const union AffineAnimCmd *const gObjectEventRotScalAnimTable_KyogreGroudon[] = {
+const union AffineAnimCmd *const gObjectEventRotScalAnimTable_CMikoMiko[] = {
     gObjectEventRotScalAnim_8508FD8,
     gObjectEventRotScalAnim_8509008,
     gObjectEventRotScalAnim_8509050,

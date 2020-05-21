@@ -139,116 +139,116 @@ RustboroCity_DevonCorp_2F_EventScript_StillRegenerating:: @ 82119F9
 
 RustboroCity_DevonCorp_2F_EventScript_FossilMonReady:: @ 8211A03
 	compare VAR_WHICH_FOSSIL_REVIVED, 1
-	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_LileepReady
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_AdvYukariReady
 	compare VAR_WHICH_FOSSIL_REVIVED, 2
-	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_AnorithReady
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_AdvChenReady
 	end
 
-RustboroCity_DevonCorp_2F_EventScript_LileepReady:: @ 8211A1A
-	bufferspeciesname 1, SPECIES_LILEEP
+RustboroCity_DevonCorp_2F_EventScript_AdvYukariReady:: @ 8211A1A
+	bufferspeciesname 1, SPECIES_ADVYUKARI
 	msgbox RustboroCity_DevonCorp_2F_Text_FossilizedMonBroughtBackToLife, MSGBOX_DEFAULT
-	goto RustboroCity_DevonCorp_2F_EventScript_ReceiveLileep
+	goto RustboroCity_DevonCorp_2F_EventScript_ReceiveAdvYukari
 	end
 
-RustboroCity_DevonCorp_2F_EventScript_AnorithReady:: @ 8211A2C
-	bufferspeciesname 1, SPECIES_ANORITH
+RustboroCity_DevonCorp_2F_EventScript_AdvChenReady:: @ 8211A2C
+	bufferspeciesname 1, SPECIES_ADVCHEN
 	msgbox RustboroCity_DevonCorp_2F_Text_FossilizedMonBroughtBackToLife, MSGBOX_DEFAULT
-	goto RustboroCity_DevonCorp_2F_EventScript_ReceiveAnorith
+	goto RustboroCity_DevonCorp_2F_EventScript_ReceiveAdvChen
 	end
 
-RustboroCity_DevonCorp_2F_EventScript_ReceiveLileep:: @ 8211A3E
-	setvar VAR_TEMP_1, SPECIES_LILEEP
-	givemon SPECIES_LILEEP, 20, ITEM_NONE
+RustboroCity_DevonCorp_2F_EventScript_ReceiveAdvYukari:: @ 8211A3E
+	setvar VAR_TEMP_1, SPECIES_ADVYUKARI
+	givemon SPECIES_ADVYUKARI, 20, ITEM_NONE
 	compare VAR_RESULT, 0
-	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_ReceiveLileepParty
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_ReceiveAdvYukariParty
 	compare VAR_RESULT, 1
-	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_ReceiveLileepPC
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_ReceiveAdvYukariPC
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
-RustboroCity_DevonCorp_2F_EventScript_ReceiveLileepParty:: @ 8211A6E
-	call RustboroCity_DevonCorp_2F_EventScript_ReceivedLileepFanfare
+RustboroCity_DevonCorp_2F_EventScript_ReceiveAdvYukariParty:: @ 8211A6E
+	call RustboroCity_DevonCorp_2F_EventScript_ReceivedAdvYukariFanfare
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
 	compare VAR_RESULT, NO
-	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_FinishReceivingLileep
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_FinishReceivingAdvYukari
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
-	goto RustboroCity_DevonCorp_2F_EventScript_FinishReceivingLileep
+	goto RustboroCity_DevonCorp_2F_EventScript_FinishReceivingAdvYukari
 	end
 
-RustboroCity_DevonCorp_2F_EventScript_ReceiveLileepPC:: @ 8211A96
-	call RustboroCity_DevonCorp_2F_EventScript_ReceivedLileepFanfare
+RustboroCity_DevonCorp_2F_EventScript_ReceiveAdvYukariPC:: @ 8211A96
+	call RustboroCity_DevonCorp_2F_EventScript_ReceivedAdvYukariFanfare
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
 	compare VAR_RESULT, NO
-	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_TransferLileepToPC
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_TransferAdvYukariToPC
 	call Common_EventScript_NameReceivedBoxMon
-	goto RustboroCity_DevonCorp_2F_EventScript_TransferLileepToPC
+	goto RustboroCity_DevonCorp_2F_EventScript_TransferAdvYukariToPC
 	end
 
-RustboroCity_DevonCorp_2F_EventScript_TransferLileepToPC:: @ 8211AB9
+RustboroCity_DevonCorp_2F_EventScript_TransferAdvYukariToPC:: @ 8211AB9
 	call Common_EventScript_TransferredToPC
-	goto RustboroCity_DevonCorp_2F_EventScript_FinishReceivingLileep
+	goto RustboroCity_DevonCorp_2F_EventScript_FinishReceivingAdvYukari
 	end
 
-RustboroCity_DevonCorp_2F_EventScript_ReceivedLileepFanfare:: @ 8211AC4
-	bufferspeciesname 1, SPECIES_LILEEP
+RustboroCity_DevonCorp_2F_EventScript_ReceivedAdvYukariFanfare:: @ 8211AC4
+	bufferspeciesname 1, SPECIES_ADVYUKARI
 	playfanfare MUS_FANFA4
 	message RustboroCity_DevonCorp_2F_Text_ReceivedMonFromResearcher
 	waitmessage
 	waitfanfare
-	bufferspeciesname 0, SPECIES_LILEEP
+	bufferspeciesname 0, SPECIES_ADVYUKARI
 	return
 
-RustboroCity_DevonCorp_2F_EventScript_FinishReceivingLileep:: @ 8211AD7
+RustboroCity_DevonCorp_2F_EventScript_FinishReceivingAdvYukari:: @ 8211AD7
 	setvar VAR_FOSSIL_RESURRECTION_STATE, 0
 	setflag FLAG_RECEIVED_REVIVED_FOSSIL_MON
 	release
 	end
 
-RustboroCity_DevonCorp_2F_EventScript_ReceiveAnorith:: @ 8211AE1
-	setvar VAR_TEMP_1, SPECIES_ANORITH
-	givemon SPECIES_ANORITH, 20, ITEM_NONE
+RustboroCity_DevonCorp_2F_EventScript_ReceiveAdvChen:: @ 8211AE1
+	setvar VAR_TEMP_1, SPECIES_ADVCHEN
+	givemon SPECIES_ADVCHEN, 20, ITEM_NONE
 	compare VAR_RESULT, 0
-	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_ReceiveAnorithParty
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_ReceiveAdvChenParty
 	compare VAR_RESULT, 1
-	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_ReceiveAnorithPC
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_ReceiveAdvChenPC
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
-RustboroCity_DevonCorp_2F_EventScript_ReceiveAnorithParty:: @ 8211B11
-	call RustboroCity_DevonCorp_2F_EventScript_ReceivedAnorithFanfare
+RustboroCity_DevonCorp_2F_EventScript_ReceiveAdvChenParty:: @ 8211B11
+	call RustboroCity_DevonCorp_2F_EventScript_ReceivedAdvChenFanfare
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
 	compare VAR_RESULT, NO
-	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_FinishReceivingAnorith
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_FinishReceivingAdvChen
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
-	goto RustboroCity_DevonCorp_2F_EventScript_FinishReceivingAnorith
+	goto RustboroCity_DevonCorp_2F_EventScript_FinishReceivingAdvChen
 	end
 
-RustboroCity_DevonCorp_2F_EventScript_ReceiveAnorithPC:: @ 8211B39
-	call RustboroCity_DevonCorp_2F_EventScript_ReceivedAnorithFanfare
+RustboroCity_DevonCorp_2F_EventScript_ReceiveAdvChenPC:: @ 8211B39
+	call RustboroCity_DevonCorp_2F_EventScript_ReceivedAdvChenFanfare
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
 	compare VAR_RESULT, NO
-	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_TransferAnorithToPC
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_TransferAdvChenToPC
 	call Common_EventScript_NameReceivedBoxMon
-	goto RustboroCity_DevonCorp_2F_EventScript_TransferAnorithToPC
+	goto RustboroCity_DevonCorp_2F_EventScript_TransferAdvChenToPC
 	end
 
-RustboroCity_DevonCorp_2F_EventScript_TransferAnorithToPC:: @ 8211B5C
+RustboroCity_DevonCorp_2F_EventScript_TransferAdvChenToPC:: @ 8211B5C
 	call Common_EventScript_TransferredToPC
-	goto RustboroCity_DevonCorp_2F_EventScript_FinishReceivingAnorith
+	goto RustboroCity_DevonCorp_2F_EventScript_FinishReceivingAdvChen
 	end
 
-RustboroCity_DevonCorp_2F_EventScript_ReceivedAnorithFanfare:: @ 8211B67
-	bufferspeciesname 1, SPECIES_ANORITH
+RustboroCity_DevonCorp_2F_EventScript_ReceivedAdvChenFanfare:: @ 8211B67
+	bufferspeciesname 1, SPECIES_ADVCHEN
 	playfanfare MUS_FANFA4
 	message RustboroCity_DevonCorp_2F_Text_ReceivedMonFromResearcher
 	waitmessage
 	waitfanfare
-	bufferspeciesname 0, SPECIES_ANORITH
+	bufferspeciesname 0, SPECIES_ADVCHEN
 	return
 
-RustboroCity_DevonCorp_2F_EventScript_FinishReceivingAnorith:: @ 8211B7A
+RustboroCity_DevonCorp_2F_EventScript_FinishReceivingAdvChen:: @ 8211B7A
 	setvar VAR_FOSSIL_RESURRECTION_STATE, 0
 	setflag FLAG_RECEIVED_REVIVED_FOSSIL_MON
 	release

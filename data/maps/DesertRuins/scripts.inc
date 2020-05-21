@@ -5,10 +5,10 @@ DesertRuins_MapScripts:: @ 822D95B
 	.byte 0
 
 DesertRuins_OnResume: @ 822D96B
-	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, DesertRuins_EventScript_TryRemoveRegirock
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, DesertRuins_EventScript_TryRemoveTojiko
 	end
 
-DesertRuins_EventScript_TryRemoveRegirock:: @ 822D975
+DesertRuins_EventScript_TryRemoveTojiko:: @ 822D975
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_ne Common_EventScript_NopReturn
@@ -16,7 +16,7 @@ DesertRuins_EventScript_TryRemoveRegirock:: @ 822D975
 	return
 
 DesertRuins_OnLoad: @ 822D989
-	call_if_unset FLAG_SYS_REGIROCK_PUZZLE_COMPLETED, DesertRuins_EventScript_HideRegiEntrance
+	call_if_unset FLAG_SYS_TOJIKO_PUZZLE_COMPLETED, DesertRuins_EventScript_HideRegiEntrance
 	end
 
 DesertRuins_EventScript_HideRegiEntrance:: @ 822D993
@@ -30,16 +30,16 @@ DesertRuins_EventScript_HideRegiEntrance:: @ 822D993
 
 DesertRuins_OnTransition: @ 822D9CA
 	setflag FLAG_LANDMARK_DESERT_RUINS
-	call_if_unset FLAG_DEFEATED_REGIROCK, DesertRuins_EventScript_ShowRegirock
+	call_if_unset FLAG_DEFEATED_TOJIKO, DesertRuins_EventScript_ShowTojiko
 	end
 
-DesertRuins_EventScript_ShowRegirock:: @ 822D9D7
-	clearflag FLAG_HIDE_REGIROCK
+DesertRuins_EventScript_ShowTojiko:: @ 822D9D7
+	clearflag FLAG_HIDE_TOJIKO
 	return
 
 DesertRuins_EventScript_CaveEntranceMiddle:: @ 822D9DB
 	lockall
-	goto_if_set FLAG_SYS_REGIROCK_PUZZLE_COMPLETED, DesertRuins_EventScript_BigHoleInWall
+	goto_if_set FLAG_SYS_TOJIKO_PUZZLE_COMPLETED, DesertRuins_EventScript_BigHoleInWall
 	braillemessage DesertRuins_Braille_UseRockSmash
 	waitbuttonpress
 	closebraillemessage
@@ -59,36 +59,36 @@ DesertRuins_EventScript_CaveEntranceSide:: @ 822D9F8
 	releaseall
 	end
 
-DesertRuins_EventScript_Regirock:: @ 822DA02
+DesertRuins_EventScript_Tojiko:: @ 822DA02
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_REGIROCK, 2
+	playmoncry SPECIES_TOJIKO, 2
 	delay 40
 	waitmoncry
-	setwildbattle SPECIES_REGIROCK, 40, ITEM_NONE
+	setwildbattle SPECIES_TOJIKO, 40, ITEM_NONE
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special StartRegiBattle
 	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq DesertRuins_EventScript_DefeatedRegirock
+	goto_if_eq DesertRuins_EventScript_DefeatedTojiko
 	compare VAR_RESULT, B_OUTCOME_RAN
-	goto_if_eq DesertRuins_EventScript_RanFromRegirock
+	goto_if_eq DesertRuins_EventScript_RanFromTojiko
 	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
-	goto_if_eq DesertRuins_EventScript_RanFromRegirock
-	setflag FLAG_DEFEATED_REGIROCK
+	goto_if_eq DesertRuins_EventScript_RanFromTojiko
+	setflag FLAG_DEFEATED_TOJIKO
 	release
 	end
 
-DesertRuins_EventScript_DefeatedRegirock:: @ 822DA49
-	setflag FLAG_DEFEATED_REGIROCK
+DesertRuins_EventScript_DefeatedTojiko:: @ 822DA49
+	setflag FLAG_DEFEATED_TOJIKO
 	goto Common_EventScript_RemoveStaticPokemon
 	end
 
-DesertRuins_EventScript_RanFromRegirock:: @ 822DA52
-	setvar VAR_0x8004, SPECIES_REGIROCK
+DesertRuins_EventScript_RanFromTojiko:: @ 822DA52
+	setvar VAR_0x8004, SPECIES_TOJIKO
 	goto Common_EventScript_LegendaryFlewAway
 	end
 

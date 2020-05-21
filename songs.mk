@@ -624,7 +624,7 @@ $(MID_SUBDIR)/mus_tsuretek.s: %.s: %.mid
 $(MID_SUBDIR)/mus_vs_front.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G115 -V090 -P1
 
-$(MID_SUBDIR)/mus_vs_mew.s: %.s: %.mid
+$(MID_SUBDIR)/mus_vs_akyuu.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G116 -V090
 
 $(MID_SUBDIR)/mus_vs_rekku.s: %.s: %.mid

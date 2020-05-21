@@ -338,8 +338,8 @@ AQUA           = FD 08
 MAGMA          = FD 09
 ARCHIE         = FD 0A
 MAXIE          = FD 0B
-KYOGRE         = FD 0C
-GROUDON        = FD 0D
+CMIKO         = FD 0C
+MIKO        = FD 0D
 
 @ battle string placeholders
 
@@ -845,7 +845,7 @@ MUS_B_TUBE = D4 01
 MUS_B_FACTORY = D5 01
 MUS_VS_REKKU = D6 01
 MUS_VS_FRONT = D7 01
-MUS_VS_MEW = D8 01
+MUS_VS_AKYUU = D8 01
 MUS_B_DOME1 = D9 01
 MUS_BATTLE27 = DA 01
 MUS_BATTLE31 = DB 01
