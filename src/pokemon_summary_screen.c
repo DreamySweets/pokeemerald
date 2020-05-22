@@ -720,7 +720,7 @@ static const struct OamData sOamData_MoveTypes =
     .affineParam = 0,
 };
 static const union AnimCmd sSpriteAnim_TypeNormal[] = {
-    ANIMCMD_FRAME(TYPE_NORMAL * 8, 0, FALSE, FALSE),
+    ANIMCMD_FRAME(TYPE_ILLUSION * 8, 0, FALSE, FALSE),
     ANIMCMD_END
 };
 static const union AnimCmd sSpriteAnim_TypeFighting[] = {
@@ -855,7 +855,7 @@ static const struct SpriteTemplate sSpriteTemplate_MoveTypes =
 };
 static const u8 sMoveTypeToOamPaletteNum[NUMBER_OF_MON_TYPES + CONTEST_CATEGORIES_COUNT] =
 {
-    [TYPE_NORMAL] = 13,
+    [TYPE_ILLUSION] = 13,
     [TYPE_DREAM] = 13,
     [TYPE_FLYING] = 14,
     [TYPE_MIASMA] = 14,

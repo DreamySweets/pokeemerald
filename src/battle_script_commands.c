@@ -872,8 +872,8 @@ static const u8 sTerrainToType[] =
     TYPE_WATER, // pond water
     TYPE_BEAST, // rock
     TYPE_BEAST, // cave
-    TYPE_NORMAL, // building
-    TYPE_NORMAL, // plain
+    TYPE_ILLUSION, // building
+    TYPE_ILLUSION, // plain
 };
 
 static const u8 sBallCatchBonuses[] =
@@ -7611,7 +7611,7 @@ static void Cmd_tryconversiontypechange(void) // randomly changes user's type to
             if (IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_GHOST))
                 moveType = TYPE_GHOST;
             else
-                moveType = TYPE_NORMAL;
+                moveType = TYPE_ILLUSION;
         }
         if (moveType != gBattleMons[gBattlerAttacker].type1
             && moveType != gBattleMons[gBattlerAttacker].type2)
@@ -7638,7 +7638,7 @@ static void Cmd_tryconversiontypechange(void) // randomly changes user's type to
                 if (IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_GHOST))
                     moveType = TYPE_GHOST;
                 else
-                    moveType = TYPE_NORMAL;
+                    moveType = TYPE_ILLUSION;
             }
         }
         while (moveType == gBattleMons[gBattlerAttacker].type1 || moveType == gBattleMons[gBattlerAttacker].type2);
@@ -9955,7 +9955,7 @@ static void Cmd_setweatherballtype(void)
         else if (gBattleWeather & WEATHER_HAIL_ANY)
             *(&gBattleStruct->dynamicMoveType) = TYPE_ICE | 0x80;
         else
-            *(&gBattleStruct->dynamicMoveType) = TYPE_NORMAL | 0x80;
+            *(&gBattleStruct->dynamicMoveType) = TYPE_ILLUSION | 0x80;
     }
 
     gBattlescriptCurrInstr++;

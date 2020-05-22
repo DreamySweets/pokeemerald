@@ -456,7 +456,7 @@ const u8 gTypeEffectiveness[336] =
 
 const u8 gTypeNames[NUMBER_OF_MON_TYPES][TYPE_NAME_LENGTH + 1] =
 {
-    _("ILLUSION"),
+    _("ILLUSI"),
     _("DREAM"),
     _("FLYING"),
     _("MIASMA"),
