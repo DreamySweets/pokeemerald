@@ -18,7 +18,7 @@ PSSGFXDIR := graphics/pokemon_storage
 OBJEVENTGFXDIR := graphics/object_events
 MISCGFXDIR := graphics/misc
 
-types := normal fight flying poison ground rock bug ghost steel mystery fire water grass electric psychic ice dragon dark
+types := illusion dream flying miasma earth beast heart ghost steel mystery fire water nature wind reason ice faith dark
 contest_types := cool beauty cute smart tough
 
 
