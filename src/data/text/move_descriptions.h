@@ -1420,7 +1420,7 @@ static const u8 sPsychoBoostDescription[] = _(
 // MOVE_NONE is ignored in this table. Make sure to always subtract 1 before getting the right pointer.
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
 {
-    [MOVE_STRIKE - 1] = sPoundDescription,
+    [MOVE_STRIKE - 1] = sStrikeDescription,
     [MOVE_KARATE_CHOP - 1] = sKarateChopDescription,
     [MOVE_DOUBLE_SLAP - 1] = sDoubleSlapDescription,
     [MOVE_COMET_PUNCH - 1] = sCometPunchDescription,
