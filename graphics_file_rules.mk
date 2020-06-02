@@ -489,7 +489,7 @@ $(ROULETTEGFXDIR)/poke_icons2.4bpp: $(ROULETTEGFXDIR)/aminoriko.4bpp \
 									$(ROULETTEGFXDIR)/aflandre.4bpp
 	@cat $^ >$@
 
-$(BATTRANSGFXDIR)/85BBC14.4bpp: %.4bpp: %.png
+$(BATTRANSGFXDIR)/regis.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 53
 
 $(BATTRANSGFXDIR)/cmamizou.4bpp: %.4bpp: %.png
