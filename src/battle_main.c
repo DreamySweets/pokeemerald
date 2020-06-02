@@ -447,7 +447,7 @@ const u8 gTypeNames[NUMBER_OF_MON_TYPES][TYPE_NAME_LENGTH + 1] =
     _("BEAST"),
     _("HEART"),
     _("GHOST"),
-    _("STEEL"),
+    _("BLADE"),
     _("???"),
     _("FIRE"),
     _("WATER"),
