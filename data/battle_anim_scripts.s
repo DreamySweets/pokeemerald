@@ -16,7 +16,7 @@ gMovesWithQuietBGM::
 	.align 2
 gBattleAnims_Moves::
 	.4byte Move_NONE
-	.4byte Move_POUND
+	.4byte Move_STRIKE
 	.4byte Move_KARATE_CHOP
 	.4byte Move_DOUBLE_SLAP
 	.4byte Move_COMET_PUNCH
@@ -422,7 +422,7 @@ gBattleAnims_Special::
 
 Move_NONE:
 Move_MIRROR_MOVE:
-Move_POUND:
+Move_STRIKE:
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_TARGET
 	setalpha 12, 8
