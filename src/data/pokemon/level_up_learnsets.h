@@ -452,7 +452,7 @@ static const u16 sYoumuLevelUpLearnset[] = {
 };
 
 static const u16 sCYukariLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_MOVE( 1, MOVE_STRIKE),
     LEVEL_UP_MOVE( 1, MOVE_GROWL),
     LEVEL_UP_MOVE( 5, MOVE_ENCORE),
     LEVEL_UP_MOVE( 9, MOVE_SING),
@@ -503,7 +503,7 @@ static const u16 sSuikaLevelUpLearnset[] = {
 static const u16 sCMystiaLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_SING),
     LEVEL_UP_MOVE( 4, MOVE_DEFENSE_CURL),
-    LEVEL_UP_MOVE( 9, MOVE_POUND),
+    LEVEL_UP_MOVE( 9, MOVE_STRIKE),
     LEVEL_UP_MOVE(14, MOVE_DISABLE),
     LEVEL_UP_MOVE(19, MOVE_ROLLOUT),
     LEVEL_UP_MOVE(24, MOVE_DOUBLE_SLAP),
@@ -1192,7 +1192,7 @@ static const u16 sNitoriLevelUpLearnset[] = {
 
 static const u16 sCHinaLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_POISON_GAS),
-    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_MOVE( 1, MOVE_STRIKE),
     LEVEL_UP_MOVE( 4, MOVE_HARDEN),
     LEVEL_UP_MOVE( 8, MOVE_DISABLE),
     LEVEL_UP_MOVE(13, MOVE_SLUDGE),
@@ -1206,7 +1206,7 @@ static const u16 sCHinaLevelUpLearnset[] = {
 
 static const u16 sHinaLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_POISON_GAS),
-    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_MOVE( 1, MOVE_STRIKE),
     LEVEL_UP_MOVE( 1, MOVE_HARDEN),
     LEVEL_UP_MOVE( 4, MOVE_HARDEN),
     LEVEL_UP_MOVE( 8, MOVE_DISABLE),
@@ -1300,7 +1300,7 @@ static const u16 sMeilingLevelUpLearnset[] = {
 };
 
 static const u16 sCSakuyaLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_MOVE( 1, MOVE_STRIKE),
     LEVEL_UP_MOVE( 1, MOVE_HYPNOSIS),
     LEVEL_UP_MOVE(10, MOVE_DISABLE),
     LEVEL_UP_MOVE(18, MOVE_CONFUSION),
@@ -1314,7 +1314,7 @@ static const u16 sCSakuyaLevelUpLearnset[] = {
 };
 
 static const u16 sSakuyaLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_MOVE( 1, MOVE_STRIKE),
     LEVEL_UP_MOVE( 1, MOVE_HYPNOSIS),
     LEVEL_UP_MOVE( 1, MOVE_DISABLE),
     LEVEL_UP_MOVE( 1, MOVE_CONFUSION),
@@ -1555,7 +1555,7 @@ static const u16 sCIchirinLevelUpLearnset[] = {
 };
 
 static const u16 sIchirinLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_MOVE( 1, MOVE_STRIKE),
     LEVEL_UP_MOVE( 1, MOVE_GROWL),
     LEVEL_UP_MOVE( 5, MOVE_TAIL_WHIP),
     LEVEL_UP_MOVE( 9, MOVE_REFRESH),
@@ -1716,7 +1716,7 @@ static const u16 sAyaLevelUpLearnset[] = {
 };
 
 static const u16 sCShikieikiLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_MOVE( 1, MOVE_STRIKE),
     LEVEL_UP_MOVE( 1, MOVE_LICK),
     LEVEL_UP_MOVE( 1, MOVE_LOVELY_KISS),
     LEVEL_UP_MOVE( 1, MOVE_POWDER_SNOW),
@@ -2093,7 +2093,7 @@ static const u16 sSarielLevelUpLearnset[] = {
 };
 
 static const u16 sAkyuuLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_MOVE( 1, MOVE_STRIKE),
     LEVEL_UP_MOVE(10, MOVE_TRANSFORM),
     LEVEL_UP_MOVE(20, MOVE_MEGA_PUNCH),
     LEVEL_UP_MOVE(30, MOVE_METRONOME),
@@ -2400,7 +2400,7 @@ static const u16 sCLuizeLevelUpLearnset[] = {
 };
 
 static const u16 sLuizeLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_MOVE( 1, MOVE_STRIKE),
     LEVEL_UP_MOVE( 1, MOVE_CHARM),
     LEVEL_UP_MOVE( 4, MOVE_ENCORE),
     LEVEL_UP_MOVE( 8, MOVE_SING),
@@ -2412,7 +2412,7 @@ static const u16 sCMargatroidLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_SING),
     LEVEL_UP_MOVE( 1, MOVE_CHARM),
     LEVEL_UP_MOVE( 4, MOVE_DEFENSE_CURL),
-    LEVEL_UP_MOVE( 9, MOVE_POUND),
+    LEVEL_UP_MOVE( 9, MOVE_STRIKE),
     LEVEL_UP_MOVE(14, MOVE_SWEET_KISS),
     LEVEL_UP_END
 };
@@ -2644,7 +2644,7 @@ static const u16 sRikaLevelUpLearnset[] = {
 
 static const u16 sCMugetsuLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_ABSORB),
-    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_MOVE( 1, MOVE_STRIKE),
     LEVEL_UP_MOVE( 6, MOVE_GROWTH),
     LEVEL_UP_MOVE(13, MOVE_RAZOR_LEAF),
     LEVEL_UP_MOVE(18, MOVE_INGRAIN),
@@ -3247,7 +3247,7 @@ static const u16 sAKanakoLevelUpLearnset[] = {
 };
 
 static const u16 sDKanakoLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_MOVE( 1, MOVE_STRIKE),
     LEVEL_UP_MOVE( 1, MOVE_LICK),
     LEVEL_UP_MOVE( 9, MOVE_SWEET_KISS),
     LEVEL_UP_MOVE(13, MOVE_POWDER_SNOW),
@@ -3300,7 +3300,7 @@ static const u16 sShinGyokuOLevelUpLearnset[] = {
 };
 
 static const u16 sShinGyokuMLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_MOVE( 1, MOVE_STRIKE),
     LEVEL_UP_MOVE( 1, MOVE_GROWL),
     LEVEL_UP_MOVE( 4, MOVE_TAIL_WHIP),
     LEVEL_UP_MOVE( 7, MOVE_REFRESH),
@@ -3570,7 +3570,7 @@ static const u16 sSpecies276LevelUpLearnset[] = {
 };
 
 static const u16 sHEirinLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_MOVE( 1, MOVE_STRIKE),
     LEVEL_UP_MOVE( 1, MOVE_LEER),
     LEVEL_UP_MOVE( 6, MOVE_ABSORB),
     LEVEL_UP_MOVE(11, MOVE_QUICK_ATTACK),
@@ -3585,7 +3585,7 @@ static const u16 sHEirinLevelUpLearnset[] = {
 };
 
 static const u16 sDYukariLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_MOVE( 1, MOVE_STRIKE),
     LEVEL_UP_MOVE( 1, MOVE_LEER),
     LEVEL_UP_MOVE( 1, MOVE_ABSORB),
     LEVEL_UP_MOVE( 1, MOVE_QUICK_ATTACK),
@@ -3603,7 +3603,7 @@ static const u16 sDYukariLevelUpLearnset[] = {
 };
 
 static const u16 sTYukariLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_MOVE( 1, MOVE_STRIKE),
     LEVEL_UP_MOVE( 1, MOVE_LEER),
     LEVEL_UP_MOVE( 1, MOVE_ABSORB),
     LEVEL_UP_MOVE( 1, MOVE_QUICK_ATTACK),
@@ -3888,7 +3888,7 @@ static const u16 sSRinLevelUpLearnset[] = {
 };
 
 static const u16 sARinLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_MOVE( 1, MOVE_STRIKE),
     LEVEL_UP_MOVE( 3, MOVE_HARDEN),
     LEVEL_UP_MOVE( 7, MOVE_GROWTH),
     LEVEL_UP_MOVE(13, MOVE_NATURE_POWER),
@@ -3902,7 +3902,7 @@ static const u16 sARinLevelUpLearnset[] = {
 };
 
 static const u16 sZombieFairyLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_MOVE( 1, MOVE_STRIKE),
     LEVEL_UP_MOVE( 1, MOVE_HARDEN),
     LEVEL_UP_MOVE( 1, MOVE_GROWTH),
     LEVEL_UP_MOVE( 1, MOVE_NATURE_POWER),
@@ -4937,7 +4937,7 @@ static const u16 sCMimaLevelUpLearnset[] = {
 };
 
 static const u16 sCKikuriLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_MOVE( 1, MOVE_STRIKE),
     LEVEL_UP_MOVE( 6, MOVE_YAWN),
     LEVEL_UP_MOVE( 9, MOVE_POISON_GAS),
     LEVEL_UP_MOVE(14, MOVE_SLUDGE),
@@ -4952,7 +4952,7 @@ static const u16 sCKikuriLevelUpLearnset[] = {
 };
 
 static const u16 sAdvMeilingLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_MOVE( 1, MOVE_STRIKE),
     LEVEL_UP_MOVE( 1, MOVE_YAWN),
     LEVEL_UP_MOVE( 1, MOVE_POISON_GAS),
     LEVEL_UP_MOVE( 1, MOVE_SLUDGE),
@@ -4986,7 +4986,7 @@ static const u16 sAPatchouliLevelUpLearnset[] = {
 };
 
 static const u16 sSMarisaLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_MOVE( 1, MOVE_STRIKE),
     LEVEL_UP_MOVE( 5, MOVE_UPROAR),
     LEVEL_UP_MOVE(11, MOVE_ASTONISH),
     LEVEL_UP_MOVE(15, MOVE_HOWL),
@@ -5001,7 +5001,7 @@ static const u16 sSMarisaLevelUpLearnset[] = {
 };
 
 static const u16 sAMarisaLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_MOVE( 1, MOVE_STRIKE),
     LEVEL_UP_MOVE( 1, MOVE_UPROAR),
     LEVEL_UP_MOVE( 1, MOVE_ASTONISH),
     LEVEL_UP_MOVE( 1, MOVE_HOWL),
@@ -5019,7 +5019,7 @@ static const u16 sAMarisaLevelUpLearnset[] = {
 };
 
 static const u16 sDMurasaLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_MOVE( 1, MOVE_STRIKE),
     LEVEL_UP_MOVE( 1, MOVE_UPROAR),
     LEVEL_UP_MOVE( 1, MOVE_ASTONISH),
     LEVEL_UP_MOVE( 1, MOVE_HOWL),

@@ -573,7 +573,7 @@ static const u8 *const sApprenticeChallengeTexts[NUM_APPRENTICES] =
 static const bool8 sValidApprenticeMoves[MOVES_COUNT] =
 {
     [MOVE_NONE] = FALSE,
-    [MOVE_POUND] = FALSE,
+    [MOVE_STRIKE] = FALSE,
     [MOVE_KARATE_CHOP] = TRUE,
     [MOVE_DOUBLE_SLAP] = TRUE,
     [MOVE_COMET_PUNCH] = FALSE,

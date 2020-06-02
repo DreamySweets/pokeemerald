@@ -2,7 +2,7 @@
 #define GUARD_CONSTANTS_MOVES_H
 
 #define MOVE_NONE 0
-#define MOVE_POUND 1
+#define MOVE_STRIKE 1
 #define MOVE_KARATE_CHOP 2
 #define MOVE_DOUBLE_SLAP 3
 #define MOVE_COMET_PUNCH 4

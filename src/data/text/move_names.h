@@ -1,7 +1,7 @@
 const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
 {
     [MOVE_NONE] = _("-"),
-    [MOVE_POUND] = _("POUND"),
+    [MOVE_STRIKE] = _("Strike"),
     [MOVE_KARATE_CHOP] = _("KARATE CHOP"),
     [MOVE_DOUBLE_SLAP] = _("DOUBLESLAP"),
     [MOVE_COMET_PUNCH] = _("COMET PUNCH"),

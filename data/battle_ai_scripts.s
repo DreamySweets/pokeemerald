@@ -343,10 +343,10 @@ AI_CBM_Roar: @ 82DC47B
 
 AI_CBM_Toxic: @ 82DC48C
 	get_target_type1
-	if_equal TYPE_STEEL, Score_Minus10
+	if_equal TYPE_BLADE, Score_Minus10
 	if_equal TYPE_MIASMA, Score_Minus10
 	get_target_type2
-	if_equal TYPE_STEEL, Score_Minus10
+	if_equal TYPE_BLADE, Score_Minus10
 	if_equal TYPE_MIASMA, Score_Minus10
 	get_ability AI_TARGET
 	if_equal ABILITY_IMMUNITY, Score_Minus10
@@ -970,7 +970,7 @@ AI_CV_DefenseUp_PhysicalTypes: @ 82DCC53
     .byte TYPE_BEAST
     .byte TYPE_HEART
     .byte TYPE_GHOST
-    .byte TYPE_STEEL
+    .byte TYPE_BLADE
     .byte -1
 
 AI_CV_SpeedUp: @ 82DCC5D
@@ -1050,7 +1050,7 @@ AI_CV_SpDefUp_PhysicalTypes: @ 82DCD0A
     .byte TYPE_BEAST
     .byte TYPE_HEART
     .byte TYPE_GHOST
-    .byte TYPE_STEEL
+    .byte TYPE_BLADE
     .byte -1
 
 AI_CV_AccuracyUp:
@@ -1161,7 +1161,7 @@ AI_CV_AttackDown_UnknownTypeList:
     .byte TYPE_EARTH
     .byte TYPE_BEAST
     .byte TYPE_HEART
-    .byte TYPE_STEEL
+    .byte TYPE_BLADE
     .byte -1
 
 AI_CV_DefenseDown:
@@ -1605,7 +1605,7 @@ AI_CV_Reflect_PhysicalTypeList:
     .byte TYPE_BEAST
     .byte TYPE_HEART
     .byte TYPE_GHOST
-    .byte TYPE_STEEL
+    .byte TYPE_BLADE
     .byte -1
 
 AI_CV_Poison:
@@ -1785,7 +1785,7 @@ AI_CV_Counter_PhysicalTypeList:
     .byte TYPE_BEAST
     .byte TYPE_HEART
     .byte TYPE_GHOST
-    .byte TYPE_STEEL
+    .byte TYPE_BLADE
     .byte -1
 
 AI_CV_Encore:
@@ -2364,7 +2364,7 @@ AI_CV_SemiInvulnerable_End:
 AI_CV_SandstormResistantTypes:
     .byte TYPE_EARTH
     .byte TYPE_BEAST
-    .byte TYPE_STEEL
+    .byte TYPE_BLADE
     .byte -1
 
 AI_CV_FakeOut:

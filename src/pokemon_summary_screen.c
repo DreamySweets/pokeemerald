@@ -767,7 +767,7 @@ static const union AnimCmd sSpriteAnim_TypeGhost[] = {
     ANIMCMD_END
 };
 static const union AnimCmd sSpriteAnim_TypeSteel[] = {
-    ANIMCMD_FRAME(TYPE_STEEL * 8, 0, FALSE, FALSE),
+    ANIMCMD_FRAME(TYPE_BLADE * 8, 0, FALSE, FALSE),
     ANIMCMD_END
 };
 static const union AnimCmd sSpriteAnim_TypeMystery[] = {
@@ -878,7 +878,7 @@ static const u8 sMoveTypeToOamPaletteNum[NUMBER_OF_MON_TYPES + CONTEST_CATEGORIE
     [TYPE_BEAST] = 13,
     [TYPE_HEART] = 15,
     [TYPE_GHOST] = 14,
-    [TYPE_STEEL] = 13,
+    [TYPE_BLADE] = 13,
     [TYPE_MYSTERY] = 15,
     [TYPE_FIRE] = 13,
     [TYPE_WATER] = 14,

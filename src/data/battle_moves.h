@@ -13,7 +13,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = 0,
     },
 
-    [MOVE_POUND] =
+    [MOVE_STRIKE] =
     {
         .effect = EFFECT_HIT,
         .power = 40,
@@ -2747,7 +2747,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     {
         .effect = EFFECT_DEFENSE_UP_HIT,
         .power = 70,
-        .type = TYPE_STEEL,
+        .type = TYPE_BLADE,
         .accuracy = 90,
         .pp = 25,
         .secondaryEffectChance = 10,
@@ -3007,7 +3007,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     {
         .effect = EFFECT_DEFENSE_DOWN_HIT,
         .power = 100,
-        .type = TYPE_STEEL,
+        .type = TYPE_BLADE,
         .accuracy = 75,
         .pp = 15,
         .secondaryEffectChance = 30,
@@ -3020,7 +3020,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     {
         .effect = EFFECT_ATTACK_UP_HIT,
         .power = 50,
-        .type = TYPE_STEEL,
+        .type = TYPE_BLADE,
         .accuracy = 95,
         .pp = 35,
         .secondaryEffectChance = 10,
@@ -4021,7 +4021,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     {
         .effect = EFFECT_ATTACK_UP_HIT,
         .power = 100,
-        .type = TYPE_STEEL,
+        .type = TYPE_BLADE,
         .accuracy = 85,
         .pp = 10,
         .secondaryEffectChance = 20,
@@ -4151,7 +4151,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     {
         .effect = EFFECT_SPECIAL_DEFENSE_DOWN_2,
         .power = 0,
-        .type = TYPE_STEEL,
+        .type = TYPE_BLADE,
         .accuracy = 85,
         .pp = 40,
         .secondaryEffectChance = 0,
@@ -4346,7 +4346,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     {
         .effect = EFFECT_DEFENSE_UP_2,
         .power = 0,
-        .type = TYPE_STEEL,
+        .type = TYPE_BLADE,
         .accuracy = 0,
         .pp = 15,
         .secondaryEffectChance = 0,
@@ -4593,7 +4593,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     {
         .effect = EFFECT_FUTURE_SIGHT,
         .power = 120,
-        .type = TYPE_STEEL,
+        .type = TYPE_BLADE,
         .accuracy = 85,
         .pp = 5,
         .secondaryEffectChance = 0,

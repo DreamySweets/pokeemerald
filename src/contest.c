@@ -5055,7 +5055,7 @@ static void sub_80DE794(u8 taskId)
 static u16 SanitizeMove(u16 move)
 {
     if (move >= MOVES_COUNT)
-        move = MOVE_POUND;
+        move = MOVE_STRIKE;
     return move;
 }
 

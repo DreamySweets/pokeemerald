@@ -237,7 +237,7 @@ BattleFrontier_BattleFactoryPreBattleRoom_EventScript_CommentOnOpponentType:: @ 
 	call_if_eq BattleFrontier_BattleFactoryPreBattleRoom_EventScript_OpponentUsesBug
 	compare VAR_0x8005, TYPE_GHOST
 	call_if_eq BattleFrontier_BattleFactoryPreBattleRoom_EventScript_OpponentUsesGhost
-	compare VAR_0x8005, TYPE_STEEL
+	compare VAR_0x8005, TYPE_BLADE
 	call_if_eq BattleFrontier_BattleFactoryPreBattleRoom_EventScript_OpponentUsesSteel
 	compare VAR_0x8005, TYPE_FIRE
 	call_if_eq BattleFrontier_BattleFactoryPreBattleRoom_EventScript_OpponentUsesFire

@@ -2,7 +2,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
 {
     [MOVE_NONE] = {0},
 
-    [MOVE_POUND] =
+    [MOVE_STRIKE] =
     {
         .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_TOUGH,

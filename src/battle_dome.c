@@ -143,7 +143,7 @@ static EWRAM_DATA u8 *sTilemapBuffer = NULL;
 static const u8 sBattleStyleMovePoints[MOVES_COUNT][NUM_MOVE_POINT_TYPES] =
 {
     [MOVE_NONE]          = {0},
-    [MOVE_POUND]         = {[MOVE_POINTS_DMG] = 1, [MOVE_POINTS_ACCURATE] = 1},
+    [MOVE_STRIKE]         = {[MOVE_POINTS_DMG] = 1, [MOVE_POINTS_ACCURATE] = 1},
     [MOVE_KARATE_CHOP]   = {[MOVE_POINTS_DMG] = 1, [MOVE_POINTS_ACCURATE] = 1},
     [MOVE_DOUBLE_SLAP]   = {[MOVE_POINTS_DMG] = 1},
     [MOVE_COMET_PUNCH]   = {[MOVE_POINTS_DMG] = 1},

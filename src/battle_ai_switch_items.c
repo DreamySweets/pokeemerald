@@ -442,9 +442,9 @@ static bool8 ShouldSwitch(void)
         return FALSE;
     if (ABILITY_ON_FIELD2(ABILITY_MAGNET_PULL))
     {
-        if (gBattleMons[gActiveBattler].type1 == TYPE_STEEL)
+        if (gBattleMons[gActiveBattler].type1 == TYPE_BLADE)
             return FALSE;
-        if (gBattleMons[gActiveBattler].type2 == TYPE_STEEL)
+        if (gBattleMons[gActiveBattler].type2 == TYPE_BLADE)
             return FALSE;
     }
     if (gBattleTypeFlags & BATTLE_TYPE_ARENA)

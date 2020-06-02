@@ -1161,7 +1161,7 @@ const struct FacilityMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
     },
     [SLATEPORT_TENT_MON_ADVMEILING] = {
         .species = SPECIES_ADVMEILING,
-        .moves = {MOVE_YAWN, MOVE_SLUDGE, MOVE_ENCORE, MOVE_POUND},
+        .moves = {MOVE_YAWN, MOVE_SLUDGE, MOVE_ENCORE, MOVE_STRIKE},
         .itemTableId = BATTLE_FRONTIER_ITEM_NONE,
         .evSpread = F_EV_SPREAD_SP_DEFENSE | F_EV_SPREAD_DEFENSE | F_EV_SPREAD_ATTACK,
         .nature = NATURE_IMPISH

@@ -847,8 +847,8 @@ static bool8 DoesTypePreventStatus(u16 species, u32 status)
     switch (status)
     {
     case STATUS1_TOXIC_POISON:
-        if (gBaseStats[species].type1 == TYPE_STEEL || gBaseStats[species].type1 == TYPE_MIASMA
-            || gBaseStats[species].type2 == TYPE_STEEL || gBaseStats[species].type2 == TYPE_MIASMA)
+        if (gBaseStats[species].type1 == TYPE_BLADE || gBaseStats[species].type1 == TYPE_MIASMA
+            || gBaseStats[species].type2 == TYPE_BLADE || gBaseStats[species].type2 == TYPE_MIASMA)
             ret = TRUE;
         break;
     case STATUS1_FREEZE:

@@ -43,7 +43,7 @@ static void ShowJudgmentSprite(u8 x, u8 y, u8 category, u8 battler);
 static const s8 sMindRatings[] =
 {
     [MOVE_NONE] = 0,
-    [MOVE_POUND] = 1,
+    [MOVE_STRIKE] = 1,
     [MOVE_KARATE_CHOP] = 1,
     [MOVE_DOUBLE_SLAP] = 1,
     [MOVE_COMET_PUNCH] = 1,

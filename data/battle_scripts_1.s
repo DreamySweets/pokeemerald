@@ -713,7 +713,7 @@ BattleScript_EffectToxic::
 	jumpifstatus BS_TARGET, STATUS1_TOXIC_POISON, BattleScript_AlreadyPoisoned
 	jumpifstatus BS_TARGET, STATUS1_ANY, BattleScript_ButItFailed
 	jumpiftype BS_TARGET, TYPE_MIASMA, BattleScript_NotAffected
-	jumpiftype BS_TARGET, TYPE_STEEL, BattleScript_NotAffected
+	jumpiftype BS_TARGET, TYPE_BLADE, BattleScript_NotAffected
 	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
 	jumpifsideaffecting BS_TARGET, SIDE_STATUS_SAFEGUARD, BattleScript_SafeguardProtected
 	attackanimation
@@ -1012,7 +1012,7 @@ BattleScript_EffectPoison::
 	jumpifstatus BS_TARGET, STATUS1_POISON, BattleScript_AlreadyPoisoned
 	jumpifstatus BS_TARGET, STATUS1_TOXIC_POISON, BattleScript_AlreadyPoisoned
 	jumpiftype BS_TARGET, TYPE_MIASMA, BattleScript_NotAffected
-	jumpiftype BS_TARGET, TYPE_STEEL, BattleScript_NotAffected
+	jumpiftype BS_TARGET, TYPE_BLADE, BattleScript_NotAffected
 	jumpifstatus BS_TARGET, STATUS1_ANY, BattleScript_ButItFailed
 	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
 	jumpifsideaffecting BS_TARGET, SIDE_STATUS_SAFEGUARD, BattleScript_SafeguardProtected

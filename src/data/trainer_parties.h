@@ -4265,7 +4265,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Ben[] = {
     .iv = 150,
     .lvl = 17,
     .species = SPECIES_CKIKURI,
-    .moves = {MOVE_AMNESIA, MOVE_SLUDGE, MOVE_YAWN, MOVE_POUND}
+    .moves = {MOVE_AMNESIA, MOVE_SLUDGE, MOVE_YAWN, MOVE_STRIKE}
     }
 };
 

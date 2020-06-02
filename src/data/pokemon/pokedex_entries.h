@@ -14,7 +14,7 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_CSANAE] =
     {
-        .categoryName = _("SEED"),
+        .categoryName = _("Miko"),
         .height = 7,
         .weight = 69,
         .description = gCSanaePokedexText,
@@ -26,7 +26,7 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_SANAE] =
     {
-        .categoryName = _("SEED"),
+        .categoryName = _("Moriya Miko"),
         .height = 10,
         .weight = 130,
         .description = gSanaePokedexText,
@@ -44,7 +44,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gCAlicePokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 388,
+        .trainerScale = 256,
         .trainerOffset = 6,
     },
 
@@ -54,7 +54,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .height = 6,
         .weight = 85,
         .description = gAlicePokedexText,
-        .pokemonScale = 444,
+        .pokemonScale = 232,
         .pokemonOffset = 18,
         .trainerScale = 256,
         .trainerOffset = 0,
@@ -78,9 +78,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .height = 17,
         .weight = 905,
         .description = gReisenPokedexText,
-        .pokemonScale = 256,
+        .pokemonScale = 232,
         .pokemonOffset = 1,
-        .trainerScale = 302,
+        .trainerScale = 256,
         .trainerOffset = 3,
     },
 
@@ -102,7 +102,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .height = 10,
         .weight = 225,
         .description = gLilyWhitePokedexText,
-        .pokemonScale = 332,
+        .pokemonScale = 232,
         .pokemonOffset = 10,
         .trainerScale = 256,
         .trainerOffset = 0,
@@ -116,7 +116,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gCLilyBlackPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = -1,
-        .trainerScale = 293,
+        .trainerScale = 256,
         .trainerOffset = 2,
     },
 
@@ -126,7 +126,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .height = 3,
         .weight = 29,
         .description = gLilyBlackPokedexText,
-        .pokemonScale = 549,
+        .pokemonScale = 232,
         .pokemonOffset = 22,
         .trainerScale = 256,
         .trainerOffset = 0,
@@ -150,7 +150,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .height = 11,
         .weight = 320,
         .description = gMomijiPokedexText,
-        .pokemonScale = 312,
+        .pokemonScale = 232,
         .pokemonOffset = 2,
         .trainerScale = 256,
         .trainerOffset = 0,
@@ -174,7 +174,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .height = 6,
         .weight = 100,
         .description = gShizuhaPokedexText,
-        .pokemonScale = 424,
+        .pokemonScale = 232,
         .pokemonOffset = 17,
         .trainerScale = 256,
         .trainerOffset = 0,
@@ -198,7 +198,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .height = 3,
         .weight = 18,
         .description = gMedicinePokedexText,
-        .pokemonScale = 508,
+        .pokemonScale = 232,
         .pokemonOffset = -3,
         .trainerScale = 256,
         .trainerOffset = 0,
@@ -222,7 +222,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .height = 15,
         .weight = 395,
         .description = gKoakumaPokedexText,
-        .pokemonScale = 269,
+        .pokemonScale = 232,
         .pokemonOffset = 0,
         .trainerScale = 256,
         .trainerOffset = 0,
@@ -246,7 +246,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .height = 7,
         .weight = 185,
         .description = gNazrinPokedexText,
-        .pokemonScale = 459,
+        .pokemonScale = 232,
         .pokemonOffset = 18,
         .trainerScale = 256,
         .trainerOffset = 0,
@@ -270,7 +270,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .height = 12,
         .weight = 380,
         .description = gTokikoPokedexText,
-        .pokemonScale = 278,
+        .pokemonScale = 232,
         .pokemonOffset = 1,
         .trainerScale = 256,
         .trainerOffset = 0,
@@ -294,9 +294,9 @@ const struct PokedexEntry gPokedexEntries[] =
         .height = 35,
         .weight = 650,
         .description = gRemiliaPokedexText,
-        .pokemonScale = 256,
+        .pokemonScale = 232,
         .pokemonOffset = 0,
-        .trainerScale = 296,
+        .trainerScale = 256,
         .trainerOffset = 2,
     },
 
@@ -318,7 +318,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .height = 8,
         .weight = 300,
         .description = gCirnoPokedexText,
-        .pokemonScale = 426,
+        .pokemonScale = 232,
         .pokemonOffset = 13,
         .trainerScale = 256,
         .trainerOffset = 0,
@@ -342,7 +342,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .height = 10,
         .weight = 295,
         .description = gRumiaPokedexText,
-        .pokemonScale = 341,
+        .pokemonScale = 232,
         .pokemonOffset = 11,
         .trainerScale = 256,
         .trainerOffset = 0,
@@ -378,7 +378,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .height = 13,
         .weight = 600,
         .description = gFlandrePokedexText,
-        .pokemonScale = 293,
+        .pokemonScale = 232,
         .pokemonOffset = 4,
         .trainerScale = 256,
         .trainerOffset = 0,
@@ -668,7 +668,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gYorihimePokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 1,
-        .trainerScale = 273,
+        .trainerScale = 256,
         .trainerOffset = 1,
     },
 
@@ -716,7 +716,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gMokouPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 1,
-        .trainerScale = 312,
+        .trainerScale = 256,
         .trainerOffset = 4,
     },
 
@@ -812,7 +812,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gYuugiPokedexText,
         .pokemonScale = 323,
         .pokemonOffset = 9,
-        .trainerScale = 257,
+        .trainerScale = 256,
         .trainerOffset = 0,
     },
 
@@ -824,7 +824,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gCTenshiPokedexText,
         .pokemonScale = 280,
         .pokemonOffset = 1,
-        .trainerScale = 269,
+        .trainerScale = 256,
         .trainerOffset = -1,
     },
 
@@ -860,7 +860,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gParseePokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 1,
-        .trainerScale = 312,
+        .trainerScale = 256,
         .trainerOffset = 3,
     },
 
@@ -884,7 +884,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gMurasaPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 312,
+        .trainerScale = 256,
         .trainerOffset = 1,
     },
 
@@ -920,7 +920,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gCKogasaPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 3,
-        .trainerScale = 296,
+        .trainerScale = 256,
         .trainerOffset = 2,
     },
 
@@ -944,7 +944,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gCSatoriPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 289,
+        .trainerScale = 256,
         .trainerOffset = 1,
     },
 
@@ -968,7 +968,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gCEirinPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 6,
-        .trainerScale = 296,
+        .trainerScale = 256,
         .trainerOffset = 2,
     },
 
@@ -1004,7 +1004,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gRanPokedexText,
         .pokemonScale = 330,
         .pokemonOffset = 2,
-        .trainerScale = 293,
+        .trainerScale = 256,
         .trainerOffset = 2,
     },
 
@@ -1016,7 +1016,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gCDaiyouseiPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 3,
-        .trainerScale = 257,
+        .trainerScale = 256,
         .trainerOffset = -1,
     },
 
@@ -1028,7 +1028,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gDaiyouseiPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 268,
+        .trainerScale = 256,
         .trainerOffset = 0,
     },
 
@@ -1052,7 +1052,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gNitoriPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 275,
+        .trainerScale = 256,
         .trainerOffset = 0,
     },
 
@@ -1100,7 +1100,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gKomachiPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 269,
+        .trainerScale = 256,
         .trainerOffset = 1,
     },
 
@@ -1124,7 +1124,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gYuyukoPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 2,
-        .trainerScale = 293,
+        .trainerScale = 256,
         .trainerOffset = 2,
     },
 
@@ -1136,7 +1136,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gCMeilingPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 2,
-        .trainerScale = 302,
+        .trainerScale = 256,
         .trainerOffset = 2,
     },
 
@@ -1148,7 +1148,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gMeilingPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 1,
-        .trainerScale = 515,
+        .trainerScale = 256,
         .trainerOffset = 14,
     },
 
@@ -1172,7 +1172,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gSakuyaPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 3,
-        .trainerScale = 257,
+        .trainerScale = 256,
         .trainerOffset = 0,
     },
 
@@ -1244,7 +1244,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gLyricaPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 309,
+        .trainerScale = 256,
         .trainerOffset = 5,
     },
 
@@ -1280,7 +1280,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gCKanakoPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 3,
-        .trainerScale = 259,
+        .trainerScale = 256,
         .trainerOffset = 1,
     },
 
@@ -1292,7 +1292,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gKanakoPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 2,
-        .trainerScale = 277,
+        .trainerScale = 256,
         .trainerOffset = 2,
     },
 
@@ -1352,7 +1352,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gCIchirinPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 1,
-        .trainerScale = 299,
+        .trainerScale = 256,
         .trainerOffset = 2,
     },
 
@@ -1388,7 +1388,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gSunnyMilkPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 387,
+        .trainerScale = 256,
         .trainerOffset = 8,
     },
 
@@ -1484,7 +1484,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gAyaPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 1,
-        .trainerScale = 293,
+        .trainerScale = 256,
         .trainerOffset = 2,
     },
 
@@ -1496,7 +1496,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gCShikieikiPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 3,
-        .trainerScale = 300,
+        .trainerScale = 256,
         .trainerOffset = 1,
     },
 
@@ -1532,7 +1532,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gShouPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 2,
-        .trainerScale = 257,
+        .trainerScale = 256,
         .trainerOffset = 0,
     },
 
@@ -1568,7 +1568,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gCTewiPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 6,
-        .trainerScale = 481,
+        .trainerScale = 256,
         .trainerOffset = 13,
     },
 
@@ -1580,7 +1580,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gTewiPokedexText,
         .pokemonScale = 257,
         .pokemonOffset = 10,
-        .trainerScale = 423,
+        .trainerScale = 256,
         .trainerOffset = 8,
     },
 
@@ -1712,7 +1712,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gCByakurenPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 302,
+        .trainerScale = 256,
         .trainerOffset = 4,
     },
 
@@ -1724,7 +1724,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gByakurenPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 4,
-        .trainerScale = 423,
+        .trainerScale = 256,
         .trainerOffset = 11,
     },
 
@@ -1736,7 +1736,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gKonngaraPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 309,
+        .trainerScale = 256,
         .trainerOffset = 2,
     },
 
@@ -1748,7 +1748,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gKikuriPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 318,
+        .trainerScale = 256,
         .trainerOffset = 3,
     },
 
@@ -1760,7 +1760,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gYuugenMaganPokedexText,
         .pokemonScale = 270,
         .pokemonOffset = 0,
-        .trainerScale = 387,
+        .trainerScale = 256,
         .trainerOffset = 8,
     },
 
@@ -1772,7 +1772,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gCToyohimePokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 8,
-        .trainerScale = 386,
+        .trainerScale = 256,
         .trainerOffset = 6,
     },
 
@@ -1784,7 +1784,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gToyohimePokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 411,
+        .trainerScale = 256,
         .trainerOffset = 5,
     },
 
@@ -1796,7 +1796,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gGoliathPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 309,
+        .trainerScale = 256,
         .trainerOffset = 4,
     },
 
@@ -1808,7 +1808,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gSarielPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 309,
+        .trainerScale = 256,
         .trainerOffset = 4,
     },
 
@@ -1856,7 +1856,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gNamazuPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 277,
+        .trainerScale = 256,
         .trainerOffset = 1,
     },
 
@@ -1892,7 +1892,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gCOrangePokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 268,
+        .trainerScale = 256,
         .trainerOffset = 1,
     },
 
@@ -1928,7 +1928,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gCChiyuriPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 342,
+        .trainerScale = 256,
         .trainerOffset = 7,
     },
 
@@ -2036,7 +2036,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gMeiraPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 281,
+        .trainerScale = 256,
         .trainerOffset = 1,
     },
 
@@ -2144,7 +2144,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gCHakureiPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 6,
-        .trainerScale = 318,
+        .trainerScale = 256,
         .trainerOffset = 4,
     },
 
@@ -2396,7 +2396,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gRikakoPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 309,
+        .trainerScale = 256,
         .trainerOffset = 5,
     },
 
@@ -2504,7 +2504,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gTNitoriPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 516,
+        .trainerScale = 256,
         .trainerOffset = 13,
     },
 
@@ -2720,7 +2720,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gTAyaPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 342,
+        .trainerScale = 256,
         .trainerOffset = 7,
     },
 
@@ -2732,7 +2732,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gATenshiPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 271,
+        .trainerScale = 256,
         .trainerOffset = 1,
     },
 
@@ -2768,7 +2768,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gTParseePokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 287,
+        .trainerScale = 256,
         .trainerOffset = 0,
     },
 
@@ -2852,7 +2852,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gAKanakoPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 2,
-        .trainerScale = 257,
+        .trainerScale = 256,
         .trainerOffset = 0,
     },
 
@@ -2912,7 +2912,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gShinGyokuMPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 4,
-        .trainerScale = 310,
+        .trainerScale = 256,
         .trainerOffset = 3,
     },
 
@@ -2924,7 +2924,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gShinGyokuFPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 345,
+        .trainerScale = 256,
         .trainerOffset = 7,
     },
 
@@ -2936,7 +2936,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gAUtsuhoPokedexText,
         .pokemonScale = 259,
         .pokemonOffset = 0,
-        .trainerScale = 345,
+        .trainerScale = 256,
         .trainerOffset = 7,
     },
 
@@ -2948,7 +2948,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gSUtsuhoPokedexText,
         .pokemonScale = 269,
         .pokemonOffset = 0,
-        .trainerScale = 345,
+        .trainerScale = 256,
         .trainerOffset = 7,
     },
 
@@ -2984,7 +2984,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gMimaPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 345,
+        .trainerScale = 256,
         .trainerOffset = 7,
     },
 
@@ -2996,7 +2996,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gSKomachiPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 721,
+        .trainerScale = 256,
         .trainerOffset = 19,
     },
 
@@ -3008,7 +3008,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gAKomachiPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 610,
+        .trainerScale = 256,
         .trainerOffset = 17,
     },
 
@@ -3056,7 +3056,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gTYukariPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = -1,
-        .trainerScale = 275,
+        .trainerScale = 256,
         .trainerOffset = 2,
     },
 
@@ -3092,7 +3092,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gAReimuPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 301,
+        .trainerScale = 256,
         .trainerOffset = 4,
     },
 
@@ -3272,7 +3272,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gSShizuhaPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 268,
+        .trainerScale = 256,
         .trainerOffset = -1,
     },
 
@@ -3476,7 +3476,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gCMimaPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 2,
-        .trainerScale = 300,
+        .trainerScale = 256,
         .trainerOffset = 1,
     },
 
@@ -3572,7 +3572,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gADaiyouseiPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 343,
+        .trainerScale = 256,
         .trainerOffset = 7,
     },
 
@@ -3596,7 +3596,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gCElisPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 9,
-        .trainerScale = 289,
+        .trainerScale = 256,
         .trainerOffset = 3,
     },
 
@@ -3680,7 +3680,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gAdvAlicePokedexText,
         .pokemonScale = 256,
         .pokemonOffset = -1,
-        .trainerScale = 350,
+        .trainerScale = 256,
         .trainerOffset = 6,
     },
 
@@ -3728,7 +3728,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gTToyohimePokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 3,
-        .trainerScale = 257,
+        .trainerScale = 256,
         .trainerOffset = 0,
     },
 
@@ -3812,7 +3812,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gAdvMeilingPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 6,
-        .trainerScale = 345,
+        .trainerScale = 256,
         .trainerOffset = 3,
     },
 
@@ -3836,7 +3836,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gDShikieikiPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 317,
+        .trainerScale = 256,
         .trainerOffset = 3,
     },
 
@@ -3848,7 +3848,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gDMeilingPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 2,
-        .trainerScale = 493,
+        .trainerScale = 256,
         .trainerOffset = 0,
     },
 
@@ -3860,7 +3860,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gTensokuPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 1352,
+        .trainerScale = 2562,
         .trainerOffset = 18,
     },
 
@@ -3884,7 +3884,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gMaganPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 7,
-        .trainerScale = 345,
+        .trainerScale = 256,
         .trainerOffset = 6,
     },
 
@@ -3968,7 +3968,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gASanaePokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 268,
+        .trainerScale = 256,
         .trainerOffset = 1,
     },
 
@@ -4136,7 +4136,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gSMeilingPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 3,
-        .trainerScale = 280,
+        .trainerScale = 256,
         .trainerOffset = 1,
     },
 
@@ -4184,7 +4184,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gDarkAlicePokedexText,
         .pokemonScale = 312,
         .pokemonOffset = 3,
-        .trainerScale = 271,
+        .trainerScale = 256,
         .trainerOffset = 0,
     },
 
@@ -4208,7 +4208,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gDTewiPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 360,
+        .trainerScale = 256,
         .trainerOffset = 7,
     },
 
@@ -4280,7 +4280,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gAdvCirnoPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 3,
-        .trainerScale = 299,
+        .trainerScale = 256,
         .trainerOffset = 1,
     },
 
@@ -4292,7 +4292,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gAPatchouliPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 344,
+        .trainerScale = 256,
         .trainerOffset = 7,
     },
 
@@ -4352,7 +4352,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gDLettyPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 3,
-        .trainerScale = 344,
+        .trainerScale = 256,
         .trainerOffset = 0,
     },
 
@@ -4520,7 +4520,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gCTojikoPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 4,
-        .trainerScale = 447,
+        .trainerScale = 256,
         .trainerOffset = 9,
     },
 
@@ -4532,7 +4532,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gTojikoPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 2,
-        .trainerScale = 309,
+        .trainerScale = 256,
         .trainerOffset = 1,
     },
 
@@ -4544,7 +4544,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gCFutoPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 301,
+        .trainerScale = 256,
         .trainerOffset = 2,
     },
 
@@ -4556,7 +4556,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gFutoPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 359,
+        .trainerScale = 256,
         .trainerOffset = 6,
     },
 
@@ -4580,7 +4580,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gCKasenPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 294,
+        .trainerScale = 256,
         .trainerOffset = 3,
     },
 
@@ -4592,7 +4592,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gCMikoPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 614,
+        .trainerScale = 256,
         .trainerOffset = 13,
     },
 
@@ -4604,7 +4604,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gMikoPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 515,
+        .trainerScale = 256,
         .trainerOffset = 14,
     },
 
@@ -4616,7 +4616,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gCMamizouPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 448,
+        .trainerScale = 256,
         .trainerOffset = 12,
     },
 
@@ -4640,7 +4640,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gGomasekiPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 290,
+        .trainerScale = 256,
         .trainerOffset = 2,
     },
 };

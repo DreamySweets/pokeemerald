@@ -2294,7 +2294,7 @@ void SetMoveEffect(bool8 primary, u8 certain)
                 }
                 RESET_RETURN
             }
-            if ((IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_MIASMA) || IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_STEEL))
+            if ((IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_MIASMA) || IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_BLADE))
                 && (gHitMarker & HITMARKER_IGNORE_SAFEGUARD)
                 && (primary == TRUE || certain == MOVE_EFFECT_CERTAIN))
             {
@@ -2306,7 +2306,7 @@ void SetMoveEffect(bool8 primary, u8 certain)
             }
             if (IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_MIASMA))
                 break;
-            if (IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_STEEL))
+            if (IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_BLADE))
                 break;
             if (gBattleMons[gEffectBattler].status1)
                 break;
@@ -2419,7 +2419,7 @@ void SetMoveEffect(bool8 primary, u8 certain)
                 }
                 RESET_RETURN
             }
-            if ((IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_MIASMA) || IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_STEEL))
+            if ((IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_MIASMA) || IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_BLADE))
                 && (gHitMarker & HITMARKER_IGNORE_SAFEGUARD)
                 && (primary == TRUE || certain == MOVE_EFFECT_CERTAIN))
             {
@@ -2431,7 +2431,7 @@ void SetMoveEffect(bool8 primary, u8 certain)
             }
             if (gBattleMons[gEffectBattler].status1)
                 break;
-            if (!IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_MIASMA) && !IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_STEEL))
+            if (!IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_MIASMA) && !IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_BLADE))
             {
                 if (gBattleMons[gEffectBattler].ability == ABILITY_IMMUNITY)
                     break;
@@ -7808,10 +7808,10 @@ static void Cmd_weatherdamage(void)
         if (gBattleWeather & WEATHER_SANDSTORM_ANY)
         {
             if (gBattleMons[gBattlerAttacker].type1 != TYPE_BEAST
-                && gBattleMons[gBattlerAttacker].type1 != TYPE_STEEL
+                && gBattleMons[gBattlerAttacker].type1 != TYPE_BLADE
                 && gBattleMons[gBattlerAttacker].type1 != TYPE_EARTH
                 && gBattleMons[gBattlerAttacker].type2 != TYPE_BEAST
-                && gBattleMons[gBattlerAttacker].type2 != TYPE_STEEL
+                && gBattleMons[gBattlerAttacker].type2 != TYPE_BLADE
                 && gBattleMons[gBattlerAttacker].type2 != TYPE_EARTH
                 && gBattleMons[gBattlerAttacker].ability != ABILITY_SAND_VEIL
                 && !(gStatuses3[gBattlerAttacker] & STATUS3_UNDERGROUND)
