@@ -1,9 +1,9 @@
 static const u8 sNullDescription[] = _(
     "");
 
-static const u8 sPoundDescription[] = _(
-    "Pounds the foe with\n"
-    "forelegs or tail.");
+static const u8 sStrikeDescription[] = _(
+    "The user attacks with its\n"
+    "fists or a weapon.");
 
 static const u8 sKarateChopDescription[] = _(
     "A chopping attack with a\n"

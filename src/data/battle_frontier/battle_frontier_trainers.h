@@ -1091,8 +1091,8 @@ const struct BattleFrontierTrainer gBattleFrontierTrainers[FRONTIER_TRAINERS_COU
     [FRONTIER_TRAINER_GABRIEL] = {
         .facilityClass = FACILITY_CLASS_COLLECTOR,
         .trainerName = _("GABRIEL"),
-        .speechBefore = {EC_MOVE2(POUND), EC_WORD_THE, EC_WORD_THICK_FAT, EC_WORD_ON, EC_WORD_MY, EC_MOVE2(BELLY_DRUM)},
-        .speechWin = {EC_MOVE2(POUND), EC_WORD_MY, EC_MOVE2(BELLY_DRUM), EC_MOVE2(POUND), EC_WORD_MY, EC_MOVE2(BELLY_DRUM)},
+        .speechBefore = {EC_MOVE2(STRIKE), EC_WORD_THE, EC_WORD_THICK_FAT, EC_WORD_ON, EC_WORD_MY, EC_MOVE2(BELLY_DRUM)},
+        .speechWin = {EC_MOVE2(STRIKE), EC_WORD_MY, EC_MOVE2(BELLY_DRUM), EC_MOVE2(STRIKE), EC_WORD_MY, EC_MOVE2(BELLY_DRUM)},
         .speechLose = {EC_WORD_MY, EC_MOVE2(BELLY_DRUM), EC_WORD_WAS, EC_WORD_TOO_WEAK, EC_WORD_ELLIPSIS, 0xFFFF},
         .monSet = gBattleFrontierTrainerMons_Gabriel
     },
