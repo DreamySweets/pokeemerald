@@ -1,20 +1,17 @@
 const u8 gDummyPokedexText[] = _(
-    "This is a newly discovered POKéMON.\n"
-    "It is currently under investigation.\n"
-    "No detailed information is available\n"
-    "at this time.");
+    "No info.\n");
 
 const u8 gCSanaePokedexText[] = _(
-    "CSANAE can be seen napping in bright\n"
-    "sunlight. There is a seed on its back.\n"
-    "By soaking up the sun's rays, the seed\n"
-    "grows progressively larger.");
+	"A young shrine maiden who lives atop\n"
+	"a mountain."
+	"She comes from the outside world.\n"
+    "She's capable of causing miracles.");
 
 const u8 gSanaePokedexText[] = _(
-    "To support its bulb, SANAE's legs\n"
-    "grow sturdy. If it spends more time lying in\n"
-    "the sunlight, the bud will soon bloom into\n"
-    "a large flower.");
+    "She is a shrine maiden who descended from\n"
+    "a goddess. She can summon Suwako and Kanako.\n"
+    "Her ability to cause miracles of wind and\n"
+    "rain lets her collect faith.");
 
 const u8 gCAlicePokedexText[] = _(
     "CALICE's flower is said to take on vivid\n"
